@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P11",
+  "questions": [
+    {
+      "id": "physics-P11.1-001",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.1",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Kinetic theory, Brownian motion and intermolecular forces",
+      "difficulty": 1,
+      "stem": "Fine pollen grains suspended in still water are seen through a microscope to jiggle along irregular, unpredictable paths. This observation is direct evidence that",
+      "options": [
+        "$\\text{the water molecules are in constant random motion}$",
+        "$\\text{the pollen grains are alive and self-propelled}$",
+        "$\\text{the water is being heated unevenly from below}$",
+        "$\\text{the pollen grains repel one another electrically}$"
+      ],
+      "correctIndex": 0,
+      "solution": "A pollen grain is far too large to move on its own, and the water is still. What moves it is the water molecules.\n\nAt any instant, molecules strike the grain from every side. Because the molecules move randomly, the number and force of the hits on one side never exactly balance the other. The leftover push shifts the grain, and a moment later the imbalance points somewhere else.\n\nThe path is irregular because the molecular motion behind it is random. That is the whole content of the observation.",
+      "distractorRationale": [
+        "Correct. Unbalanced random impacts from the surrounding molecules push the grain first one way and then another.",
+        "The historical first guess, and wrong: the same jiggling appears with smoke particles and with pollen from long-dead plants.",
+        "Uneven heating would set up a convection current, which carries particles along a smooth drifting path, not an irregular jittering one.",
+        "Repulsion between grains would push them steadily apart. The observed motion changes direction constantly instead."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Brownian motion is defined as the random motion of a suspended particle caused by unbalanced collisions with the molecules of the surrounding fluid. Only option A names that cause; the other three are each ruled out by a standard control observation."
+      }
+    },
+    {
+      "id": "physics-P11.1-002",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.1",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Kinetic theory, Brownian motion and intermolecular forces",
+      "difficulty": 1,
+      "stem": "A sealed flask of gas is warmed from $20\\ ^\\circ\\mathrm{C}$ to $80\\ ^\\circ\\mathrm{C}$. What happens to the average kinetic energy of its molecules?",
+      "options": [
+        "$\\text{It increases}$",
+        "$\\text{It stays the same}$",
+        "$\\text{It decreases}$",
+        "$\\text{It depends on which gas is in the flask}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Temperature, on the kinetic model, *is* a measure of the average kinetic energy of the molecules. The two rise and fall together.\n\nWarming the flask raises the temperature, so the average molecular kinetic energy rises with it.\n\nThe link runs through absolute temperature alone. It does not depend on which gas, on the pressure, or on the volume.",
+      "distractorRationale": [
+        "Correct. Average molecular kinetic energy is set by absolute temperature, which has risen.",
+        "Would require the temperature to be unchanged. The flask is being warmed, so it is not.",
+        "Reverses the relationship. Cooling lowers the average kinetic energy; heating raises it.",
+        "At the same temperature, all gases have the same *average kinetic energy per molecule*. What differs between gases is the average speed, because the masses differ."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "In the kinetic model the average translational kinetic energy of a molecule is proportional to absolute temperature and to nothing else. Raising the temperature therefore raises it, and the constant of proportionality is the same for every gas, which disposes of option D."
+      }
+    },
+    {
+      "id": "physics-P11.1-003",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.1",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Kinetic theory, Brownian motion and intermolecular forces",
+      "difficulty": 3,
+      "stem": "Two molecules sit at the separation $r_{0}$ at which the force between them is zero. They are then pushed closer together, to a separation smaller than $r_{0}$. The net force between them is now",
+      "options": [
+        "$\\text{zero, because } r_{0} \\text{ is the equilibrium separation}$",
+        "$\\text{repulsive}$",
+        "$\\text{attractive}$",
+        "$\\text{attractive at first, then repulsive}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Between two molecules there are always both an attraction and a repulsion, and each weakens as the separation grows. The repulsion weakens **faster**.\n\nAt $r=r_{0}$ the two happen to be equal in size and cancel, which is why the net force is zero there.\n\nMove closer than $r_{0}$ and both grow, but the repulsion grows faster, so it wins:\n$$r<r_{0} \\ \\Longrightarrow\\ \\text{net force is repulsive, pushing the molecules apart}.$$\n\nThis is why solids and liquids resist being compressed.",
+      "distractorRationale": [
+        "The force is zero only *at* $r_{0}$. Once the separation changes, the balance between attraction and repulsion is broken.",
+        "Correct. Below $r_{0}$ the repulsion grows faster than the attraction, so the net force pushes the molecules apart.",
+        "This is what happens on the other side: for $r>r_{0}$ the attraction wins and pulls the molecules together.",
+        "Describes moving outward past $r_{0}$ and back, not a single push inward. Inside $r_{0}$ the force is repulsive throughout."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Molecular attraction and repulsion both fall off with separation, the repulsion more steeply. They balance at r0 by definition, so compressing below r0 makes the faster-growing repulsion dominate and the net force is repulsive. Only option B states this."
+      }
+    },
+    {
+      "id": "physics-P11.2-001",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.2",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Gas laws and the ideal gas equation",
+      "difficulty": 2,
+      "stem": "A fixed mass of gas is sealed in a rigid steel cylinder and warmed from $27\\ ^\\circ\\mathrm{C}$ to $127\\ ^\\circ\\mathrm{C}$. Its pressure becomes how many times its original value?",
+      "options": ["$0.75$", "$1.33$", "$3.00$", "$4.70$"],
+      "correctIndex": 1,
+      "solution": "The cylinder is rigid, so the volume is fixed and this is a constant-volume change:\n$$\\frac{p_{1}}{T_{1}}=\\frac{p_{2}}{T_{2}}.$$\n\n**Convert to kelvin first.** This is the step the question is really testing:\n$$T_{1}=27+273=300\\ \\mathrm{K}, \\qquad T_{2}=127+273=400\\ \\mathrm{K}.$$\n\nThen\n$$\\frac{p_{2}}{p_{1}}=\\frac{T_{2}}{T_{1}}=\\frac{400}{300}=1.33.$$",
+      "distractorRationale": [
+        "Turned the ratio upside down, computing $T_{1}/T_{2}=300/400$. Heating a sealed rigid container raises the pressure, so the ratio must exceed $1$.",
+        "Correct. $400\\ \\mathrm{K}\\,/\\,300\\ \\mathrm{K}=1.33$.",
+        "Used the ratio of the temperature *rise* to something, or scaled by $127-27=100$ incorrectly. The gas law needs absolute temperatures, not a difference.",
+        "Used the Celsius readings directly: $127/27=4.70$. Gas laws only work in kelvin, because only the kelvin scale starts at absolute zero."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(127 + 273) / (27 + 273)",
+        "expected": 1.3333333333333333,
+        "tolerance": 0.005
+      }
+    },
+    {
+      "id": "physics-P11.2-002",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.2",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Gas laws and the ideal gas equation",
+      "difficulty": 2,
+      "stem": "A syringe holds $3.0\\ \\mathrm{L}$ of gas at a pressure of $2.0 \\times 10^{5}\\ \\mathrm{Pa}$. The plunger is pushed in slowly, so the temperature does not change, until the volume is $1.2\\ \\mathrm{L}$. The new pressure is",
+      "options": [
+        "$8.0 \\times 10^{4}\\ \\mathrm{Pa}$",
+        "$2.5 \\times 10^{5}\\ \\mathrm{Pa}$",
+        "$7.2 \\times 10^{5}\\ \\mathrm{Pa}$",
+        "$5.0 \\times 10^{5}\\ \\mathrm{Pa}$"
+      ],
+      "correctIndex": 3,
+      "solution": "\"Slowly, so the temperature does not change\" means this is an isothermal change, so Boyle's law applies:\n$$p_{1}V_{1}=p_{2}V_{2}.$$\n\nRearrange for the new pressure:\n$$p_{2}=\\frac{p_{1}V_{1}}{V_{2}}=\\frac{(2.0 \\times 10^{5})(3.0)}{1.2}=5.0 \\times 10^{5}\\ \\mathrm{Pa}.$$\n\nThe volume was squeezed to $0.4$ of its old value, so the pressure rose by a factor of $2.5$. Note that the litres cancel, so there is no need to convert them.",
+      "distractorRationale": [
+        "Inverted the volume ratio, computing $p_{1}V_{2}/V_{1}$. Squeezing a gas raises its pressure, so an answer below $2.0 \\times 10^{5}\\ \\mathrm{Pa}$ cannot be right.",
+        "Multiplied the pressure by $1.25$ instead of $2.5$, using the volume *difference* $3.0-1.2=1.8$ somewhere rather than the ratio.",
+        "Multiplied the two volumes rather than dividing, giving $p_{1}V_{1}V_{2}$ scaled wrongly.",
+        "Correct. $p_{2}=(2.0 \\times 10^{5})(3.0)/1.2=5.0 \\times 10^{5}\\ \\mathrm{Pa}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(2.0e5 * 3.0) / 1.2",
+        "expected": 500000,
+        "tolerance": 1e-9,
+        "unit": "Pa"
+      }
+    },
+    {
+      "id": "physics-P11.2-003",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.2",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Gas laws and the ideal gas equation",
+      "difficulty": 3,
+      "stem": "A weather balloon holds $0.60\\ \\mathrm{m^{3}}$ of gas at $300\\ \\mathrm{K}$. The gas is warmed to $450\\ \\mathrm{K}$ while the pressure inside stays constant. The new volume is",
+      "options": [
+        "$0.90\\ \\mathrm{m^{3}}$",
+        "$0.40\\ \\mathrm{m^{3}}$",
+        "$0.60\\ \\mathrm{m^{3}}$",
+        "$1.35\\ \\mathrm{m^{3}}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Constant pressure, so volume and absolute temperature rise together:\n$$\\frac{V_{1}}{T_{1}}=\\frac{V_{2}}{T_{2}}.$$\n\nThe temperatures are already in kelvin, so no conversion is needed:\n$$V_{2}=V_{1}\\cdot\\frac{T_{2}}{T_{1}}=0.60 \\times \\frac{450}{300}=0.60 \\times 1.5=0.90\\ \\mathrm{m^{3}}.$$\n\nA sanity check: the temperature went up by half, so the volume should too.",
+      "distractorRationale": [
+        "Correct. $V_{2}=0.60 \\times 450/300=0.90\\ \\mathrm{m^{3}}$.",
+        "Turned the temperature ratio upside down, computing $0.60 \\times 300/450$. Warming a gas at constant pressure expands it, so the volume must grow.",
+        "The starting volume, unchanged. This would be the answer at constant *volume*, but here it is the pressure that is held constant.",
+        "Applied the factor $1.5$ twice, or squared the ratio: $0.60 \\times 1.5^{2}=1.35$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.60 * (450 / 300)",
+        "expected": 0.9,
+        "tolerance": 1e-9,
+        "unit": "m^3"
+      }
+    },
+    {
+      "id": "physics-P11.2-004",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.2",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Gas laws and the ideal gas equation",
+      "difficulty": 4,
+      "stem": "A sealed sample of gas occupies $2.0\\ \\mathrm{L}$ at $1.0 \\times 10^{5}\\ \\mathrm{Pa}$ and $300\\ \\mathrm{K}$. It is taken to a new state at $2.0 \\times 10^{5}\\ \\mathrm{Pa}$ and $400\\ \\mathrm{K}$. Its new volume is",
+      "options": [
+        "$0.75\\ \\mathrm{L}$",
+        "$1.33\\ \\mathrm{L}$",
+        "$2.67\\ \\mathrm{L}$",
+        "$3.00\\ \\mathrm{L}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Both the pressure and the temperature change, so use the combined gas law:\n$$\\frac{p_{1}V_{1}}{T_{1}}=\\frac{p_{2}V_{2}}{T_{2}}.$$\n\nRearrange for $V_{2}$:\n$$V_{2}=V_{1}\\cdot\\frac{p_{1}}{p_{2}}\\cdot\\frac{T_{2}}{T_{1}}=2.0 \\times \\frac{1.0 \\times 10^{5}}{2.0 \\times 10^{5}} \\times \\frac{400}{300}.$$\n\nTake the two factors in turn. Doubling the pressure halves the volume. Raising the temperature from $300\\ \\mathrm{K}$ to $400\\ \\mathrm{K}$ multiplies it by $\\tfrac{4}{3}$:\n$$V_{2}=2.0 \\times 0.5 \\times \\tfrac{4}{3}=1.33\\ \\mathrm{L}.$$\n\nThe two effects pull in opposite directions, and the pressure change is the stronger of the two, so the gas ends up smaller than it started.",
+      "distractorRationale": [
+        "Applied the temperature factor upside down: $2.0 \\times 0.5 \\times 300/400$.",
+        "Correct. $V_{2}=2.0 \\times \\tfrac{1}{2} \\times \\tfrac{4}{3}=1.33\\ \\mathrm{L}$.",
+        "Applied the pressure factor upside down, doubling the volume instead of halving it: $2.0 \\times 2 \\times \\tfrac{4}{3} / 2$.",
+        "Used only the temperature change and ignored the pressure change entirely: $2.0 \\times \\tfrac{400}{300}$ rounds to $2.67$, and a further slip gives $3.00$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(1.0e5 * 2.0 * 400) / (300 * 2.0e5)",
+        "expected": 1.3333333333333333,
+        "tolerance": 0.005,
+        "unit": "L"
+      }
+    },
+    {
+      "id": "physics-P11.2-005",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.2",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Gas laws and the ideal gas equation",
+      "difficulty": 4,
+      "stem": "A rigid sealed tank of gas is cooled from $87\\ ^\\circ\\mathrm{C}$ to $-33\\ ^\\circ\\mathrm{C}$. Its final pressure is what fraction of its initial pressure?",
+      "options": [
+        "$-0.38$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{3}{2}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The tank is rigid, so the volume is fixed:\n$$\\frac{p_{2}}{p_{1}}=\\frac{T_{2}}{T_{1}}.$$\n\n**Convert both readings to kelvin.** The negative Celsius value is where this question bites:\n$$T_{1}=87+273=360\\ \\mathrm{K}, \\qquad T_{2}=-33+273=240\\ \\mathrm{K}.$$\n\nNote that $-33\\ ^\\circ\\mathrm{C}$ is a perfectly ordinary $240\\ \\mathrm{K}$ — still well above absolute zero.\n\n$$\\frac{p_{2}}{p_{1}}=\\frac{240}{360}=\\frac{2}{3}.$$",
+      "distractorRationale": [
+        "Divided the Celsius readings directly: $-33/87=-0.38$. A negative pressure ratio is impossible, which is the signal that the kelvin conversion was skipped.",
+        "Used the temperature *drop* of $120\\ \\mathrm{K}$ against $360\\ \\mathrm{K}$ to get $\\tfrac{1}{3}$. That is the fraction the pressure *falls by*, not the fraction it falls *to*.",
+        "Correct. $240\\ \\mathrm{K}\\,/\\,360\\ \\mathrm{K}=\\tfrac{2}{3}$.",
+        "Turned the ratio upside down, computing $T_{1}/T_{2}$. Cooling lowers the pressure, so the fraction must be less than $1$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(-33 + 273) / (87 + 273)",
+        "expected": 0.6666666666666666,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P11.3-001",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.3",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Internal energy and the first law of thermodynamics",
+      "difficulty": 2,
+      "stem": "A gas absorbs $200\\ \\mathrm{J}$ of heat and, as it expands, does $80\\ \\mathrm{J}$ of work on its surroundings. The change in its internal energy is",
+      "options": [
+        "$-120\\ \\mathrm{J}$",
+        "$80\\ \\mathrm{J}$",
+        "$120\\ \\mathrm{J}$",
+        "$280\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The first law of thermodynamics is an energy account for the gas:\n$$\\Delta U = Q - W,$$\nwhere $Q$ is the heat **absorbed by** the gas and $W$ is the work done **by** the gas.\n\nBoth quantities are given in exactly that form:\n$$\\Delta U = 200 - 80 = 120\\ \\mathrm{J}.$$\n\nIn words: $200\\ \\mathrm{J}$ came in as heat, $80\\ \\mathrm{J}$ left as work, so $120\\ \\mathrm{J}$ stayed behind as internal energy.",
+      "distractorRationale": [
+        "Right size, wrong sign. The gas took in more energy than it gave out, so its internal energy must rise.",
+        "The work term alone. The heat absorbed was never included.",
+        "Correct. $\\Delta U = Q - W = 200 - 80 = 120\\ \\mathrm{J}$.",
+        "Added the work instead of subtracting it. Work done *by* the gas is energy leaving, so it must be subtracted."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "200 - 80",
+        "expected": 120,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P11.3-002",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.3",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Internal energy and the first law of thermodynamics",
+      "difficulty": 3,
+      "stem": "A gas is compressed, with $150\\ \\mathrm{J}$ of work done on it, and during the process it gives out $90\\ \\mathrm{J}$ of heat to its surroundings. The change in its internal energy is",
+      "options": [
+        "$-240\\ \\mathrm{J}$",
+        "$-60\\ \\mathrm{J}$",
+        "$60\\ \\mathrm{J}$",
+        "$240\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Use $\\Delta U = Q - W$, with $Q$ the heat absorbed by the gas and $W$ the work done by the gas. Both are stated the other way round here, so both change sign.\n\n**Heat.** The gas gives out $90\\ \\mathrm{J}$, so it absorbs $-90\\ \\mathrm{J}$:\n$$Q = -90\\ \\mathrm{J}.$$\n\n**Work.** Work is done *on* the gas, so the work done *by* the gas is negative:\n$$W = -150\\ \\mathrm{J}.$$\n\nSubstitute:\n$$\\Delta U = (-90) - (-150) = -90 + 150 = 60\\ \\mathrm{J}.$$\n\nMore energy was pushed in by compression than leaked away as heat, so the internal energy rises.",
+      "distractorRationale": [
+        "Made both signs negative and added them: $-90-150$. The compression puts energy in, so it cannot appear as a loss.",
+        "Right size, wrong sign. This comes from $-150+90$, treating the compression as energy leaving the gas.",
+        "Correct. $\\Delta U = (-90)-(-150) = 60\\ \\mathrm{J}$.",
+        "Added the two magnitudes, $150+90$, without giving the outgoing heat a negative sign."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(-90) - (-150)",
+        "expected": 60,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P11.3-003",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.3",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Internal energy and the first law of thermodynamics",
+      "difficulty": 3,
+      "stem": "An ideal gas expands at constant temperature, absorbing $500\\ \\mathrm{J}$ of heat while it does so. The work it does on its surroundings is",
+      "options": [
+        "$250\\ \\mathrm{J}$",
+        "$500\\ \\mathrm{J}$",
+        "$1000\\ \\mathrm{J}$",
+        "$0\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 1,
+      "solution": "For an ideal gas, internal energy depends only on temperature. The temperature is held constant, so\n$$\\Delta U = 0.$$\n\nPut that into the first law:\n$$\\Delta U = Q - W \\ \\Longrightarrow\\ 0 = 500 - W \\ \\Longrightarrow\\ W = 500\\ \\mathrm{J}.$$\n\nEvery joule of heat that entered left again as work. Nothing was stored, because storing it would have meant a temperature rise.",
+      "distractorRationale": [
+        "Splits the heat evenly between work and internal energy. That would need $\\Delta U = 250\\ \\mathrm{J}$, which contradicts the constant temperature.",
+        "Correct. $\\Delta U = 0$ at constant temperature, so $W = Q = 500\\ \\mathrm{J}$.",
+        "Added the heat to itself, as if both $Q$ and $\\Delta U$ contributed to the work. Only $Q$ is available.",
+        "Would follow if the gas did no work, but it is expanding, and an expanding gas pushes its surroundings back."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "500 - 0",
+        "expected": 500,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P11.3-004",
+      "subject": "physics",
+      "topic": "P11",
+      "subtopic": "P11.3",
+      "syllabusRef": "P-3 / Thermodynamics / Thermal Physics / Internal energy and the first law of thermodynamics",
+      "difficulty": 5,
+      "stem": "A gas is sealed inside a thermally insulated cylinder, so no heat can enter or leave. A piston compresses it, doing $320\\ \\mathrm{J}$ of work on the gas. The change in the internal energy of the gas is",
+      "options": [
+        "$-320\\ \\mathrm{J}$",
+        "$0\\ \\mathrm{J}$",
+        "$+160\\ \\mathrm{J}$",
+        "$+320\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — read the insulation.** \"Thermally insulated\" is the whole reason the word appears: no heat crosses the boundary, so\n$$Q = 0.$$\n\n**Step 2 — fix the sign of the work.** In $\\Delta U = Q - W$, the symbol $W$ means work done *by* the gas. Here the piston does $320\\ \\mathrm{J}$ *on* the gas, so\n$$W = -320\\ \\mathrm{J}.$$\n\n**Step 3 — substitute.**\n$$\\Delta U = 0 - (-320) = +320\\ \\mathrm{J}.$$\n\nWith nowhere for the energy to escape, all of the work goes into internal energy, and the gas gets hotter. This is why a bicycle pump warms up as you use it.",
+      "distractorRationale": [
+        "Took $W=+320$ without converting \"work done on the gas\" into \"work done by the gas\". The sign flip is the point of the question.",
+        "Would follow from $Q=0$ alone, forgetting that work is a second, independent way to change internal energy.",
+        "Halved the result, as though the work were shared between internal energy and something else. With no heat flow there is nowhere else for it to go.",
+        "Correct. $Q=0$ and $W=-320\\ \\mathrm{J}$, so $\\Delta U = 0-(-320)=+320\\ \\mathrm{J}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0 - (-320)",
+        "expected": 320,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    }
+  ]
+}

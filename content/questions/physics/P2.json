@@ -1,0 +1,642 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P2",
+  "questions": [
+    {
+      "id": "physics-P2.1-001",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.1",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Weight and Hooke's law",
+      "difficulty": 1,
+      "stem": "A survey robot is shipped from a laboratory on Earth to a base on the Moon, where the gravitational field strength is about one sixth of the value on Earth. Compared with their values on Earth, the robot's mass and weight on the Moon are",
+      "options": [
+        "$\\text{both smaller}$",
+        "$\\text{the same mass, a smaller weight}$",
+        "$\\text{a smaller mass, the same weight}$",
+        "$\\text{both unchanged}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Mass measures how much matter an object contains and how hard it is to accelerate. Shipping the robot somewhere else does not add or remove any matter, so the mass is unchanged.\n\nWeight is the gravitational pull on that mass:\n$$W=mg.$$\n\nThe mass $m$ stays the same but the field strength $g$ on the Moon is about one sixth of the Earth value, so the weight falls to about one sixth as well.\n\nThe robot would still be just as hard to shove sideways on the Moon. It would simply press down on the ground much more gently.",
+      "distractorRationale": [
+        "Treats mass as if it depended on gravity. Mass is a property of the object alone and travels with it unchanged.",
+        "Correct. Mass is unchanged and weight, being $mg$, falls with the field strength.",
+        "Swaps the two quantities over. It is weight, not mass, that depends on where the object is.",
+        "Would require the gravitational field to be the same on the Moon as on Earth, which the question says it is not."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Mass is an intrinsic property and does not change with location, while weight is the gravitational force W = mg and therefore falls when g falls. Only option B keeps the mass fixed and reduces the weight."
+      }
+    },
+    {
+      "id": "physics-P2.1-002",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.1",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Weight and Hooke's law",
+      "difficulty": 2,
+      "stem": "In a workshop test a $3.0\\ \\mathrm{kg}$ load hangs at rest from a vertical steel spring of stiffness $250\\ \\mathrm{N/m}$. (Take $g=10\\ \\mathrm{m/s^2}$.) The spring stretches by",
+      "options": [
+        "$8.3\\ \\mathrm{m}$",
+        "$0.012\\ \\mathrm{m}$",
+        "$0.24\\ \\mathrm{m}$",
+        "$0.12\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 3,
+      "solution": "The load hangs at rest, so the spring force balances the weight.\n\n**Step 1 — find the stretching force.**\n$$F=mg=3.0\\times 10=30\\ \\mathrm{N}.$$\n\n**Step 2 — apply Hooke's law, $F=kx$.**\n$$x=\\frac{F}{k}=\\frac{30}{250}=0.12\\ \\mathrm{m}.$$\n\nThat is $12\\ \\mathrm{cm}$, a believable stretch for a spring this stiff.",
+      "distractorRationale": [
+        "Turned Hooke's law upside down, computing $k/F=250/30$. A stiffer spring must stretch less, not more.",
+        "Used the mass $3.0\\ \\mathrm{kg}$ in place of the weight $30\\ \\mathrm{N}$, which loses a factor of $g$.",
+        "Doubled the answer, as if the weight were shared by two springs or counted twice.",
+        "Correct. $x=mg/k=30/250=0.12\\ \\mathrm{m}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(3.0 * 10) / 250",
+        "expected": 0.12,
+        "tolerance": 1e-09,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P2.1-003",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.1",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Weight and Hooke's law",
+      "difficulty": 3,
+      "stem": "The spring inside a luggage scale stretches by $4.0\\ \\mathrm{cm}$ when a $2.0\\ \\mathrm{kg}$ bag hangs from it at rest. (Take $g=10\\ \\mathrm{m/s^2}$.) The stiffness of that spring is",
+      "options": [
+        "$5\\ \\mathrm{N/m}$",
+        "$50\\ \\mathrm{N/m}$",
+        "$500\\ \\mathrm{N/m}$",
+        "$5000\\ \\mathrm{N/m}$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — the force stretching the spring is the weight of the bag.**\n$$F=mg=2.0\\times 10=20\\ \\mathrm{N}.$$\n\n**Step 2 — convert the extension to metres.** Stiffness in $\\mathrm{N/m}$ needs the extension in metres:\n$$x=4.0\\ \\mathrm{cm}=0.040\\ \\mathrm{m}.$$\n\n**Step 3 — rearrange Hooke's law.**\n$$k=\\frac{F}{x}=\\frac{20}{0.040}=500\\ \\mathrm{N/m}.$$\n\nIn words: it takes $500\\ \\mathrm{N}$ to stretch this spring by a whole metre, so $20\\ \\mathrm{N}$ stretches it by four centimetres.",
+      "distractorRationale": [
+        "Left the extension in centimetres, computing $20/4$. The unit $\\mathrm{N/m}$ demands metres.",
+        "Used the mass $2.0\\ \\mathrm{kg}$ instead of the weight $20\\ \\mathrm{N}$, giving $2.0/0.040$.",
+        "Correct. $k=F/x=20/0.040=500\\ \\mathrm{N/m}$.",
+        "Multiplied by $g$ a second time, computing $200/0.040$. The weight already contains one factor of $g$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(2.0 * 10) / 0.040",
+        "expected": 500,
+        "tolerance": 1e-09,
+        "unit": "N/m"
+      }
+    },
+    {
+      "id": "physics-P2.1-004",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.1",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Weight and Hooke's law",
+      "difficulty": 4,
+      "stem": "Two identical springs, each of stiffness $300\\ \\mathrm{N/m}$, hang side by side from a beam and together hold up a $12\\ \\mathrm{kg}$ toolbox, sharing its weight equally. (Take $g=10\\ \\mathrm{m/s^2}$.) Each spring stretches by",
+      "options": [
+        "$0.20\\ \\mathrm{m}$",
+        "$0.40\\ \\mathrm{m}$",
+        "$0.10\\ \\mathrm{m}$",
+        "$0.02\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — the total force to be held.**\n$$W=mg=12\\times 10=120\\ \\mathrm{N}.$$\n\n**Step 2 — split it between the two springs.** They share equally, so each carries\n$$F=\\frac{120}{2}=60\\ \\mathrm{N}.$$\n\n**Step 3 — apply Hooke's law to one spring.**\n$$x=\\frac{F}{k}=\\frac{60}{300}=0.20\\ \\mathrm{m}.$$\n\nBoth springs hang from the same beam and hold the same toolbox, so they stretch by the same $0.20\\ \\mathrm{m}$. Sharing the load halves the stretch that a single spring would have suffered.",
+      "distractorRationale": [
+        "Correct. Each spring carries $60\\ \\mathrm{N}$, so $x=60/300=0.20\\ \\mathrm{m}$.",
+        "Put the whole $120\\ \\mathrm{N}$ on one spring, forgetting that the load is shared.",
+        "Halved a second time, dividing the extension by two after the load had already been halved.",
+        "Slipped a decimal place in the stiffness, treating $300\\ \\mathrm{N/m}$ as $3000\\ \\mathrm{N/m}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(12 * 10 / 2) / 300",
+        "expected": 0.2,
+        "tolerance": 1e-09,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P2.2-001",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.2",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Friction",
+      "difficulty": 1,
+      "stem": "A hardback book is given one shove and then slides to the right across a flat table, slowing down as it goes. While it is sliding, in which direction does the friction force from the table act on the book?",
+      "options": [
+        "$\\text{to the right}$",
+        "$\\text{to the left}$",
+        "$\\text{vertically upward}$",
+        "$\\text{vertically downward}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Sliding friction always opposes the sliding. The book slides to the right across the table, so the table rubs back on the book to the left.\n\nThat is also the only direction consistent with what is observed. The book slows down, so the resultant force on it points backward, against the motion.\n\nThe hand that shoved the book is no longer touching it, so friction is the only horizontal force left.",
+      "distractorRationale": [
+        "Points friction along the motion. A force in that direction would speed the book up, not slow it down.",
+        "Correct. Kinetic friction opposes the relative sliding, so it acts leftward on a book sliding rightward.",
+        "That is the normal force from the table, which is perpendicular to the surface, not the friction force along it.",
+        "That is the weight of the book, which is a gravitational force, not a contact force from the table."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Kinetic friction acts along the contact surface and opposes the relative sliding of the two surfaces. The book slides rightward, so friction on it acts leftward, which is also the only option consistent with the book slowing down. Up and down name the normal force and the weight instead."
+      }
+    },
+    {
+      "id": "physics-P2.2-002",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.2",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Friction",
+      "difficulty": 2,
+      "stem": "A packing crate of mass $25\\ \\mathrm{kg}$ is dragged at a constant speed across a level workshop floor. The coefficient of kinetic friction between crate and floor is $0.40$. (Take $g=10\\ \\mathrm{m/s^2}$.) The friction force acting on the crate is",
+      "options": [
+        "$10\\ \\mathrm{N}$",
+        "$250\\ \\mathrm{N}$",
+        "$625\\ \\mathrm{N}$",
+        "$100\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — find the normal force.** The floor is level and nothing presses the crate down or lifts it, so the floor pushes up with a force equal to the weight:\n$$N=mg=25\\times 10=250\\ \\mathrm{N}.$$\n\n**Step 2 — apply the friction law.**\n$$f=\\mu N=0.40\\times 250=100\\ \\mathrm{N}.$$\n\nBecause the crate moves at a constant speed, the person dragging it must also be pulling with $100\\ \\mathrm{N}$: the forces balance and there is no acceleration.",
+      "distractorRationale": [
+        "Multiplied $\\mu$ by the mass instead of the weight, $0.40\\times 25$, dropping the factor $g$.",
+        "The normal force alone. It still has to be multiplied by the coefficient of friction.",
+        "Divided by $\\mu$ rather than multiplying, $250/0.40$. Since $\\mu<1$, friction must be smaller than the normal force.",
+        "Correct. $f=\\mu mg=0.40\\times 25\\times 10=100\\ \\mathrm{N}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.40 * 25 * 10",
+        "expected": 100,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P2.2-003",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.2",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Friction",
+      "difficulty": 3,
+      "stem": "A steel drum stands on a level loading bay. A worker leans on it horizontally with a push that grows slowly from zero, and for a while the drum does not budge. During that time, the friction force from the floor on the drum",
+      "options": [
+        "$\\text{grows so that it always matches the push}$",
+        "$\\text{sits at its largest possible value the whole time}$",
+        "$\\text{gets smaller as the push gets larger}$",
+        "$\\text{is zero until the drum begins to move}$"
+      ],
+      "correctIndex": 0,
+      "solution": "The drum is at rest and stays at rest, so the horizontal forces on it must add to zero at every instant.\n\nOnly two horizontal forces act: the worker's push and static friction. Adding to zero means\n$$f=\\text{push},$$\nso as the push climbs, friction climbs with it.\n\nStatic friction is not a fixed number. It takes whatever value is needed, up to a ceiling of $\\mu_{s}N$. Once the push passes that ceiling the balance breaks, the drum starts to slide, and only then does friction settle at the kinetic value.",
+      "distractorRationale": [
+        "Correct. While the drum is still, static friction adjusts itself to equal the applied push.",
+        "The maximum value is only reached at the instant the drum is about to slip. For a gentle push, friction is well below it.",
+        "Reverses the relationship. If friction fell as the push grew, the drum would have started moving at the very first touch.",
+        "Would leave the push unbalanced, so the drum would accelerate immediately. It plainly does not."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "A body at rest has zero resultant force, so static friction must equal the applied push at every instant while the drum stays still. Static friction is therefore variable, with maximum value mu_s N reached only on the point of slipping, which rules out the other three statements."
+      }
+    },
+    {
+      "id": "physics-P2.2-004",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.2",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Friction",
+      "difficulty": 4,
+      "stem": "A hockey puck leaves a stick at $8.0\\ \\mathrm{m/s}$ and glides $16\\ \\mathrm{m}$ across level ice before stopping. Nothing but friction acts along its path. (Take $g=10\\ \\mathrm{m/s^2}$.) How large is the coefficient of kinetic friction here?",
+      "options": [
+        "$2.0$",
+        "$0.40$",
+        "$0.20$",
+        "$0.10$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — get the deceleration from the motion.** No time is given, so use\n$$v^{2}=u^{2}+2as \\ \\Longrightarrow\\ 0=8.0^{2}+2a(16) \\ \\Longrightarrow\\ a=-\\frac{64}{32}=-2.0\\ \\mathrm{m/s^{2}}.$$\n\n**Step 2 — connect that to friction.** On level ice the normal force is $mg$, so the friction force is $\\mu mg$ and Newton's second law gives\n$$\\mu m g = m a \\ \\Longrightarrow\\ \\mu=\\frac{a}{g}.$$\n\nThe mass cancels, which is why it was never given.\n\n**Step 3 — substitute.**\n$$\\mu=\\frac{2.0}{10}=0.20.$$\n\nA coefficient is a pure number with no unit, and $0.20$ is a sensible value for a puck on ice.",
+      "distractorRationale": [
+        "The deceleration $2.0\\ \\mathrm{m/s^{2}}$ written down as the coefficient. It still has to be divided by $g$, and a coefficient carries no unit.",
+        "Dropped the factor $2$ in $v^{2}=u^{2}+2as$, giving $a=4.0\\ \\mathrm{m/s^{2}}$ and $\\mu=0.40$.",
+        "Correct. $a=u^{2}/(2s)=2.0\\ \\mathrm{m/s^{2}}$, so $\\mu=a/g=0.20$.",
+        "Divided by $2$ once more after finding $\\mu$, as if the average speed had to be used twice."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(8.0 * 8.0) / (2 * 16 * 10)",
+        "expected": 0.2,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "physics-P2.3-001",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.3",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Resultant forces and resolution",
+      "difficulty": 2,
+      "stem": "Two tugs pull a barge with steel cables that lie at right angles to each other. One cable pulls with $900\\ \\mathrm{N}$ due north, the other with $1200\\ \\mathrm{N}$ due east. The magnitude of the resultant pull on the barge is",
+      "options": [
+        "$2100\\ \\mathrm{N}$",
+        "$300\\ \\mathrm{N}$",
+        "$1050\\ \\mathrm{N}$",
+        "$1500\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Forces are vectors, so they combine head to tail, not by ordinary addition.\n\nThe two cables are perpendicular, so the two pulls form the short sides of a right-angled triangle and the resultant is the hypotenuse:\n$$R=\\sqrt{900^{2}+1200^{2}}=\\sqrt{810000+1440000}=\\sqrt{2250000}=1500\\ \\mathrm{N}.$$\n\nNotice that the resultant is larger than either pull but smaller than their sum. That is always true for two forces at an angle between $0^\\circ$ and $90^\\circ$.",
+      "distractorRationale": [
+        "Added the magnitudes. That answer would be right only if both cables pulled the same way.",
+        "Subtracted the magnitudes, which would apply only to two pulls in exactly opposite directions.",
+        "Averaged the two pulls. Averaging has no place in vector addition.",
+        "Correct. The cables are perpendicular, so $R=\\sqrt{900^{2}+1200^{2}}=1500\\ \\mathrm{N}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(900 * 900 + 1200 * 1200)",
+        "expected": 1500,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P2.3-002",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.3",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Resultant forces and resolution",
+      "difficulty": 4,
+      "stem": "A window-cleaning cradle is hauled sideways by a guide rope whose tension is $260\\ \\mathrm{N}$, directed at $60^\\circ$ above the horizontal. A second rope, horizontal, pulls the cradle the other way with $70\\ \\mathrm{N}$. The resultant horizontal force on the cradle is",
+      "options": [
+        "$60\\ \\mathrm{N}$",
+        "$130\\ \\mathrm{N}$",
+        "$155\\ \\mathrm{N}$",
+        "$200\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Only the horizontal direction is asked about, so resolve first and then combine.\n\n**Step 1 — resolve the guide rope.** The angle is measured from the horizontal, so the horizontal part uses the cosine:\n$$T_{x}=260\\cos 60^\\circ=260\\times 0.5=130\\ \\mathrm{N}.$$\n\n**Step 2 — combine with the second rope.** It pulls the opposite way, so it is subtracted:\n$$F=130-70=60\\ \\mathrm{N}.$$\n\nThe vertical part of the guide rope, $260\\sin 60^\\circ$, does not enter this answer. It acts on the cradle, but at right angles to the direction asked about.",
+      "distractorRationale": [
+        "Correct. $260\\cos 60^\\circ-70=130-70=60\\ \\mathrm{N}$.",
+        "The horizontal component of the guide rope alone, with the second rope left out.",
+        "Used $\\sin 60^\\circ$ instead of $\\cos 60^\\circ$, giving about $225-70=155\\ \\mathrm{N}$. With the angle measured from the horizontal, the cosine gives the horizontal part.",
+        "Added the two horizontal pulls, $130+70$, instead of subtracting. The ropes pull in opposite directions."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "260 * Math.cos(60 * Math.PI / 180) - 70",
+        "expected": 60,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P2.3-003",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.3",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Resultant forces and resolution",
+      "difficulty": 3,
+      "stem": "Three horizontal cables are tied to a mooring post. They pull with $50\\ \\mathrm{N}$ due east, $20\\ \\mathrm{N}$ due west and $40\\ \\mathrm{N}$ due north. The magnitude of the resultant force on the post is",
+      "options": [
+        "$110\\ \\mathrm{N}$",
+        "$50\\ \\mathrm{N}$",
+        "$70\\ \\mathrm{N}$",
+        "$10\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — settle the east-west line first.** These two pulls are along one line, so they simply subtract:\n$$F_{\\text{east}}=50-20=30\\ \\mathrm{N}\\ \\text{eastward}.$$\n\n**Step 2 — combine with the northward pull.** What remains is $30\\ \\mathrm{N}$ east and $40\\ \\mathrm{N}$ north, which are perpendicular:\n$$R=\\sqrt{30^{2}+40^{2}}=\\sqrt{900+1600}=50\\ \\mathrm{N}.$$\n\nCollinear forces add and subtract; perpendicular ones need Pythagoras. Sorting the three into those two groups is the whole method.",
+      "distractorRationale": [
+        "Added all three magnitudes, as though every cable pulled the same way.",
+        "Correct. The east-west pair leaves $30\\ \\mathrm{N}$ east, and $\\sqrt{30^{2}+40^{2}}=50\\ \\mathrm{N}$.",
+        "Added the leftover $30\\ \\mathrm{N}$ to the $40\\ \\mathrm{N}$ as if they were along the same line. They are perpendicular.",
+        "Treated all three as collinear and subtracted throughout, $50-20-40$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt((50 - 20) * (50 - 20) + 40 * 40)",
+        "expected": 50,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P2.3-004",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.3",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Resultant forces and resolution",
+      "difficulty": 5,
+      "stem": "Two workers heave on a stuck fence post with ropes that lie in the same horizontal plane. Each rope carries a tension of $250\\ \\mathrm{N}$, and the angle between the two ropes is $120^\\circ$. The magnitude of their combined pull on the post is",
+      "options": [
+        "$0\\ \\mathrm{N}$",
+        "$433\\ \\mathrm{N}$",
+        "$250\\ \\mathrm{N}$",
+        "$500\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Because the two tensions are equal, the resultant must lie along the line that bisects the angle between them. Each rope makes half of $120^\\circ$, that is $60^\\circ$, with that bisector.\n\nResolve each rope along the bisector. The two components across the bisector are equal and opposite, so they cancel, and what is left is\n$$R=2T\\cos\\frac{\\theta}{2}=2\\times 250\\times\\cos 60^\\circ=2\\times 250\\times 0.5=250\\ \\mathrm{N}.$$\n\nThe result is worth remembering: two equal forces $120^\\circ$ apart give a resultant of exactly the same size as one of them. Pulling in widely different directions wastes most of the effort.",
+      "distractorRationale": [
+        "Assumed that forces more than $90^\\circ$ apart cancel. Complete cancellation needs $180^\\circ$, not $120^\\circ$.",
+        "Halved the wrong angle, using $\\cos 30^\\circ$ in $2T\\cos(\\theta/2)$. Each rope makes $60^\\circ$ with the bisector, not $30^\\circ$.",
+        "Correct. $R=2T\\cos 60^\\circ=2\\times 250\\times 0.5=250\\ \\mathrm{N}$.",
+        "Added the magnitudes, ignoring the angle. That is the answer only for two ropes pulling the same way."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * 250 * Math.cos((120 / 2) * Math.PI / 180)",
+        "expected": 250,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P2.4-001",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.4",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Newton's three laws of motion",
+      "difficulty": 1,
+      "stem": "A tractor tows a loaded trailer along a level road at a steady speed. Which two forces form a Newton's third law pair?",
+      "options": [
+        "$\\text{the forward pull of the tractor on the trailer, and the backward pull of the trailer on the tractor}$",
+        "$\\text{the weight of the trailer, and the upward push of the road on the trailer}$",
+        "$\\text{the forward pull of the tractor on the trailer, and the friction on the trailer}$",
+        "$\\text{the weight of the trailer, and the forward pull of the tractor on the trailer}$"
+      ],
+      "correctIndex": 0,
+      "solution": "A third law pair has three signatures: the two forces are of the same kind, they are equal in size and opposite in direction, and — the test that settles every case — they act on **two different bodies**.\n\nThe tractor pulls the trailer forward through the coupling; the trailer pulls the tractor backward through the same coupling. Same kind, opposite directions, one force on each body. That is the pair.\n\nEvery other option lists two forces that both act on the trailer. Forces on the same body can balance, but balancing is Newton's first law, not his third.",
+      "distractorRationale": [
+        "Correct. These two are the same kind of force, act along the same line in opposite directions, and act on different bodies.",
+        "Both of these act on the trailer, and they are different in kind: one is gravitational, the other a contact force. They balance, which is the first law, not the third.",
+        "Both act on the trailer. They happen to be equal here only because the speed is steady, which is a coincidence of this situation, not a law.",
+        "Both act on the trailer, and they are perpendicular to each other, so they cannot be an equal-and-opposite pair."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "A Newton's third law pair consists of two forces of the same type that act on two different bodies, equal in magnitude and opposite in direction. Only option A names forces on two different bodies: the tractor on the trailer and the trailer on the tractor. In every other option both forces act on the trailer."
+      }
+    },
+    {
+      "id": "physics-P2.4-002",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.4",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Newton's three laws of motion",
+      "difficulty": 2,
+      "stem": "A curling stone of mass $20\\ \\mathrm{kg}$ is pushed along the ice by a steady horizontal force of $30\\ \\mathrm{N}$. Friction is small enough to ignore. The acceleration of the stone is",
+      "options": [
+        "$0.67\\ \\mathrm{m/s^{2}}$",
+        "$600\\ \\mathrm{m/s^{2}}$",
+        "$10\\ \\mathrm{m/s^{2}}$",
+        "$1.5\\ \\mathrm{m/s^{2}}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Newton's second law relates the resultant force to the acceleration:\n$$F=ma \\ \\Longrightarrow\\ a=\\frac{F}{m}.$$\n\nFriction is negligible, so the $30\\ \\mathrm{N}$ push is the resultant force:\n$$a=\\frac{30}{20}=1.5\\ \\mathrm{m/s^{2}}.$$\n\nA check on the size: $1.5\\ \\mathrm{m/s^{2}}$ times $20\\ \\mathrm{kg}$ returns the $30\\ \\mathrm{N}$ that was applied.",
+      "distractorRationale": [
+        "Turned the fraction upside down, computing $m/F=20/30$. Mass belongs in the denominator: more mass means less acceleration.",
+        "Multiplied the force by the mass, $30\\times 20$. That combination has no physical meaning here.",
+        "Quoted $g$. Gravity acts vertically and is balanced by the ice; it is not the horizontal acceleration.",
+        "Correct. $a=F/m=30/20=1.5\\ \\mathrm{m/s^{2}}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "30 / 20",
+        "expected": 1.5,
+        "tolerance": 1e-09,
+        "unit": "m/s^2"
+      }
+    },
+    {
+      "id": "physics-P2.4-003",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.4",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Newton's three laws of motion",
+      "difficulty": 4,
+      "stem": "A lift cage of total mass $500\\ \\mathrm{kg}$ is hauled straight up by its cable, gaining speed with an upward acceleration of $2.0\\ \\mathrm{m/s^{2}}$. (Take $g=10\\ \\mathrm{m/s^2}$.) The tension in the cable is",
+      "options": [
+        "$5000\\ \\mathrm{N}$",
+        "$6000\\ \\mathrm{N}$",
+        "$4000\\ \\mathrm{N}$",
+        "$1000\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — list the forces on the cage.** The cable tension $T$ pulls up; the weight $mg$ pulls down. Nothing else touches it.\n\n**Step 2 — write Newton's second law along the direction of the acceleration.** Taking upward as positive,\n$$T-mg=ma.$$\n\n**Step 3 — solve for the tension.**\n$$T=m(g+a)=500\\times(10+2.0)=500\\times 12=6000\\ \\mathrm{N}.$$\n\nThe tension exceeds the weight of $5000\\ \\mathrm{N}$, and it must: only an upward resultant force can produce an upward acceleration. This is the same physics as feeling heavier when a lift starts to rise.",
+      "distractorRationale": [
+        "The weight alone, $mg$. That is the tension for a lift at rest or moving at a constant velocity, not one gaining speed.",
+        "Correct. $T=m(g+a)=500\\times 12=6000\\ \\mathrm{N}$.",
+        "Subtracted the acceleration term, $m(g-a)$. That is the tension when the cage accelerates downward.",
+        "Used $ma$ only and forgot the weight. The cable must hold the cage up as well as accelerate it."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "500 * (10 + 2.0)",
+        "expected": 6000,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P2.5-001",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.5",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Equilibrium and inclined planes",
+      "difficulty": 3,
+      "stem": "A barrel of mass $60\\ \\mathrm{kg}$ is held at rest on a loading ramp that rises at $30^\\circ$ to the horizontal. (Take $g=10\\ \\mathrm{m/s^2}$.) The component of the barrel's weight directed down along the ramp surface is",
+      "options": [
+        "$600\\ \\mathrm{N}$",
+        "$520\\ \\mathrm{N}$",
+        "$300\\ \\mathrm{N}$",
+        "$150\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — find the weight.**\n$$W=mg=60\\times 10=600\\ \\mathrm{N},$$\nacting vertically downward.\n\n**Step 2 — resolve it along the ramp.** Split the weight into a part along the slope and a part pressing into the slope. The angle of the ramp appears between the weight and the direction perpendicular to the surface, which puts the sine with the along-slope part:\n$$W_{\\parallel}=W\\sin\\theta=600\\sin 30^\\circ=600\\times 0.5=300\\ \\mathrm{N}.$$\n\nA check at the extremes: on flat ground, $\\theta=0^\\circ$ and nothing pulls the barrel along; on a vertical wall, $\\theta=90^\\circ$ and the whole weight does. Only the sine behaves that way.",
+      "distractorRationale": [
+        "The full weight, with no resolving done. Only part of the weight acts along the ramp unless the ramp is vertical.",
+        "Used $\\cos 30^\\circ$, which gives about $520\\ \\mathrm{N}$. That is the component pressing into the ramp, not the one along it.",
+        "Correct. $W\\sin 30^\\circ=600\\times 0.5=300\\ \\mathrm{N}$.",
+        "Halved the weight twice, applying the factor $0.5$ from $\\sin 30^\\circ$ a second time."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "60 * 10 * Math.sin(30 * Math.PI / 180)",
+        "expected": 300,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P2.5-002",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.5",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Equilibrium and inclined planes",
+      "difficulty": 3,
+      "stem": "A crate of mass $80\\ \\mathrm{kg}$ rests without sliding on a steep chute inclined at $60^\\circ$ to the horizontal. (Take $g=10\\ \\mathrm{m/s^2}$.) The normal force from the chute on the crate is",
+      "options": [
+        "$400\\ \\mathrm{N}$",
+        "$800\\ \\mathrm{N}$",
+        "$693\\ \\mathrm{N}$",
+        "$80\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — find the weight.**\n$$W=mg=80\\times 10=800\\ \\mathrm{N}.$$\n\n**Step 2 — resolve perpendicular to the chute.** The crate does not sink into the surface or lift off it, so the normal force balances only the part of the weight that presses into the surface:\n$$N=W\\cos\\theta=800\\cos 60^\\circ=800\\times 0.5=400\\ \\mathrm{N}.$$\n\nThe steeper the chute, the smaller the normal force. At $60^\\circ$ the crate presses on the surface with only half the force it would exert on flat ground, which is also why steep slopes offer so little friction.",
+      "distractorRationale": [
+        "Correct. $N=mg\\cos 60^\\circ=800\\times 0.5=400\\ \\mathrm{N}$.",
+        "The full weight. That is the normal force only on level ground, where the surface has to support all of it.",
+        "Used $\\sin 60^\\circ$, about $693\\ \\mathrm{N}$. That is the component along the chute, which friction has to hold, not the normal force.",
+        "Quoted the mass in kilograms as if it were a force in newtons. The factor $g$ is missing."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "80 * 10 * Math.cos(60 * Math.PI / 180)",
+        "expected": 400,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P2.5-003",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.5",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Equilibrium and inclined planes",
+      "difficulty": 4,
+      "stem": "A sack of mass $30\\ \\mathrm{kg}$ hangs at rest from two ropes tied to a beam. Each rope makes an angle of $60^\\circ$ with the vertical, and by symmetry the two tensions are equal. (Take $g=10\\ \\mathrm{m/s^2}$.) The tension in each rope is",
+      "options": [
+        "$150\\ \\mathrm{N}$",
+        "$173\\ \\mathrm{N}$",
+        "$600\\ \\mathrm{N}$",
+        "$300\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — the load to be held.**\n$$W=mg=30\\times 10=300\\ \\mathrm{N}.$$\n\n**Step 2 — resolve one rope vertically.** The angle is measured from the vertical, so the upward part of each tension is $T\\cos 60^\\circ$.\n\n**Step 3 — balance the vertical forces.** The sack hangs at rest, so the two upward components together carry the whole weight:\n$$2T\\cos 60^\\circ=W \\ \\Longrightarrow\\ 2T(0.5)=300 \\ \\Longrightarrow\\ T=300\\ \\mathrm{N}.$$\n\nEach rope therefore carries as much force as the entire sack weighs. Splaying ropes out from the vertical always increases their tension, because only part of each tension pulls upward. The horizontal parts cancel each other, which is why the sack does not swing.",
+      "distractorRationale": [
+        "Shared the weight equally between the ropes but ignored the angle. Half the weight is what each rope would carry only if both hung vertically.",
+        "Used $\\sin 60^\\circ$ instead of $\\cos 60^\\circ$, giving $300/(2\\sin 60^\\circ)\\approx 173\\ \\mathrm{N}$. With the angle taken from the vertical, the cosine gives the upward part.",
+        "Forgot that two ropes share the load, computing $300/\\cos 60^\\circ$ for a single rope.",
+        "Correct. $2T\\cos 60^\\circ=300\\ \\mathrm{N}$, so $T=300\\ \\mathrm{N}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(30 * 10) / (2 * Math.cos(60 * Math.PI / 180))",
+        "expected": 300,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P2.5-004",
+      "subject": "physics",
+      "topic": "P2",
+      "subtopic": "P2.5",
+      "syllabusRef": "P-1 / Mechanics / Forces and Newton's Laws / Equilibrium and inclined planes",
+      "difficulty": 5,
+      "stem": "A trunk of mass $m$ is held at rest on a smooth ramp that makes an angle $\\theta$ with the horizontal. The rope holding it runs parallel to the ramp surface, and friction is negligible. Writing $g$ for the gravitational field strength, the tension in the rope is",
+      "options": [
+        "$mg\\cos\\theta$",
+        "$mg\\sin\\theta$",
+        "$mg\\tan\\theta$",
+        "$mg$"
+      ],
+      "correctIndex": 1,
+      "solution": "Three forces act on the trunk: its weight $mg$ straight down, the normal force perpendicular to the ramp, and the rope tension $T$ up along the ramp.\n\n**Step 1 — choose axes along and across the ramp.** This is what makes the problem short: the normal force then has no component along the ramp, and the tension has no component across it.\n\n**Step 2 — resolve the weight.** Along the ramp the weight contributes $mg\\sin\\theta$ down the slope; perpendicular to it, $mg\\cos\\theta$ into the surface.\n\n**Step 3 — balance along the ramp.** The trunk is at rest, so\n$$T=mg\\sin\\theta.$$\n\nTest it at the two extremes. On flat ground, $\\theta=0$ and the rope carries nothing. On a vertical face, $\\theta=90^\\circ$ and the rope carries the full weight $mg$. Only $mg\\sin\\theta$ behaves that way, which is a fast check on whether the sine or the cosine belongs here.",
+      "distractorRationale": [
+        "The component perpendicular to the ramp. That is the size of the normal force, which the surface supplies, not the rope.",
+        "Correct. Balancing along the ramp gives $T=mg\\sin\\theta$, which is zero on flat ground and $mg$ on a vertical face.",
+        "Divides the along-slope component by $\\cos\\theta$, which would be right only for a horizontal rope. Here the rope lies along the ramp.",
+        "The full weight, which the rope carries only when the ramp is vertical. On a gentle slope the surface supports most of the trunk."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": [
+          "m",
+          "theta"
+        ],
+        "domain": [
+          [
+            1,
+            10
+          ],
+          [
+            0.2,
+            1.2
+          ]
+        ],
+        "integerVars": [],
+        "reference": "m * 10 * Math.sin(theta)",
+        "optionForms": [
+          "m * 10 * Math.cos(theta)",
+          "m * 10 * Math.sin(theta)",
+          "m * 10 * Math.tan(theta)",
+          "m * 10"
+        ],
+        "extraSamples": [],
+        "tolerance": 1e-09,
+        "samples": 40
+      }
+    }
+  ]
+}

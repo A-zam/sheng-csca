@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M9",
+  "questions": [
+    {
+      "id": "math-M9.1-001",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The ellipse",
+      "difficulty": 1,
+      "stem": "An ellipse is written as $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{9}=1$. Its major axis measures",
+      "options": ["$6$", "$10$", "$5$", "$3$"],
+      "correctIndex": 1,
+      "solution": "In $\\dfrac{x^{2}}{a^{2}}+\\dfrac{y^{2}}{b^{2}}=1$ the larger denominator sits under the variable that runs along the long axis. Here $25>9$, so the long axis is horizontal and\n$$a^{2}=25,\\qquad a=5.$$\n\nThe letter $a$ is only the **semi**-major axis — half of the full axis. The axis itself runs from $(-5,0)$ to $(5,0)$, so its length is\n$$2a=10.$$",
+      "distractorRationale": [
+        "Used the small denominator: $2b=2\\times 3=6$ is the minor axis, not the major one.",
+        "Correct. $a^{2}=25$ gives $a=5$, and the major axis is $2a=10$.",
+        "Stopped at the semi-major axis $a=5$, forgetting the factor $2$.",
+        "Read off $b=3$, the semi-minor axis, which is the shortest of the four quantities on offer."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * Math.sqrt(25)",
+        "expected": 10,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M9.1-002",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The ellipse",
+      "difficulty": 2,
+      "stem": "The eccentricity of $\\dfrac{x^{2}}{100}+\\dfrac{y^{2}}{64}=1$ equals",
+      "options": ["$\\dfrac{3}{5}$", "$\\dfrac{4}{5}$", "$\\dfrac{5}{3}$", "$\\dfrac{2}{5}$"],
+      "correctIndex": 0,
+      "solution": "**Step 1 — the three lengths.** $a^{2}=100$ and $b^{2}=64$, so $a=10$ and $b=8$. For an ellipse the focal half-distance comes from\n$$c^{2}=a^{2}-b^{2}=100-64=36,\\qquad c=6.$$\n\n**Step 2 — the ratio.** Eccentricity is the focal half-distance divided by the semi-major axis:\n$$e=\\frac{c}{a}=\\frac{6}{10}=\\frac{3}{5}.$$\n\nA value below $1$ is the sanity check: every ellipse has $0<e<1$.",
+      "distractorRationale": [
+        "Correct. $c=\\sqrt{100-64}=6$ and $a=10$, so $e=\\dfrac{6}{10}=\\dfrac{3}{5}$.",
+        "Used $\\dfrac{b}{a}=\\dfrac{8}{10}$. That ratio measures how round the ellipse is, but eccentricity needs $c$, not $b$.",
+        "Inverted the ratio to $\\dfrac{a}{c}=\\dfrac{10}{6}$. Any answer above $1$ cannot be an ellipse's eccentricity.",
+        "Computed $\\dfrac{a-b}{a}=\\dfrac{10-8}{10}$, subtracting the lengths instead of subtracting their squares."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(100 - 64) / Math.sqrt(100)",
+        "expected": 0.6,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M9.1-003",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The ellipse",
+      "difficulty": 3,
+      "stem": "An ellipse centred at the origin has foci $(\\pm 4,\\ 0)$ and semi-minor axis $3$. Its equation is",
+      "options": [
+        "$\\dfrac{x^{2}}{9}+\\dfrac{y^{2}}{25}=1$",
+        "$\\dfrac{x^{2}}{16}+\\dfrac{y^{2}}{9}=1$",
+        "$\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{9}=1$",
+        "$\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{16}=1$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — where the long axis points.** Both foci sit on the $x$-axis, so the major axis is horizontal and the equation has the form $\\dfrac{x^{2}}{a^{2}}+\\dfrac{y^{2}}{b^{2}}=1$ with $a>b$.\n\n**Step 2 — the missing length.** The foci give $c=4$, and the semi-minor axis gives $b=3$. For an ellipse the relation runs\n$$a^{2}=b^{2}+c^{2}=9+16=25.$$\n\n**Step 3 — assemble.**\n$$\\frac{x^{2}}{25}+\\frac{y^{2}}{9}=1.$$\nCheck it: $(5,0)$ and $(0,3)$ both satisfy it, and $c=\\sqrt{25-9}=4$ puts the foci back where they started.",
+      "distractorRationale": [
+        "Put the larger denominator under $y^{2}$, which pushes the foci onto the $y$-axis instead of the $x$-axis.",
+        "Took $a^{2}=c^{2}=16$, treating the focus as the vertex. The focus always lies strictly inside the ellipse, so $a>c$.",
+        "Correct. $a^{2}=b^{2}+c^{2}=9+16=25$, with the major axis horizontal because the foci are.",
+        "Used $b^{2}=c^{2}=16$, confusing the semi-minor axis with the focal half-distance."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x", "y"],
+        "domain": [[-6, 6], [-6, 6]],
+        "reference": "(Math.abs(x * x / 25 + y * y / 9 - 1) < 1e-9) ? 1 : 0",
+        "optionForms": [
+          "(Math.abs(x * x / 9 + y * y / 25 - 1) < 1e-9) ? 1 : 0",
+          "(Math.abs(x * x / 16 + y * y / 9 - 1) < 1e-9) ? 1 : 0",
+          "(Math.abs(x * x / 25 + y * y / 9 - 1) < 1e-9) ? 1 : 0",
+          "(Math.abs(x * x / 25 + y * y / 16 - 1) < 1e-9) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": 5, "y": 0 },
+          { "x": -5, "y": 0 },
+          { "x": 0, "y": 3 },
+          { "x": 0, "y": -3 },
+          { "x": 4, "y": 1.8 },
+          { "x": -3, "y": 2.4 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M9.1-004",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The ellipse",
+      "difficulty": 4,
+      "stem": "$P$ lies on $\\dfrac{x^{2}}{25}+\\dfrac{y^{2}}{16}=1$, whose foci are $F_{1}$ and $F_{2}$. The perimeter of $\\triangle PF_{1}F_{2}$ is",
+      "options": ["$10$", "$13$", "$18$", "$16$"],
+      "correctIndex": 3,
+      "solution": "The perimeter is $|PF_{1}|+|PF_{2}|+|F_{1}F_{2}|$, and each piece is fixed even though $P$ is not.\n\n**Step 1 — the two focal radii.** The defining property of an ellipse is that the two distances to the foci always add to $2a$. Here $a=5$, so\n$$|PF_{1}|+|PF_{2}|=10.$$\n\n**Step 2 — the base.** $c^{2}=25-16=9$, so $c=3$ and the foci are $(\\pm 3,0)$. They are $2c=6$ apart.\n\n**Step 3 — add.**\n$$10+6=16.$$\nThe answer does not depend on which point $P$ is, which is what makes the question quick.",
+      "distractorRationale": [
+        "This is $2a$ alone — the two focal radii — with the side $F_{1}F_{2}$ never added.",
+        "Added only $c=3$ instead of the full focal separation $2c=6$.",
+        "Used $2b=8$ for the base, taking the semi-minor axis where the focal half-distance $c$ was needed.",
+        "Correct. $|PF_{1}|+|PF_{2}|=2a=10$ and $|F_{1}F_{2}|=2c=6$, giving $16$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * Math.sqrt(25) + 2 * Math.sqrt(25 - 16)",
+        "expected": 16,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M9.2-001",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The hyperbola",
+      "difficulty": 1,
+      "stem": "$\\dfrac{x^{2}}{36}-\\dfrac{y^{2}}{13}=1$ meets the $x$-axis at two vertices. How far apart are they?",
+      "options": ["$6$", "$2\\sqrt{13}$", "$12$", "$24$"],
+      "correctIndex": 2,
+      "solution": "Set $y=0$ to find where the curve crosses the $x$-axis:\n$$\\frac{x^{2}}{36}=1 \\quad\\Longrightarrow\\quad x=\\pm 6.$$\n\nThe vertices are $(-6,0)$ and $(6,0)$, so the gap between them is\n$$6-(-6)=12.$$\n\nThat gap is the transverse axis, $2a$, with $a=6$.",
+      "distractorRationale": [
+        "Gave $a=6$, the distance from the centre to one vertex, rather than the distance between the two vertices.",
+        "Took $2b$ from the $y$-term. That is the conjugate axis, and a hyperbola never actually reaches it.",
+        "Correct. $y=0$ gives $x=\\pm 6$, so the vertices are $2a=12$ apart.",
+        "Doubled $a$ twice, reporting $4a$ instead of $2a$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * Math.sqrt(36)",
+        "expected": 12,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M9.2-002",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The hyperbola",
+      "difficulty": 2,
+      "stem": "Asymptotes of $\\dfrac{x^{2}}{9}-\\dfrac{y^{2}}{16}=1$ have slopes $\\pm k$, with $k>0$. Find $k$.",
+      "options": ["$\\dfrac{3}{4}$", "$\\dfrac{4}{3}$", "$\\dfrac{16}{9}$", "$\\dfrac{9}{16}$"],
+      "correctIndex": 1,
+      "solution": "Replace the $1$ on the right by $0$ — that is what the curve tends to far from the centre:\n$$\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=0.$$\n\nThis factorises into two straight lines. Rearranging,\n$$y^{2}=\\frac{16}{9}x^{2} \\quad\\Longrightarrow\\quad y=\\pm\\frac{4}{3}x.$$\n\nSo $k=\\dfrac{4}{3}$: take the square roots first, and the $y$-denominator goes on top.",
+      "distractorRationale": [
+        "Used $\\dfrac{a}{b}$. The slope of an asymptote is rise over run, so the number from the $y$-term belongs on top.",
+        "Correct. Setting the right-hand side to $0$ gives $y=\\pm\\dfrac{4}{3}x$.",
+        "Skipped the square roots and reported $\\dfrac{b^{2}}{a^{2}}$.",
+        "Skipped the square roots and inverted the ratio as well."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(16) / Math.sqrt(9)",
+        "expected": 1.3333333333333333,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M9.2-003",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The hyperbola",
+      "difficulty": 3,
+      "stem": "A hyperbola has foci on the $x$-axis, with $a=3$ and $b=4$. Its eccentricity is",
+      "options": ["$\\dfrac{5}{4}$", "$\\dfrac{4}{3}$", "$\\dfrac{3}{5}$", "$\\dfrac{5}{3}$"],
+      "correctIndex": 3,
+      "solution": "**Step 1 — find $c$.** A hyperbola adds where an ellipse subtracts:\n$$c^{2}=a^{2}+b^{2}=9+16=25,\\qquad c=5.$$\n\n**Step 2 — divide.**\n$$e=\\frac{c}{a}=\\frac{5}{3}.$$\n\nSanity check: every hyperbola has $e>1$, and $\\dfrac{5}{3}>1$.",
+      "distractorRationale": [
+        "Divided $c$ by $b$. Eccentricity always compares $c$ with $a$, the distance to a vertex.",
+        "Reported $\\dfrac{b}{a}$, which is the asymptote slope, not the eccentricity.",
+        "Inverted the ratio to $\\dfrac{a}{c}$. A hyperbola cannot have $e<1$.",
+        "Correct. $c=\\sqrt{9+16}=5$, so $e=\\dfrac{5}{3}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(3 * 3 + 4 * 4) / 3",
+        "expected": 1.6666666666666667,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M9.2-004",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The hyperbola",
+      "difficulty": 3,
+      "stem": "A hyperbola centred at the origin has a vertex at $(3,\\ 0)$ and a focus at $(5,\\ 0)$. Its equation is",
+      "options": [
+        "$\\dfrac{x^{2}}{9}-\\dfrac{y^{2}}{16}=1$",
+        "$\\dfrac{x^{2}}{16}-\\dfrac{y^{2}}{9}=1$",
+        "$\\dfrac{x^{2}}{9}-\\dfrac{y^{2}}{25}=1$",
+        "$\\dfrac{y^{2}}{16}-\\dfrac{x^{2}}{9}=1$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — orientation.** The vertex and the focus both sit on the $x$-axis, so the branches open left and right and the $x^{2}$ term carries the plus sign.\n\n**Step 2 — the two given lengths.** The vertex gives $a=3$ and the focus gives $c=5$.\n\n**Step 3 — the third length.** For a hyperbola,\n$$b^{2}=c^{2}-a^{2}=25-9=16.$$\n\nSo the equation is\n$$\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=1.$$\nSubstituting $(3,0)$ returns $1$, as it must.",
+      "distractorRationale": [
+        "Correct. $a^{2}=9$ from the vertex and $b^{2}=c^{2}-a^{2}=16$ from the focus.",
+        "Swapped the two denominators, which moves the vertex to $(4,0)$ instead of $(3,0)$.",
+        "Used $b^{2}=c^{2}=25$, forgetting to subtract $a^{2}$.",
+        "Gave the minus sign to $x^{2}$, which turns the branches upwards and puts the vertices on the $y$-axis."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x", "y"],
+        "domain": [[-6, 6], [-6, 6]],
+        "reference": "(Math.abs(x * x / 9 - y * y / 16 - 1) < 1e-9) ? 1 : 0",
+        "optionForms": [
+          "(Math.abs(x * x / 9 - y * y / 16 - 1) < 1e-9) ? 1 : 0",
+          "(Math.abs(x * x / 16 - y * y / 9 - 1) < 1e-9) ? 1 : 0",
+          "(Math.abs(x * x / 9 - y * y / 25 - 1) < 1e-9) ? 1 : 0",
+          "(Math.abs(y * y / 16 - x * x / 9 - 1) < 1e-9) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": 3, "y": 0 },
+          { "x": -3, "y": 0 },
+          { "x": 4.242640687119285, "y": 4 },
+          { "x": 4.242640687119285, "y": -4 },
+          { "x": 0, "y": 4 },
+          { "x": 4, "y": 0 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M9.3-001",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.3",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The parabola",
+      "difficulty": 2,
+      "stem": "The parabola $y^{2}=12x$ has focus $(f,\\ 0)$. Find $f$.",
+      "options": ["$-3$", "$3$", "$6$", "$12$"],
+      "correctIndex": 1,
+      "solution": "Match the curve to the standard form $y^{2}=4fx$, whose focus is $(f,0)$ and whose directrix is $x=-f$.\n\nComparing coefficients,\n$$4f=12 \\quad\\Longrightarrow\\quad f=3.$$\n\nSo the focus is $(3,0)$, three units to the right of the vertex, and the directrix is the line $x=-3$.",
+      "distractorRationale": [
+        "Gave the directrix $x=-3$. The focus and the directrix sit on opposite sides of the vertex, so the sign flips.",
+        "Correct. $4f=12$ gives $f=3$.",
+        "Halved the coefficient instead of quartering it. $6$ is the focus-to-directrix distance, not the focal abscissa.",
+        "Read the coefficient itself as the coordinate, skipping the comparison with $y^{2}=4fx$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "12 / 4",
+        "expected": 3,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M9.3-002",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.3",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The parabola",
+      "difficulty": 3,
+      "stem": "A point on $y^{2}=8x$ sits $6$ units from the focus. Its $x$-coordinate is",
+      "options": ["$4$", "$2$", "$6$", "$8$"],
+      "correctIndex": 0,
+      "solution": "**Step 1 — locate the directrix.** Writing $y^{2}=4fx$ with $4f=8$ gives $f=2$, so the directrix is $x=-2$.\n\n**Step 2 — use the focal distance rule.** Every point of a parabola is as far from the focus as from the directrix. For a point with abscissa $x$, the horizontal gap to the line $x=-2$ is $x+2$, so\n$$x+2=6.$$\n\n**Step 3 — solve.**\n$$x=4.$$",
+      "distractorRationale": [
+        "Correct. The focal distance is $x+2$, and $x+2=6$ gives $x=4$.",
+        "Used an offset of $4$ instead of $2$, halving the coefficient $8$ rather than quartering it.",
+        "Took the distance itself as the abscissa, ignoring the shift caused by the directrix.",
+        "Added the offset instead of subtracting it, solving $x-2=6$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "6 - 8 / 4",
+        "expected": 4,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M9.3-003",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.3",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The parabola",
+      "difficulty": 4,
+      "stem": "A chord $AB$ of $y^{2}=4x$ passes through the focus. If the two endpoints satisfy $x_{A}+x_{B}=6$, then $|AB|$ is",
+      "options": ["$6$", "$7$", "$8$", "$10$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — the directrix.** From $4f=4$ we get $f=1$, so the directrix is $x=-1$.\n\n**Step 2 — turn each focal radius into a horizontal distance.** A point of the parabola is as far from the focus as from the directrix, so\n$$|AF|=x_{A}+1,\\qquad |BF|=x_{B}+1.$$\n\n**Step 3 — add.** Because the chord runs through $F$, its length is the sum of the two radii:\n$$|AB|=(x_{A}+1)+(x_{B}+1)=x_{A}+x_{B}+2=6+2=8.$$\n\nHow steeply the chord runs never enters this count.",
+      "distractorRationale": [
+        "Reported the sum of the abscissae, leaving out the two shifts to the directrix.",
+        "Added one shift instead of two — only one endpoint was converted into a focal radius.",
+        "Correct. $|AB|=x_{A}+x_{B}+2=8$.",
+        "Used a shift of $2$ per endpoint, taking the focus-to-directrix distance rather than $f=1$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "6 + 2 * (4 / 4)",
+        "expected": 8,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M9.3-004",
+      "subject": "math",
+      "topic": "M9",
+      "subtopic": "M9.3",
+      "syllabusRef": "M-3 / Geometry and Algebra / Conic Sections / The parabola",
+      "difficulty": 5,
+      "stem": "On $y^{2}=2px$ with $p>0$ and focus $F$, a point $M(x_{0},\\ y_{0})$ satisfies $|MF|=2x_{0}$. Then $x_{0}$ equals",
+      "options": ["$\\dfrac{p}{4}$", "$p$", "$2p$", "$\\dfrac{p}{2}$"],
+      "correctIndex": 3,
+      "solution": "**Step 1 — read the standard form.** Comparing $y^{2}=2px$ with $y^{2}=4fx$ gives $f=\\dfrac{p}{2}$, so the directrix is $x=-\\dfrac{p}{2}$.\n\n**Step 2 — write the focal distance.** The distance from $M$ to the directrix is the horizontal gap, so\n$$|MF|=x_{0}+\\frac{p}{2}.$$\n\n**Step 3 — impose the condition.**\n$$x_{0}+\\frac{p}{2}=2x_{0} \\quad\\Longrightarrow\\quad \\frac{p}{2}=x_{0}.$$\n\nSo $x_{0}=\\dfrac{p}{2}$, which is positive, as any point on the right-opening branch must be.",
+      "distractorRationale": [
+        "Used a directrix offset of $\\dfrac{p}{4}$, quartering $p$ as though the equation read $y^{2}=4px$.",
+        "Took the offset as $p$ itself and solved $x_{0}+p=2x_{0}$, skipping the halving in $f=\\dfrac{p}{2}$.",
+        "Doubled the previous slip, solving $x_{0}+2p=2x_{0}$.",
+        "Correct. $|MF|=x_{0}+\\dfrac{p}{2}=2x_{0}$ leaves $x_{0}=\\dfrac{p}{2}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["p"],
+        "domain": [[1, 12]],
+        "reference": "p / 2",
+        "optionForms": ["p / 4", "p", "2 * p", "p / 2"],
+        "extraSamples": [{ "p": 2 }, { "p": 4 }, { "p": 6 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    }
+  ]
+}

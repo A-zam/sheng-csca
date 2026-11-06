@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P1",
+  "questions": [
+    {
+      "id": "physics-P1.1-001",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.1",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Scalars, vectors and frames of reference",
+      "difficulty": 1,
+      "stem": "A courier records four quantities for one delivery: the mass of the parcel, the time the trip took, the length of the winding route driven, and the straight-line change of position from depot to doorstep. Which one of the four is a vector?",
+      "options": [
+        "$\\text{the mass of the parcel}$",
+        "$\\text{the time the trip took}$",
+        "$\\text{the change of position from depot to doorstep}$",
+        "$\\text{the length of the route driven}$"
+      ],
+      "correctIndex": 2,
+      "solution": "A vector needs two things: a size and a direction. A scalar has a size only.\n\nMass is a size only: $3\\ \\mathrm{kg}$ points nowhere. Time is a size only. The length of the route is a size only — it says how far the wheels turned, not which way the van ended up.\n\nThe change of position is different. To state it you must say both how far apart the depot and the doorstep are **and** in which direction the doorstep lies. That is displacement, and it is a vector.\n\nNotice that the last two are easy to confuse. Route length and displacement are equal only when the journey is a straight line in one direction.",
+      "distractorRationale": [
+        "Mass has no direction attached to it, so it is a scalar. It is the same number whichever way the van drives.",
+        "Time has no direction either. Clocks run forward everywhere, which is not a direction in space.",
+        "Correct. A change of position carries both a size and a direction, which is exactly what makes a quantity a vector.",
+        "Route length is distance, a scalar. It adds up every metre driven and keeps no record of direction."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "A vector is a quantity with both magnitude and direction. Mass, time and route length are each specified by a number alone, so they are scalars. Only the change of position requires a direction as well as a size, so option C is the vector."
+      }
+    },
+    {
+      "id": "physics-P1.1-002",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.1",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Scalars, vectors and frames of reference",
+      "difficulty": 2,
+      "stem": "A survey drone flies $300\\ \\mathrm{m}$ due south along a canal, then turns and flies $400\\ \\mathrm{m}$ due east to a bridge. The magnitude of its displacement from the starting point is",
+      "options": [
+        "$500\\ \\mathrm{m}$",
+        "$700\\ \\mathrm{m}$",
+        "$350\\ \\mathrm{m}$",
+        "$100\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Displacement is the straight line from start to finish, not the path flown.\n\nThe two legs are at right angles, so they are the two shorter sides of a right-angled triangle and the displacement is its hypotenuse:\n$$s=\\sqrt{300^{2}+400^{2}}=\\sqrt{90000+160000}=\\sqrt{250000}=500\\ \\mathrm{m}.$$\n\nThe drone flew $700\\ \\mathrm{m}$ of track but finished only $500\\ \\mathrm{m}$ from where it began. Distance and displacement agree only for a straight, one-way trip.",
+      "distractorRationale": [
+        "Correct. The legs are perpendicular, so $\\sqrt{300^{2}+400^{2}}=500\\ \\mathrm{m}$.",
+        "Added the two legs. That gives the distance flown, which is the path length, not the straight-line displacement.",
+        "Averaged the two legs. Averaging is not how perpendicular vectors combine.",
+        "Subtracted one leg from the other. Subtraction would apply only if the two legs pointed along the same line in opposite directions."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(300 * 300 + 400 * 400)",
+        "expected": 500,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P1.1-003",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.1",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Scalars, vectors and frames of reference",
+      "difficulty": 3,
+      "stem": "A river ferry moves at a steady $6.0\\ \\mathrm{m/s}$ relative to the bank. A passenger walks along the deck toward the stern at $1.5\\ \\mathrm{m/s}$ relative to the ferry. The passenger's speed relative to the bank is",
+      "options": [
+        "$7.5\\ \\mathrm{m/s}$",
+        "$6.0\\ \\mathrm{m/s}$",
+        "$1.5\\ \\mathrm{m/s}$",
+        "$4.5\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Two frames are in play: the deck and the bank. Velocities add from one frame to the next, keeping their signs.\n\nTake the ferry's direction of travel as positive. In the bank frame the deck itself moves at $+6.0\\ \\mathrm{m/s}$.\n\nThe stern is behind, so walking toward it means moving backward relative to the deck:\n$$v_{\\text{passenger, deck}}=-1.5\\ \\mathrm{m/s}.$$\n\nAdd the two:\n$$v_{\\text{passenger, bank}}=6.0+(-1.5)=4.5\\ \\mathrm{m/s}.$$\n\nWalking sternward eats into the ferry's speed. Walking toward the bow would have given $7.5\\ \\mathrm{m/s}$ instead.",
+      "distractorRationale": [
+        "Added the two speeds. That is the answer for a passenger walking toward the bow, in the same direction as the ferry.",
+        "The speed of the deck alone. It ignores the passenger's own walking altogether.",
+        "The speed measured in the deck frame, quoted as if it were measured from the bank. The frame must be converted before the number means anything to an observer on shore.",
+        "Correct. The walk is sternward, so $6.0-1.5=4.5\\ \\mathrm{m/s}$ relative to the bank."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "6.0 - 1.5",
+        "expected": 4.5,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P1.2-001",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.2",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Displacement, velocity and acceleration",
+      "difficulty": 3,
+      "stem": "A patrol boat runs $900\\ \\mathrm{m}$ upstream along a straight channel in $100\\ \\mathrm{s}$, then returns to the same mooring in $200\\ \\mathrm{s}$. Its average velocity for the whole run is",
+      "options": [
+        "$6.0\\ \\mathrm{m/s}$",
+        "$0\\ \\mathrm{m/s}$",
+        "$9.0\\ \\mathrm{m/s}$",
+        "$4.5\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Average velocity is built from displacement, not from path length:\n$$\\bar{v}=\\frac{\\text{displacement}}{\\text{total time}}.$$\n\n**Step 1 — find the displacement.** The boat ends where it started, so the outward $900\\ \\mathrm{m}$ and the return $900\\ \\mathrm{m}$ cancel:\n$$\\Delta s = 900-900 = 0.$$\n\n**Step 2 — divide by the total time.**\n$$\\bar{v}=\\frac{0}{100+200}=0\\ \\mathrm{m/s}.$$\n\nThe average *speed* is a different quantity and is not zero: $1800/300=6.0\\ \\mathrm{m/s}$. The question asks for velocity, and a round trip always has zero average velocity.",
+      "distractorRationale": [
+        "This is the average speed, $1800\\ \\mathrm{m}$ of path divided by $300\\ \\mathrm{s}$. Speed uses path length; velocity uses displacement.",
+        "Correct. The boat returns to its mooring, so the displacement is zero and so is the average velocity.",
+        "The speed on the upstream leg alone, $900/100$. One leg cannot represent the whole run.",
+        "The speed on the return leg alone, $900/200$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(900 - 900) / (100 + 200)",
+        "expected": 0,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P1.2-002",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.2",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Displacement, velocity and acceleration",
+      "difficulty": 2,
+      "stem": "A tram pulls away from a stop and its speed rises steadily from $2\\ \\mathrm{m/s}$ to $14\\ \\mathrm{m/s}$ in $6\\ \\mathrm{s}$ along a straight track. Its acceleration is",
+      "options": [
+        "$12\\ \\mathrm{m/s^{2}}$",
+        "$2.33\\ \\mathrm{m/s^{2}}$",
+        "$2.0\\ \\mathrm{m/s^{2}}$",
+        "$0.5\\ \\mathrm{m/s^{2}}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Acceleration is the rate at which velocity changes:\n$$a=\\frac{v-u}{t}.$$\n\nThe speed gains $14-2=12\\ \\mathrm{m/s}$, and it takes $6\\ \\mathrm{s}$ to do so:\n$$a=\\frac{12}{6}=2.0\\ \\mathrm{m/s^{2}}.$$\n\nRead that as: every second, the tram is $2\\ \\mathrm{m/s}$ faster than it was.",
+      "distractorRationale": [
+        "The change in speed, $14-2$, quoted without dividing by the time. That is a velocity change in $\\mathrm{m/s}$, not an acceleration.",
+        "Used the final speed alone, $14/6$, and dropped the starting speed. The tram was already moving when the timing began.",
+        "Correct. $a=(14-2)/6=2.0\\ \\mathrm{m/s^{2}}$.",
+        "Turned the fraction upside down, computing $6/12$. Time belongs in the denominator."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(14 - 2) / 6",
+        "expected": 2,
+        "tolerance": 1e-9,
+        "unit": "m/s^2"
+      }
+    },
+    {
+      "id": "physics-P1.2-003",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.2",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Displacement, velocity and acceleration",
+      "difficulty": 4,
+      "stem": "Take east as the positive direction. A radio-controlled boat is moving east at $3\\ \\mathrm{m/s}$. Five seconds later it is moving west at $7\\ \\mathrm{m/s}$ along the same line. Its average acceleration during those five seconds is",
+      "options": [
+        "$-2.0\\ \\mathrm{m/s^{2}}$",
+        "$+2.0\\ \\mathrm{m/s^{2}}$",
+        "$-0.8\\ \\mathrm{m/s^{2}}$",
+        "$+0.8\\ \\mathrm{m/s^{2}}$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — put signs on both velocities.** East is positive, so west is negative:\n$$u=+3\\ \\mathrm{m/s}, \\qquad v=-7\\ \\mathrm{m/s}.$$\n\n**Step 2 — take the change.** Velocity is a vector, so the reversal makes the change larger than either speed:\n$$v-u=(-7)-(+3)=-10\\ \\mathrm{m/s}.$$\n\n**Step 3 — divide by the time.**\n$$a=\\frac{-10}{5}=-2.0\\ \\mathrm{m/s^{2}}.$$\n\nThe minus sign says the acceleration points west. That is what first slowed the boat, stopped it, and then drove it back the other way.",
+      "distractorRationale": [
+        "Correct. $a=\\big((-7)-(+3)\\big)/5=-2.0\\ \\mathrm{m/s^{2}}$, directed west.",
+        "Right size, wrong sign: the westward velocity was entered as $+7$. The boat ends up going west, so the acceleration cannot point east.",
+        "Subtracted the two magnitudes, $(3-7)/5$, as though both velocities pointed the same way. The reversal of direction is the whole point.",
+        "Subtracted the magnitudes the other way round, $(7-3)/5$, which loses both the size and the sign of the change."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "((-7) - 3) / 5",
+        "expected": -2,
+        "tolerance": 1e-9,
+        "unit": "m/s^2"
+      }
+    },
+    {
+      "id": "physics-P1.3-001",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.3",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Uniformly accelerated motion in a straight line",
+      "difficulty": 2,
+      "stem": "A loading trolley standing still in a warehouse aisle is then pushed with a steady acceleration of $1.5\\ \\mathrm{m/s^{2}}$ for $8\\ \\mathrm{s}$. Its speed at the end of the push is",
+      "options": [
+        "$5.33\\ \\mathrm{m/s}$",
+        "$6.0\\ \\mathrm{m/s}$",
+        "$9.5\\ \\mathrm{m/s}$",
+        "$12\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 3,
+      "solution": "The trolley starts still, so $u=0$ and\n$$v=u+at=0+at=at.$$\n\nSubstitute:\n$$v=1.5\\times 8=12\\ \\mathrm{m/s}.$$\n\nOne check on the size: gaining $1.5\\ \\mathrm{m/s}$ every second for eight seconds must give $12\\ \\mathrm{m/s}$.",
+      "distractorRationale": [
+        "Divided instead of multiplying, $8/1.5$. Acceleration multiplied by time gives a velocity; dividing by it gives a time.",
+        "Used $\\tfrac{1}{2}at$. The factor $\\tfrac{1}{2}$ belongs to the displacement formula $s=\\tfrac{1}{2}at^{2}$, not to the velocity.",
+        "Added the acceleration to the time, $1.5+8$. Quantities with different units cannot be added.",
+        "Correct. $v=at=1.5\\times 8=12\\ \\mathrm{m/s}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1.5 * 8",
+        "expected": 12,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P1.3-002",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.3",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Uniformly accelerated motion in a straight line",
+      "difficulty": 3,
+      "stem": "A freight lift is already rising at $4\\ \\mathrm{m/s}$ when it begins to accelerate uniformly at $2\\ \\mathrm{m/s^{2}}$, and it keeps that acceleration for $6\\ \\mathrm{s}$. The distance it covers in those six seconds is",
+      "options": [
+        "$36\\ \\mathrm{m}$",
+        "$60\\ \\mathrm{m}$",
+        "$24\\ \\mathrm{m}$",
+        "$96\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 1,
+      "solution": "The lift is already moving, so the displacement has two parts:\n$$s=ut+\\tfrac{1}{2}at^{2}.$$\n\n**Step 1 — the part from the starting speed.**\n$$ut=4\\times 6=24\\ \\mathrm{m}.$$\n\n**Step 2 — the extra part from the acceleration.**\n$$\\tfrac{1}{2}at^{2}=\\tfrac{1}{2}\\times 2\\times 6^{2}=36\\ \\mathrm{m}.$$\n\n**Step 3 — add them.**\n$$s=24+36=60\\ \\mathrm{m}.$$\n\nBoth terms are needed. Dropping either one is the mistake this item is built around.",
+      "distractorRationale": [
+        "Only the $\\tfrac{1}{2}at^{2}$ term. It ignores the $4\\ \\mathrm{m/s}$ the lift already had when timing began.",
+        "Correct. $s=4\\times 6+\\tfrac{1}{2}\\times 2\\times 6^{2}=24+36=60\\ \\mathrm{m}$.",
+        "Only the $ut$ term, as though the speed stayed at $4\\ \\mathrm{m/s}$ throughout. That would need zero acceleration.",
+        "Forgot the factor $\\tfrac{1}{2}$, giving $24+72$. The $\\tfrac{1}{2}$ is what turns a rising speed into an average one."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "4 * 6 + 0.5 * 2 * 6 * 6",
+        "expected": 60,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P1.3-003",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.3",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Uniformly accelerated motion in a straight line",
+      "difficulty": 3,
+      "stem": "A sledge slides onto a gritted patch at $12\\ \\mathrm{m/s}$ and slows uniformly at $3\\ \\mathrm{m/s^{2}}$ until it stops. The distance it covers on the grit is",
+      "options": [
+        "$24\\ \\mathrm{m}$",
+        "$48\\ \\mathrm{m}$",
+        "$6\\ \\mathrm{m}$",
+        "$4\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 0,
+      "solution": "No time is given, so use the equation that leaves time out:\n$$v^{2}=u^{2}+2as.$$\n\nThe sledge stops, so $v=0$, and the acceleration is a slowing one, $a=-3\\ \\mathrm{m/s^{2}}$:\n$$0=12^{2}+2(-3)s \\ \\Longrightarrow\\ 6s=144 \\ \\Longrightarrow\\ s=24\\ \\mathrm{m}.$$\n\nA check by a second route: the sledge stops after $t=12/3=4\\ \\mathrm{s}$, and its average speed over that time is $6\\ \\mathrm{m/s}$, so $s=6\\times 4=24\\ \\mathrm{m}$.",
+      "distractorRationale": [
+        "Correct. $s=u^{2}/(2a)=144/6=24\\ \\mathrm{m}$.",
+        "Dropped the factor $2$ in $2as$, computing $144/3$. That factor comes from the average speed being half the starting speed.",
+        "The average speed, $6\\ \\mathrm{m/s}$, written down as if it were the distance. It still has to be multiplied by the $4\\ \\mathrm{s}$.",
+        "The stopping time, $12/3=4\\ \\mathrm{s}$, quoted as a distance. It answers a different question."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(12 * 12) / (2 * 3)",
+        "expected": 24,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P1.3-004",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.3",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Uniformly accelerated motion in a straight line",
+      "difficulty": 4,
+      "stem": "A shuttle bus speeds up uniformly from rest to $20\\ \\mathrm{m/s}$ in $10\\ \\mathrm{s}$, holds that speed for $15\\ \\mathrm{s}$, then brakes uniformly to rest in a further $5\\ \\mathrm{s}$. The total distance it travels is",
+      "options": [
+        "$300\\ \\mathrm{m}$",
+        "$400\\ \\mathrm{m}$",
+        "$450\\ \\mathrm{m}$",
+        "$600\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Take the three stages one at a time. In a stage with uniform acceleration the distance is the average speed multiplied by the time.\n\n**Step 1 — speeding up.** Average speed $(0+20)/2=10\\ \\mathrm{m/s}$ for $10\\ \\mathrm{s}$:\n$$s_{1}=10\\times 10=100\\ \\mathrm{m}.$$\n\n**Step 2 — steady speed.**\n$$s_{2}=20\\times 15=300\\ \\mathrm{m}.$$\n\n**Step 3 — braking.** Average speed $(20+0)/2=10\\ \\mathrm{m/s}$ for $5\\ \\mathrm{s}$:\n$$s_{3}=10\\times 5=50\\ \\mathrm{m}.$$\n\n**Total.**\n$$s=100+300+50=450\\ \\mathrm{m}.$$\n\nOn a speed-time graph this is the area of a trapezium, and the two sloping stages contribute half of what they would at full speed.",
+      "distractorRationale": [
+        "Only the middle stage. The starting and braking stages both cover ground as well.",
+        "Left out the braking stage, adding only $100+300$. The bus is still moving while it brakes.",
+        "Correct. $100+300+50=450\\ \\mathrm{m}$.",
+        "Treated the whole $30\\ \\mathrm{s}$ as travel at $20\\ \\mathrm{m/s}$. During the first and last stages the bus is slower than that."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * 20 * 10 + 20 * 15 + 0.5 * 20 * 5",
+        "expected": 450,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P1.4-001",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.4",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Free fall and vertical motion",
+      "difficulty": 1,
+      "stem": "A steel ball and a crumpled paper cone are released at the same instant from the same height inside a tall tube from which the air has been pumped out. What is seen?",
+      "options": [
+        "$\\text{the steel ball reaches the bottom first, because it has more mass}$",
+        "$\\text{the paper cone reaches the bottom first, because it is lighter}$",
+        "$\\text{neither one falls, because no air is left to push them down}$",
+        "$\\text{both reach the bottom together, because both fall with the same acceleration}$"
+      ],
+      "correctIndex": 3,
+      "solution": "In free fall the only force acting is the pull of gravity. For an object of mass $m$ that force is $mg$, so Newton's second law gives\n$$a=\\frac{mg}{m}=g.$$\n\nThe mass cancels. Heavier objects are pulled harder, but they also need more force to be accelerated by the same amount, and the two effects cancel exactly.\n\nOn an ordinary bench the paper cone loses because air resistance slows it. Pumping the air out removes that difference, and the two arrive together.",
+      "distractorRationale": [
+        "Assumes heavier means faster. The extra pull on the heavier object is exactly matched by its extra inertia, so the acceleration is unchanged.",
+        "Reverses the same mistake. Being light is no advantage either, once there is no air.",
+        "Air is not what makes things fall; gravity is. Removing the air removes only the resistance.",
+        "Correct. With no air resistance, every object falls with acceleration $g$ whatever its mass, so both land together."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "For an object in free fall the resultant force is its weight mg, so Newton's second law gives a = mg/m = g, independent of mass. With the air removed there is no drag to break that equality, so the two objects fall together and option D is the only correct statement."
+      }
+    },
+    {
+      "id": "physics-P1.4-002",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.4",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Free fall and vertical motion",
+      "difficulty": 2,
+      "stem": "A roof tile slips off the edge of a scaffold and falls freely for $4.0\\ \\mathrm{s}$ before it strikes the ground. (Take $g=10\\ \\mathrm{m/s^2}$.) Its speed at the moment of impact is",
+      "options": [
+        "$10\\ \\mathrm{m/s}$",
+        "$40\\ \\mathrm{m/s}$",
+        "$20\\ \\mathrm{m/s}$",
+        "$80\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 1,
+      "solution": "The tile slips rather than being thrown, so it starts from rest and $u=0$. For free fall the acceleration is $g$ downward:\n$$v=u+gt=gt.$$\n\nSubstitute:\n$$v=10\\times 4.0=40\\ \\mathrm{m/s}.$$\n\nEach second of falling adds $10\\ \\mathrm{m/s}$, so after four seconds the tile is moving at $40\\ \\mathrm{m/s}$.",
+      "distractorRationale": [
+        "Quoted $g$ itself. That is the gain in speed per second, not the speed reached after four seconds.",
+        "Correct. $v=gt=10\\times 4.0=40\\ \\mathrm{m/s}$.",
+        "Used $\\tfrac{1}{2}gt$. Halving belongs to the distance formula, not to the final speed.",
+        "Computed $\\tfrac{1}{2}gt^{2}=80$, which is the distance fallen in metres, not a speed."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "10 * 4.0",
+        "expected": 40,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P1.4-003",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.4",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Free fall and vertical motion",
+      "difficulty": 3,
+      "stem": "A pebble is let go from a bridge parapet and reaches the water $3.0\\ \\mathrm{s}$ later. Air resistance is negligible. (Take $g=10\\ \\mathrm{m/s^2}$.) The parapet stands above the water by",
+      "options": [
+        "$45\\ \\mathrm{m}$",
+        "$90\\ \\mathrm{m}$",
+        "$30\\ \\mathrm{m}$",
+        "$15\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 0,
+      "solution": "The pebble is let go, not thrown, so $u=0$ and the fall is uniformly accelerated at $g$:\n$$h=ut+\\tfrac{1}{2}gt^{2}=\\tfrac{1}{2}gt^{2}.$$\n\nSubstitute:\n$$h=\\tfrac{1}{2}\\times 10\\times (3.0)^{2}=\\tfrac{1}{2}\\times 10\\times 9=45\\ \\mathrm{m}.$$\n\nA check: the pebble hits the water at $gt=30\\ \\mathrm{m/s}$, its average speed on the way down is half of that, $15\\ \\mathrm{m/s}$, and $15\\times 3.0=45\\ \\mathrm{m}$.",
+      "distractorRationale": [
+        "Correct. $h=\\tfrac{1}{2}gt^{2}=\\tfrac{1}{2}\\times 10\\times 9=45\\ \\mathrm{m}$.",
+        "Left out the factor $\\tfrac{1}{2}$, computing $gt^{2}=90$. The pebble is not falling at its final speed for the whole three seconds.",
+        "This is $gt=30$, the speed on arrival in $\\mathrm{m/s}$, written down as a height.",
+        "Used $\\tfrac{1}{2}gt$ and forgot to square the time. That value is the average speed in $\\mathrm{m/s}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * 10 * 3.0 * 3.0",
+        "expected": 45,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P1.4-004",
+      "subject": "physics",
+      "topic": "P1",
+      "subtopic": "P1.4",
+      "syllabusRef": "P-1 / Mechanics / Kinematics / Free fall and vertical motion",
+      "difficulty": 5,
+      "stem": "A signal flare leaves the ground travelling straight upward at $30\\ \\mathrm{m/s}$. (Take $g=10\\ \\mathrm{m/s^2}$.) It passes a window ledge $40\\ \\mathrm{m}$ above the ground on the way up and passes it again on the way down. How long after launch does it pass the ledge the second time?",
+      "options": [
+        "$2.0\\ \\mathrm{s}$",
+        "$3.0\\ \\mathrm{s}$",
+        "$4.0\\ \\mathrm{s}$",
+        "$6.0\\ \\mathrm{s}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Measure heights upward from the ground. With $u=30\\ \\mathrm{m/s}$ and an acceleration of $-10\\ \\mathrm{m/s^{2}}$,\n$$h=30t-5t^{2}.$$\n\n**Step 1 — set the height to the ledge.**\n$$40=30t-5t^{2} \\ \\Longrightarrow\\ 5t^{2}-30t+40=0 \\ \\Longrightarrow\\ t^{2}-6t+8=0.$$\n\n**Step 2 — solve, and expect two roots.**\n$$(t-2)(t-4)=0 \\ \\Longrightarrow\\ t=2.0\\ \\mathrm{s} \\ \\text{or} \\ t=4.0\\ \\mathrm{s}.$$\n\n**Step 3 — choose the right root.** Two roots are not an accident here: the flare is at the ledge twice, once rising and once falling. The later root is the downward pass:\n$$t=4.0\\ \\mathrm{s}.$$\n\nThe two roots sit either side of the highest point at $t=30/10=3.0\\ \\mathrm{s}$, which is a useful check.",
+      "distractorRationale": [
+        "The smaller root. That is the upward pass, which the question does not ask for.",
+        "The time to the highest point, $u/g=3.0\\ \\mathrm{s}$. The flare is above the ledge at that instant, not at it.",
+        "Correct. The roots of $t^{2}-6t+8=0$ are $2.0\\ \\mathrm{s}$ and $4.0\\ \\mathrm{s}$, and the second pass is at $4.0\\ \\mathrm{s}$.",
+        "The total time of flight, $2u/g=6.0\\ \\mathrm{s}$. That is when the flare is back at ground level, well below the ledge."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(30 + Math.sqrt(30 * 30 - 4 * (10 / 2) * 40)) / (2 * (10 / 2))",
+        "expected": 4,
+        "tolerance": 1e-9,
+        "unit": "s"
+      }
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P5",
+  "questions": [
+    {
+      "id": "physics-P5.1-001",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.1",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Projectile motion",
+      "difficulty": 2,
+      "stem": "A dart leaves a horizontal blowpipe at $20\\ \\mathrm{m/s}$ and is in the air for $0.30\\ \\mathrm{s}$ before it reaches the board. The vertical distance it has dropped in that time is (Take $g=10\\ \\mathrm{m/s^2}$.)",
+      "options": [
+        "$0.45\\ \\mathrm{m}$",
+        "$0.90\\ \\mathrm{m}$",
+        "$1.5\\ \\mathrm{m}$",
+        "$3.0\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 0,
+      "solution": "The horizontal and vertical motions are independent. The launch speed of $20\\ \\mathrm{m/s}$ plays no part in the drop; only gravity and the flight time do.\n\nThe dart leaves the blowpipe horizontally, so its starting vertical velocity is zero and\n$$y = \\tfrac12 gt^2 = \\tfrac12 \\times 10 \\times (0.30)^2 = 5 \\times 0.09 = 0.45\\ \\mathrm{m}.$$\n\nThe time is squared. Using $t$ where $t^2$ belongs turns a drop of $45\\ \\mathrm{cm}$ into one of $1.5\\ \\mathrm{m}$.",
+      "distractorRationale": [
+        "Correct. $y = \\tfrac12 gt^2 = \\tfrac12 \\times 10 \\times (0.30)^2 = 0.45\\ \\mathrm{m}$.",
+        "Dropped the factor of $\\tfrac12$, computing $gt^2$.",
+        "Forgot to square the time, computing $\\tfrac12 gt$.",
+        "Computed $gt = 3.0$, which is the vertical speed gained in $\\mathrm{m/s}$, and reported it as a distance."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * 10 * 0.30 * 0.30",
+        "expected": 0.45,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P5.1-002",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.1",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Projectile motion",
+      "difficulty": 3,
+      "stem": "A stunt cyclist rides horizontally off the edge of a flat roof at $8\\ \\mathrm{m/s}$ and lands on level ground $20\\ \\mathrm{m}$ below. The horizontal distance between the foot of the wall and the landing point is (Take $g=10\\ \\mathrm{m/s^2}$.)",
+      "options": [
+        "$11.3\\ \\mathrm{m}$",
+        "$16\\ \\mathrm{m}$",
+        "$20\\ \\mathrm{m}$",
+        "$32\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — get the flight time from the vertical motion.** The cyclist leaves the roof horizontally, so the starting vertical velocity is zero:\n$$20 = \\tfrac12 \\times 10 \\times t^2 \\ \\Longrightarrow\\ t^2 = 4 \\ \\Longrightarrow\\ t = 2\\ \\mathrm{s}.$$\n\n**Step 2 — use that time horizontally.** Nothing pushes or drags the cyclist sideways, so the horizontal speed stays at $8\\ \\mathrm{m/s}$ the whole way down:\n$$x = vt = 8 \\times 2 = 16\\ \\mathrm{m}.$$\n\nThe vertical equation supplies the clock and the horizontal equation supplies the distance. The only thing the two share is the time.",
+      "distractorRationale": [
+        "Dropped the factor of $2$ when solving for the time, taking $t = \\sqrt{h/g} = 1.41\\ \\mathrm{s}$ instead of $\\sqrt{2h/g} = 2\\ \\mathrm{s}$.",
+        "Correct. The fall takes $t = \\sqrt{2 \\times 20 / 10} = 2\\ \\mathrm{s}$, and $x = 8 \\times 2 = 16\\ \\mathrm{m}$.",
+        "Assumed the flight path is a straight line at $45^\\circ$, so that the horizontal distance equals the $20\\ \\mathrm{m}$ drop. The path is a parabola, not a straight line.",
+        "Forgot to square the time, solving $20 = \\tfrac12 \\times 10 \\times t$ to get $t = 4\\ \\mathrm{s}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "8 * Math.sqrt(2 * 20 / 10)",
+        "expected": 16,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P5.1-003",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.1",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Projectile motion",
+      "difficulty": 4,
+      "stem": "A ball is kicked horizontally off the edge of a footbridge at $6\\ \\mathrm{m/s}$. Air resistance is negligible. The speed of the ball $0.80\\ \\mathrm{s}$ later, while it is still falling, is (Take $g=10\\ \\mathrm{m/s^2}$.)",
+      "options": [
+        "$6\\ \\mathrm{m/s}$",
+        "$8\\ \\mathrm{m/s}$",
+        "$10\\ \\mathrm{m/s}$",
+        "$14\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — the horizontal component.** Gravity acts straight down, so nothing changes the horizontal velocity:\n$$v_x = 6\\ \\mathrm{m/s}.$$\n\n**Step 2 — the vertical component.** The ball starts with no vertical velocity, so\n$$v_y = gt = 10 \\times 0.80 = 8\\ \\mathrm{m/s}.$$\n\n**Step 3 — combine them.** The two components are at right angles, so the speed is the hypotenuse of the triangle they form:\n$$v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10\\ \\mathrm{m/s}.$$\n\nVelocities at right angles combine by Pythagoras, never by simple addition.",
+      "distractorRationale": [
+        "Assumed the speed is unchanged because gravity acts at right angles to the launch. Gravity does not alter the horizontal component, but it steadily builds a vertical one.",
+        "Gave the vertical component alone and forgot that the ball is still travelling horizontally as well.",
+        "Correct. $v = \\sqrt{6^2 + 8^2} = 10\\ \\mathrm{m/s}$.",
+        "Added the two components arithmetically, $6 + 8$. Components at right angles must be combined by Pythagoras."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(6 * 6 + Math.pow(10 * 0.80, 2))",
+        "expected": 10,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P5.2-001",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.2",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Circular motion: angular velocity, period and centripetal force",
+      "difficulty": 1,
+      "stem": "A ball on the end of a string is whirled in a horizontal circle at a steady speed on a smooth table. The string suddenly snaps. Immediately afterwards the ball moves",
+      "options": [
+        "$\\text{straight outward, directly away from the centre}$",
+        "$\\text{straight towards the centre of the circle}$",
+        "$\\text{along the circle, gradually slowing down}$",
+        "$\\text{in a straight line along the tangent at the point of the break}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Moving in a circle at a steady speed needs a force pointing at the centre, and here the string supplies it. The ball's velocity, though, is not directed at the centre: at every instant it points along the tangent.\n\nWhen the string snaps, that centre-pointing force disappears. With no horizontal force left, Newton's first law takes over and the ball keeps the velocity it had at that instant, in both size and direction.\n\nThat velocity was tangential, so the ball travels in a straight line along the tangent. Nothing ever pushed the ball outward, so it does not fly radially away from the centre.",
+      "distractorRationale": [
+        "The common \"centrifugal force\" mistake. No outward force acts on the ball at any stage, so nothing can launch it radially outward.",
+        "Reverses the argument. The string did pull inward, but once it snaps that pull is gone, and a body does not move in the direction of a force that is no longer there.",
+        "Requires a force to keep bending the path. With the string gone there is nothing to supply it, and on a smooth table nothing to slow the ball either.",
+        "Correct. The velocity is tangential, and with no resultant horizontal force the ball keeps it unchanged."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "In uniform circular motion the velocity is tangential while the resultant force is radial. Removing the string removes the only horizontal force, so by Newton's first law the ball continues with the velocity it had, which is tangential. No outward force ever acted, ruling out the radial option."
+      }
+    },
+    {
+      "id": "physics-P5.2-002",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.2",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Circular motion: angular velocity, period and centripetal force",
+      "difficulty": 2,
+      "stem": "A fairground carousel turns steadily and completes one full revolution every $4.0\\ \\mathrm{s}$. Its angular velocity is",
+      "options": [
+        "$\\dfrac{\\pi}{4}\\ \\mathrm{rad/s}$",
+        "$\\dfrac{\\pi}{2}\\ \\mathrm{rad/s}$",
+        "$2\\pi\\ \\mathrm{rad/s}$",
+        "$8\\pi\\ \\mathrm{rad/s}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Angular velocity is the angle swept out per second. One full revolution is $2\\pi$ radians and it takes one period, so\n$$\\omega = \\frac{2\\pi}{T}.$$\n\nSubstituting $T = 4.0\\ \\mathrm{s}$,\n$$\\omega = \\frac{2\\pi}{4.0} = \\frac{\\pi}{2}\\ \\mathrm{rad/s} \\approx 1.6\\ \\mathrm{rad/s}.$$\n\nAs a check, the carousel turns a quarter of a revolution each second, and a quarter of $2\\pi$ is indeed $\\tfrac{\\pi}{2}$.",
+      "distractorRationale": [
+        "Used $\\pi/T$ rather than $2\\pi/T$, taking half a revolution as a full turn.",
+        "Correct. $\\omega = \\dfrac{2\\pi}{T} = \\dfrac{2\\pi}{4.0} = \\dfrac{\\pi}{2}\\ \\mathrm{rad/s}$.",
+        "Stopped at $2\\pi$, the angle of one revolution, and forgot to divide by the period.",
+        "Multiplied by the period instead of dividing, computing $2\\pi T$. A longer period must mean a smaller angular velocity."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * Math.PI / 4.0",
+        "expected": 1.5707963267948966,
+        "tolerance": 1e-9,
+        "unit": "rad/s"
+      }
+    },
+    {
+      "id": "physics-P5.2-003",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.2",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Circular motion: angular velocity, period and centripetal force",
+      "difficulty": 3,
+      "stem": "A cyclist and her bicycle, of combined mass $80\\ \\mathrm{kg}$, ride round a flat velodrome bend of radius $20\\ \\mathrm{m}$ at a steady $10\\ \\mathrm{m/s}$. The centripetal force needed is",
+      "options": [
+        "$40\\ \\mathrm{N}$",
+        "$200\\ \\mathrm{N}$",
+        "$400\\ \\mathrm{N}$",
+        "$1.6 \\times 10^{5}\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The centripetal force is the resultant force required to hold a body on a circular path:\n$$F = \\frac{mv^2}{r}.$$\n\nSubstitute the combined mass, the speed and the radius, squaring the speed:\n$$F = \\frac{80 \\times 10^2}{20} = \\frac{8000}{20} = 400\\ \\mathrm{N}.$$\n\nOn a flat track this force has to come from friction between the tyres and the surface. Riding the same bend twice as fast would need four times the force, which is why a bend taken too quickly ends in a skid.",
+      "distractorRationale": [
+        "Forgot to square the speed, computing $mv/r$.",
+        "Inserted a factor of $\\tfrac12$, imported from the kinetic-energy formula. The centripetal force carries no such factor.",
+        "Correct. $F = \\dfrac{mv^2}{r} = \\dfrac{80 \\times 10^2}{20} = 400\\ \\mathrm{N}$.",
+        "Multiplied by the radius instead of dividing by it, computing $mv^2r$. A wider bend needs a smaller force, not a larger one."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "80 * 10 * 10 / 20",
+        "expected": 400,
+        "tolerance": 1e-9,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P5.2-004",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.2",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Circular motion: angular velocity, period and centripetal force",
+      "difficulty": 5,
+      "stem": "A bucket of water is swung in a vertical circle on a rope, the water staying $0.90\\ \\mathrm{m}$ from the shoulder. The least speed the bucket may have at the highest point of the circle, if the water is not to fall out, is (Take $g=10\\ \\mathrm{m/s^2}$.)",
+      "options": [
+        "$3\\ \\mathrm{m/s}$",
+        "$2.1\\ \\mathrm{m/s}$",
+        "$4.2\\ \\mathrm{m/s}$",
+        "$9\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — see what supplies the centripetal force at the top.** At the highest point the centre of the circle is directly below, and both the weight and any rope tension point that way:\n$$mg + T = \\frac{mv^2}{r}.$$\n\n**Step 2 — impose the minimum condition.** Swinging more and more slowly needs less and less tension. The slowest case is the one in which the rope has just gone slack, $T = 0$, and gravity alone bends the path:\n$$mg = \\frac{mv^2}{r}.$$\n\n**Step 3 — solve.** The mass cancels, so the answer holds for any bucket:\n$$v = \\sqrt{gr} = \\sqrt{10 \\times 0.90} = \\sqrt{9} = 3\\ \\mathrm{m/s}.$$\n\nAny slower and the force needed to keep the water on the circle is less than its own weight. Gravity then wins, the water leaves the circular path, and it falls out.",
+      "distractorRationale": [
+        "Correct. Setting the tension to zero gives $mg = mv^2/r$, so $v = \\sqrt{gr} = \\sqrt{9} = 3\\ \\mathrm{m/s}$.",
+        "Inserted a factor of $\\tfrac12$, computing $\\sqrt{gr/2}$. The condition is $mg = mv^2/r$, an equation between forces, with no such factor.",
+        "Used $\\sqrt{2gr}$, importing the factor of $2$ from the free-fall energy formula. This is a force condition, not an energy one.",
+        "Computed $gr = 9$ and forgot to take the square root."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(10 * 0.90)",
+        "expected": 3,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P5.3-001",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.3",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Universal gravitation and satellites",
+      "difficulty": 3,
+      "stem": "Two identical lead spheres hang side by side with their centres $0.20\\ \\mathrm{m}$ apart, and a delicate balance measures the gravitational attraction between them. The spheres are then moved until their centres are $0.60\\ \\mathrm{m}$ apart. The new attraction, as a fraction of the original, is",
+      "options": [
+        "$\\dfrac{1}{3}$",
+        "$3$",
+        "$9$",
+        "$\\dfrac{1}{9}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Newton's law of gravitation makes the attraction fall off with the square of the separation:\n$$F = \\frac{Gm_1m_2}{r^2} \\ \\Longrightarrow\\ F \\propto \\frac{1}{r^2}.$$\n\nNeither mass changes, so only the separation matters. It grows by the factor\n$$\\frac{0.60}{0.20} = 3.$$\n\nThe force therefore falls by a factor of $3^2 = 9$, leaving\n$$\\frac{F_2}{F_1} = \\frac{1}{9}.$$\n\nTripling the distance does not cut the force to a third. The square is what makes gravity fade so quickly with separation.",
+      "distractorRationale": [
+        "Treated the force as inversely proportional to $r$ rather than to $r^2$, so a factor of $3$ in the distance gave a factor of $\\tfrac13$ in the force.",
+        "Multiplied instead of dividing, and used the wrong power as well. Moving the spheres apart must weaken the attraction.",
+        "Applied the square in the right place but upside down. Separating the spheres cannot make them attract more strongly.",
+        "Correct. $F \\propto 1/r^2$ and the separation is tripled, so the force falls to $1/3^2 = \\tfrac19$ of its old value."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1 / Math.pow(0.60 / 0.20, 2)",
+        "expected": 0.1111111111111111,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P5.3-002",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.3",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Universal gravitation and satellites",
+      "difficulty": 5,
+      "stem": "Two satellites move in circular orbits around the same planet. The orbit of the second satellite has a radius nine times that of the first. The first satellite completes one orbit in a time $T$. The time the second satellite takes to complete one orbit is",
+      "options": ["$3T$", "$27T$", "$9T$", "$81T$"],
+      "correctIndex": 1,
+      "solution": "For a circular orbit the gravitational pull supplies the whole centripetal force. Writing the centripetal acceleration in terms of the period,\n$$\\frac{GMm}{r^2} = m\\left(\\frac{2\\pi}{T}\\right)^2 r.$$\n\nThe satellite's own mass cancels, and rearranging gives Kepler's third law:\n$$T^2 = \\frac{4\\pi^2}{GM}r^3 \\ \\Longrightarrow\\ T \\propto r^{3/2}.$$\n\nThe radius is multiplied by $9$, so the period is multiplied by\n$$9^{3/2} = \\left(\\sqrt{9}\\right)^3 = 3^3 = 27.$$\n\nThe second satellite therefore takes $27T$ to go round once. A wider orbit is both longer and slower to travel, and the two effects together stretch the period by more than the radius factor alone.",
+      "distractorRationale": [
+        "Used $T \\propto \\sqrt{r}$, which is how the orbital *speed* scales, not the period.",
+        "Correct. $T \\propto r^{3/2}$, and $9^{3/2} = 27$.",
+        "Assumed the period is proportional to the radius, so nine times the radius gives nine times the period. Kepler's law says $T^2 \\propto r^3$, not $T \\propto r$.",
+        "Used $T \\propto r^2$, squaring the radius factor instead of raising it to the power $\\tfrac32$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["T"],
+        "domain": [[1, 10]],
+        "integerVars": [],
+        "reference": "27 * T",
+        "optionForms": ["3 * T", "27 * T", "9 * T", "81 * T"],
+        "tolerance": 1e-9,
+        "samples": 40,
+        "extraSamples": []
+      }
+    },
+    {
+      "id": "physics-P5.3-003",
+      "subject": "physics",
+      "topic": "P5",
+      "subtopic": "P5.3",
+      "syllabusRef": "P-1 / Mechanics / Curvilinear Motion and Gravitation / Universal gravitation and satellites",
+      "difficulty": 4,
+      "stem": "A spherical planet has a radius of $2.0 \\times 10^{7}\\ \\mathrm{m}$, and the acceleration of free fall at its surface is $6.67\\ \\mathrm{m/s^2}$. Taking $G=6.67\\times10^{-11}\\ \\mathrm{N\\cdot m^2/kg^2}$, the mass of the planet is",
+      "options": [
+        "$4.0 \\times 10^{25}\\ \\mathrm{kg}$",
+        "$2.5 \\times 10^{-26}\\ \\mathrm{kg}$",
+        "$1.8 \\times 10^{5}\\ \\mathrm{kg}$",
+        "$2.0 \\times 10^{18}\\ \\mathrm{kg}$"
+      ],
+      "correctIndex": 0,
+      "solution": "At the surface, the weight of a body of mass $m$ is just the planet's gravitational pull on it:\n$$mg = \\frac{GMm}{R^2} \\ \\Longrightarrow\\ g = \\frac{GM}{R^2}.$$\n\n**Step 1 — rearrange for the mass of the planet.**\n$$M = \\frac{gR^2}{G}.$$\n\n**Step 2 — substitute.** The two factors of $6.67$ cancel, which is what keeps the arithmetic short:\n$$M = \\frac{6.67 \\times (2.0 \\times 10^{7})^2}{6.67 \\times 10^{-11}} = \\frac{4.0 \\times 10^{14}}{10^{-11}} = 4.0 \\times 10^{25}\\ \\mathrm{kg}.$$\n\nThe radius is squared, and dropping that square costs seven powers of ten.",
+      "distractorRationale": [
+        "Correct. $M = \\dfrac{gR^2}{G} = \\dfrac{6.67 \\times (2.0 \\times 10^{7})^2}{6.67 \\times 10^{-11}} = 4.0 \\times 10^{25}\\ \\mathrm{kg}$.",
+        "Turned the formula upside down, computing $G/(gR^2)$.",
+        "Multiplied by $G$ instead of dividing by it, computing $gR^2G$.",
+        "Forgot to square the radius, computing $gR/G$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "6.67 * Math.pow(2.0e7, 2) / 6.67e-11",
+        "expected": 4.0e25,
+        "tolerance": 1e-9,
+        "unit": "kg"
+      }
+    }
+  ]
+}

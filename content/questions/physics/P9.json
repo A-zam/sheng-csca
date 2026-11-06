@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P9",
+  "questions": [
+    {
+      "id": "physics-P9.1-001",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.1",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / Magnetic flux density and magnetic flux",
+      "difficulty": 1,
+      "stem": "A flat search coil of area $0.012\\ \\mathrm{m^{2}}$ sits face-on between the poles of an electromagnet, so the field crosses its plane at right angles. A Hall probe reads the flux density as $0.25\\ \\mathrm{T}$. How much flux threads the coil?",
+      "options": [
+        "$0.048\\ \\mathrm{Wb}$",
+        "$0.012\\ \\mathrm{Wb}$",
+        "$3.0 \\times 10^{-3}\\ \\mathrm{Wb}$",
+        "$0.25\\ \\mathrm{Wb}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Flux is flux density multiplied by the area it passes through, provided the field is perpendicular to that area:\n$$\\Phi = BA.$$\n\nThe coil is face-on, so no angle factor is needed:\n$$\\Phi = 0.25 \\times 0.012 = 3.0 \\times 10^{-3}\\ \\mathrm{Wb}.$$\n\nA useful check on the size: $0.012$ is roughly one hundredth, and a quarter of one hundredth is three thousandths.",
+      "distractorRationale": [
+        "Divided the area by the flux density instead of multiplying: $0.012 / 0.25 = 0.048$. Flux grows when either factor grows, so the two must be multiplied.",
+        "Quoted the area itself. An area only becomes a flux once it is multiplied by the flux density crossing it.",
+        "Correct. $\\Phi = BA = 0.25 \\times 0.012 = 3.0 \\times 10^{-3}\\ \\mathrm{Wb}$.",
+        "Quoted the flux density itself, leaving the area out. Flux density is the flux per unit area, not the flux."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.25 * 0.012",
+        "expected": 0.003,
+        "tolerance": 1e-09,
+        "unit": "Wb"
+      }
+    },
+    {
+      "id": "physics-P9.1-002",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.1",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / Magnetic flux density and magnetic flux",
+      "difficulty": 3,
+      "stem": "A flat rectangular pickup loop, of area $0.040\\ \\mathrm{m^{2}}$, is clamped between the pole faces of a laboratory electromagnet, where the flux density is $0.50\\ \\mathrm{T}$. The loop is tilted, so the field lines make an angle of $60^\\circ$ with the normal to the plane of the loop. The magnetic flux through the loop is",
+      "options": [
+        "$1.0 \\times 10^{-2}\\ \\mathrm{Wb}$",
+        "$1.7 \\times 10^{-2}\\ \\mathrm{Wb}$",
+        "$2.0 \\times 10^{-2}\\ \\mathrm{Wb}$",
+        "$5.0 \\times 10^{-3}\\ \\mathrm{Wb}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Only the part of the field along the normal to the loop threads through it, so\n$$\\Phi = BA\\cos\\theta,$$\nwhere $\\theta$ is measured between the field and the **normal**, not between the field and the surface.\n\nHere $\\theta = 60^\\circ$ is already the angle to the normal, so $\\cos\\theta = 0.5$:\n$$\\Phi = 0.50 \\times 0.040 \\times 0.5 = 1.0 \\times 10^{-2}\\ \\mathrm{Wb}.$$\n\nTilting the loop can only reduce the flux, so the answer must be smaller than the face-on value of $2.0 \\times 10^{-2}\\ \\mathrm{Wb}$.",
+      "distractorRationale": [
+        "Correct. $\\Phi = BA\\cos 60^\\circ = 0.50 \\times 0.040 \\times 0.5 = 1.0 \\times 10^{-2}\\ \\mathrm{Wb}$.",
+        "Used $\\sin$ where $\\cos$ was needed, as if the $60^\\circ$ had been measured from the plane of the loop rather than from the normal to it.",
+        "Ignored the angle altogether and used $\\Phi = BA$. That is the face-on value, which a tilted loop cannot reach.",
+        "Applied the factor $\\cos 60^\\circ$ twice, once to the field and again to the area."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.50 * 0.040 * Math.cos(60 * Math.PI / 180)",
+        "expected": 0.01,
+        "tolerance": 1e-09,
+        "unit": "Wb"
+      }
+    },
+    {
+      "id": "physics-P9.1-003",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.1",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / Magnetic flux density and magnetic flux",
+      "difficulty": 2,
+      "stem": "The search head of a metal detector contains a coil of $50$ turns. Every turn encloses an area of $4.0 \\times 10^{-4}\\ \\mathrm{m^{2}}$, and the head is held so that each turn is face-on to a steady field whose flux density is $0.20\\ \\mathrm{T}$. The flux linkage of this coil is",
+      "options": [
+        "$1.6 \\times 10^{-6}\\ \\mathrm{Wb}$",
+        "$8.0 \\times 10^{-5}\\ \\mathrm{Wb}$",
+        "$2.0 \\times 10^{-2}\\ \\mathrm{Wb}$",
+        "$4.0 \\times 10^{-3}\\ \\mathrm{Wb}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — the flux through one turn.** Each turn is face-on, so\n$$\\Phi = BA = 0.20 \\times 4.0 \\times 10^{-4} = 8.0 \\times 10^{-5}\\ \\mathrm{Wb}.$$\n\n**Step 2 — link all the turns.** Flux linkage counts that flux once for every turn:\n$$N\\Phi = 50 \\times 8.0 \\times 10^{-5} = 4.0 \\times 10^{-3}\\ \\mathrm{Wb}.$$\n\nThe number of turns is what makes a detector head sensitive: fifty turns give fifty times the linkage of a single loop of the same size.",
+      "distractorRationale": [
+        "Divided by the number of turns instead of multiplying by it. Adding turns increases the linkage, so $N$ belongs in the numerator.",
+        "Forgot the number of turns $N$ and stopped at the flux through a single turn.",
+        "Left the flux density out, multiplying only the turns by the area: $50 \\times 4.0 \\times 10^{-4}$. That product is an area, not a flux.",
+        "Correct. $N\\Phi = 50 \\times 0.20 \\times 4.0 \\times 10^{-4} = 4.0 \\times 10^{-3}\\ \\mathrm{Wb}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "50 * 0.20 * 4.0e-4",
+        "expected": 0.004,
+        "tolerance": 1e-09,
+        "unit": "Wb"
+      }
+    },
+    {
+      "id": "physics-P9.2-001",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.2",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / Force on a current-carrying conductor",
+      "difficulty": 2,
+      "stem": "In a railgun demonstration a straight aluminium bar rests across two parallel rails that are $0.30\\ \\mathrm{m}$ apart. The bar carries a current of $2.5\\ \\mathrm{A}$, and a steady field of flux density $0.40\\ \\mathrm{T}$ runs vertically through the region, at right angles to the bar. The magnetic force on the bar is",
+      "options": [
+        "$0.12\\ \\mathrm{N}$",
+        "$0.30\\ \\mathrm{N}$",
+        "$0.75\\ \\mathrm{N}$",
+        "$3.3\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 1,
+      "solution": "For a straight conductor at right angles to the field,\n$$F = BIL,$$\nwhere $L$ is the length of the conductor that lies in the field. Here that is the gap between the rails, $0.30\\ \\mathrm{m}$.\n\n$$F = 0.40 \\times 2.5 \\times 0.30 = 0.30\\ \\mathrm{N}.$$\n\nAll three factors multiply: doubling the current, the field or the rail spacing would each double the push on the bar.",
+      "distractorRationale": [
+        "Left the current out, computing $BL = 0.40 \\times 0.30$. A conductor with no current feels no magnetic force at all, so $I$ cannot be dropped.",
+        "Correct. $F = BIL = 0.40 \\times 2.5 \\times 0.30 = 0.30\\ \\mathrm{N}$.",
+        "Left the flux density out, computing $IL = 2.5 \\times 0.30$.",
+        "Divided by the length instead of multiplying by it: $0.40 \\times 2.5 / 0.30$. A shorter bar in the field feels less force, not more."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.40 * 2.5 * 0.30",
+        "expected": 0.3,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P9.2-002",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.2",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / Force on a current-carrying conductor",
+      "difficulty": 3,
+      "stem": "A straight copper rod of length $0.50\\ \\mathrm{m}$ carries a current of $4.0\\ \\mathrm{A}$. It is clamped inside a magnet gap where the flux density is $0.20\\ \\mathrm{T}$, with the rod set at $30^\\circ$ to the field lines. The magnetic force on the rod is",
+      "options": [
+        "$0.20\\ \\mathrm{N}$",
+        "$0.35\\ \\mathrm{N}$",
+        "$0.40\\ \\mathrm{N}$",
+        "$0.80\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 0,
+      "solution": "When the conductor is not perpendicular to the field, only the component of the field across the rod pushes on it:\n$$F = BIL\\sin\\theta,$$\nwith $\\theta$ measured between the rod and the field lines.\n\nHere $\\theta = 30^\\circ$, so $\\sin\\theta = 0.5$:\n$$F = 0.20 \\times 4.0 \\times 0.50 \\times 0.5 = 0.20\\ \\mathrm{N}.$$\n\nThe check on the setup: a rod lying **along** the field would have $\\theta = 0$ and feel no force at all, which is what the sine gives.",
+      "distractorRationale": [
+        "Correct. $F = BIL\\sin 30^\\circ = 0.20 \\times 4.0 \\times 0.50 \\times 0.5 = 0.20\\ \\mathrm{N}$.",
+        "Used $\\cos 30^\\circ$ instead of $\\sin 30^\\circ$, as if the $30^\\circ$ had been measured from the perpendicular to the field.",
+        "Ignored the angle and used $F = BIL$. That is the maximum force, reached only when the rod is perpendicular to the field.",
+        "Divided by $\\sin 30^\\circ$ instead of multiplying, which makes the force larger than the perpendicular case."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.20 * 4.0 * 0.50 * Math.sin(30 * Math.PI / 180)",
+        "expected": 0.2,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P9.2-003",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.2",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / Force on a current-carrying conductor",
+      "difficulty": 4,
+      "stem": "A straight wire of mass $0.020\\ \\mathrm{kg}$ and length $0.25\\ \\mathrm{m}$ lies horizontally across two rails. A horizontal field of flux density $0.50\\ \\mathrm{T}$ fills the gap and is perpendicular to the wire. Take $g = 10\\ \\mathrm{m/s^{2}}$. The current that makes the magnetic force on the wire just support its weight is",
+      "options": [
+        "$0.025\\ \\mathrm{A}$",
+        "$0.16\\ \\mathrm{A}$",
+        "$0.40\\ \\mathrm{A}$",
+        "$1.6\\ \\mathrm{A}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — the weight to be supported.**\n$$W = mg = 0.020 \\times 10 = 0.20\\ \\mathrm{N}.$$\n\n**Step 2 — set the magnetic force equal to it.** The field is perpendicular to the wire, so $F = BIL$, and at the point of lifting\n$$BIL = mg.$$\n\n**Step 3 — solve for the current.**\n$$I = \\frac{mg}{BL} = \\frac{0.20}{0.50 \\times 0.25} = \\frac{0.20}{0.125} = 1.6\\ \\mathrm{A}.$$\n\nThe denominator $BL = 0.125$ is small, so the current has to be several times the weight in newtons.",
+      "distractorRationale": [
+        "Multiplied by $BL$ instead of dividing by it: $0.20 \\times 0.125$. Rearranging $BIL = mg$ puts $BL$ underneath.",
+        "Used the mass as if it were the weight, leaving out $g$: $0.020 / 0.125$. Mass in kilograms is not a force.",
+        "Left the length out of the denominator, dividing the weight by the flux density alone: $0.20 / 0.50$.",
+        "Correct. $I = mg / (BL) = (0.020 \\times 10) / (0.50 \\times 0.25) = 1.6\\ \\mathrm{A}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(0.020 * 10) / (0.50 * 0.25)",
+        "expected": 1.6,
+        "tolerance": 1e-09,
+        "unit": "A"
+      }
+    },
+    {
+      "id": "physics-P9.2-004",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.2",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / Force on a current-carrying conductor",
+      "difficulty": 2,
+      "stem": "The figure shows a straight wire lying in the plane of the page. The conventional current in it flows from the bottom of the page towards the top. The wire sits in a uniform magnetic field directed into the page, drawn as a grid of crosses. The magnetic force on the wire acts",
+      "options": [
+        "$\\text{towards the right-hand edge of the page}$",
+        "$\\text{up the page, along the current}$",
+        "$\\text{towards the left-hand edge of the page}$",
+        "$\\text{into the page, along the field}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Use the left-hand motor rule, with the three fingers held at right angles to one another.\n\n**First finger — field.** Point it into the page.\n\n**Second finger — current.** Point it up the page.\n\n**Thumb — force.** It now points towards the left-hand edge of the page.\n\nThe same result comes from $\\vec{F} = I\\vec{L} \\times \\vec{B}$: with the current up the page and the field into the page, the force is at right angles to both, and it comes out to the left.\n\nNotice what the rule guarantees in general: the force is never along the wire and never along the field.",
+      "distractorRationale": [
+        "Used the right hand instead of the left. The right hand is for the field around a current or for induced effects on positive charges; the motor rule takes the left hand, and swapping them reverses the answer.",
+        "Assumed the force pushes the wire along its own length. A force along the current would do nothing to a wire free to move sideways, and the cross product forbids it.",
+        "Correct. First finger into the page, second finger up the page, and the thumb points to the left-hand edge.",
+        "Assumed the force acts along the field lines. The magnetic force is perpendicular to the field, never parallel to it."
+      ],
+      "figure": "<svg viewBox=\"0 0 240 170\" role=\"img\" aria-label=\"A vertical wire carrying current up the page inside a field directed into the page\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><line x1=\"120\" y1=\"148\" x2=\"120\" y2=\"22\"/><polyline points=\"113,34 120,22 127,34\"/></g><g stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"><path d=\"M26 46 l8 8 M34 46 l-8 8\"/><path d=\"M26 86 l8 8 M34 86 l-8 8\"/><path d=\"M26 126 l8 8 M34 126 l-8 8\"/><path d=\"M61 46 l8 8 M69 46 l-8 8\"/><path d=\"M61 86 l8 8 M69 86 l-8 8\"/><path d=\"M61 126 l8 8 M69 126 l-8 8\"/><path d=\"M171 46 l8 8 M179 46 l-8 8\"/><path d=\"M171 86 l8 8 M179 86 l-8 8\"/><path d=\"M171 126 l8 8 M179 126 l-8 8\"/><path d=\"M206 46 l8 8 M214 46 l-8 8\"/><path d=\"M206 86 l8 8 M214 86 l-8 8\"/><path d=\"M206 126 l8 8 M214 126 l-8 8\"/></g><text x=\"128\" y=\"36\" fill=\"currentColor\" font-size=\"14\">I</text><text x=\"70\" y=\"163\" fill=\"currentColor\" font-size=\"12\">B into the page</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "The current runs up the page and the field runs into the page. Fleming's left-hand rule, with the first finger into the page and the second finger up the page, puts the thumb towards the left-hand edge; the vector product I L x B gives the same direction. Options placing the force along the wire or along the field are impossible because the force is perpendicular to both, and the right-hand version of the rule would give the opposite edge."
+      }
+    },
+    {
+      "id": "physics-P9.3-001",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.3",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / The Lorentz force and charged particles in a field",
+      "difficulty": 3,
+      "stem": "In a demonstration tube an electron travels horizontally from left to right, in the plane of the page. It crosses a region where a uniform magnetic field points out of the page, drawn as a grid of dots in the figure. At that instant the magnetic force on the electron acts",
+      "options": [
+        "$\\text{towards the bottom of the page}$",
+        "$\\text{towards the top of the page}$",
+        "$\\text{out of the page, along the field}$",
+        "$\\text{from left to right, along the velocity of the electron}$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — work with conventional current first.** A stream of electrons moving to the right is a conventional current to the **left**.\n\n**Step 2 — apply the left-hand motor rule to that current.** First finger out of the page along the field, second finger to the left along the conventional current: the thumb points towards the top of the page.\n\n**Step 3 — that is the force on the electron.** The rule was applied to the conventional current, which already carries the sign of the charge, so no further reversal is needed.\n\nThe force comes out perpendicular to the velocity, which is why the electron curves upward into a circular arc instead of speeding up or slowing down.",
+      "distractorRationale": [
+        "Applied the rule as if the electron were positive, forgetting that its motion to the right is a conventional current to the left. That sign slip reverses the answer.",
+        "Correct. The electron moving right is a conventional current to the left, and with the field out of the page the left-hand rule gives a force towards the top of the page.",
+        "Assumed the force acts along the field. A charge moving along the field feels no force at all, and a charge moving across it is pushed at right angles to the field, never along it.",
+        "Assumed the force acts along the velocity. A force along the motion would change the electron's speed, but a magnetic force does no work on a moving charge."
+      ],
+      "figure": "<svg viewBox=\"0 0 250 170\" role=\"img\" aria-label=\"An electron moving left to right through a field directed out of the page\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><line x1=\"25\" y1=\"90\" x2=\"215\" y2=\"90\"/><polyline points=\"203,83 215,90 203,97\"/></g><g fill=\"currentColor\" stroke=\"none\"><circle cx=\"45\" cy=\"45\" r=\"2.5\"/><circle cx=\"90\" cy=\"45\" r=\"2.5\"/><circle cx=\"135\" cy=\"45\" r=\"2.5\"/><circle cx=\"180\" cy=\"45\" r=\"2.5\"/><circle cx=\"45\" cy=\"130\" r=\"2.5\"/><circle cx=\"90\" cy=\"130\" r=\"2.5\"/><circle cx=\"135\" cy=\"130\" r=\"2.5\"/><circle cx=\"180\" cy=\"130\" r=\"2.5\"/></g><text x=\"25\" y=\"82\" fill=\"currentColor\" font-size=\"12\">electron</text><text x=\"120\" y=\"82\" fill=\"currentColor\" font-size=\"14\">v</text><text x=\"60\" y=\"162\" fill=\"currentColor\" font-size=\"12\">B out of the page</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "An electron drifting to the right is a conventional current to the left. With the field out of the page and that current to the left, the left-hand motor rule puts the thumb towards the top of the page, so the force on the electron is upward. The force must also be perpendicular to both the velocity and the field, which rules out the two options that place it along one of them."
+      }
+    },
+    {
+      "id": "physics-P9.3-002",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.3",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / The Lorentz force and charged particles in a field",
+      "difficulty": 4,
+      "stem": "In a mass spectrometer a singly charged ion of mass $5.0 \\times 10^{-26}\\ \\mathrm{kg}$ carries a charge $e = 1.6 \\times 10^{-19}\\ \\mathrm{C}$. It enters the analyser at $3.2 \\times 10^{5}\\ \\mathrm{m/s}$, moving at right angles to a field whose flux density is $0.40\\ \\mathrm{T}$. The radius of the circular path it follows is",
+      "options": [
+        "$0.25\\ \\mathrm{m}$",
+        "$0.125\\ \\mathrm{m}$",
+        "$4.0\\ \\mathrm{m}$",
+        "$0.50\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — the magnetic force is the centripetal force.** The force $qvB$ is always perpendicular to the velocity, so it turns the ion without changing its speed:\n$$qvB = \\frac{mv^{2}}{r}.$$\n\n**Step 2 — rearrange.** One factor of $v$ cancels:\n$$r = \\frac{mv}{qB}.$$\n\n**Step 3 — substitute.**\n$$r = \\frac{(5.0 \\times 10^{-26})(3.2 \\times 10^{5})}{(1.6 \\times 10^{-19})(0.40)} = \\frac{1.6 \\times 10^{-20}}{6.4 \\times 10^{-20}} = 0.25\\ \\mathrm{m}.$$\n\nHeavier ions of the same charge and speed travel on wider arcs, which is exactly how the instrument separates them.",
+      "distractorRationale": [
+        "Correct. $r = mv / (qB) = (1.6 \\times 10^{-20}) / (6.4 \\times 10^{-20}) = 0.25\\ \\mathrm{m}$.",
+        "Treated the ion as carrying a charge of $2e$. The stem says it is singly charged, so the charge in the denominator is $e$.",
+        "Wrote $r = qB / (mv)$, turning the formula upside down. That expression grows when the field grows, whereas a stronger field bends the path more tightly.",
+        "Doubled the answer, quoting the diameter of the circular path rather than its radius."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(5.0e-26 * 3.2e5) / (1.6e-19 * 0.40)",
+        "expected": 0.25,
+        "tolerance": 1e-09,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P9.3-003",
+      "subject": "physics",
+      "topic": "P9",
+      "subtopic": "P9.3",
+      "syllabusRef": "P-2 / Electromagnetism / The Magnetic Field / The Lorentz force and charged particles in a field",
+      "difficulty": 5,
+      "stem": "Ions reach a mass spectrometer through a velocity selector. Inside it two parallel plates, $10\\ \\mathrm{mm}$ apart, are held at a potential difference of $300\\ \\mathrm{V}$, and a field of flux density $0.15\\ \\mathrm{T}$ crosses the same space at right angles both to the electric field and to the beam. An ion passes straight through, undeflected. Its speed is",
+      "options": [
+        "$2.0 \\times 10^{2}\\ \\mathrm{m/s}$",
+        "$2.0 \\times 10^{3}\\ \\mathrm{m/s}$",
+        "$4.5 \\times 10^{3}\\ \\mathrm{m/s}$",
+        "$2.0 \\times 10^{5}\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — the electric field between the plates.** A uniform field between parallel plates is the potential difference divided by their separation, in metres:\n$$E = \\frac{V}{d} = \\frac{300}{0.010} = 3.0 \\times 10^{4}\\ \\mathrm{V/m}.$$\n\n**Step 2 — undeflected means the two forces balance.** The electric force $qE$ and the magnetic force $qvB$ act in opposite directions and cancel:\n$$qE = qvB.$$\n\n**Step 3 — the charge cancels.** This is why the selector picks out a speed rather than a particular ion:\n$$v = \\frac{E}{B} = \\frac{3.0 \\times 10^{4}}{0.15} = 2.0 \\times 10^{5}\\ \\mathrm{m/s}.$$\n\nAny ion at this speed goes straight on, whatever its charge or mass; slower and faster ones are swept aside.",
+      "distractorRationale": [
+        "Left the plate separation in millimetres, giving $E = 300/10 = 30\\ \\mathrm{V/m}$. The separation must be converted to metres before it can be used with volts.",
+        "Used the potential difference itself as the electric field strength, dividing $300$ by $0.15$. Volts and volts per metre are different quantities.",
+        "Multiplied $E$ by $B$ instead of dividing. Balancing $qE$ against $qvB$ leaves $v = E/B$.",
+        "Correct. $E = 300 / 0.010 = 3.0 \\times 10^{4}\\ \\mathrm{V/m}$, so $v = E/B = 2.0 \\times 10^{5}\\ \\mathrm{m/s}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(300 / 0.010) / 0.15",
+        "expected": 200000,
+        "tolerance": 1e-09,
+        "unit": "m/s"
+      }
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M2",
+  "questions": [
+    {
+      "id": "math-M2.1-001",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Properties of inequalities and the AM-GM inequality",
+      "difficulty": 1,
+      "stem": "Let $m>n$. Which statement holds for every such pair?",
+      "options": [
+        "$-5m<-5n$",
+        "$-5m>-5n$",
+        "$m^{2}>n^{2}$",
+        "$\\dfrac{m}{5}<\\dfrac{n}{5}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Multiplying an inequality by a negative number turns it around. Multiplying or dividing by a positive number leaves it alone.\n\nStarting from $m>n$ and multiplying both sides by $-5$:\n$$-5m<-5n.$$\n\nDividing $m>n$ by the positive number $5$ keeps the direction, so $\\dfrac{m}{5}>\\dfrac{n}{5}$.\n\nSquaring is not safe at all. Take $m=1$ and $n=-4$: then $m>n$ holds, yet $m^{2}=1$ is smaller than $n^{2}=16$.",
+      "distractorRationale": [
+        "Correct. The multiplier $-5$ is negative, so the direction of the inequality reverses.",
+        "Kept the direction after multiplying by a negative number.",
+        "Squared both sides without checking signs. With $m=1$ and $n=-4$ the premise holds but $m^{2}<n^{2}$.",
+        "Reversed the direction after dividing by $5$, which is positive, so the direction should have stayed."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["u", "d"],
+        "domain": [[-6, 6], [0.5, 5]],
+        "integerVars": [],
+        "reference": "1",
+        "optionForms": [
+          "((-5) * u < (-5) * (u - d)) ? 1 : 0",
+          "((-5) * u > (-5) * (u - d)) ? 1 : 0",
+          "(u * u > (u - d) * (u - d)) ? 1 : 0",
+          "(u / 5 < (u - d) / 5) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "u": 1, "d": 5 },
+          { "u": -4, "d": 2 },
+          { "u": 3, "d": 1 },
+          { "u": 0, "d": 4 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M2.1-002",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Properties of inequalities and the AM-GM inequality",
+      "difficulty": 2,
+      "stem": "Let $t>0$. The least value of $t+\\dfrac{9}{t}$ is",
+      "options": ["$3$", "$6$", "$9$", "$18$"],
+      "correctIndex": 1,
+      "solution": "The two terms are positive and their product does not depend on $t$:\n$$t\\cdot\\dfrac{9}{t}=9.$$\n\nAM-GM bounds a sum of two positive numbers by twice the square root of their product:\n$$t+\\dfrac{9}{t}\\ge 2\\sqrt{9}=6.$$\n\nEquality asks for $t=\\dfrac{9}{t}$, that is $t=3$, which is allowed. The bound $6$ is reached, so it is the least value.",
+      "distractorRationale": [
+        "Dropped the factor of $2$ in the AM-GM bound and quoted $\\sqrt{9}$ on its own.",
+        "Correct. $t+\\dfrac{9}{t}\\ge 2\\sqrt{9}=6$, with equality at $t=3$.",
+        "Quoted the constant $9$ from inside the fraction instead of computing the bound.",
+        "Doubled the constant $9$ rather than doubling its square root."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * Math.sqrt(9)",
+        "expected": 6,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M2.1-003",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Properties of inequalities and the AM-GM inequality",
+      "difficulty": 3,
+      "stem": "Positive numbers $p$ and $q$ satisfy $pq=16$. The least value of $p+q$ is",
+      "options": ["$4$", "$8$", "$16$", "$32$"],
+      "correctIndex": 1,
+      "solution": "The product is pinned at $16$, so AM-GM controls the sum from below:\n$$\\dfrac{p+q}{2}\\ge\\sqrt{pq}=\\sqrt{16}=4.$$\n\nMultiplying through by $2$,\n$$p+q\\ge 8.$$\n\nEquality needs $p=q$, and the pair $p=q=4$ does satisfy $pq=16$. So the sum really can be $8$, and never less.",
+      "distractorRationale": [
+        "$\\sqrt{16}=4$ is the geometric mean of $p$ and $q$; the sum is bounded by twice that.",
+        "Correct. $p+q\\ge 2\\sqrt{pq}=8$, attained at $p=q=4$.",
+        "Repeated the product $pq$. The question asks for the sum.",
+        "Doubled the product instead of doubling the square root of the product."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * Math.sqrt(16)",
+        "expected": 8,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M2.1-004",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Properties of inequalities and the AM-GM inequality",
+      "difficulty": 4,
+      "stem": "Let $x>2$. The least value of $x+\\dfrac{9}{x-2}$ is",
+      "options": ["$5$", "$6$", "$8$", "$11$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — build a pair with a fixed product.** As written, $x$ and $\\dfrac{9}{x-2}$ multiply to something that still moves with $x$. Rewrite $x$ as $(x-2)+2$:\n$$x+\\dfrac{9}{x-2}=(x-2)+\\dfrac{9}{x-2}+2.$$\n\n**Step 2 — bound the pair.** Because $x>2$, the quantity $x-2$ is positive, and $(x-2)\\cdot\\dfrac{9}{x-2}=9$. So\n$$(x-2)+\\dfrac{9}{x-2}\\ge 2\\sqrt{9}=6.$$\n\n**Step 3 — restore the constant.**\n$$x+\\dfrac{9}{x-2}\\ge 6+2=8.$$\nEquality needs $x-2=3$, so $x=5$, which does satisfy $x>2$.",
+      "distractorRationale": [
+        "This is the value of $x$ where the minimum happens, not the minimum itself.",
+        "Bounded $(x-2)+\\dfrac{9}{x-2}$ correctly but never added the $2$ back after the split.",
+        "Correct. The split gives $6+2=8$, reached at $x=5$.",
+        "Added the constant $9$ to the $2$ instead of adding $2\\sqrt{9}$ to it."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * Math.sqrt(9) + 2",
+        "expected": 8,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M2.1-005",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Properties of inequalities and the AM-GM inequality",
+      "difficulty": 5,
+      "stem": "Let $a>0$, $b>0$ and $a+b=1$. The least value of $\\dfrac{1}{a}+\\dfrac{4}{b}$ is",
+      "options": ["$4$", "$5$", "$9$", "$10$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — feed the constraint in as a factor of $1$.** Since $a+b=1$,\n$$\\dfrac{1}{a}+\\dfrac{4}{b}=\\left(\\dfrac{1}{a}+\\dfrac{4}{b}\\right)(a+b)=1+4+\\dfrac{b}{a}+\\dfrac{4a}{b}.$$\n\n**Step 2 — bound the part that still moves.** The terms $\\dfrac{b}{a}$ and $\\dfrac{4a}{b}$ are positive and multiply to $4$, so\n$$\\dfrac{b}{a}+\\dfrac{4a}{b}\\ge 2\\sqrt{4}=4.$$\n\n**Step 3 — add the constant back.**\n$$\\dfrac{1}{a}+\\dfrac{4}{b}\\ge 5+4=9.$$\n\nEquality needs $b=2a$. Together with $a+b=1$ that gives $a=\\dfrac13$ and $b=\\dfrac23$, both positive, so $9$ is attained.",
+      "distractorRationale": [
+        "Applied AM-GM straight to the two fractions as $2\\sqrt{1\\times 4}$, which never uses the constraint $a+b=1$.",
+        "Stopped at the constant part $1+4$ and threw away $\\dfrac{b}{a}+\\dfrac{4a}{b}$.",
+        "Correct. Multiplying by $(a+b)$ gives $5+\\dfrac{b}{a}+\\dfrac{4a}{b}\\ge 5+4=9$.",
+        "Assumed the minimum sits at $a=b=\\dfrac12$, which gives $2+8=10$. The two fractions carry different weights, so the balance point is elsewhere."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.pow(Math.sqrt(1) + Math.sqrt(4), 2)",
+        "expected": 9,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M2.2-001",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Quadratic inequalities",
+      "difficulty": 1,
+      "stem": "Solve $(x-2)(x+5)<0$.",
+      "options": [
+        "$(-\\infty,\\ -5)\\cup(2,\\ +\\infty)$",
+        "$(-2,\\ 5)$",
+        "$[-5,\\ 2]$",
+        "$(-5,\\ 2)$"
+      ],
+      "correctIndex": 3,
+      "solution": "A product of two numbers is negative when the two carry opposite signs.\n\nEach bracket changes sign at its own root: $x-2$ at $x=2$, and $x+5$ at $x=-5$.\n\nLeft of $-5$ both brackets are negative, so the product is positive. Right of $2$ both are positive. Between the two roots one bracket is positive and the other negative, which is the case wanted:\n$$-5<x<2.$$\n\nAt $x=-5$ and at $x=2$ the product equals $0$, and $0$ is not less than $0$, so neither end is included.",
+      "distractorRationale": [
+        "Kept the outside region, where the two brackets share a sign and the product is positive.",
+        "Read the roots straight off the constants, as $-2$ and $5$. The bracket $x+5$ vanishes at $x=-5$, not at $x=5$.",
+        "Right interval, wrong ends. At $-5$ and $2$ the product is $0$, which fails a strict inequality.",
+        "Correct. The brackets take opposite signs exactly between $-5$ and $2$, ends excluded."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-9, 7]],
+        "reference": "((x - 2) * (x + 5) < 0) ? 1 : 0",
+        "optionForms": [
+          "(x < -5 || x > 2) ? 1 : 0",
+          "(x > -2 && x < 5) ? 1 : 0",
+          "(x >= -5 && x <= 2) ? 1 : 0",
+          "(x > -5 && x < 2) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": -5 }, { "x": 2 }, { "x": -5.5 }, { "x": -4.9 },
+          { "x": 1.9 }, { "x": 2.5 }, { "x": -2 }, { "x": 5 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M2.2-002",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Quadratic inequalities",
+      "difficulty": 2,
+      "stem": "Solve $x^{2}\\le 7x-12$.",
+      "options": [
+        "$[-4,\\ -3]$",
+        "$(3,\\ 4)$",
+        "$[3,\\ 4]$",
+        "$(-\\infty,\\ 3]\\cup[4,\\ +\\infty)$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — gather the terms on one side.** Subtract $7x-12$ from both sides:\n$$x^{2}-7x+12\\le 0.$$\n\n**Step 2 — factorise.** Two numbers with product $12$ and sum $7$ are $3$ and $4$:\n$$(x-3)(x-4)\\le 0.$$\n\nThe parabola opens upwards, so the expression sits at or below zero from one root across to the other. Both roots make it exactly $0$, which $\\le$ permits:\n$$3\\le x\\le 4.$$",
+      "distractorRationale": [
+        "Sign slip when moving the terms across, solving $x^{2}+7x+12\\le 0$ instead.",
+        "Excluded both ends, but $x=3$ and $x=4$ give equality and $\\le$ allows it.",
+        "Correct. $(x-3)(x-4)\\le 0$ holds between the roots, ends included.",
+        "Kept the outside region, which is the solution of $x^{2}\\ge 7x-12$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-8, 9]],
+        "reference": "(x * x <= 7 * x - 12) ? 1 : 0",
+        "optionForms": [
+          "(x >= -4 && x <= -3) ? 1 : 0",
+          "(x > 3 && x < 4) ? 1 : 0",
+          "(x >= 3 && x <= 4) ? 1 : 0",
+          "(x <= 3 || x >= 4) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": 3 }, { "x": 4 }, { "x": 2.9 }, { "x": 4.1 },
+          { "x": 3.5 }, { "x": -3 }, { "x": -4 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M2.2-003",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Quadratic inequalities",
+      "difficulty": 2,
+      "stem": "Solve $-x^{2}+4x+5>0$.",
+      "options": [
+        "$(-\\infty,\\ -1)\\cup(5,\\ +\\infty)$",
+        "$(-5,\\ 1)$",
+        "$[-1,\\ 5]$",
+        "$(-1,\\ 5)$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — make the leading coefficient positive.** Multiply by $-1$ and turn the inequality round:\n$$x^{2}-4x-5<0.$$\n\n**Step 2 — factorise.** Product $-5$ and sum $-4$ give $-5$ and $1$:\n$$(x-5)(x+1)<0.$$\n\nAn upward parabola dips below the axis between its roots, so\n$$-1<x<5.$$\n\nThe roots themselves return $0$, and the inequality is strict, so they are left out.",
+      "distractorRationale": [
+        "Multiplied by $-1$ but kept the direction of the inequality, which selects the outside region.",
+        "Took the roots to be $-5$ and $1$, reading the constants of $(x-5)(x+1)$ with their own signs.",
+        "Included the roots, where the expression equals $0$ and a strict inequality fails.",
+        "Correct. After $x^{2}-4x-5<0$ the solution runs strictly between the roots $-1$ and $5$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-9, 10]],
+        "reference": "(-(x * x) + 4 * x + 5 > 0) ? 1 : 0",
+        "optionForms": [
+          "(x < -1 || x > 5) ? 1 : 0",
+          "(x > -5 && x < 1) ? 1 : 0",
+          "(x >= -1 && x <= 5) ? 1 : 0",
+          "(x > -1 && x < 5) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": -1 }, { "x": 5 }, { "x": -1.1 }, { "x": 5.1 },
+          { "x": 0 }, { "x": -5 }, { "x": 1 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M2.2-004",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Quadratic inequalities",
+      "difficulty": 3,
+      "stem": "For which $k$ does $x^{2}-6x+k>0$ hold at every real $x$?",
+      "options": ["$k<9$", "$k\\le 9$", "$k>9$", "$k\\ge 9$"],
+      "correctIndex": 2,
+      "solution": "The parabola opens upwards, so it stays strictly above the axis exactly when it never touches it — that is, when there is no real root.\n\nThe discriminant is\n$$\\Delta=(-6)^{2}-4k=36-4k,$$\nand no real root means $\\Delta<0$:\n$$36-4k<0\\quad\\Longrightarrow\\quad k>9.$$\n\nThe boundary deserves a check. At $k=9$ the expression is $(x-3)^{2}$, which equals $0$ at $x=3$, so the strict inequality already fails and $k=9$ has to go.",
+      "distractorRationale": [
+        "Solved $\\Delta>0$. That is the condition for two real roots, which is when the expression does dip below zero.",
+        "Same reversal, and it also admits $k=9$, where the graph touches the axis.",
+        "Correct. $\\Delta=36-4k<0$ keeps the whole parabola above the axis.",
+        "Admitted $k=9$. There $x^{2}-6x+9=(x-3)^{2}$ is zero at $x=3$, so the strict inequality fails."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["k"],
+        "domain": [[-4, 22]],
+        "reference": "((36 - 4 * k) < 0) ? 1 : 0",
+        "optionForms": [
+          "(k < 9) ? 1 : 0",
+          "(k <= 9) ? 1 : 0",
+          "(k > 9) ? 1 : 0",
+          "(k >= 9) ? 1 : 0"
+        ],
+        "extraSamples": [{ "k": 9 }, { "k": 8.9 }, { "k": 9.1 }, { "k": 0 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M2.2-005",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Quadratic inequalities",
+      "difficulty": 4,
+      "stem": "The inequality $ax^{2}+bx+2>0$ holds exactly when $-\\dfrac12<x<\\dfrac13$. Find $a+b$.",
+      "options": ["$-14$", "$-10$", "$10$", "$14$"],
+      "correctIndex": 0,
+      "solution": "**Step 1 — read the shape off the answer.** The set where the expression is positive is a bounded open interval, so the parabola opens downwards, giving $a<0$, and the two ends $-\\dfrac12$ and $\\dfrac13$ are its roots.\n\n**Step 2 — use the product of the roots.** For $ax^{2}+bx+2$ the roots multiply to $\\dfrac{2}{a}$:\n$$-\\dfrac12\\times\\dfrac13=-\\dfrac16=\\dfrac{2}{a}\\quad\\Longrightarrow\\quad a=-12.$$\n\n**Step 3 — use the sum of the roots.** The roots add to $-\\dfrac{b}{a}$:\n$$-\\dfrac12+\\dfrac13=-\\dfrac16=-\\dfrac{b}{-12}\\quad\\Longrightarrow\\quad b=-2.$$\n\nSo $a+b=-12+(-2)=-14$, and $a=-12$ is indeed negative, as Step 1 required.",
+      "distractorRationale": [
+        "Correct. $a=-12$ comes from the product of the roots and $b=-2$ from their sum.",
+        "Sign slip on the sum of the roots, giving $b=2$ and the total $-12+2$.",
+        "Missed that a bounded solution interval forces $a<0$, taking $a=12$ with $b=-2$.",
+        "Both signs wrong: $a=12$ together with $b=2$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(2 / ((-1 / 2) * (1 / 3))) + (-(2 / ((-1 / 2) * (1 / 3))) * ((-1 / 2) + (1 / 3)))",
+        "expected": -14,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M2.3-001",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.3",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Rational and absolute-value inequalities",
+      "difficulty": 2,
+      "stem": "Solve $|2x-3|<7$.",
+      "options": [
+        "$(-2,\\ 5)$",
+        "$(-5,\\ 2)$",
+        "$[-2,\\ 5]$",
+        "$(-\\infty,\\ -2)\\cup(5,\\ +\\infty)$"
+      ],
+      "correctIndex": 0,
+      "solution": "A modulus below $7$ says the quantity inside sits within $7$ of zero, so the statement becomes one double inequality:\n$$-7<2x-3<7.$$\n\nAdd $3$ to all three parts:\n$$-4<2x<10.$$\n\nDivide by $2$. The divisor is positive, so the directions stay as they are:\n$$-2<x<5.$$",
+      "distractorRationale": [
+        "Correct. $-7<2x-3<7$ unwinds to $-2<x<5$.",
+        "Flipped the sign of the constant inside the modulus, solving $-7<2x+3<7$.",
+        "Used $\\le$ at both ends. At $x=-2$ and $x=5$ the modulus is exactly $7$, and the inequality is strict.",
+        "Kept the outside region, which solves $|2x-3|>7$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-9, 11]],
+        "reference": "(Math.abs(2 * x - 3) < 7) ? 1 : 0",
+        "optionForms": [
+          "(x > -2 && x < 5) ? 1 : 0",
+          "(x > -5 && x < 2) ? 1 : 0",
+          "(x >= -2 && x <= 5) ? 1 : 0",
+          "(x < -2 || x > 5) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": -2 }, { "x": 5 }, { "x": -2.1 }, { "x": 5.1 },
+          { "x": 0 }, { "x": -5 }, { "x": 2 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M2.3-002",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.3",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Rational and absolute-value inequalities",
+      "difficulty": 3,
+      "stem": "Solve $\\dfrac{x-4}{x+1}\\le 0$.",
+      "options": [
+        "$[-1,\\ 4]$",
+        "$(-1,\\ 4]$",
+        "$(-1,\\ 4)$",
+        "$(-\\infty,\\ -1)\\cup[4,\\ +\\infty)$"
+      ],
+      "correctIndex": 1,
+      "solution": "A quotient is negative when its two parts carry opposite signs, and it is zero when the top is zero.\n\nThe interesting values are $x=4$, where the top vanishes, and $x=-1$, where the bottom vanishes. Test the three pieces they cut out. For $x<-1$ both parts are negative, so the quotient is positive. Between $-1$ and $4$ the top is negative while the bottom is positive, so the quotient is negative. Beyond $4$ both are positive again.\n\nNow settle the two ends. At $x=4$ the quotient is exactly $0$, which $\\le 0$ accepts. At $x=-1$ the bottom is $0$ and the expression has no value at all, so that end can never join in:\n$$-1<x\\le 4.$$",
+      "distractorRationale": [
+        "Closed the left end. Division by zero at $x=-1$ leaves the expression undefined, so it cannot belong.",
+        "Correct. Negative strictly between the two critical values, plus $x=4$ where the quotient is $0$.",
+        "Dropped $x=4$, but there the quotient is $0$ and $\\le 0$ allows it.",
+        "This is where the quotient is positive, the solution of $\\dfrac{x-4}{x+1}\\ge 0$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-8, 10]],
+        "reference": "((x + 1 !== 0) && ((x - 4) / (x + 1) <= 0)) ? 1 : 0",
+        "optionForms": [
+          "(x >= -1 && x <= 4) ? 1 : 0",
+          "(x > -1 && x <= 4) ? 1 : 0",
+          "(x > -1 && x < 4) ? 1 : 0",
+          "(x < -1 || x >= 4) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": -1 }, { "x": 4 }, { "x": -1.1 }, { "x": -0.9 },
+          { "x": 3.9 }, { "x": 4.1 }, { "x": 0 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M2.3-003",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.3",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Rational and absolute-value inequalities",
+      "difficulty": 3,
+      "stem": "Solve $|x+2|\\ge 5$.",
+      "options": [
+        "$[-7,\\ 3]$",
+        "$(-\\infty,\\ -7]\\cup[3,\\ +\\infty)$",
+        "$(-\\infty,\\ -7)\\cup(3,\\ +\\infty)$",
+        "$(-\\infty,\\ -3]\\cup[7,\\ +\\infty)$"
+      ],
+      "correctIndex": 1,
+      "solution": "A modulus of at least $5$ says $x+2$ is $5$ or more away from zero, in one direction or the other. That splits into two cases.\n\n**Case 1.** $x+2\\ge 5$, so $x\\ge 3$.\n\n**Case 2.** $x+2\\le -5$, so $x\\le -7$.\n\nBoth ends are kept, because $|x+2|=5$ does satisfy $\\ge 5$. Nothing between the two cases works, so the answer is the union of the two pieces.",
+      "distractorRationale": [
+        "Solved $|x+2|\\le 5$ and kept the middle stretch instead of the two outer ones.",
+        "Correct. The two cases give $x\\le -7$ and $x\\ge 3$, with both ends included.",
+        "Left out $-7$ and $3$, where the modulus is exactly $5$ and $\\ge$ is satisfied.",
+        "Centred the modulus at $2$ rather than at $-2$, as if the expression were $|x-2|$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-14, 12]],
+        "reference": "(Math.abs(x + 2) >= 5) ? 1 : 0",
+        "optionForms": [
+          "(x >= -7 && x <= 3) ? 1 : 0",
+          "(x <= -7 || x >= 3) ? 1 : 0",
+          "(x < -7 || x > 3) ? 1 : 0",
+          "(x <= -3 || x >= 7) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": -7 }, { "x": 3 }, { "x": -7.1 }, { "x": 3.1 },
+          { "x": 0 }, { "x": -3 }, { "x": 7 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M2.3-004",
+      "subject": "math",
+      "topic": "M2",
+      "subtopic": "M2.3",
+      "syllabusRef": "M-1 / Sets and Inequalities / Inequalities / Rational and absolute-value inequalities",
+      "difficulty": 4,
+      "stem": "Solve $\\dfrac{2x+1}{x-3}>1$.",
+      "options": [
+        "$(-4,\\ 3)$",
+        "$(-4,\\ +\\infty)$",
+        "$(3,\\ +\\infty)$",
+        "$(-\\infty,\\ -4)\\cup(3,\\ +\\infty)$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — resist cross-multiplying.** The sign of $x-3$ is unknown, so multiplying by it would need a case split. Move the $1$ across instead:\n$$\\dfrac{2x+1}{x-3}-1>0.$$\n\n**Step 2 — write it as one fraction.**\n$$\\dfrac{2x+1-(x-3)}{x-3}=\\dfrac{x+4}{x-3}>0.$$\n\n**Step 3 — a quotient is positive when the parts share a sign.** Both are positive when $x>3$; both are negative when $x<-4$.\n\nAt $x=-4$ the fraction is $0$, which is not greater than $0$, and at $x=3$ it has no value. Both are excluded.",
+      "distractorRationale": [
+        "Solved $(x+4)(x-3)<0$, taking the product to be negative when the inequality asks for it to be positive.",
+        "Multiplied by $x-3$ as though it were always positive, reducing to $2x+1>x-3$ and losing the branch $x<3$.",
+        "Kept only the piece where the denominator is positive and dropped $x<-4$.",
+        "Correct. $\\dfrac{x+4}{x-3}>0$ holds for $x<-4$ and for $x>3$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-12, 10]],
+        "reference": "((x !== 3) && ((2 * x + 1) / (x - 3) > 1)) ? 1 : 0",
+        "optionForms": [
+          "(x > -4 && x < 3) ? 1 : 0",
+          "(x > -4) ? 1 : 0",
+          "(x > 3) ? 1 : 0",
+          "(x < -4 || x > 3) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": -4 }, { "x": 3 }, { "x": -4.1 }, { "x": -3.9 },
+          { "x": 2.9 }, { "x": 3.1 }, { "x": 0 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    }
+  ]
+}

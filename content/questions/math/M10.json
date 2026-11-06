@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M10",
+  "questions": [
+    {
+      "id": "math-M10.1-001",
+      "subject": "math",
+      "topic": "M10",
+      "subtopic": "M10.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Vectors / Plane vectors: addition, subtraction and scalar multiples",
+      "difficulty": 1,
+      "stem": "Take $\\vec{a}=(5,\\ -2)$ and $\\vec{b}=(-3,\\ 6)$. Write $\\vec{a}+\\vec{b}=(m,\\ n)$. Then $n$ is",
+      "options": [
+        "$4$",
+        "$-8$",
+        "$8$",
+        "$2$"
+      ],
+      "correctIndex": 0,
+      "solution": "Vectors in the plane add slot by slot: the first components combine with each other, the second with each other.\n\nThe second slot holds $-2$ from $\\vec{a}$ and $6$ from $\\vec{b}$, so\n$$n=-2+6=4.$$\n\n(For completeness, $m=5+(-3)=2$, but the question asks only for $n$.)",
+      "distractorRationale": [
+        "Correct. The second components are $-2$ and $6$, and $-2+6=4$.",
+        "Computed $\\vec{a}-\\vec{b}$ in that slot: $-2-6=-8$.",
+        "Computed $\\vec{b}-\\vec{a}$ in that slot: $6-(-2)=8$.",
+        "Added the two *first* components, $5+(-3)$, and reported $m$ instead of $n$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "-2 + 6",
+        "expected": 4,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M10.1-002",
+      "subject": "math",
+      "topic": "M10",
+      "subtopic": "M10.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Vectors / Plane vectors: addition, subtraction and scalar multiples",
+      "difficulty": 2,
+      "stem": "$\\vec{a}=(2,\\ 3)$ is parallel to $\\vec{b}=(6,\\ t)$. Find $t$.",
+      "options": [
+        "$4$",
+        "$9$",
+        "$-4$",
+        "$7$"
+      ],
+      "correctIndex": 1,
+      "solution": "Parallel vectors are scalar multiples of one another, so the cross-multiplied components must agree:\n$$2t-3\\times 6=0.$$\n\nHence $2t=18$ and\n$$t=9.$$\n\nAs a check, $\\vec{b}=(6,9)=3(2,3)=3\\vec{a}$, so the scale factor is $3$ in both slots.",
+      "distractorRationale": [
+        "Paired the components the wrong way round, solving $3t=2\\times 6$.",
+        "Correct. $2t=3\\times 6$ gives $t=9$, and indeed $\\vec{b}=3\\vec{a}$.",
+        "Applied the perpendicular test $2\\times 6+3t=0$ instead of the parallel one.",
+        "Treated \"parallel\" as \"shifted by the same amount\", adding the gap $6-2=4$ to $3$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "3 * 6 / 2",
+        "expected": 9,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M10.1-003",
+      "subject": "math",
+      "topic": "M10",
+      "subtopic": "M10.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Vectors / Plane vectors: addition, subtraction and scalar multiples",
+      "difficulty": 3,
+      "stem": "With $\\vec{a}=(1,\\ 2)$ and $\\vec{b}=(3,\\ -1)$, write $(9,\\ 4)=x\\vec{a}+y\\vec{b}$. Then $x+y$ is",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$5$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — split into components.** Matching each slot separately,\n$$x+3y=9,\\qquad 2x-y=4.$$\n\n**Step 2 — eliminate.** The second equation gives $y=2x-4$. Substituting into the first,\n$$x+3(2x-4)=9 \\quad\\Longrightarrow\\quad 7x=21 \\quad\\Longrightarrow\\quad x=3,$$\nand then $y=2(3)-4=2$.\n\n**Step 3 — answer the question actually asked.**\n$$x+y=3+2=5.$$\n\nCheck: $3(1,2)+2(3,-1)=(3+6,\\ 6-2)=(9,4)$.",
+      "distractorRationale": [
+        "Computed $x-y=3-2$ instead of the sum the question asked for.",
+        "Stopped at $y=2$ and reported one coefficient only.",
+        "Stopped at $x=3$ and reported one coefficient only.",
+        "Correct. $x=3$ and $y=2$, so $x+y=5$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "((9 * (-1) - 3 * 4) + (1 * 4 - 2 * 9)) / (1 * (-1) - 3 * 2)",
+        "expected": 5,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M10.2-001",
+      "subject": "math",
+      "topic": "M10",
+      "subtopic": "M10.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Vectors / Dot product, magnitude and angle",
+      "difficulty": 2,
+      "stem": "Compute $\\vec{a}\\cdot\\vec{b}$ for $\\vec{a}=(4,\\ -3)$ and $\\vec{b}=(2,\\ 5)$.",
+      "options": [
+        "$23$",
+        "$-23$",
+        "$-7$",
+        "$7$"
+      ],
+      "correctIndex": 2,
+      "solution": "The dot product multiplies matching components and adds the two results:\n$$\\vec{a}\\cdot\\vec{b}=4\\times 2+(-3)\\times 5.$$\n\nThat is\n$$8+(-15)=-7.$$\n\nThe outcome is a number, not a vector, and its negative sign says the angle between the two vectors is obtuse.",
+      "distractorRationale": [
+        "Dropped the minus sign on $-3$, computing $8+15$.",
+        "Made the sign error on both products, giving $-8-15$.",
+        "Correct. $4\\times 2+(-3)\\times 5=8-15=-7$.",
+        "Right size, wrong sign: subtracted $8-15$ the other way round as $15-8$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "4 * 2 + (-3) * 5",
+        "expected": -7,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M10.2-002",
+      "subject": "math",
+      "topic": "M10",
+      "subtopic": "M10.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Vectors / Dot product, magnitude and angle",
+      "difficulty": 3,
+      "stem": "$\\vec{a}=(1,\\ \\sqrt{3})$ and $\\vec{b}=(\\sqrt{3},\\ 1)$. The angle between them, in degrees, is",
+      "options": [
+        "$0^\\circ$",
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$60^\\circ$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — the dot product.**\n$$\\vec{a}\\cdot\\vec{b}=1\\times\\sqrt{3}+\\sqrt{3}\\times 1=2\\sqrt{3}.$$\n\n**Step 2 — the two lengths.**\n$$|\\vec{a}|=\\sqrt{1+3}=2,\\qquad |\\vec{b}|=\\sqrt{3+1}=2.$$\n\n**Step 3 — divide and read off the angle.**\n$$\\cos\\theta=\\frac{2\\sqrt{3}}{2\\times 2}=\\frac{\\sqrt{3}}{2} \\quad\\Longrightarrow\\quad \\theta=30^{\\circ}.$$\n\nThe picture agrees: $\\vec{a}$ points at $60^{\\circ}$ above the $x$-axis and $\\vec{b}$ at $30^{\\circ}$, and the gap between those directions is $30^{\\circ}$.",
+      "distractorRationale": [
+        "Paired the components without crossing them, computing $1\\times 1+\\sqrt{3}\\times\\sqrt{3}=4$ and so $\\cos\\theta=1$.",
+        "Correct. $\\cos\\theta=\\dfrac{2\\sqrt{3}}{4}=\\dfrac{\\sqrt{3}}{2}$, so $\\theta=30^{\\circ}$.",
+        "Assumed that two vectors whose components are swapped always meet at $45^{\\circ}$. That only happens when the components are equal.",
+        "Gave the direction angle of $\\vec{a}$ alone, measured from the $x$-axis, instead of the angle between the two vectors."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.acos((1 * Math.sqrt(3) + Math.sqrt(3) * 1) / (Math.sqrt(1 + 3) * Math.sqrt(3 + 1))) * 180 / Math.PI",
+        "expected": 30,
+        "tolerance": 0.000001
+      }
+    },
+    {
+      "id": "math-M10.2-003",
+      "subject": "math",
+      "topic": "M10",
+      "subtopic": "M10.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Vectors / Dot product, magnitude and angle",
+      "difficulty": 4,
+      "stem": "$|\\vec{a}|=3$, $|\\vec{b}|=4$, and the angle between them is $60^{\\circ}$. Find $|\\vec{a}+\\vec{b}|$.",
+      "options": [
+        "$\\sqrt{13}$",
+        "$5$",
+        "$\\sqrt{37}$",
+        "$7$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — square the sum.** Expanding the dot product of $\\vec{a}+\\vec{b}$ with itself,\n$$|\\vec{a}+\\vec{b}|^{2}=|\\vec{a}|^{2}+2\\,\\vec{a}\\cdot\\vec{b}+|\\vec{b}|^{2}.$$\n\n**Step 2 — evaluate the middle term.**\n$$\\vec{a}\\cdot\\vec{b}=3\\times 4\\times\\cos 60^{\\circ}=12\\times\\tfrac{1}{2}=6.$$\n\n**Step 3 — put the numbers in.**\n$$|\\vec{a}+\\vec{b}|^{2}=9+12+16=37 \\quad\\Longrightarrow\\quad |\\vec{a}+\\vec{b}|=\\sqrt{37}.$$\n\nA check on size: the result must lie between $|4-3|=1$ and $4+3=7$, and $\\sqrt{37}\\approx 6.1$ does.",
+      "distractorRationale": [
+        "Subtracted the middle term, $9+16-12$. That sign belongs to the cosine rule for the third side of a triangle, not to $|\\vec{a}+\\vec{b}|$.",
+        "Left out the cross term altogether, which is the answer only when the two vectors are perpendicular.",
+        "Correct. $|\\vec{a}+\\vec{b}|^{2}=9+2(6)+16=37$.",
+        "Added the two lengths. That is the upper bound, reached only when the vectors point the same way."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(3 * 3 + 4 * 4 + 2 * 3 * 4 * Math.cos(60 * Math.PI / 180))",
+        "expected": 6.082762530298219,
+        "tolerance": 1e-9
+      }
+    }
+  ]
+}

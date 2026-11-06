@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P15",
+  "questions": [
+    {
+      "id": "physics-P15.1-001",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.1",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / The Bohr model, energy levels and spectral lines",
+      "difficulty": 1,
+      "stem": "In the Bohr model of the atom, a photon is given out when an electron",
+      "options": [
+        "$\\text{drops from a higher energy level to a lower one}$",
+        "$\\text{jumps from a lower energy level to a higher one}$",
+        "$\\text{stays in one energy level and circles the nucleus}$",
+        "$\\text{leaves the atom altogether}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Energy has to come from somewhere. A photon carries energy away, so the atom must have lost some, which means the electron ends up more tightly bound than it started.\n\nSo the electron falls to a lower level, and the photon carries off exactly the gap:\n$$hf=E_{\\text{high}}-E_{\\text{low}}.$$\n\nThe reverse process, climbing to a higher level, needs energy put *in* — so a photon is absorbed there, not emitted.\n\nAnd an electron sitting in a level radiates nothing at all. That is the whole point of Bohr's model: the classical prediction was that a circling charge should radiate continuously and spiral into the nucleus, and the fact that atoms are stable says it does not.",
+      "distractorRationale": [
+        "Correct. The atom loses energy, and the photon carries away exactly the difference between the two levels.",
+        "This is absorption, not emission. Climbing to a higher level requires energy to be supplied.",
+        "A stationary state radiates nothing. That stability is exactly what Bohr's model was built to explain.",
+        "This is ionisation, which again needs energy put in rather than given out."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Emission means the atom loses energy, so the electron must end in a lower level. Absorption (option B) and ionisation (option D) both require energy input, and Bohr's stationary states radiate nothing (option C), so only A describes emission."
+      }
+    },
+    {
+      "id": "physics-P15.1-002",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.1",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / The Bohr model, energy levels and spectral lines",
+      "difficulty": 2,
+      "stem": "In a hydrogen atom an electron drops from a level of energy $-0.85\\ \\mathrm{eV}$ to a level of energy $-3.40\\ \\mathrm{eV}$. The photon emitted has an energy of",
+      "options": [
+        "$0.85\\ \\mathrm{eV}$",
+        "$2.55\\ \\mathrm{eV}$",
+        "$3.40\\ \\mathrm{eV}$",
+        "$4.25\\ \\mathrm{eV}$"
+      ],
+      "correctIndex": 1,
+      "solution": "The photon carries away the difference between the two levels:\n$$E_{\\text{photon}}=E_{\\text{initial}}-E_{\\text{final}}.$$\n\nSubstitute, keeping both signs:\n$$E_{\\text{photon}}=(-0.85)-(-3.40)=-0.85+3.40=2.55\\ \\mathrm{eV}.$$\n\nBoth levels are negative because a bound electron has less energy than a free one at rest. The level nearer zero is the *higher* one, which is why $-0.85\\ \\mathrm{eV}$ is above $-3.40\\ \\mathrm{eV}$.\n\nThe answer comes out positive, as it must — a photon cannot carry negative energy.",
+      "distractorRationale": [
+        "The upper level's energy on its own, ignoring where the electron landed.",
+        "Correct. $E=(-0.85)-(-3.40)=2.55\\ \\mathrm{eV}$.",
+        "The lower level's energy on its own. The photon reflects the gap, not either endpoint.",
+        "Added the two magnitudes, $0.85+3.40$, instead of subtracting the signed values."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(-0.85) - (-3.40)",
+        "expected": 2.55,
+        "tolerance": 1e-9,
+        "unit": "eV"
+      }
+    },
+    {
+      "id": "physics-P15.1-003",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.1",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / The Bohr model, energy levels and spectral lines",
+      "difficulty": 4,
+      "stem": "An atomic transition releases a photon of energy $2.55\\ \\mathrm{eV}$. Take $h=6.63 \\times 10^{-34}\\ \\mathrm{J\\cdot s}$, $c=3.0 \\times 10^{8}\\ \\mathrm{m/s}$ and $e=1.6 \\times 10^{-19}\\ \\mathrm{C}$. The wavelength of the light is",
+      "options": [
+        "$2.44 \\times 10^{-7}\\ \\mathrm{m}$",
+        "$4.88 \\times 10^{-9}\\ \\mathrm{m}$",
+        "$4.88 \\times 10^{-7}\\ \\mathrm{m}$",
+        "$9.75 \\times 10^{-7}\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — convert the energy to joules.** The constants are in SI units, so the energy has to be too:\n$$E=2.55 \\times 1.6 \\times 10^{-19}=4.08 \\times 10^{-19}\\ \\mathrm{J}.$$\n\n**Step 2 — rearrange $E=hc/\\lambda$ for the wavelength.**\n$$\\lambda=\\frac{hc}{E}=\\frac{(6.63 \\times 10^{-34})(3.0 \\times 10^{8})}{4.08 \\times 10^{-19}}=\\frac{1.989 \\times 10^{-25}}{4.08 \\times 10^{-19}}.$$\n\n$$\\lambda=4.88 \\times 10^{-7}\\ \\mathrm{m}.$$\n\nThat is $488\\ \\mathrm{nm}$, a blue-green line — squarely in the visible range, which is the check worth making for a transition of a couple of electronvolts.",
+      "distractorRationale": [
+        "Halved the wavelength, which corresponds to doubling the photon energy somewhere in the working.",
+        "Right leading figures, wrong power of ten. This is in the X-ray region, far too energetic for a $2.55\\ \\mathrm{eV}$ transition.",
+        "Correct. $\\lambda=hc/E=4.88 \\times 10^{-7}\\ \\mathrm{m}$, a visible blue-green line.",
+        "Doubled the wavelength, from halving the energy — most often by forgetting the factor of $1.6 \\times 10^{-19}$ properly."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "6.63e-34 * 3.0e8 / (2.55 * 1.6e-19)",
+        "expected": 4.875e-7,
+        "tolerance": 0.005,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P15.1-004",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.1",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / The Bohr model, energy levels and spectral lines",
+      "difficulty": 3,
+      "stem": "A gas of one element is heated until it glows, and its light is passed through a prism. Only a few sharp coloured lines appear, always at the same wavelengths, rather than a continuous band. This is because",
+      "options": [
+        "$\\text{the prism can only separate certain colours}$",
+        "$\\text{the gas is too thin to produce all the colours}$",
+        "$\\text{some colours are absorbed again before they leave the gas}$",
+        "$\\text{the atom's electrons can only occupy certain fixed energy levels}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Each line in the spectrum is one particular transition. Its wavelength is fixed by the photon energy through $E=hc/\\lambda$, and the photon energy is fixed by the gap the electron falls across.\n\nSo a sharp line means a sharply defined energy gap, and a *few* lines means only a few gaps exist. That is only possible if the electron's allowed energies form a discrete set rather than a continuous range.\n\nHad the electron been free to take any energy, every gap would be possible and the spectrum would be a smooth continuous band. The gaps between the lines are, in effect, the energies the atom is forbidden to release — and they are the direct evidence for quantised energy levels.\n\nThe wavelengths are always the same because the levels belong to the element itself, which is why a spectrum identifies an element as reliably as a fingerprint.",
+      "distractorRationale": [
+        "A prism separates every wavelength reaching it. Shine white light through the same prism and a full continuous spectrum appears.",
+        "Thinning the gas makes the lines fainter, not fewer. Their wavelengths do not move.",
+        "Reabsorption produces dark lines in a continuous background, which is the absorption spectrum. Here the background is dark and the lines are bright, so this is emission.",
+        "Correct. Discrete energy levels allow only discrete energy gaps, so only discrete photon energies, so only discrete wavelengths."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "A line spectrum requires discrete photon energies, which requires discrete energy differences, which requires quantised levels. The prism (A) disperses all wavelengths, density (B) affects intensity not wavelength, and reabsorption (C) describes an absorption spectrum rather than the bright-line emission described."
+      }
+    },
+    {
+      "id": "physics-P15.2-001",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.2",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / Nuclear reactions and radioactive decay",
+      "difficulty": 2,
+      "stem": "A uranium nucleus with mass number $238$ and atomic number $92$ emits an alpha particle. The mass number of the nucleus left behind is",
+      "options": ["$234$", "$236$", "$238$", "$240$"],
+      "correctIndex": 0,
+      "solution": "An alpha particle is a helium nucleus: two protons and two neutrons, so mass number $4$ and atomic number $2$.\n\nMass number is conserved across a nuclear reaction, so the nucleons have to balance:\n$$238 = A_{\\text{daughter}} + 4 \\ \\Longrightarrow \\ A_{\\text{daughter}} = 238 - 4 = 234.$$\n\nThe alpha particle takes four nucleons away with it, and the daughter keeps the rest.",
+      "distractorRationale": [
+        "Correct. The alpha particle removes $4$ nucleons, leaving $238-4=234$.",
+        "Subtracted $2$ rather than $4$, using the alpha particle's *atomic* number where its mass number belongs.",
+        "Left the mass number unchanged. That happens in beta decay, not alpha decay.",
+        "Added the alpha particle's mass number instead of subtracting it."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "238 - 4",
+        "expected": 234,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P15.2-002",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.2",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / Nuclear reactions and radioactive decay",
+      "difficulty": 3,
+      "stem": "The same uranium nucleus, atomic number $92$, emits an alpha particle. The atomic number of the daughter nucleus is",
+      "options": ["$88$", "$90$", "$92$", "$94$"],
+      "correctIndex": 1,
+      "solution": "Charge is conserved as well as nucleon number, so the atomic numbers must balance too.\n\nThe alpha particle carries away two protons, so its atomic number is $2$:\n$$92 = Z_{\\text{daughter}} + 2 \\ \\Longrightarrow \\ Z_{\\text{daughter}} = 92 - 2 = 90.$$\n\nElement $90$ is thorium, so uranium-238 alpha decays to thorium-234. Alpha decay always moves an element two places back in the periodic table.",
+      "distractorRationale": [
+        "Subtracted $4$ instead of $2$, using the alpha particle's mass number where its charge belongs.",
+        "Correct. The alpha particle removes $2$ protons, leaving $92-2=90$.",
+        "Left the atomic number unchanged. Emitting two protons must change it.",
+        "Added $2$ rather than subtracting. That would mean the nucleus gained protons while emitting them."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "92 - 2",
+        "expected": 90,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P15.2-003",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.2",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / Nuclear reactions and radioactive decay",
+      "difficulty": 2,
+      "stem": "Carbon-14, atomic number $6$, decays by beta-minus emission: a neutron inside the nucleus turns into a proton and an electron, and the electron is ejected. The atomic number of the daughter nucleus is",
+      "options": ["$5$", "$6$", "$7$", "$8$"],
+      "correctIndex": 2,
+      "solution": "The stem gives the mechanism, so follow it directly. A neutron becomes a proton, so the nucleus ends up with **one more proton** than it started with:\n$$Z_{\\text{daughter}} = 6 + 1 = 7.$$\n\nThe total charge still balances: the nucleus gained $+1$ and the ejected electron carries $-1$ away, so the pair sums to zero, exactly as it was.\n\nThe mass number is unchanged at $14$, because a neutron was not lost but converted — the nucleon count stays the same. So carbon-14 becomes nitrogen-14.",
+      "distractorRationale": [
+        "Reduced the atomic number, which is what happens when a *positron* is emitted and a proton becomes a neutron.",
+        "Left it unchanged. The whole point of beta-minus decay is that a neutron becomes a proton, which must change $Z$.",
+        "Correct. One neutron becomes one proton, so $Z$ rises from $6$ to $7$.",
+        "Added $2$, which is the change for alpha emission and in the wrong direction as well."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "6 + 1",
+        "expected": 7,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P15.2-004",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.2",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / Nuclear reactions and radioactive decay",
+      "difficulty": 4,
+      "stem": "The activity of a radioactive sample falls from $800\\ \\mathrm{Bq}$ to $100\\ \\mathrm{Bq}$ over $24$ days. Its half-life is",
+      "options": [
+        "$3\\ \\mathrm{days}$",
+        "$6\\ \\mathrm{days}$",
+        "$12\\ \\mathrm{days}$",
+        "$8\\ \\mathrm{days}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — count the halvings.** Each half-life halves the activity, so step down from $800$ until you reach $100$:\n$$800 \\ \\to \\ 400 \\ \\to \\ 200 \\ \\to \\ 100.$$\nThat is three steps, so three half-lives have passed.\n\n**Step 2 — divide the time between them.**\n$$T_{1/2}=\\frac{24}{3}=8\\ \\mathrm{days}.$$\n\nEqivalently, the activity fell to $\\tfrac{1}{8}$ of its starting value, and $\\tfrac{1}{8}=\\left(\\tfrac{1}{2}\\right)^{3}$, which again gives three half-lives.",
+      "distractorRationale": [
+        "Divided $24$ by $8$, using the *factor* the activity fell by rather than the number of halvings.",
+        "Counted four half-lives instead of three, perhaps by including the starting value as a step.",
+        "Counted two half-lives. Two would take $800$ only as far as $200$.",
+        "Correct. $800 \\to 400 \\to 200 \\to 100$ is three half-lives, so $T_{1/2}=24/3=8\\ \\mathrm{days}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "24 / (Math.log(800 / 100) / Math.log(2))",
+        "expected": 8,
+        "tolerance": 1e-9,
+        "unit": "days"
+      }
+    },
+    {
+      "id": "physics-P15.3-001",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.3",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / Mass defect, binding energy and mass-energy equivalence",
+      "difficulty": 3,
+      "stem": "A nucleus has a mass defect of $0.030\\ \\mathrm{u}$. Take $1\\ \\mathrm{u}=1.66 \\times 10^{-27}\\ \\mathrm{kg}$ and $c=3.0 \\times 10^{8}\\ \\mathrm{m/s}$. Its binding energy is",
+      "options": [
+        "$4.48 \\times 10^{-12}\\ \\mathrm{J}$",
+        "$1.49 \\times 10^{-20}\\ \\mathrm{J}$",
+        "$4.98 \\times 10^{-29}\\ \\mathrm{J}$",
+        "$8.96 \\times 10^{-12}\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — put the mass defect into kilograms.**\n$$\\Delta m=0.030 \\times 1.66 \\times 10^{-27}=4.98 \\times 10^{-29}\\ \\mathrm{kg}.$$\n\n**Step 2 — convert that mass into energy.**\n$$E=\\Delta m\\,c^{2}=(4.98 \\times 10^{-29})(3.0 \\times 10^{8})^{2}=(4.98 \\times 10^{-29})(9.0 \\times 10^{16}).$$\n\n$$E=4.48 \\times 10^{-12}\\ \\mathrm{J}.$$\n\nThe binding energy is what you would have to supply to pull the nucleus apart into free nucleons — and equally, it is the energy released when those nucleons come together. A tiny missing mass converts into a very large energy, because $c^{2}$ is such a large multiplier.",
+      "distractorRationale": [
+        "Correct. $E=\\Delta m\\,c^{2}=(4.98 \\times 10^{-29})(9.0 \\times 10^{16})=4.48 \\times 10^{-12}\\ \\mathrm{J}$.",
+        "Multiplied by $c$ rather than $c^{2}$, leaving the answer eight powers of ten too small.",
+        "This is the mass defect in kilograms. It still has to be multiplied by $c^{2}$ to become an energy.",
+        "Doubled the result, most often by using $2c$ in place of $c^{2}$ somewhere in the arithmetic."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.030 * 1.66e-27 * 3.0e8 * 3.0e8",
+        "expected": 4.482e-12,
+        "tolerance": 0.005,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P15.3-002",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.3",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / Mass defect, binding energy and mass-energy equivalence",
+      "difficulty": 1,
+      "stem": "The mass of a stable nucleus, compared with the total mass of the same protons and neutrons weighed separately, is",
+      "options": [
+        "$\\text{greater}$",
+        "$\\text{smaller}$",
+        "$\\text{exactly the same}$",
+        "$\\text{greater or smaller depending on the element}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Assembling a nucleus from free nucleons **releases** energy — that released energy is the binding energy. Energy leaving the system takes mass with it, through\n$$\\Delta E=\\Delta m\\,c^{2}.$$\n\nSo the assembled nucleus weighs less than its separate parts. The shortfall is the mass defect:\n$$\\Delta m=\\sum m_{\\text{nucleons}}-m_{\\text{nucleus}}>0.$$\n\nThe reverse reading is just as useful: because the nucleus sits lower in mass, you have to *supply* that energy to pull it apart again. If a nucleus weighed more than its parts, it would fly apart on its own — which is precisely why it would not be stable.",
+      "distractorRationale": [
+        "A nucleus heavier than its parts would release energy by breaking up, so it could not be stable.",
+        "Correct. The binding energy released on assembly corresponds to the missing mass, so the nucleus is lighter than its separate nucleons.",
+        "Would mean zero binding energy, so the nucleus could be pulled apart for free and would not hold together at all.",
+        "Every stable nucleus is lighter than its separate nucleons. What varies between elements is the size of the defect, not its sign."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Binding energy is released when nucleons combine, and by E = mc^2 the energy lost corresponds to mass lost, so the bound nucleus is lighter than its free constituents. A positive mass defect is what makes a nucleus stable, which rules out options A, C and D."
+      }
+    },
+    {
+      "id": "physics-P15.3-003",
+      "subject": "physics",
+      "topic": "P15",
+      "subtopic": "P15.3",
+      "syllabusRef": "P-5 / Modern Physics / Atomic and Nuclear Physics / Mass defect, binding energy and mass-energy equivalence",
+      "difficulty": 5,
+      "stem": "In one fusion reaction the total mass of the particles falls by $4.0 \\times 10^{-29}\\ \\mathrm{kg}$. Take $c=3.0 \\times 10^{8}\\ \\mathrm{m/s}$. The energy released is",
+      "options": [
+        "$1.20 \\times 10^{-20}\\ \\mathrm{J}$",
+        "$3.60 \\times 10^{-21}\\ \\mathrm{J}$",
+        "$3.60 \\times 10^{-12}\\ \\mathrm{J}$",
+        "$1.33 \\times 10^{-37}\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The missing mass has not vanished; it has become energy. The conversion rate is $c^{2}$:\n$$E=\\Delta m\\,c^{2}.$$\n\nThe mass is already in kilograms, so substitute directly, squaring the speed of light first:\n$$c^{2}=(3.0 \\times 10^{8})^{2}=9.0 \\times 10^{16}\\ \\mathrm{m^{2}/s^{2}},$$\n$$E=(4.0 \\times 10^{-29})(9.0 \\times 10^{16})=3.6 \\times 10^{-12}\\ \\mathrm{J}.$$\n\nWorth pausing on the size. That is only a few picojoules from one reaction — but a gram of fuel holds of the order of $10^{23}$ nuclei, so the total is enormous. This is where the Sun's output comes from.",
+      "distractorRationale": [
+        "Multiplied by $c$ instead of $c^{2}$. Squaring the speed of light is what makes the energy large.",
+        "Squared the mantissa but not the power of ten, so $c^{2}$ came out as $9.0 \\times 10^{8}$ rather than $9.0 \\times 10^{16}$.",
+        "Correct. $E=(4.0 \\times 10^{-29})(9.0 \\times 10^{16})=3.6 \\times 10^{-12}\\ \\mathrm{J}$.",
+        "Divided by $c^{2}$ instead of multiplying. That converts an energy into a mass, which is the opposite of what is wanted here."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "4.0e-29 * 3.0e8 * 3.0e8",
+        "expected": 3.6e-12,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    }
+  ]
+}

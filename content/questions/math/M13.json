@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M13",
+  "questions": [
+    {
+      "id": "math-M13.1-001",
+      "subject": "math",
+      "topic": "M13",
+      "subtopic": "M13.1",
+      "syllabusRef": "M-4 / Probability and Statistics / Counting / Permutations",
+      "difficulty": 1,
+      "stem": "A shelf holds five different atlases standing side by side. Find the number of possible orders.",
+      "options": ["$20$", "$24$", "$60$", "$120$"],
+      "correctIndex": 3,
+      "solution": "Fill the five positions one at a time.\n\nThe first position can take any of the $5$ atlases. Once it is filled, $4$ atlases remain for the second position, then $3$, then $2$, then $1$.\n\nMultiply the choices together:\n$$5 \\times 4 \\times 3 \\times 2 \\times 1 = 120.$$\n\nEvery factor must appear, because every position has to be filled.",
+      "distractorRationale": [
+        "Stopped after two factors, $5 \\times 4$, so only the first two positions were filled.",
+        "Computed $4!$, which arranges only four of the five atlases.",
+        "Stopped after three factors, $5 \\times 4 \\times 3$, leaving the last two positions unfilled.",
+        "Correct. All five positions are filled, giving $5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "5 * 4 * 3 * 2 * 1",
+        "expected": 120,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M13.1-002",
+      "subject": "math",
+      "topic": "M13",
+      "subtopic": "M13.1",
+      "syllabusRef": "M-4 / Probability and Statistics / Counting / Permutations",
+      "difficulty": 2,
+      "stem": "Seven cyclists finish a stage with no two finishing times equal. Medals go to the first, second and third to finish. Find the number of different medal outcomes.",
+      "options": ["$21$", "$35$", "$210$", "$343$"],
+      "correctIndex": 2,
+      "solution": "The three medals are different from one another, so the order of the three named cyclists matters. This is a permutation of $3$ chosen from $7$.\n\nThe first medal can go to any of $7$ cyclists, the second to any of the remaining $6$, the third to any of the remaining $5$:\n$$7 \\times 6 \\times 5 = 210.$$\n\nDividing by $3!$ here would be wrong: that would treat the three medals as interchangeable.",
+      "distractorRationale": [
+        "Computed $\\dfrac{7 \\times 6}{2}$, choosing only two cyclists instead of three.",
+        "Computed $\\dfrac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1}$, a combination. That treats the three medals as identical, but first place differs from third place.",
+        "Correct. The medals are distinguishable, so the count is the permutation $7 \\times 6 \\times 5 = 210$.",
+        "Computed $7^{3}$, which allows one cyclist to take more than one medal."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "7 * 6 * 5",
+        "expected": 210,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M13.1-003",
+      "subject": "math",
+      "topic": "M13",
+      "subtopic": "M13.1",
+      "syllabusRef": "M-4 / Probability and Statistics / Counting / Permutations",
+      "difficulty": 3,
+      "stem": "Six trainees line up for a photograph. Two of them, $P$ and $Q$, must stand next to each other. Find the number of possible lines.",
+      "options": ["$120$", "$240$", "$480$", "$720$"],
+      "correctIndex": 1,
+      "solution": "**Step 1 — glue the pair together.** Treat $P$ and $Q$ as one block. The line then contains that block plus the other $4$ trainees, so there are $5$ items to arrange:\n$$5 \\times 4 \\times 3 \\times 2 \\times 1 = 120.$$\n\n**Step 2 — order the pair inside the block.** Within the block the two can stand as $PQ$ or as $QP$, which is $2$ ways.\n\n**Step 3 — multiply.**\n$$120 \\times 2 = 240.$$",
+      "distractorRationale": [
+        "Arranged the block with the other four trainees but forgot Step 2, so $PQ$ and $QP$ were counted as one.",
+        "Correct. $5!$ arrangements of the block and the four others, doubled for the two orders inside the block.",
+        "This is $720 - 240$, the number of lines in which $P$ and $Q$ are *apart* — the opposite of what was asked.",
+        "Computed $6!$, ignoring the restriction entirely."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * (5 * 4 * 3 * 2 * 1)",
+        "expected": 240,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M13.2-001",
+      "subject": "math",
+      "topic": "M13",
+      "subtopic": "M13.2",
+      "syllabusRef": "M-4 / Probability and Statistics / Counting / Combinations",
+      "difficulty": 2,
+      "stem": "A gardening club has nine members. Three of them will form a planting crew. Find the number of different crews.",
+      "options": ["$84$", "$126$", "$252$", "$504$"],
+      "correctIndex": 0,
+      "solution": "A crew is just a set of three people. Swapping two of them gives the same crew, so order does not matter and this is a combination.\n\nCount the ordered picks first, $9 \\times 8 \\times 7 = 504$. Each crew has been counted once for every ordering of its three members, and there are $3! = 6$ such orderings.\n\nSo\n$$\\frac{9 \\times 8 \\times 7}{3 \\times 2 \\times 1} = \\frac{504}{6} = 84.$$",
+        "distractorRationale": [
+        "Correct. $\\dfrac{9 \\times 8 \\times 7}{3 \\times 2 \\times 1} = 84$.",
+        "Chose four members instead of three, giving $\\dfrac{9 \\times 8 \\times 7 \\times 6}{4 \\times 3 \\times 2 \\times 1}$.",
+        "Divided $504$ by $2!$ instead of by $3!$, so each crew is still counted three times.",
+        "Left the count as $9 \\times 8 \\times 7$, which counts the orderings as well as the crews."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(9 * 8 * 7) / (3 * 2 * 1)",
+        "expected": 84,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M13.2-002",
+      "subject": "math",
+      "topic": "M13",
+      "subtopic": "M13.2",
+      "syllabusRef": "M-4 / Probability and Statistics / Counting / Combinations",
+      "difficulty": 4,
+      "stem": "A rack carries seven different spice jars. A cook will take at least five of them on a trip. Find the number of possible selections.",
+      "options": ["$21$", "$28$", "$29$", "$128$"],
+      "correctIndex": 2,
+      "solution": "\"At least five\" splits into three separate cases, and the cases cannot overlap, so their counts add.\n\n**Case 1 — exactly five jars.**\n$$\\frac{7 \\times 6 \\times 5 \\times 4 \\times 3}{5 \\times 4 \\times 3 \\times 2 \\times 1} = 21.$$\n\n**Case 2 — exactly six jars.** Choosing six is the same as deciding which single jar to leave behind, so there are $7$ ways.\n\n**Case 3 — all seven jars.** There is $1$ way.\n\nAdding the three cases:\n$$21 + 7 + 1 = 29.$$",
+      "distractorRationale": [
+        "Counted only Case 1, the selections of exactly five jars.",
+        "Added Cases 1 and 2 but forgot Case 3, that taking the whole rack also satisfies \"at least five\".",
+        "Correct. $21 + 7 + 1 = 29$.",
+        "Computed $2^{7}$, the number of all possible selections, with no lower limit on the size applied."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(7 * 6 * 5 * 4 * 3) / (5 * 4 * 3 * 2 * 1) + (7 * 6 * 5 * 4 * 3 * 2) / (6 * 5 * 4 * 3 * 2 * 1) + 1",
+        "expected": 29,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M13.2-003",
+      "subject": "math",
+      "topic": "M13",
+      "subtopic": "M13.2",
+      "syllabusRef": "M-4 / Probability and Statistics / Counting / Combinations",
+      "difficulty": 3,
+      "stem": "A review panel of four is drawn from five engineers and four architects. It must hold exactly two engineers and exactly two architects. Find the number of possible panels.",
+      "options": ["$60$", "$120$", "$126$", "$3024$"],
+      "correctIndex": 0,
+      "solution": "The two halves of the panel are chosen independently, so count each half and multiply.\n\n**Step 1 — the engineers.** Two from five, order irrelevant:\n$$\\frac{5 \\times 4}{2 \\times 1} = 10.$$\n\n**Step 2 — the architects.** Two from four:\n$$\\frac{4 \\times 3}{2 \\times 1} = 6.$$\n\n**Step 3 — combine.** Every choice of engineers can sit with every choice of architects, so the two counts multiply:\n$$10 \\times 6 = 60.$$",
+      "distractorRationale": [
+        "Correct. $10$ ways to pick the engineers times $6$ ways to pick the architects.",
+        "Used $4 \\times 3 = 12$ for the architects instead of $\\dfrac{4 \\times 3}{2} = 6$, so the two architects were put in an order.",
+        "Chose any four of the nine people, $\\dfrac{9 \\times 8 \\times 7 \\times 6}{4 \\times 3 \\times 2 \\times 1}$, ignoring the two-and-two rule.",
+        "Computed $9 \\times 8 \\times 7 \\times 6$, an ordered selection from all nine people."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "((5 * 4) / (2 * 1)) * ((4 * 3) / (2 * 1))",
+        "expected": 60,
+        "tolerance": 1e-9
+      }
+    }
+  ]
+}

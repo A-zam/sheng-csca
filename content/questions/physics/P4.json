@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P4",
+  "questions": [
+    {
+      "id": "physics-P4.1-001",
+      "subject": "physics",
+      "topic": "P4",
+      "subtopic": "P4.1",
+      "syllabusRef": "P-1 / Mechanics / Momentum and Impulse / Impulse and change of momentum",
+      "difficulty": 1,
+      "stem": "Impulse is measured in $\\mathrm{N\\cdot s}$. Which quantity is measured in the same SI unit?",
+      "options": [
+        "$\\text{Momentum}$",
+        "$\\text{Kinetic energy}$",
+        "$\\text{Power}$",
+        "$\\text{Force}$"
+      ],
+      "correctIndex": 0,
+      "solution": "An impulse is a force multiplied by the time for which it acts, $J = Ft$, so its unit is the newton second.\n\nNewton's second law says that this product is exactly the change in momentum:\n$$Ft = \\Delta(mv).$$\n\nTwo quantities that are always equal must share a unit, so momentum is measured in $\\mathrm{N\\cdot s}$ as well, more usually written $\\mathrm{kg\\cdot m/s}$. The two forms agree:\n$$\\mathrm{N\\cdot s} = \\mathrm{kg\\cdot m/s^2} \\times \\mathrm{s} = \\mathrm{kg\\cdot m/s}.$$",
+      "distractorRationale": [
+        "Correct. Impulse equals change of momentum, so the two share a unit: $\\mathrm{N\\cdot s} = \\mathrm{kg\\cdot m/s}$.",
+        "Energy is measured in joules, which is $\\mathrm{N\\cdot m}$. The second factor there is a distance, not a time.",
+        "Power is energy per second, measured in watts. It carries a second in the denominator, not the numerator.",
+        "Force is measured in newtons alone. An impulse is a force multiplied by a time, so it carries an extra second."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "The impulse-momentum theorem states Ft = mv2 - mv1, so impulse and momentum are the same kind of quantity and must share a unit: N.s = kg.m/s. Energy is measured in joules, power in watts and force in newtons, so none of the other three can match."
+      }
+    },
+    {
+      "id": "physics-P4.1-002",
+      "subject": "physics",
+      "topic": "P4",
+      "subtopic": "P4.1",
+      "syllabusRef": "P-1 / Mechanics / Momentum and Impulse / Impulse and change of momentum",
+      "difficulty": 2,
+      "stem": "A tennis racket strikes a ball, pushing it forward with an average force of $250\\ \\mathrm{N}$ for a contact time of $0.020\\ \\mathrm{s}$. The magnitude of the impulse the racket gives the ball is",
+      "options": [
+        "$0.5\\ \\mathrm{N\\cdot s}$",
+        "$5\\ \\mathrm{N\\cdot s}$",
+        "$250\\ \\mathrm{N\\cdot s}$",
+        "$1.25 \\times 10^{4}\\ \\mathrm{N\\cdot s}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Impulse is the product of the average force and the time for which it acts:\n$$J = Ft = 250 \\times 0.020 = 5\\ \\mathrm{N\\cdot s}.$$\n\nThe contact lasts only a fiftieth of a second, which is why a racket needs a force of hundreds of newtons to change the ball's motion appreciably.\n\nThe two quantities are multiplied. Dividing the force by the time would give a rate of change of force, which is not what an impulse means.",
+      "distractorRationale": [
+        "Slipped one power of ten in the contact time, using $0.0020\\ \\mathrm{s}$ instead of $0.020\\ \\mathrm{s}$.",
+        "Correct. $J = Ft = 250 \\times 0.020 = 5\\ \\mathrm{N\\cdot s}$.",
+        "Reported the force itself and never multiplied by the contact time. A newton is not a newton second.",
+        "Divided the force by the time instead of multiplying, giving $250/0.020$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "250 * 0.020",
+        "expected": 5,
+        "tolerance": 1e-9,
+        "unit": "N\\cdot s"
+      }
+    },
+    {
+      "id": "physics-P4.1-003",
+      "subject": "physics",
+      "topic": "P4",
+      "subtopic": "P4.1",
+      "syllabusRef": "P-1 / Mechanics / Momentum and Impulse / Impulse and change of momentum",
+      "difficulty": 3,
+      "stem": "A squash ball of mass $0.15\\ \\mathrm{kg}$ travels horizontally to the right at $12\\ \\mathrm{m/s}$, strikes a wall, and rebounds horizontally to the left at $8\\ \\mathrm{m/s}$. Taking rightward as the positive direction, the impulse the wall gives the ball is",
+      "options": [
+        "$-1.2\\ \\mathrm{N\\cdot s}$",
+        "$+3\\ \\mathrm{N\\cdot s}$",
+        "$-3\\ \\mathrm{N\\cdot s}$",
+        "$-0.6\\ \\mathrm{N\\cdot s}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Impulse equals the change in momentum, and momentum is a vector, so each direction of travel has to be carried through as a sign.\n\n**Step 1 — write both velocities with signs.** Rightward is positive, so\n$$v_1 = +12\\ \\mathrm{m/s}, \\qquad v_2 = -8\\ \\mathrm{m/s}.$$\n\n**Step 2 — take the change in momentum.**\n$$J = m(v_2 - v_1) = 0.15 \\times (-8 - 12) = 0.15 \\times (-20) = -3\\ \\mathrm{N\\cdot s}.$$\n\nThe minus sign says the impulse points to the left, which it must, since the wall pushes the ball back. Because the ball reverses, the two speeds add inside the bracket rather than cancelling, and the impulse is larger than it would have been had the ball simply stopped dead.",
+      "distractorRationale": [
+        "Used only the rebound momentum, $0.15 \\times 8$, and ignored the momentum the ball arrived with.",
+        "Right size, wrong sign. The ball ends up travelling leftward, so the impulse that turned it round must be negative.",
+        "Correct. $J = m(v_2 - v_1) = 0.15 \\times (-8 - 12) = -3\\ \\mathrm{N\\cdot s}$.",
+        "Subtracted the speeds as if both were positive, using $8 - 12 = -4$ instead of $-8 - 12 = -20$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.15 * (-8 - 12)",
+        "expected": -3,
+        "tolerance": 1e-9,
+        "unit": "N\\cdot s"
+      }
+    },
+    {
+      "id": "physics-P4.1-004",
+      "subject": "physics",
+      "topic": "P4",
+      "subtopic": "P4.1",
+      "syllabusRef": "P-1 / Mechanics / Momentum and Impulse / Impulse and change of momentum",
+      "difficulty": 4,
+      "stem": "A basketball of mass $0.60\\ \\mathrm{kg}$ meets a gym floor moving downward at $5\\ \\mathrm{m/s}$ and leaves it moving upward at $3\\ \\mathrm{m/s}$. The contact lasts $0.10\\ \\mathrm{s}$. Taking upward as the positive direction, the magnitude of the average resultant force on the ball during the contact is",
+      "options": [
+        "$12\\ \\mathrm{N}$",
+        "$18\\ \\mathrm{N}$",
+        "$30\\ \\mathrm{N}$",
+        "$48\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — fix the signs.** Upward is positive, so the ball arrives with $v_1 = -5\\ \\mathrm{m/s}$ and leaves with $v_2 = +3\\ \\mathrm{m/s}$.\n\n**Step 2 — change in momentum.**\n$$\\Delta p = m(v_2 - v_1) = 0.60 \\times (3 - (-5)) = 0.60 \\times 8 = 4.8\\ \\mathrm{kg\\cdot m/s}.$$\n\n**Step 3 — average force.** The impulse of the resultant force equals that change:\n$$F = \\frac{\\Delta p}{t} = \\frac{4.8}{0.10} = 48\\ \\mathrm{N}.$$\n\nThe two velocities point opposite ways, so their difference is $3 + 5 = 8$, not $5 - 3 = 2$. That single sign is worth a factor of four in the answer.",
+      "distractorRationale": [
+        "Subtracted the two speeds as though both were upward, using $5 - 3 = 2$ in place of $3 - (-5) = 8$.",
+        "Used only the momentum the ball left with, $0.60 \\times 3$, and ignored the momentum it arrived with.",
+        "Used only the momentum the ball arrived with, $0.60 \\times 5$, as though the ball had stopped dead instead of bouncing.",
+        "Correct. $\\Delta p = 0.60 \\times (3 - (-5)) = 4.8\\ \\mathrm{kg\\cdot m/s}$, so $F = 4.8/0.10 = 48\\ \\mathrm{N}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(0.60 * (3 - (-5))) / 0.10",
+        "expected": 48,
+        "tolerance": 1e-9,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P4.2-001",
+      "subject": "physics",
+      "topic": "P4",
+      "subtopic": "P4.2",
+      "syllabusRef": "P-1 / Mechanics / Momentum and Impulse / Conservation of momentum and collisions",
+      "difficulty": 1,
+      "stem": "Two railway wagons collide on a level, frictionless track and lock together. During the collision, which quantity is certainly conserved?",
+      "options": [
+        "$\\text{The total kinetic energy of the two wagons}$",
+        "$\\text{The total momentum of the two wagons}$",
+        "$\\text{The speed of the heavier wagon}$",
+        "$\\text{The momentum of each wagon separately}$"
+      ],
+      "correctIndex": 1,
+      "solution": "The two wagons push on each other with equal and opposite forces, for exactly the same length of time, so the impulses they receive are equal and opposite. Whatever momentum one gains, the other loses.\n\nOn a level, frictionless track there is no external horizontal force on the pair, so nothing changes the total. The total momentum before the collision equals the total momentum after it.\n\nKinetic energy is a different matter. Wagons that lock together are dented and warmed by the impact, and that energy never comes back. A collision in which the bodies move off as one always loses kinetic energy.",
+      "distractorRationale": [
+        "Kinetic energy is conserved only in an elastic collision. Wagons that lock together lose kinetic energy to deformation and heating.",
+        "Correct. No external horizontal force acts on the pair, so their total momentum is unchanged by the collision.",
+        "Every wagon in a collision changes its velocity. Only the total of the two momenta is protected, not any single speed.",
+        "The wagons exchange momentum, so each one's momentum changes. It is the sum that stays fixed."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "With no external horizontal force on the two-wagon system, the total momentum is conserved. Kinetic energy is not, because the wagons lock together and a perfectly inelastic collision always loses kinetic energy, and neither wagon keeps its own momentum, since the two push on each other."
+      }
+    },
+    {
+      "id": "physics-P4.2-002",
+      "subject": "physics",
+      "topic": "P4",
+      "subtopic": "P4.2",
+      "syllabusRef": "P-1 / Mechanics / Momentum and Impulse / Conservation of momentum and collisions",
+      "difficulty": 2,
+      "stem": "A shunting locomotive of mass $8000\\ \\mathrm{kg}$ rolls east along a level track at $3\\ \\mathrm{m/s}$ and couples to a stationary wagon of mass $4000\\ \\mathrm{kg}$. The two then move off together towards the east. Their common speed is",
+      "options": [
+        "$6\\ \\mathrm{m/s}$",
+        "$1.5\\ \\mathrm{m/s}$",
+        "$3\\ \\mathrm{m/s}$",
+        "$2\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 3,
+      "solution": "No external horizontal force acts while the coupling happens, so the total momentum is unchanged. Take east as positive.\n\n**Before.** Only the locomotive is moving:\n$$p = 8000 \\times 3 = 2.4 \\times 10^{4}\\ \\mathrm{kg\\cdot m/s}.$$\n\n**After.** The two vehicles move as a single body of mass $8000 + 4000 = 12000\\ \\mathrm{kg}$:\n$$12000\\,v = 2.4 \\times 10^{4} \\ \\Longrightarrow\\ v = 2\\ \\mathrm{m/s}.$$\n\nAs a check, the moving body afterwards is heavier than the locomotive alone, so it must travel more slowly than $3\\ \\mathrm{m/s}$.",
+      "distractorRationale": [
+        "Divided the locomotive's momentum by the wagon's mass alone, computing $2.4 \\times 10^{4}/4000$.",
+        "Halved the starting speed, as though the momentum were shared equally between two bodies of equal mass. The two masses are not equal.",
+        "Assumed the speed is unchanged by the coupling. Adding mass at the same momentum must reduce the speed.",
+        "Correct. $v = \\dfrac{8000 \\times 3}{8000 + 4000} = 2\\ \\mathrm{m/s}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(8000 * 3) / (8000 + 4000)",
+        "expected": 2,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P4.2-003",
+      "subject": "physics",
+      "topic": "P4",
+      "subtopic": "P4.2",
+      "syllabusRef": "P-1 / Mechanics / Momentum and Impulse / Conservation of momentum and collisions",
+      "difficulty": 3,
+      "stem": "Two skaters stand at rest facing each other on a frictionless rink. The first skater, of mass $70\\ \\mathrm{kg}$, pushes the second, of mass $50\\ \\mathrm{kg}$, who then glides east at $2.8\\ \\mathrm{m/s}$. The speed of the first skater immediately after the push is",
+      "options": [
+        "$2\\ \\mathrm{m/s}$",
+        "$2.8\\ \\mathrm{m/s}$",
+        "$3.9\\ \\mathrm{m/s}$",
+        "$0\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Both skaters start at rest, so the total momentum of the pair is zero, and the ice exerts no horizontal force to change it. The total is still zero after the push.\n\nTake east as positive:\n$$50 \\times 2.8 + 70 \\times v = 0 \\ \\Longrightarrow\\ v = -\\frac{140}{70} = -2\\ \\mathrm{m/s}.$$\n\nThe first skater therefore moves west at $2\\ \\mathrm{m/s}$, and the speed asked for is $2\\ \\mathrm{m/s}$.\n\nA zero total does not mean each skater has zero momentum. It means their momenta are equal in size and opposite in direction, so the heavier skater always ends up the slower of the two.",
+      "distractorRationale": [
+        "Correct. $70v = 50 \\times 2.8$ in magnitude, so $v = 140/70 = 2\\ \\mathrm{m/s}$, directed west.",
+        "Assumed the two skaters move apart at equal speeds. Equal momenta with unequal masses means unequal speeds.",
+        "Swapped the two masses, computing $70 \\times 2.8 / 50$. The mass being divided by must be the mass of the skater whose speed is wanted.",
+        "Read \"the total momentum is zero\" as \"each skater has zero momentum\", leaving the pusher at rest. Newton's third law guarantees she recoils."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(50 * 2.8) / 70",
+        "expected": 2,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P4.2-004",
+      "subject": "physics",
+      "topic": "P4",
+      "subtopic": "P4.2",
+      "syllabusRef": "P-1 / Mechanics / Momentum and Impulse / Conservation of momentum and collisions",
+      "difficulty": 4,
+      "stem": "On a linear air track, a glider of mass $0.30\\ \\mathrm{kg}$ moves to the right at $4\\ \\mathrm{m/s}$ and meets head-on a glider of mass $0.20\\ \\mathrm{kg}$ moving to the left at $3\\ \\mathrm{m/s}$. After the collision the $0.30\\ \\mathrm{kg}$ glider is still moving to the right, now at $1\\ \\mathrm{m/s}$. Taking rightward as positive, the velocity of the $0.20\\ \\mathrm{kg}$ glider after the collision is",
+      "options": [
+        "$+7.5\\ \\mathrm{m/s}$",
+        "$-1.5\\ \\mathrm{m/s}$",
+        "$+1.5\\ \\mathrm{m/s}$",
+        "$+3\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The air track removes friction, so the total momentum of the two gliders is the same before and after. Rightward is positive throughout.\n\n**Step 1 — total momentum before.** The lighter glider travels left, so its velocity is negative:\n$$p_1 = 0.30 \\times 4 + 0.20 \\times (-3) = 1.2 - 0.6 = 0.6\\ \\mathrm{kg\\cdot m/s}.$$\n\n**Step 2 — total momentum after.** The heavier glider still moves right at $1\\ \\mathrm{m/s}$:\n$$p_2 = 0.30 \\times 1 + 0.20\\,v = 0.3 + 0.20\\,v.$$\n\n**Step 3 — set the two equal.**\n$$0.3 + 0.20\\,v = 0.6 \\ \\Longrightarrow\\ v = \\frac{0.3}{0.20} = +1.5\\ \\mathrm{m/s}.$$\n\nThe answer is positive, so the lighter glider has been turned round and now travels to the right. Dropping the minus sign on its incoming velocity is the single most common error here.",
+      "distractorRationale": [
+        "Ignored the minus sign on the left-moving glider, taking the total before the collision as $1.2 + 0.6 = 1.8\\ \\mathrm{kg\\cdot m/s}$.",
+        "Right size, wrong sign. Substituting $-1.5\\ \\mathrm{m/s}$ makes the total afterwards zero, not the $0.6\\ \\mathrm{kg\\cdot m/s}$ the pair started with.",
+        "Correct. $0.30 \\times 4 + 0.20 \\times (-3) = 0.30 \\times 1 + 0.20\\,v$ gives $v = +1.5\\ \\mathrm{m/s}$.",
+        "Forgot that the heavier glider still carries $0.30\\ \\mathrm{kg\\cdot m/s}$ after the collision, solving $0.20\\,v = 0.6$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(0.30 * 4 + 0.20 * (-3) - 0.30 * 1) / 0.20",
+        "expected": 1.5,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    }
+  ]
+}

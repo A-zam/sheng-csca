@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "CSCA (China Scholastic Competency Assessment) — Mathematics and Physics, English medium",
+  "disclaimer": "This taxonomy is an independent study aid. It is not published, reviewed, or endorsed by CSCA, the China Scholarship Council, or any university. Topics marked verified:false could not be confirmed against two independent sources and are inferred from the reference corpus or from the standard Chinese senior-high scope.",
+  "sources": [
+    {
+      "id": "src-analysis",
+      "title": "CSCA Mathematics / Physics Examination Syllabus Analysis (2025)",
+      "publisher": "CrosslineEdu",
+      "kind": "secondary",
+      "note": "Two documents in the operator-supplied corpus. Each gives the exam's module list, the question count per module, and the easy/medium/complex split per module. This is the most specific structural source available and the module counts below come from it."
+    },
+    {
+      "id": "src-guides",
+      "title": "CSCA Mathematics / Physics Exam Preparation Guide, and Formula Sheet v2.0",
+      "publisher": "CrosslineEdu",
+      "kind": "secondary",
+      "note": "Chapter structure and formula-sheet contents fix the depth of each topic — which is what settles borderline scope questions such as thin lenses, the sine and cosine rules, and Bayes' theorem."
+    },
+    {
+      "id": "src-guidebook",
+      "title": "Guide to the CSCA Exam — section V, 'Detailed Syllabus (Official 2025 Edition by CSCA)'",
+      "publisher": "China Admissions",
+      "url": "https://www.china-admissions.com/wp-content/uploads/2025/11/CSCA-Guidebook.pdf",
+      "retrieved": "2026-09-07",
+      "kind": "secondary",
+      "note": "Independent web source reproducing the official 2025 syllabus headings. Agrees with src-analysis on all five physics strands and all four mathematics modules."
+    },
+    {
+      "id": "src-cucas",
+      "title": "CSCA Test: Syllabus, Dates, Mock Test & University List 2026",
+      "publisher": "CUCAS",
+      "url": "https://www.cucas.cn/csca",
+      "retrieved": "2026-09-07",
+      "kind": "secondary",
+      "note": "Corroborates the exam format: 48 multiple-choice questions, 60 minutes, 100 points."
+    },
+    {
+      "id": "src-mandarinzone",
+      "title": "CSCA Exam Complete Guide (2025-2026)",
+      "publisher": "Mandarin Zone",
+      "url": "https://www.mandarinzone.com/csca-exam-guide/",
+      "retrieved": "2026-09-07",
+      "kind": "secondary",
+      "note": "Third independent confirmation of 48 questions in 60 minutes."
+    },
+    {
+      "id": "src-papers",
+      "title": "Private reference set of past-paper-style material supplied by the site operator",
+      "publisher": "private",
+      "kind": "corpus",
+      "note": "Used only to derive the topic-frequency, difficulty and style profile in calibration.json. No item text is reproduced anywhere in this repository."
+    }
+  ],
+  "primarySourceUnavailable": {
+    "attempted": [
+      "https://csca.cn/testprep/examsv",
+      "https://www.cucas.cn/uploads/school/2025/1021/1761013301474194.pdf",
+      "https://csca.app/en/exam-guide",
+      "https://www.crosslineedu.com/pages/csca-physics-official-syllabus"
+    ],
+    "reason": "csca.cn returned an empty shell; cucas.cn serves an obfuscated anti-bot payload in place of the syllabus PDF; csca.app returned HTTP 429; crosslineedu.com returned HTTP 403.",
+    "consequence": "Nothing here is a first-party CSCA document. A topic is marked verified:true only where at least two independent sources agree AND it is visible in the reference corpus. Everything else is verified:false with a note saying why."
+  },
+  "subjects": [
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "shortName": "Math",
+      "questionCount": 48,
+      "timeLimitMinutes": 60,
+      "totalPoints": 100,
+      "verified": true,
+      "strands": [
+        {
+          "id": "M-1",
+          "name": "Sets and Inequalities",
+          "officialWording": "Module 1: Sets and Inequalities — 8 questions (17%). Set operations; linear inequalities; absolute value inequalities.",
+          "verified": true,
+          "topics": [
+            {
+              "id": "M1",
+              "name": "Sets and Logic",
+              "verified": true,
+              "subtopics": [
+                { "id": "M1.1", "name": "Set notation, elements and subsets", "verified": true },
+                { "id": "M1.2", "name": "Union, intersection and complement", "verified": true },
+                { "id": "M1.3", "name": "Necessary and sufficient conditions", "verified": true }
+              ]
+            },
+            {
+              "id": "M2",
+              "name": "Inequalities",
+              "verified": true,
+              "subtopics": [
+                { "id": "M2.1", "name": "Properties of inequalities and the AM-GM inequality", "verified": true },
+                { "id": "M2.2", "name": "Quadratic inequalities", "verified": true },
+                { "id": "M2.3", "name": "Rational and absolute-value inequalities", "verified": true }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "M-2",
+          "name": "Functions and Sequences",
+          "officialWording": "Module 2: Functions and Sequences — 16 questions (33%). Function properties (domain, range, monotonicity, parity, periodicity); linear, quadratic, exponential and logarithmic functions; arithmetic and geometric sequences; derivatives.",
+          "verified": true,
+          "topics": [
+            {
+              "id": "M3",
+              "name": "Properties of Functions",
+              "verified": true,
+              "subtopics": [
+                { "id": "M3.1", "name": "Domain and range", "verified": true },
+                { "id": "M3.2", "name": "Monotonicity", "verified": true },
+                { "id": "M3.3", "name": "Parity: odd and even functions", "verified": true },
+                { "id": "M3.4", "name": "Inverse functions and graph transformations", "verified": true }
+              ]
+            },
+            {
+              "id": "M4",
+              "name": "Exponential and Logarithmic Functions",
+              "verified": true,
+              "subtopics": [
+                { "id": "M4.1", "name": "Power and quadratic functions", "verified": true },
+                { "id": "M4.2", "name": "Exponential functions and their graphs", "verified": true },
+                { "id": "M4.3", "name": "Logarithms and logarithmic functions", "verified": true }
+              ]
+            },
+            {
+              "id": "M5",
+              "name": "Trigonometry",
+              "verified": true,
+              "note": "The module heading names only linear, quadratic, exponential and logarithmic functions, but the formula sheet devotes a full section to trigonometry and every past paper in the corpus is dense with it.",
+              "subtopics": [
+                { "id": "M5.1", "name": "Definitions, radians and the unit circle", "verified": true },
+                { "id": "M5.2", "name": "Identities for the same angle and reduction formulae", "verified": true },
+                { "id": "M5.3", "name": "Sum, difference, double- and half-angle formulae", "verified": true },
+                { "id": "M5.4", "name": "Graphs, period, amplitude and monotonicity", "verified": true },
+                { "id": "M5.5", "name": "Solving triangles: sine rule, cosine rule and area", "verified": true }
+              ]
+            },
+            {
+              "id": "M6",
+              "name": "Sequences",
+              "verified": true,
+              "subtopics": [
+                { "id": "M6.1", "name": "Arithmetic sequences and their sums", "verified": true },
+                { "id": "M6.2", "name": "Geometric sequences and their sums", "verified": true },
+                { "id": "M6.3", "name": "General terms, recurrences and S(n) relations", "verified": true }
+              ]
+            },
+            {
+              "id": "M7",
+              "name": "Limits and Derivatives",
+              "verified": true,
+              "subtopics": [
+                { "id": "M7.1", "name": "Limits and the definition of the derivative", "verified": true },
+                { "id": "M7.2", "name": "Differentiation rules and tangent lines", "verified": true },
+                { "id": "M7.3", "name": "Monotonicity and extrema using derivatives", "verified": true }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "M-3",
+          "name": "Geometry and Algebra",
+          "officialWording": "Module 3: Geometry and Algebra — 14 questions (29%). Plane geometry (triangles, circles, polygons; area and perimeter); analytic geometry (lines, circles, parabolas, ellipses, hyperbolas); vectors; systems of linear equations.",
+          "verified": true,
+          "topics": [
+            {
+              "id": "M8",
+              "name": "Lines and Circles",
+              "verified": true,
+              "subtopics": [
+                { "id": "M8.1", "name": "Slope, angle of inclination and equations of lines", "verified": true },
+                { "id": "M8.2", "name": "Parallel, perpendicular, intersection and distance", "verified": true },
+                { "id": "M8.3", "name": "Equations and properties of circles", "verified": true },
+                { "id": "M8.4", "name": "Points, quadrants and distance in the plane", "verified": true }
+              ]
+            },
+            {
+              "id": "M9",
+              "name": "Conic Sections",
+              "verified": true,
+              "subtopics": [
+                { "id": "M9.1", "name": "The ellipse", "verified": true },
+                { "id": "M9.2", "name": "The hyperbola", "verified": true },
+                { "id": "M9.3", "name": "The parabola", "verified": true }
+              ]
+            },
+            {
+              "id": "M10",
+              "name": "Vectors",
+              "verified": true,
+              "subtopics": [
+                { "id": "M10.1", "name": "Plane vectors: addition, subtraction and scalar multiples", "verified": true },
+                { "id": "M10.2", "name": "Dot product, magnitude and angle", "verified": true }
+              ]
+            },
+            {
+              "id": "M11",
+              "name": "Complex Numbers",
+              "verified": false,
+              "note": "Named in the China Admissions reproduction of the official syllabus and present in the reference papers, but absent from the module headings and the formula sheet. Included at low weight because it has actually been examined.",
+              "subtopics": [
+                { "id": "M11.1", "name": "Arithmetic, conjugates and equations", "verified": false },
+                { "id": "M11.2", "name": "Modulus and the complex plane", "verified": false }
+              ]
+            },
+            {
+              "id": "M12",
+              "name": "Plane Geometry",
+              "verified": true,
+              "subtopics": [
+                { "id": "M12.1", "name": "Triangles: angles, similarity and area", "verified": true },
+                { "id": "M12.2", "name": "Circles: chords, tangents and angles", "verified": true },
+                { "id": "M12.3", "name": "Polygons, perimeter and area", "verified": true }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "M-4",
+          "name": "Probability and Statistics",
+          "officialWording": "Module 4: Probability and Statistics — 10 questions (21%). Classical probability (basic events, sample space, probability formulae); mean and variance; normal distribution.",
+          "verified": true,
+          "topics": [
+            {
+              "id": "M13",
+              "name": "Counting",
+              "verified": true,
+              "subtopics": [
+                { "id": "M13.1", "name": "Permutations", "verified": true },
+                { "id": "M13.2", "name": "Combinations", "verified": true }
+              ]
+            },
+            {
+              "id": "M14",
+              "name": "Probability",
+              "verified": true,
+              "subtopics": [
+                { "id": "M14.1", "name": "Classical probability and sample spaces", "verified": true },
+                { "id": "M14.2", "name": "Mutually exclusive, complementary and independent events", "verified": true },
+                { "id": "M14.3", "name": "Conditional probability and total probability", "verified": true }
+              ]
+            },
+            {
+              "id": "M15",
+              "name": "Statistics and Distributions",
+              "verified": true,
+              "subtopics": [
+                { "id": "M15.1", "name": "Mean, median, mode and range", "verified": true },
+                { "id": "M15.2", "name": "Variance and standard deviation", "verified": true },
+                { "id": "M15.3", "name": "The binomial distribution", "verified": true },
+                { "id": "M15.4", "name": "The normal distribution", "verified": true }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "shortName": "Physics",
+      "questionCount": 48,
+      "timeLimitMinutes": 60,
+      "totalPoints": 100,
+      "verified": true,
+      "strands": [
+        {
+          "id": "P-1",
+          "name": "Mechanics",
+          "officialWording": "Module 1: Mechanics — 14 questions (29%). Displacement, velocity, acceleration, uniform linear motion and free fall; Newton's laws and applications; momentum and impulse, momentum conservation; work and energy, mechanical energy conservation; circular motion and centripetal force; simple harmonic motion and mechanical waves.",
+          "verified": true,
+          "topics": [
+            {
+              "id": "P1",
+              "name": "Kinematics",
+              "verified": true,
+              "subtopics": [
+                { "id": "P1.1", "name": "Scalars, vectors and frames of reference", "verified": true },
+                { "id": "P1.2", "name": "Displacement, velocity and acceleration", "verified": true },
+                { "id": "P1.3", "name": "Uniformly accelerated motion in a straight line", "verified": true },
+                { "id": "P1.4", "name": "Free fall and vertical motion", "verified": true }
+              ]
+            },
+            {
+              "id": "P2",
+              "name": "Forces and Newton's Laws",
+              "verified": true,
+              "subtopics": [
+                { "id": "P2.1", "name": "Weight and Hooke's law", "verified": true },
+                { "id": "P2.2", "name": "Friction", "verified": true },
+                { "id": "P2.3", "name": "Resultant forces and resolution", "verified": true },
+                { "id": "P2.4", "name": "Newton's three laws of motion", "verified": true },
+                { "id": "P2.5", "name": "Equilibrium and inclined planes", "verified": true }
+              ]
+            },
+            {
+              "id": "P3",
+              "name": "Work, Energy and Power",
+              "verified": true,
+              "subtopics": [
+                { "id": "P3.1", "name": "Work and power", "verified": true },
+                { "id": "P3.2", "name": "Kinetic energy and the work-energy theorem", "verified": true },
+                { "id": "P3.3", "name": "Gravitational and elastic potential energy", "verified": true },
+                { "id": "P3.4", "name": "Conservation of mechanical energy", "verified": true }
+              ]
+            },
+            {
+              "id": "P4",
+              "name": "Momentum and Impulse",
+              "verified": true,
+              "subtopics": [
+                { "id": "P4.1", "name": "Impulse and change of momentum", "verified": true },
+                { "id": "P4.2", "name": "Conservation of momentum and collisions", "verified": true }
+              ]
+            },
+            {
+              "id": "P5",
+              "name": "Curvilinear Motion and Gravitation",
+              "verified": true,
+              "subtopics": [
+                { "id": "P5.1", "name": "Projectile motion", "verified": true },
+                { "id": "P5.2", "name": "Circular motion: angular velocity, period and centripetal force", "verified": true },
+                { "id": "P5.3", "name": "Universal gravitation and satellites", "verified": true }
+              ]
+            },
+            {
+              "id": "P6",
+              "name": "Vibrations and Waves",
+              "verified": true,
+              "subtopics": [
+                { "id": "P6.1", "name": "Simple harmonic motion", "verified": true },
+                { "id": "P6.2", "name": "Mechanical waves: speed, frequency and wavelength", "verified": true },
+                { "id": "P6.3", "name": "Sound waves", "verified": true }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "P-2",
+          "name": "Electromagnetism",
+          "officialWording": "Module 2: Electromagnetism — 12 questions (25%). Coulomb's law: electric field strength and electric potential; Ohm's law: series-parallel circuits, power calculations; magnetic induction: Ampere's force, Lorentz force; electromagnetic induction: Faraday's law, Lenz's law.",
+          "verified": true,
+          "topics": [
+            {
+              "id": "P7",
+              "name": "Electrostatics",
+              "verified": true,
+              "subtopics": [
+                { "id": "P7.1", "name": "Charge, conservation of charge and Coulomb's law", "verified": true },
+                { "id": "P7.2", "name": "Electric field strength and field lines", "verified": true },
+                { "id": "P7.3", "name": "Potential difference and work done by the electric force", "verified": true },
+                { "id": "P7.4", "name": "Capacitance and capacitors", "verified": false, "note": "Present in the reference corpus but not named in any module heading." }
+              ]
+            },
+            {
+              "id": "P8",
+              "name": "Direct Current Circuits",
+              "verified": true,
+              "subtopics": [
+                { "id": "P8.1", "name": "Current, resistance and Ohm's law", "verified": true },
+                { "id": "P8.2", "name": "Series and parallel combinations", "verified": true },
+                { "id": "P8.3", "name": "Electrical power, energy and electromotive force", "verified": true }
+              ]
+            },
+            {
+              "id": "P9",
+              "name": "The Magnetic Field",
+              "verified": true,
+              "subtopics": [
+                { "id": "P9.1", "name": "Magnetic flux density and magnetic flux", "verified": true },
+                { "id": "P9.2", "name": "Force on a current-carrying conductor", "verified": true },
+                { "id": "P9.3", "name": "The Lorentz force and charged particles in a field", "verified": true }
+              ]
+            },
+            {
+              "id": "P10",
+              "name": "Electromagnetic Induction",
+              "verified": true,
+              "subtopics": [
+                { "id": "P10.1", "name": "Faraday's law of induction", "verified": true },
+                { "id": "P10.2", "name": "Lenz's law and the direction of induced current", "verified": true },
+                { "id": "P10.3", "name": "Motional electromotive force", "verified": true }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "P-3",
+          "name": "Thermodynamics",
+          "officialWording": "Module 3: Thermodynamics — 6 questions (13%). Kinetic theory of gases; ideal gas state equation; first law of thermodynamics.",
+          "verified": true,
+          "topics": [
+            {
+              "id": "P11",
+              "name": "Thermal Physics",
+              "verified": true,
+              "subtopics": [
+                { "id": "P11.1", "name": "Kinetic theory, Brownian motion and intermolecular forces", "verified": true },
+                { "id": "P11.2", "name": "Gas laws and the ideal gas equation", "verified": true },
+                { "id": "P11.3", "name": "Internal energy and the first law of thermodynamics", "verified": true }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "P-4",
+          "name": "Optics",
+          "officialWording": "Module 4: Optics — 8 questions (17%). Geometrical optics: reflection, refraction and imaging. Physical optics: interference and diffraction.",
+          "verified": true,
+          "topics": [
+            {
+              "id": "P12",
+              "name": "Geometrical Optics",
+              "verified": true,
+              "subtopics": [
+                { "id": "P12.1", "name": "Reflection and plane mirrors", "verified": true },
+                { "id": "P12.2", "name": "Refraction and refractive index", "verified": true },
+                { "id": "P12.3", "name": "Total internal reflection and the critical angle", "verified": true },
+                { "id": "P12.4", "name": "Thin lenses and magnification", "verified": true }
+              ]
+            },
+            {
+              "id": "P13",
+              "name": "Physical Optics",
+              "verified": true,
+              "subtopics": [
+                { "id": "P13.1", "name": "Interference of light", "verified": true },
+                { "id": "P13.2", "name": "Diffraction and the wave nature of light", "verified": true }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "P-5",
+          "name": "Modern Physics",
+          "officialWording": "Module 5: Modern Physics — 8 questions (17%). Photoelectric effect (E = hf - W); atomic structure: Bohr model, energy levels, electron transitions, spectral lines; nuclear physics: mass defect, binding energy, nuclear reactions, radioactive decay.",
+          "verified": true,
+          "topics": [
+            {
+              "id": "P14",
+              "name": "Photons and the Photoelectric Effect",
+              "verified": true,
+              "subtopics": [
+                { "id": "P14.1", "name": "Photon energy and the wave-particle picture", "verified": true },
+                { "id": "P14.2", "name": "The photoelectric equation and work function", "verified": true }
+              ]
+            },
+            {
+              "id": "P15",
+              "name": "Atomic and Nuclear Physics",
+              "verified": true,
+              "subtopics": [
+                { "id": "P15.1", "name": "The Bohr model, energy levels and spectral lines", "verified": true },
+                { "id": "P15.2", "name": "Nuclear reactions and radioactive decay", "verified": true },
+                { "id": "P15.3", "name": "Mass defect, binding energy and mass-energy equivalence", "verified": true }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M4",
+  "questions": [
+    {
+      "id": "math-M4.1-001",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Power and quadratic functions",
+      "difficulty": 2,
+      "stem": "The minimum value of $y=x^{2}-6x+11$ is",
+      "options": ["$2$", "$3$", "$9$", "$11$"],
+      "correctIndex": 0,
+      "solution": "Complete the square. Halve the coefficient of $x$ to get $-3$, then square it:\n$$x^{2}-6x+11=(x-3)^{2}-9+11=(x-3)^{2}+2.$$\n\nA square is never negative, so $(x-3)^{2}\\ge 0$, and the smallest it can be is $0$ at $x=3$. At that point\n$$y_{\\min}=0+2=2.$$",
+      "distractorRationale": [
+        "Correct. Completing the square gives $(x-3)^{2}+2$, so the least value is $2$, reached at $x=3$.",
+        "This is $x=3$, the input where the minimum happens, not the minimum value itself.",
+        "This is the $9$ produced while completing the square. It has to be subtracted again, not reported as the answer.",
+        "This is $y$ at $x=0$, the intercept on the vertical axis. The curve dips well below it before turning."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "11 - (6 * 6) / (4 * 1)",
+        "expected": 2,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M4.1-002",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Power and quadratic functions",
+      "difficulty": 1,
+      "stem": "Which of the following is a power function?",
+      "options": [
+        "$y=2^{x}$",
+        "$y=x^{\\frac{1}{2}}$",
+        "$y=\\log_{2}x$",
+        "$y=2x+1$"
+      ],
+      "correctIndex": 1,
+      "solution": "A power function has the variable in the **base** and a constant in the exponent:\n$$y=x^{a}, \\qquad a \\text{ constant}.$$\n\nCheck each candidate against that shape. Only $y=x^{\\frac{1}{2}}$ has $x$ as the base with a fixed exponent, so it is the power function. (It is the square root function, written another way.)",
+      "distractorRationale": [
+        "This is an exponential function: the variable is in the exponent and the base is fixed. That is the opposite arrangement.",
+        "Correct. The variable is the base and the exponent $\\tfrac{1}{2}$ is a constant, which is exactly the form $y=x^{a}$.",
+        "This is a logarithmic function, the inverse of an exponential one. It is not of the form $y=x^{a}$.",
+        "This is linear. It can be written $y=2x^{1}+1$, but the extra $+1$ means it is not a single power of $x$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "A power function is by definition y = x^a with the variable as the base and a constant exponent. Only option B has that form; A is exponential, C is logarithmic, and D is linear with a constant term added."
+      }
+    },
+    {
+      "id": "math-M4.1-003",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Power and quadratic functions",
+      "difficulty": 4,
+      "stem": "The parabola $y=x^{2}+bx+9$ meets the horizontal axis at exactly one point. Given that $b>0$, the value of $b$ is",
+      "options": ["$3$", "$9$", "$6$", "$12$"],
+      "correctIndex": 2,
+      "solution": "\"Meets the axis at exactly one point\" means the equation $x^{2}+bx+9=0$ has a repeated root, which happens exactly when the discriminant is zero:\n$$\\Delta=b^{2}-4ac=0.$$\n\nHere $a=1$ and $c=9$, so\n$$b^{2}-4(1)(9)=0 \\ \\Longrightarrow\\ b^{2}=36 \\ \\Longrightarrow\\ b=\\pm 6.$$\n\nThe question asks for the positive value, so $b=6$. (Check: $x^{2}+6x+9=(x+3)^{2}$, which touches the axis at $x=-3$ and nowhere else.)",
+      "distractorRationale": [
+        "Solved $b^{2}=9$ instead of $b^{2}=36$, which drops the factor of $4a$ from the discriminant.",
+        "Set $b$ equal to the constant term. The constant is $c$; $b$ is the coefficient of $x$ and is found from the discriminant.",
+        "Correct. $\\Delta=b^{2}-36=0$ gives $b=6$ for the positive root, and $x^{2}+6x+9=(x+3)^{2}$.",
+        "Used $\\Delta=b^{2}-4ac$ with $c$ doubled somewhere, giving $b^{2}=144$. The constant term is $9$, not $36$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(4 * 1 * 9)",
+        "expected": 6,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M4.2-001",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Exponential functions and their graphs",
+      "difficulty": 1,
+      "stem": "For every $a>0$ with $a \\neq 1$, the graph of $y=a^{x}$ passes through which fixed point?",
+      "options": ["$(0,\\ 0)$", "$(1,\\ 0)$", "$(1,\\ 1)$", "$(0,\\ 1)$"],
+      "correctIndex": 3,
+      "solution": "A point is fixed only if it works for **every** allowed $a$. So look for an input whose output does not depend on $a$.\n\nPut $x=0$:\n$$y=a^{0}=1 \\qquad \\text{for every } a>0.$$\n\nSo every such graph passes through $(0,\\ 1)$, whatever the base.\n\nAny other input does depend on $a$. At $x=1$, for instance, $y=a$, which is $2$ for $a=2$ and $3$ for $a=3$ — a moving point, not a fixed one.",
+      "distractorRationale": [
+        "Would need $a^{0}=0$, but any non-zero number raised to the power $0$ is $1$. An exponential graph never touches the horizontal axis.",
+        "Would need $a^{1}=0$, which is impossible for $a>0$.",
+        "Only true for the single base $a=1$, and that base is excluded. For any other base, $a^{1}=a \\neq 1$.",
+        "Correct. $a^{0}=1$ for every allowed base, so $(0,\\ 1)$ lies on all of these graphs."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "A fixed point must satisfy y = a^x for all admissible a. Since a^0 = 1 for every a > 0, the point (0, 1) qualifies. At x = 1 the value is a itself, which varies, so no point with x = 1 is fixed; and a^x is strictly positive, so no point with y = 0 is on the graph."
+      }
+    },
+    {
+      "id": "math-M4.2-002",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Exponential functions and their graphs",
+      "difficulty": 2,
+      "stem": "Solve $3^{2x-1}=27$ for $x$.",
+      "options": ["$2$", "$1$", "$3$", "$5$"],
+      "correctIndex": 0,
+      "solution": "Write both sides as powers of the same base. Since $27=3^{3}$:\n$$3^{2x-1}=3^{3}.$$\n\nAn exponential function takes each value only once, so the exponents must match:\n$$2x-1=3 \\ \\Longrightarrow\\ 2x=4 \\ \\Longrightarrow\\ x=2.$$\n\nCheck: $3^{2(2)-1}=3^{3}=27$.",
+      "distractorRationale": [
+        "Correct. Matching exponents gives $2x-1=3$, so $x=2$.",
+        "Set $2x-1=1$, matching against $3^{1}$ rather than $3^{3}$.",
+        "Stopped at the exponent itself, $2x-1=3$, and reported the right-hand side instead of solving for $x$.",
+        "Solved $2x-1=3$ but added rather than divided: $x=3+2$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(3 + 1) / 2",
+        "expected": 2,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M4.2-003",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Exponential functions and their graphs",
+      "difficulty": 3,
+      "stem": "Which of the following functions is decreasing on the whole of $\\mathbb{R}$?",
+      "options": [
+        "$y=3^{x}$",
+        "$y=\\left(\\dfrac{1}{4}\\right)^{x}$",
+        "$y=x^{3}$",
+        "$y=x^{2}+1$"
+      ],
+      "correctIndex": 1,
+      "solution": "For $y=a^{x}$ the direction is decided entirely by the base:\n$$a>1 \\Rightarrow \\text{increasing}, \\qquad 0<a<1 \\Rightarrow \\text{decreasing}.$$\n\nCheck the two exponentials. Base $3$ is greater than $1$, so $y=3^{x}$ increases. Base $\\tfrac{1}{4}$ lies between $0$ and $1$, so $y=\\left(\\tfrac{1}{4}\\right)^{x}$ decreases everywhere.\n\nThe other two are not exponentials at all. $y=x^{3}$ increases throughout, and $y=x^{2}+1$ falls then rises, so neither is decreasing on all of $\\mathbb{R}$.",
+      "distractorRationale": [
+        "Base $3>1$, so this increases. Larger $x$ gives a larger power.",
+        "Correct. The base $\\tfrac{1}{4}$ lies strictly between $0$ and $1$, so raising it to larger powers gives smaller values.",
+        "A cubic with a positive coefficient, which increases across the whole line rather than decreasing.",
+        "Decreasing on $(-\\infty,\\ 0]$ but increasing on $[0,\\ +\\infty)$, so it is not decreasing on all of $\\mathbb{R}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-3, 3]],
+        "reference": "Math.pow(0.25, x)",
+        "optionForms": [
+          "Math.pow(3, x)",
+          "Math.pow(0.25, x)",
+          "x * x * x",
+          "x * x + 1"
+        ],
+        "extraSamples": [{ "x": 0 }, { "x": 1 }, { "x": -1 }, { "x": 2 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M4.2-004",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Exponential functions and their graphs",
+      "difficulty": 5,
+      "stem": "The equation $9^{x}-4\\cdot 3^{x}+3=0$ has two real solutions. Their sum is",
+      "options": ["$0$", "$4$", "$1$", "$3$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — spot the hidden quadratic.** Note that $9^{x}=(3^{2})^{x}=(3^{x})^{2}$. Substituting $t=3^{x}$ turns the equation into\n$$t^{2}-4t+3=0.$$\n\n**Step 2 — solve for $t$.** Factorising,\n$$(t-1)(t-3)=0 \\ \\Longrightarrow\\ t=1 \\ \\text{ or } \\ t=3.$$\nBoth are positive, so both give a genuine value of $x$. (A negative or zero $t$ would have to be discarded, since $3^{x}>0$ always.)\n\n**Step 3 — go back to $x$.**\n$$3^{x}=1 \\Rightarrow x=0, \\qquad 3^{x}=3 \\Rightarrow x=1.$$\n\nThe sum is $0+1=1$.",
+      "distractorRationale": [
+        "Found only the root $x=0$, from $t=1$, and missed the second value of $t$.",
+        "Added the two values of $t$ instead of the two values of $x$: $1+3=4$. The substitution has to be undone before summing.",
+        "Correct. $t=3^{x}$ gives $t=1$ or $t=3$, hence $x=0$ or $x=1$, and $0+1=1$.",
+        "Reported the larger value of $t$ rather than a value of $x$ at all."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.log(1) / Math.log(3) + Math.log(3) / Math.log(3)",
+        "expected": 1,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M4.3-001",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Logarithms and logarithmic functions",
+      "difficulty": 1,
+      "stem": "$\\log_{5}125=$",
+      "options": ["$\\dfrac{1}{3}$", "$5$", "$25$", "$3$"],
+      "correctIndex": 3,
+      "solution": "A logarithm asks: to what power must the base be raised to reach the number?\n\nHere the base is $5$ and the number is $125$. Since\n$$5^{3}=125,$$\nthe answer is $3$.",
+      "distractorRationale": [
+        "The reciprocal of the answer. This would be $\\log_{125}5$, with the base and the number swapped.",
+        "The base itself, not the exponent the base has to be raised to.",
+        "This is $5^{2}$. Two fives are not enough — $125$ needs three.",
+        "Correct. $5^{3}=125$, so $\\log_{5}125=3$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.log(125) / Math.log(5)",
+        "expected": 3,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M4.3-002",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Logarithms and logarithmic functions",
+      "difficulty": 2,
+      "stem": "$\\log_{2}6-\\log_{2}3=$",
+      "options": ["$1$", "$2$", "$\\log_{2}3$", "$3$"],
+      "correctIndex": 0,
+      "solution": "Two logarithms with the same base subtract into the logarithm of a quotient:\n$$\\log_{2}6-\\log_{2}3=\\log_{2}\\!\\left(\\frac{6}{3}\\right)=\\log_{2}2.$$\n\nAnd $2^{1}=2$, so $\\log_{2}2=1$.",
+      "distractorRationale": [
+        "Correct. The difference of logarithms is the logarithm of the quotient: $\\log_{2}(6/3)=\\log_{2}2=1$.",
+        "Divided the two logarithms rather than subtracting them, and then mis-evaluated the result.",
+        "Subtracted the *numbers* to get $\\log_{2}3$ from $6-3$. The rule applies to the logarithms, turning subtraction into division.",
+        "Divided $6$ by $3$ correctly but then reported $6/2$, or confused the quotient with the base."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.log(6) / Math.log(2) - Math.log(3) / Math.log(2)",
+        "expected": 1,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M4.3-003",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Logarithms and logarithmic functions",
+      "difficulty": 3,
+      "stem": "The domain of $y=\\log_{3}(2x-6)$ is",
+      "options": [
+        "$(0,\\ +\\infty)$",
+        "$(3,\\ +\\infty)$",
+        "$[3,\\ +\\infty)$",
+        "$(-\\infty,\\ 3)$"
+      ],
+      "correctIndex": 1,
+      "solution": "A logarithm is defined only for a strictly positive argument, so the requirement is\n$$2x-6>0.$$\n\nSolve it:\n$$2x>6 \\ \\Longrightarrow\\ x>3.$$\n\nThe inequality is strict, so $x=3$ is excluded — at that point the argument is $0$, and $\\log_{3}0$ does not exist.\n$$\\text{Domain}=(3,\\ +\\infty).$$",
+      "distractorRationale": [
+        "Required $x>0$, as if the argument of the logarithm were $x$ itself rather than $2x-6$.",
+        "Correct. $2x-6>0$ gives $x>3$, with $3$ excluded because the argument would be $0$ there.",
+        "Included $x=3$. At that value the argument is exactly $0$, and the logarithm of $0$ is undefined.",
+        "Reversed the inequality. For $x<3$ the argument $2x-6$ is negative, where the logarithm is also undefined."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-4, 12]],
+        "reference": "(2 * x - 6 > 0) ? 1 : 0",
+        "optionForms": [
+          "(x > 0) ? 1 : 0",
+          "(x > 3) ? 1 : 0",
+          "(x >= 3) ? 1 : 0",
+          "(x < 3) ? 1 : 0"
+        ],
+        "extraSamples": [{ "x": 0 }, { "x": 3 }, { "x": 2.9 }, { "x": 3.1 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M4.3-004",
+      "subject": "math",
+      "topic": "M4",
+      "subtopic": "M4.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Exponential and Logarithmic Functions / Logarithms and logarithmic functions",
+      "difficulty": 4,
+      "stem": "Suppose $\\log_{a}2=m$ and $\\log_{a}3=n$. Then $\\log_{a}18=$",
+      "options": ["$2m+n$", "$mn^{2}$", "$m+2n$", "$m+n^{2}$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — factorise the number.** Break $18$ into the primes whose logarithms are given:\n$$18=2 \\times 9=2 \\times 3^{2}.$$\n\n**Step 2 — split the logarithm.** A product becomes a sum, and a power becomes a multiplier:\n$$\\log_{a}18=\\log_{a}2+\\log_{a}3^{2}=\\log_{a}2+2\\log_{a}3.$$\n\n**Step 3 — substitute.**\n$$\\log_{a}18=m+2n.$$\n\nThe pattern to remember: the exponent inside comes out as a *coefficient*, never as a power of the answer.",
+      "distractorRationale": [
+        "Attached the $2$ to the wrong factor, as though $18=2^{2}\\times 3$. In fact $18=2\\times 3^{2}$.",
+        "Turned the product into a product of logarithms. $\\log(xy)$ is $\\log x+\\log y$, not $\\log x \\cdot \\log y$.",
+        "Correct. $18=2\\times 3^{2}$, so $\\log_{a}18=\\log_{a}2+2\\log_{a}3=m+2n$.",
+        "Brought the exponent down as a power of $n$ instead of a coefficient. $\\log_{a}3^{2}=2\\log_{a}3$, not $(\\log_{a}3)^{2}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["m", "n"],
+        "domain": [
+          [1, 4],
+          [5, 9]
+        ],
+        "reference": "m + 2 * n",
+        "optionForms": ["2 * m + n", "m * n * n", "m + 2 * n", "m + n * n"],
+        "extraSamples": [{ "m": 1, "n": 5 }, { "m": 2, "n": 6 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    }
+  ]
+}

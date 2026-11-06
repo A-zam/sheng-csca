@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P10",
+  "questions": [
+    {
+      "id": "physics-P10.1-001",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.1",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Faraday's law of induction",
+      "difficulty": 2,
+      "stem": "A demonstration coil of $200$ turns is wound onto an offcut of transformer core. As the core is magnetised, the flux threading each turn climbs steadily from $0.05\\ \\mathrm{Wb}$ to $0.25\\ \\mathrm{Wb}$, and the climb lasts $0.40\\ \\mathrm{s}$. The emf induced in the coil is",
+      "options": [
+        "$0.50\\ \\mathrm{V}$",
+        "$16\\ \\mathrm{V}$",
+        "$100\\ \\mathrm{V}$",
+        "$125\\ \\mathrm{V}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Faraday's law gives the emf as the rate of change of flux linkage:\n$$\\varepsilon = N\\frac{\\Delta\\Phi}{\\Delta t}.$$\n\n**Step 1 — the change in flux, not the flux.** Only the change matters:\n$$\\Delta\\Phi = 0.25 - 0.05 = 0.20\\ \\mathrm{Wb}.$$\n\n**Step 2 — divide by the time and multiply by the turns.**\n$$\\varepsilon = 200 \\times \\frac{0.20}{0.40} = 200 \\times 0.50 = 100\\ \\mathrm{V}.$$\n\nEach turn contributes $0.50\\ \\mathrm{V}$, and the two hundred turns are in series, so their emfs add.",
+      "distractorRationale": [
+        "Forgot the number of turns $N$ and quoted the emf of a single turn.",
+        "Multiplied by the time instead of dividing by it: $200 \\times 0.20 \\times 0.40$. A slower change gives a smaller emf, so the time belongs underneath.",
+        "Correct. $\\varepsilon = N\\,\\Delta\\Phi/\\Delta t = 200 \\times 0.20 / 0.40 = 100\\ \\mathrm{V}$.",
+        "Used the final flux instead of the change in flux: $200 \\times 0.25 / 0.40$. The coil already had $0.05\\ \\mathrm{Wb}$ through it before the change began, and a steady flux induces nothing."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "200 * (0.25 - 0.05) / 0.40",
+        "expected": 100,
+        "tolerance": 1e-9,
+        "unit": "V"
+      }
+    },
+    {
+      "id": "physics-P10.1-002",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.1",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Faraday's law of induction",
+      "difficulty": 3,
+      "stem": "A test coil of $40$ turns, each turn enclosing $2.5 \\times 10^{-3}\\ \\mathrm{m^{2}}$, lies flat on the top of an induction hob. When the hob is switched off, the flux density through the coil drops steadily from $0.80\\ \\mathrm{T}$ to $0.20\\ \\mathrm{T}$ in $0.30\\ \\mathrm{s}$. The emf induced in the coil is",
+      "options": [
+        "$5.0 \\times 10^{-3}\\ \\mathrm{V}$",
+        "$0.20\\ \\mathrm{V}$",
+        "$0.27\\ \\mathrm{V}$",
+        "$0.018\\ \\mathrm{V}$"
+      ],
+      "correctIndex": 1,
+      "solution": "The area of the coil never changes, so the flux changes only because the flux density does:\n$$\\varepsilon = NA\\frac{\\Delta B}{\\Delta t}.$$\n\n**Step 1 — the change in flux density.**\n$$\\Delta B = 0.80 - 0.20 = 0.60\\ \\mathrm{T}.$$\n\n**Step 2 — the rate.**\n$$\\frac{\\Delta B}{\\Delta t} = \\frac{0.60}{0.30} = 2.0\\ \\mathrm{T/s}.$$\n\n**Step 3 — multiply by the area and the turns.**\n$$\\varepsilon = 40 \\times 2.5 \\times 10^{-3} \\times 2.0 = 0.20\\ \\mathrm{V}.$$\n\nOnly the size of the emf is asked for; the minus sign in Faraday's law records its direction, which Lenz's law then interprets.",
+      "distractorRationale": [
+        "Forgot the number of turns $N$, using the area of one turn alone.",
+        "Correct. $\\varepsilon = NA\\,\\Delta B/\\Delta t = 40 \\times 2.5 \\times 10^{-3} \\times 2.0 = 0.20\\ \\mathrm{V}$.",
+        "Used the starting flux density of $0.80\\ \\mathrm{T}$ instead of the change of $0.60\\ \\mathrm{T}$. The field does not fall to zero, so the drop is smaller than the starting value.",
+        "Multiplied by the time instead of dividing by it, which turns a rate into a product."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "40 * 2.5e-3 * (0.80 - 0.20) / 0.30",
+        "expected": 0.2,
+        "tolerance": 1e-9,
+        "unit": "V"
+      }
+    },
+    {
+      "id": "physics-P10.1-003",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.1",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Faraday's law of induction",
+      "difficulty": 4,
+      "stem": "A search coil of $50$ turns is part of a closed loop whose total resistance is $4.0\\ \\Omega$. The coil is drawn away from a magnet, and the flux through each turn falls steadily from $8.0 \\times 10^{-3}\\ \\mathrm{Wb}$ to $2.0 \\times 10^{-3}\\ \\mathrm{Wb}$ in $0.15\\ \\mathrm{s}$. The current in the loop while this is happening is",
+      "options": [
+        "$0.010\\ \\mathrm{A}$",
+        "$0.67\\ \\mathrm{A}$",
+        "$2.0\\ \\mathrm{A}$",
+        "$0.50\\ \\mathrm{A}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — the emf, from Faraday's law.** The change in flux per turn is $8.0 \\times 10^{-3} - 2.0 \\times 10^{-3} = 6.0 \\times 10^{-3}\\ \\mathrm{Wb}$, so\n$$\\varepsilon = N\\frac{\\Delta\\Phi}{\\Delta t} = 50 \\times \\frac{6.0 \\times 10^{-3}}{0.15} = 50 \\times 0.040 = 2.0\\ \\mathrm{V}.$$\n\n**Step 2 — the current, from Ohm's law.** The induced emf drives the loop like any other source:\n$$I = \\frac{\\varepsilon}{R} = \\frac{2.0}{4.0} = 0.50\\ \\mathrm{A}.$$\n\nThe two steps are separate: Faraday's law says how hard the circuit is driven, and the resistance says how much current that produces.",
+      "distractorRationale": [
+        "Forgot the number of turns, using the emf of a single turn: $0.040 / 4.0$.",
+        "Used the starting flux of $8.0 \\times 10^{-3}\\ \\mathrm{Wb}$ instead of the change of $6.0 \\times 10^{-3}\\ \\mathrm{Wb}$. The flux does not fall all the way to zero.",
+        "Inverted Ohm's law, dividing the resistance by the emf. A larger resistance must give a smaller current, not a larger one.",
+        "Correct. $\\varepsilon = 50 \\times (6.0 \\times 10^{-3}) / 0.15 = 2.0\\ \\mathrm{V}$, so $I = 2.0 / 4.0 = 0.50\\ \\mathrm{A}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(50 * (8.0e-3 - 2.0e-3) / 0.15) / 4.0",
+        "expected": 0.5,
+        "tolerance": 1e-9,
+        "unit": "A"
+      }
+    },
+    {
+      "id": "physics-P10.1-004",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.1",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Faraday's law of induction",
+      "difficulty": 5,
+      "stem": "A search coil of $100$ turns, each of area $5.0 \\times 10^{-4}\\ \\mathrm{m^{2}}$, is held face-on where the flux density is $0.20\\ \\mathrm{T}$. Its ends are joined, making a circuit of total resistance $4.0\\ \\Omega$. The coil is then turned over through $180^\\circ$, so that the flux through it ends up reversed. The total charge that passes round the circuit during the turn is",
+      "options": [
+        "$5.0 \\times 10^{-3}\\ \\mathrm{C}$",
+        "$2.5 \\times 10^{-3}\\ \\mathrm{C}$",
+        "$5.0 \\times 10^{-5}\\ \\mathrm{C}$",
+        "$2.0 \\times 10^{-2}\\ \\mathrm{C}$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — charge is current multiplied by time, and the time drops out.**\n$$q = I\\,\\Delta t = \\frac{\\varepsilon}{R}\\,\\Delta t = \\frac{N\\,\\Delta\\Phi}{\\Delta t \\cdot R}\\,\\Delta t = \\frac{N\\,\\Delta\\Phi}{R}.$$\nSo the answer does not depend on how quickly the coil is turned. A fast turn gives a large current for a short time, a slow turn a small current for a long time, and the charge is the same.\n\n**Step 2 — the flux change of a reversal.** Turning through $180^\\circ$ takes the flux from $+BA$ to $-BA$, a change of\n$$\\Delta\\Phi = 2BA = 2 \\times 0.20 \\times 5.0 \\times 10^{-4} = 2.0 \\times 10^{-4}\\ \\mathrm{Wb}.$$\n\n**Step 3 — substitute.**\n$$q = \\frac{100 \\times 2.0 \\times 10^{-4}}{4.0} = \\frac{2.0 \\times 10^{-2}}{4.0} = 5.0 \\times 10^{-3}\\ \\mathrm{C}.$$",
+      "distractorRationale": [
+        "Correct. $q = N\\,\\Delta\\Phi / R$ with $\\Delta\\Phi = 2BA$, giving $(100 \\times 2.0 \\times 10^{-4}) / 4.0 = 5.0 \\times 10^{-3}\\ \\mathrm{C}$.",
+        "Took the flux change as $BA$, as if the flux merely fell to zero. Reversing the flux changes it by twice that, from $+BA$ to $-BA$.",
+        "Forgot the number of turns, using the flux change of a single turn.",
+        "Left out the division by the resistance, so the flux linkage change was quoted in place of the charge."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "100 * (2 * 0.20 * 5.0e-4) / 4.0",
+        "expected": 0.005,
+        "tolerance": 1e-9,
+        "unit": "C"
+      }
+    },
+    {
+      "id": "physics-P10.2-001",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.2",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Lenz's law and the direction of induced current",
+      "difficulty": 1,
+      "stem": "The figure shows the north pole of a bar magnet being pushed towards one face of a coil whose ends are joined through a sensitive galvanometer. While the magnet is still moving towards the coil, the induced current",
+      "options": [
+        "$\\text{flows so that the face nearer the magnet becomes a south pole}$",
+        "$\\text{flows so that the face nearer the magnet becomes a north pole}$",
+        "$\\text{is zero, because the magnet never touches the coil}$",
+        "$\\text{is zero, because there is no cell anywhere in the circuit}$"
+      ],
+      "correctIndex": 1,
+      "solution": "The flux through the coil is growing as the north pole comes closer, so the induced current must act to hold that growth back.\n\n**What that means here.** The near face has to push the incoming north pole away, and only a north pole repels a north pole. So the induced current circulates in the sense that makes the near face a north pole.\n\n**Why the opposite is impossible.** If the near face became a south pole it would pull the magnet in. The magnet would accelerate, inducing a larger current, which would pull harder still: energy would appear out of nothing. The direction is fixed by energy conservation, not by convention.\n\nThe hand that pushes the magnet does work against the repulsion, and that work is what appears as electrical energy in the galvanometer.",
+      "distractorRationale": [
+        "Reverses the opposition. A south pole on the near face would attract the magnet and accelerate it, so the circuit would deliver energy while gaining kinetic energy as well.",
+        "Correct. A growing flux is opposed, so the near face becomes a north pole and repels the approaching north pole; the work done pushing the magnet becomes electrical energy.",
+        "Treats induction as if it needed contact. The changing flux is what drives the current, and it reaches the coil through the space between them.",
+        "Assumes an emf needs a cell. The moving magnet is the source here, which is the whole point of a dynamo."
+      ],
+      "figure": "<svg viewBox=\"0 0 260 160\" role=\"img\" aria-label=\"A bar magnet approaching a coil connected to a galvanometer\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><rect x=\"18\" y=\"52\" width=\"72\" height=\"30\"/><line x1=\"54\" y1=\"52\" x2=\"54\" y2=\"82\"/><line x1=\"100\" y1=\"67\" x2=\"132\" y2=\"67\"/><polyline points=\"124,61 132,67 124,73\"/><ellipse cx=\"162\" cy=\"67\" rx=\"8\" ry=\"32\"/><ellipse cx=\"180\" cy=\"67\" rx=\"8\" ry=\"32\"/><ellipse cx=\"198\" cy=\"67\" rx=\"8\" ry=\"32\"/><polyline points=\"162,99 162,128 172,128\"/><polyline points=\"198,99 198,128 190,128\"/><circle cx=\"181\" cy=\"128\" r=\"9\"/></g><text x=\"30\" y=\"73\" fill=\"currentColor\" font-size=\"13\">S</text><text x=\"70\" y=\"73\" fill=\"currentColor\" font-size=\"13\">N</text><text x=\"108\" y=\"60\" fill=\"currentColor\" font-size=\"12\">push</text><text x=\"177\" y=\"132\" fill=\"currentColor\" font-size=\"11\">G</text><text x=\"150\" y=\"152\" fill=\"currentColor\" font-size=\"12\">coil</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "The flux through the coil is increasing while the north pole approaches, so the induced current must oppose that increase, which it can only do by making the near face a north pole that repels the magnet. The alternative, a south pole on the near face, would attract the magnet and speed it up, producing electrical energy and kinetic energy together out of nothing, so it is ruled out by energy conservation."
+      }
+    },
+    {
+      "id": "physics-P10.2-002",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.2",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Lenz's law and the direction of induced current",
+      "difficulty": 2,
+      "stem": "A square loop of copper wire is pulled at a steady speed into a region where a uniform magnetic field points into the page. The loop stays in the plane of the page throughout. While the loop is still entering the region, the induced current in it",
+      "options": [
+        "$\\text{flows clockwise round the loop}$",
+        "$\\text{is zero until the loop is completely inside the field region}$",
+        "$\\text{is zero, because the field inside the region is uniform}$",
+        "$\\text{flows anticlockwise round the loop}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — which way is the flux changing?** More and more of the loop's area is inside the field region, so the flux into the page through the loop is increasing.\n\n**Step 2 — the induced current opposes that increase.** To hold the into-the-page flux back, the current must create flux **out of** the page inside the loop.\n\n**Step 3 — turn that into a direction.** Grip the loop with the right hand so the thumb points out of the page, towards the reader; the fingers then curl anticlockwise. So the induced current runs anticlockwise.\n\nOnce the loop is entirely inside the region the flux stops changing, the current falls to zero, and while the loop leaves again the flux falls and the current reverses to clockwise.",
+      "distractorRationale": [
+        "Reinforces the change instead of opposing it: a clockwise current would add more flux into the page, which is the direction Lenz's law forbids.",
+        "Reverses when the current flows. The emf depends on the flux changing, and it changes while the loop is crossing the boundary, not while it sits wholly inside.",
+        "Confuses a uniform field with an unchanging flux. The field is the same everywhere inside the region, but the area of the loop that lies in it is still growing.",
+        "Correct. The into-the-page flux is increasing, so the induced current must produce flux out of the page inside the loop, which by the right-hand grip rule means an anticlockwise current."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "As the loop enters, the area of it lying in the field grows, so the flux into the page increases. Lenz's law requires the induced current to set up flux out of the page inside the loop, and by the right-hand grip rule a flux pointing out of the page towards the reader corresponds to an anticlockwise current. A clockwise current would strengthen the change instead of opposing it."
+      }
+    },
+    {
+      "id": "physics-P10.2-003",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.2",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Lenz's law and the direction of induced current",
+      "difficulty": 3,
+      "stem": "A short bar magnet is dropped down a long vertical copper pipe. It takes several seconds to reach the bottom, while a non-magnetic slug of the same mass falls straight through. While the magnet is inside the pipe, the force that the induced currents in the pipe wall exert on it acts",
+      "options": [
+        "$\\text{upwards, opposing the fall of the magnet}$",
+        "$\\text{downwards, adding to the weight of the magnet}$",
+        "$\\text{sideways, pressing the magnet against the wall of the pipe}$",
+        "$\\text{in no direction at all, since copper is not a magnetic material}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Think of the pipe as a stack of copper rings.\n\n**The ring below the magnet.** The flux through it is growing as the magnet approaches, so the current induced in it opposes the approach: its upper face becomes the same pole as the magnet's lower pole, and it pushes the magnet back up.\n\n**The ring above the magnet.** The flux through it is falling as the magnet recedes, so its current opposes the departure: it attracts the magnet, again pulling it upwards.\n\nBoth rings therefore act upwards, and the retarding force grows with the speed of fall, so the magnet settles at a slow steady speed.\n\nThe gravitational potential energy lost does not become kinetic energy; it is dissipated as heat in the resistance of the copper.",
+      "distractorRationale": [
+        "Correct. The ring of pipe ahead of the magnet repels it and the ring behind attracts it, and both of those act upwards, retarding the fall.",
+        "Reverses Lenz's law. A downward force would make the magnet fall faster, inducing a stronger current, which would push harder still, so the magnet would gain kinetic energy and electrical energy at once.",
+        "Places the force at right angles to the motion. The flux change is along the pipe, so the force that opposes it is along the pipe too.",
+        "Confuses attraction with induction. Copper is not attracted by a magnet at rest, but a changing flux drives currents in any conductor, and those currents exert a force."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "The flux in the pipe ahead of the falling magnet is rising and the flux behind it is falling, so the induced currents there repel the approaching pole and attract the receding one. Both effects point upwards, which is the only direction consistent with energy conservation: a downward induced force would accelerate the magnet while also dissipating heat, creating energy from nothing."
+      }
+    },
+    {
+      "id": "physics-P10.3-001",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.3",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Motional electromotive force",
+      "difficulty": 1,
+      "stem": "The figure shows a straight metal rod sliding along two parallel rails that are $0.80\\ \\mathrm{m}$ apart. The rod moves at a steady $6.0\\ \\mathrm{m/s}$, and the apparatus sits in a field of flux density $0.50\\ \\mathrm{T}$ directed into the page, at right angles both to the rod and to its motion. The emf induced between the ends of the rod is",
+      "options": [
+        "$0.40\\ \\mathrm{V}$",
+        "$3.0\\ \\mathrm{V}$",
+        "$2.4\\ \\mathrm{V}$",
+        "$4.8\\ \\mathrm{V}$"
+      ],
+      "correctIndex": 2,
+      "solution": "A conductor of length $L$ sweeping across a perpendicular field at speed $v$ develops a motional emf\n$$\\varepsilon = BLv.$$\n\nThe length that matters is the part of the rod between the rails, $0.80\\ \\mathrm{m}$:\n$$\\varepsilon = 0.50 \\times 0.80 \\times 6.0 = 2.4\\ \\mathrm{V}.$$\n\nThe formula is Faraday's law in another guise: in one second the rod sweeps out an area $Lv$, so the flux enclosed by the circuit changes by $BLv$ each second.",
+      "distractorRationale": [
+        "Left the speed out, computing $BL$. A stationary rod sweeps out no area and induces nothing, so $v$ cannot be dropped.",
+        "Left the rail separation out, computing $Bv$. A wider gap means more area swept per second and a larger emf.",
+        "Correct. $\\varepsilon = BLv = 0.50 \\times 0.80 \\times 6.0 = 2.4\\ \\mathrm{V}$.",
+        "Left the flux density out, computing $Lv$. That product is an area swept per second, not an emf."
+      ],
+      "figure": "<svg viewBox=\"0 0 260 170\" role=\"img\" aria-label=\"A rod sliding along two rails in a field directed into the page\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><line x1=\"20\" y1=\"45\" x2=\"245\" y2=\"45\"/><line x1=\"20\" y1=\"115\" x2=\"245\" y2=\"115\"/><line x1=\"20\" y1=\"45\" x2=\"20\" y2=\"115\"/></g><g stroke=\"currentColor\" stroke-width=\"4\" fill=\"none\"><line x1=\"92\" y1=\"45\" x2=\"92\" y2=\"115\"/></g><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><line x1=\"100\" y1=\"80\" x2=\"134\" y2=\"80\"/><polyline points=\"126,74 134,80 126,86\"/></g><g stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"><path d=\"M156 56 l8 8 M164 56 l-8 8\"/><path d=\"M156 96 l8 8 M164 96 l-8 8\"/><path d=\"M196 56 l8 8 M204 56 l-8 8\"/><path d=\"M196 96 l8 8 M204 96 l-8 8\"/><path d=\"M226 56 l8 8 M234 56 l-8 8\"/><path d=\"M226 96 l8 8 M234 96 l-8 8\"/></g><text x=\"110\" y=\"72\" fill=\"currentColor\" font-size=\"14\">v</text><text x=\"30\" y=\"85\" fill=\"currentColor\" font-size=\"12\">rod</text><text x=\"78\" y=\"162\" fill=\"currentColor\" font-size=\"12\">B into the page</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.50 * 0.80 * 6.0",
+        "expected": 2.4,
+        "tolerance": 1e-9,
+        "unit": "V"
+      }
+    },
+    {
+      "id": "physics-P10.3-002",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.3",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Motional electromotive force",
+      "difficulty": 3,
+      "stem": "A rod of length $0.50\\ \\mathrm{m}$ slides at $3.0\\ \\mathrm{m/s}$ along two rails whose far ends are bridged by a $3.0\\ \\Omega$ resistor. A field of flux density $0.40\\ \\mathrm{T}$ crosses the plane of the rails at right angles. The rod and the rails themselves have negligible resistance. The current in the resistor is",
+      "options": [
+        "$0.20\\ \\mathrm{A}$",
+        "$0.60\\ \\mathrm{A}$",
+        "$1.8\\ \\mathrm{A}$",
+        "$5.0\\ \\mathrm{A}$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — the rod is the source.** Its motional emf is\n$$\\varepsilon = BLv = 0.40 \\times 0.50 \\times 3.0 = 0.60\\ \\mathrm{V}.$$\n\n**Step 2 — the resistor is the load.** The rod and rails add no resistance, so the whole emf appears across the resistor:\n$$I = \\frac{\\varepsilon}{R} = \\frac{0.60}{3.0} = 0.20\\ \\mathrm{A}.$$\n\nThe sliding rod behaves exactly like a cell of emf $0.60\\ \\mathrm{V}$ with no internal resistance.",
+      "distractorRationale": [
+        "Correct. $\\varepsilon = BLv = 0.60\\ \\mathrm{V}$, so $I = 0.60/3.0 = 0.20\\ \\mathrm{A}$.",
+        "Stopped at the emf and quoted its number as a current. The circuit still has to be divided by its resistance.",
+        "Multiplied the emf by the resistance instead of dividing by it. A larger resistor must pass a smaller current.",
+        "Inverted Ohm's law, computing $R/\\varepsilon = 3.0/0.60$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(0.40 * 0.50 * 3.0) / 3.0",
+        "expected": 0.2,
+        "tolerance": 1e-9,
+        "unit": "A"
+      }
+    },
+    {
+      "id": "physics-P10.3-003",
+      "subject": "physics",
+      "topic": "P10",
+      "subtopic": "P10.3",
+      "syllabusRef": "P-2 / Electromagnetism / Electromagnetic Induction / Motional electromotive force",
+      "difficulty": 4,
+      "stem": "A rod of length $1.5\\ \\mathrm{m}$ is pushed along two rails at a steady $4.0\\ \\mathrm{m/s}$. Rod and rails form a circuit of total resistance $0.60\\ \\Omega$, and a field of flux density $0.20\\ \\mathrm{T}$ crosses the plane of the circuit at right angles. Friction is negligible. The force needed to keep the rod moving at this steady speed is",
+      "options": [
+        "$0.40\\ \\mathrm{N}$",
+        "$2.0\\ \\mathrm{N}$",
+        "$2.4\\ \\mathrm{N}$",
+        "$0.60\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — the emf.**\n$$\\varepsilon = BLv = 0.20 \\times 1.5 \\times 4.0 = 1.2\\ \\mathrm{V}.$$\n\n**Step 2 — the induced current.**\n$$I = \\frac{\\varepsilon}{R} = \\frac{1.2}{0.60} = 2.0\\ \\mathrm{A}.$$\n\n**Step 3 — the magnetic force on the current-carrying rod.** By Lenz's law it opposes the motion, so an equal forward push is needed to hold the speed steady:\n$$F = BIL = 0.20 \\times 2.0 \\times 1.5 = 0.60\\ \\mathrm{N}.$$\n\nA check by energy: the push delivers $Fv = 0.60 \\times 4.0 = 2.4\\ \\mathrm{W}$, and the circuit dissipates $\\varepsilon I = 1.2 \\times 2.0 = 2.4\\ \\mathrm{W}$. The two agree, as they must at constant speed.",
+      "distractorRationale": [
+        "Left the length out of $F = BIL$, computing $BI$ alone.",
+        "Stopped at the induced current and quoted its number as the force.",
+        "Worked out the power, $\\varepsilon I = 2.4\\ \\mathrm{W}$, and quoted that number as the force. Power is force multiplied by speed, so the force is this divided by $4.0\\ \\mathrm{m/s}$.",
+        "Correct. $\\varepsilon = 1.2\\ \\mathrm{V}$, $I = 2.0\\ \\mathrm{A}$, and $F = BIL = 0.20 \\times 2.0 \\times 1.5 = 0.60\\ \\mathrm{N}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.20 * ((0.20 * 1.5 * 4.0) / 0.60) * 1.5",
+        "expected": 0.6,
+        "tolerance": 1e-9,
+        "unit": "N"
+      }
+    }
+  ]
+}

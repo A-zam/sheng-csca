@@ -1,0 +1,62 @@
+# --- Reference material: INPUT ONLY. Never commit, bundle, or serve. ---
+/reference/
+/reference/**
+
+# --- Additional reference material dropped into the project root. ---
+# Same rule as reference/: input only, never committed, bundled or served.
+/Study Pack - Math/
+/Study Pack - Physics/
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+
+# next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# testing
+/coverage
+
+# production
+/dist
+
+# misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# derived from reference/ — regenerated on demand, never committed
+/.originality-index.json
+
+# scratch
+/.tmp/
+
+# generated from content/ by scripts/build-public-data.ts
+/public/data/
+
+.env*
+
+# private working notes and local tooling, kept out of the public repo
+/csca-prep-claude-code-prompt.md
+/.claude/skills/

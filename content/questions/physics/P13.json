@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P13",
+  "questions": [
+    {
+      "id": "physics-P13.1-001",
+      "subject": "physics",
+      "topic": "P13",
+      "subtopic": "P13.1",
+      "syllabusRef": "P-4 / Optics / Physical Optics / Interference of light",
+      "difficulty": 1,
+      "stem": "A soap film stretched across a wire ring is lit by white light. Bands of colour appear across it, and they shift as the film drains and grows thinner. The colours are produced because",
+      "options": [
+        "$\\text{light reflected from the front and back faces of the film superposes, and the path difference depends on thickness}$",
+        "$\\text{the soap solution splits white light into a spectrum in the way a prism does}$",
+        "$\\text{each colour of light travels at a different speed through the air outside the film}$",
+        "$\\text{the film absorbs every colour except the one seen at each point}$"
+      ],
+      "correctIndex": 0,
+      "solution": "The film is a very thin sheet with two surfaces. Some of the light reflects off the front surface; the rest goes in, reflects off the back surface, and comes out again.\n\nThose two reflected beams come from the same original wave, so they are coherent and they superpose. The second beam has travelled an extra distance of about twice the film thickness, and that extra path decides whether the two arrive in step or out of step.\n\nBecause the condition depends on the wavelength, one colour cancels and another reinforces at any given thickness. The film is wedge-shaped as it drains, so the thickness varies down the film and different colours are strengthened at different heights. That is the pattern of bands.\n\nAs the film thins further the whole pattern moves, exactly as the explanation predicts.",
+      "distractorRationale": [
+        "Correct. Two-beam interference between the front-surface and back-surface reflections, with a path difference set by the local thickness.",
+        "Dispersion in a prism needs a thick wedge of glass and produces one continuous spectrum, not bands that move as the film thins.",
+        "All colours travel at the same speed in air. Even in a medium, a difference in speed alone would separate the colours, not make bands appear and shift.",
+        "Selective absorption would give one fixed colour that does not change as the film drains, and it would not depend on thickness."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Thin-film colours arise from the superposition of the reflections from the two surfaces of the film, whose path difference is set by the film thickness, so the reinforced wavelength changes as the thickness changes. Option A states exactly this. Dispersion, differing speeds in air and selective absorption all fail to explain why the bands move as the film drains."
+      }
+    },
+    {
+      "id": "physics-P13.1-002",
+      "subject": "physics",
+      "topic": "P13",
+      "subtopic": "P13.1",
+      "syllabusRef": "P-4 / Optics / Physical Optics / Interference of light",
+      "difficulty": 3,
+      "stem": "In a two-slit demonstration, a pair of narrow slits $0.50\\ \\mathrm{mm}$ apart is lit by light of wavelength $600\\ \\mathrm{nm}$, and the fringes are viewed on a screen $2.0\\ \\mathrm{m}$ away. Using $\\Delta y = \\dfrac{\\lambda D}{d}$, the spacing between neighbouring bright fringes is",
+      "options": [
+        "$0.60\\ \\mathrm{mm}$",
+        "$2.4\\ \\mathrm{mm}$",
+        "$1.2\\ \\mathrm{mm}$",
+        "$4.8\\ \\mathrm{mm}$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — put everything into metres.** This is where the question bites:\n$$\\lambda = 600\\ \\mathrm{nm} = 6.0\\times10^{-7}\\ \\mathrm{m}, \\qquad d = 0.50\\ \\mathrm{mm} = 5.0\\times10^{-4}\\ \\mathrm{m}.$$\n\n**Step 2 — substitute.**\n$$\\Delta y = \\frac{(6.0\\times10^{-7})(2.0)}{5.0\\times10^{-4}} = \\frac{1.2\\times10^{-6}}{5.0\\times10^{-4}} = 2.4\\times10^{-3}\\ \\mathrm{m}.$$\n\n**Step 3 — report it in millimetres.**\n$$\\Delta y = 2.4\\ \\mathrm{mm}.$$\n\nA fringe spacing of a couple of millimetres is what makes the pattern visible to the eye, which is a useful sanity check on the powers of ten.",
+      "distractorRationale": [
+        "Divided by the screen distance instead of multiplying by it: $\\lambda/(Dd)$ in place of $\\lambda D/d$.",
+        "Correct. $\\Delta y = (6.0\\times10^{-7})(2.0)/(5.0\\times10^{-4}) = 2.4\\ \\mathrm{mm}$.",
+        "Halved the result, using $\\lambda D/(2d)$, as though the two slits introduced an extra factor of two.",
+        "Used a slit separation of $0.25\\ \\mathrm{mm}$, halving $d$ somewhere in the unit conversion."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "600e-9 * 2.0 / 0.50e-3 * 1000",
+        "expected": 2.4,
+        "tolerance": 1e-9,
+        "unit": "mm"
+      }
+    },
+    {
+      "id": "physics-P13.1-003",
+      "subject": "physics",
+      "topic": "P13",
+      "subtopic": "P13.1",
+      "syllabusRef": "P-4 / Optics / Physical Optics / Interference of light",
+      "difficulty": 4,
+      "stem": "In a two-slit interference experiment the screen is moved from $1.2\\ \\mathrm{m}$ to $1.8\\ \\mathrm{m}$ from the slits and, at the same time, the separation of the slits is halved. The wavelength of the light is unchanged. The fringe spacing becomes how many times its original value?",
+      "options": [
+        "$0.75$",
+        "$1.5$",
+        "$3.0$",
+        "$6.0$"
+      ],
+      "correctIndex": 2,
+      "solution": "The fringe spacing obeys\n$$\\Delta y = \\frac{\\lambda D}{d},$$\nso it is proportional to $D$ and inversely proportional to $d$. Take the two changes one at a time.\n\n**Step 1 — the screen moves.** $D$ goes from $1.2\\ \\mathrm{m}$ to $1.8\\ \\mathrm{m}$, a factor of\n$$\\frac{1.8}{1.2} = 1.5.$$\n\n**Step 2 — the slits close up.** Halving $d$ doubles $\\Delta y$, a factor of $2$.\n\n**Step 3 — combine.** The two effects multiply:\n$$1.5 \\times 2 = 3.0.$$\n\nBoth changes push the same way, so the pattern spreads out three times as far.",
+      "distractorRationale": [
+        "Inverted both factors, dividing by $1.5$ and by $2$. Moving the screen further away and bringing the slits closer both widen the pattern.",
+        "Counted only the change in screen distance and ignored the change in slit separation.",
+        "Correct. $\\Delta y \\propto D/d$, so the factor is $(1.8/1.2)\\times 2 = 3.0$.",
+        "Doubled the screen-distance factor as well as applying the slit factor, giving $3\\times2$ instead of $1.5\\times2$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(1.8 / 1.2) * 2",
+        "expected": 3,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P13.2-001",
+      "subject": "physics",
+      "topic": "P13",
+      "subtopic": "P13.2",
+      "syllabusRef": "P-4 / Optics / Physical Optics / Diffraction and the wave nature of light",
+      "difficulty": 2,
+      "stem": "Light of a single wavelength passes through one narrow slit and lands on a screen, giving a broad bright band in the middle with fainter bands on either side. The slit is then made narrower. The central bright band",
+      "options": [
+        "$\\text{becomes narrower}$",
+        "$\\text{keeps its width but grows brighter}$",
+        "$\\text{breaks into two separate bands}$",
+        "$\\text{becomes wider}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Diffraction is the spreading of a wave as it squeezes through an opening, and how much it spreads depends on the ratio of the wavelength to the width of the opening.\n\nThe angular half-width of the central band satisfies\n$$\\sin\\theta = \\frac{\\lambda}{a},$$\nwhere $a$ is the slit width.\n\nMaking $a$ smaller makes $\\lambda/a$ larger, so $\\theta$ grows and the central band spreads further across the screen. Less light gets through as well, so the band also grows fainter.\n\nThe general rule is worth remembering: the narrower the gap, the greater the spreading.",
+      "distractorRationale": [
+        "Reverses the relationship. Narrowing the gap increases $\\lambda/a$, so the pattern spreads more, not less.",
+        "The width does change, and the band gets dimmer rather than brighter because a narrower slit admits less light.",
+        "The central maximum stays single. Extra dark lines appear only further out, on either side of it.",
+        "Correct. The half-width satisfies $\\sin\\theta = \\lambda/a$, so shrinking $a$ widens the central band."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "The angular half-width of the single-slit central maximum satisfies sin(theta) = wavelength / slit width, so reducing the slit width increases the ratio and widens the band. Option D states this; A reverses it, B denies any change in width, and C describes a splitting that single-slit diffraction never produces."
+      }
+    },
+    {
+      "id": "physics-P13.2-002",
+      "subject": "physics",
+      "topic": "P13",
+      "subtopic": "P13.2",
+      "syllabusRef": "P-4 / Optics / Physical Optics / Diffraction and the wave nature of light",
+      "difficulty": 3,
+      "stem": "A diffraction grating ruled with $4000$ lines per centimetre is lit at normal incidence by light of wavelength $500\\ \\mathrm{nm}$. Maxima satisfy $d\\sin\\theta = n\\lambda$. The sine of the angle of the first-order maximum is",
+      "options": [
+        "$0.20$",
+        "$0.40$",
+        "$0.002$",
+        "$5.0$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — find the grating spacing.** The lines are counted per centimetre, so convert to metres first:\n$$d = \\frac{0.01\\ \\mathrm{m}}{4000} = 2.5\\times10^{-6}\\ \\mathrm{m}.$$\n\n**Step 2 — apply the grating equation with $n=1$.**\n$$\\sin\\theta = \\frac{\\lambda}{d} = \\frac{5.0\\times10^{-7}}{2.5\\times10^{-6}} = 0.20.$$\n\nA sine must lie between $0$ and $1$, which immediately disqualifies any answer above $1$.",
+      "distractorRationale": [
+        "Correct. $d = 2.5\\times10^{-6}\\ \\mathrm{m}$ and $\\sin\\theta = \\lambda/d = 0.20$.",
+        "Used $n=2$, giving the second-order maximum rather than the first.",
+        "Took $d = 1/4000$ of a metre, forgetting that the lines were counted per centimetre.",
+        "Inverted the fraction, computing $d/\\lambda$. The result exceeds $1$, which no sine can do."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "500e-9 / (0.01 / 4000)",
+        "expected": 0.2,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P13.2-003",
+      "subject": "physics",
+      "topic": "P13",
+      "subtopic": "P13.2",
+      "syllabusRef": "P-4 / Optics / Physical Optics / Diffraction and the wave nature of light",
+      "difficulty": 5,
+      "stem": "A grating ruled with $5000$ lines per centimetre is lit at normal incidence by red light of wavelength $625\\ \\mathrm{nm}$. Maxima satisfy $d\\sin\\theta = n\\lambda$. The highest order that can be observed is",
+      "options": [
+        "$2$",
+        "$5$",
+        "$3$",
+        "$4$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — the grating spacing.**\n$$d = \\frac{0.01\\ \\mathrm{m}}{5000} = 2.0\\times10^{-6}\\ \\mathrm{m}.$$\n\n**Step 2 — the physical limit.** Rearranging the grating equation gives\n$$\\sin\\theta = \\frac{n\\lambda}{d},$$\nand a sine can never exceed $1$. So an order exists only while\n$$n \\le \\frac{d}{\\lambda}.$$\n\n**Step 3 — evaluate the bound.**\n$$\\frac{d}{\\lambda} = \\frac{2.0\\times10^{-6}}{6.25\\times10^{-7}} = 3.2.$$\n\n**Step 4 — take the largest whole number below it.** Orders must be integers, so the highest one available is $n=3$. It needs $\\sin\\theta = 3/3.2 = 0.94$, which is possible. Order $4$ would need $\\sin\\theta = 1.25$, which is not.",
+      "distractorRationale": [
+        "Treated $d/\\lambda = 3.2$ as needing a whole order in reserve and stopped one short. Order $3$ is perfectly allowed, since it only needs $\\sin\\theta = 0.94$.",
+        "Counted the number of maxima that appear ($n = 0$ and $\\pm1$, $\\pm2$) rather than the highest order number.",
+        "Correct. $d/\\lambda = 3.2$, so the largest integer order is $3$.",
+        "Rounded $3.2$ up instead of down. Order $4$ would require $\\sin\\theta = 1.25$, which is impossible."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.floor((0.01 / 5000) / 625e-9)",
+        "expected": 3,
+        "tolerance": 1e-9
+      }
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M6",
+  "questions": [
+    {
+      "id": "math-M6.1-001",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / Arithmetic sequences and their sums",
+      "difficulty": 1,
+      "stem": "The sequence $3,\\ 10,\\ 17,\\ 24,\\ \\ldots$ is arithmetic. Its common difference $d$ is",
+      "options": ["$3$", "$7$", "$10$", "$14$"],
+      "correctIndex": 1,
+      "solution": "The common difference is what each term adds to the one before it.\n\nSubtract a neighbouring pair:\n$$d=10-3=7.$$\n\nThe same gap appears further along: $17-10=7$ and $24-17=7$. A constant gap is what makes the list arithmetic, so $d=7$.",
+      "distractorRationale": [
+        "$3$ is the opening term $a_1$. The gap between terms is a subtraction, not the first entry.",
+        "Correct. Neighbouring terms differ by $7$, since $10-3=17-10=24-17=7$.",
+        "$10$ is the second term, copied out without subtracting the term before it.",
+        "Skipped over a term and used $17-3$, which spans two gaps rather than one."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "10 - 3",
+        "expected": 7,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M6.1-002",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / Arithmetic sequences and their sums",
+      "difficulty": 2,
+      "stem": "An arithmetic sequence has $a_1=-5$ and $d=6$. Find $a_{12}$.",
+      "options": ["$61$", "$66$", "$67$", "$71$"],
+      "correctIndex": 0,
+      "solution": "Every step forward adds $d$. Travelling from $a_1$ out to $a_{12}$ takes $12-1=11$ steps, because the first term is where the counting starts rather than a step in its own right.\n$$a_{12}=a_1+11d=-5+11 \\times 6=-5+66=61.$$",
+      "distractorRationale": [
+        "Correct. Eleven steps of $6$ added to $-5$ give $-5+66=61$.",
+        "Reported $11d$ on its own and never added the starting value $-5$.",
+        "Took $12$ steps rather than $11$, computing $-5+12 \\times 6$.",
+        "Sign slip on the starting value: added $+5$ to $66$ instead of $-5$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "-5 + (12 - 1) * 6",
+        "expected": 61,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M6.1-003",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / Arithmetic sequences and their sums",
+      "difficulty": 3,
+      "stem": "An arithmetic sequence has $a_3=11$ and $a_7=27$. Find $S_{10}$.",
+      "options": ["$171$", "$190$", "$210$", "$230$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — the common difference.** Four steps separate $a_3$ from $a_7$, so\n$$d=\\frac{27-11}{7-3}=\\frac{16}{4}=4.$$\n\n**Step 2 — the opening term.** Walk two steps back from $a_3$:\n$$a_1=11-2 \\times 4=3.$$\n\n**Step 3 — add up ten terms.** Ten terms enclose nine steps, so the bracket carries $9d$:\n$$S_{10}=\\frac{10}{2}\\bigl(2 \\times 3+9 \\times 4\\bigr)=5 \\times 42=210.$$",
+      "distractorRationale": [
+        "Added only nine terms. This is $S_9$, and the tenth term $39$ is missing from it.",
+        "Divided by $5$ instead of $4$ when finding $d$, counting terms where gaps were wanted. That yields $d=3.2$ and a starting value of $4.6$.",
+        "Correct. $d=4$ and $a_1=3$, so $S_{10}=5(6+36)=210$.",
+        "Wrote $2a_1+10d$ inside the bracket, using ten steps where nine belong."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(10 / 2) * (2 * (11 - 2 * ((27 - 11) / (7 - 3))) + 9 * ((27 - 11) / (7 - 3)))",
+        "expected": 210,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M6.1-004",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / Arithmetic sequences and their sums",
+      "difficulty": 4,
+      "stem": "The five interior angles of a convex pentagon total $540^\\circ$ and form an arithmetic sequence of common difference $20^\\circ$. The largest angle is",
+      "options": ["$88^\\circ$", "$108^\\circ$", "$128^\\circ$", "$148^\\circ$"],
+      "correctIndex": 3,
+      "solution": "**Step 1 — the middle angle.** When an arithmetic list has an odd length, its middle entry equals the mean of the whole list. Five angles totalling $540^\\circ$ therefore give\n$$a_3=\\frac{540^\\circ}{5}=108^\\circ.$$\n\n**Step 2 — climb to the top.** The biggest angle is $a_5$, which sits two steps above the middle:\n$$a_5=108^\\circ+2 \\times 20^\\circ=148^\\circ.$$\n\nThe five angles run $68^\\circ,\\ 88^\\circ,\\ 108^\\circ,\\ 128^\\circ,\\ 148^\\circ$, and they do total $540^\\circ$.",
+      "distractorRationale": [
+        "This is $a_2$. Counting downwards from the middle reaches the small angles, not the large ones.",
+        "This is the mean angle $a_3$. A mean sits in the middle of the list, so it cannot be the largest entry.",
+        "Climbed one step of $20^\\circ$ above the middle instead of two, landing on $a_4$.",
+        "Correct. The middle angle is $108^\\circ$ and the largest lies two steps above it: $108^\\circ+40^\\circ=148^\\circ$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "540 / 5 + 2 * 20",
+        "expected": 148,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M6.2-001",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / Geometric sequences and their sums",
+      "difficulty": 2,
+      "stem": "A geometric sequence has $a_1=3$ and common ratio $q=2$. Find $a_6$.",
+      "options": ["$48$", "$64$", "$96$", "$192$"],
+      "correctIndex": 2,
+      "solution": "The ratio is applied once per step, and reaching $a_6$ from $a_1$ takes five steps.\n$$a_6=a_1q^{5}=3 \\times 2^{5}=3 \\times 32=96.$$",
+      "distractorRationale": [
+        "Used $q^{4}$, one step short of the sixth term.",
+        "Computed $2^{6}$ and never multiplied by the starting value $3$.",
+        "Correct. Five doublings applied to $3$ give $3 \\times 32=96$.",
+        "Used $q^{6}$, as if six steps separated the first term from the sixth."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "3 * Math.pow(2, 6 - 1)",
+        "expected": 96,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M6.2-002",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / Geometric sequences and their sums",
+      "difficulty": 3,
+      "stem": "A geometric sequence has $a_1=2$ and $q=3$. Find $S_5$.",
+      "options": ["$121$", "$162$", "$240$", "$242$"],
+      "correctIndex": 3,
+      "solution": "Because $q \\neq 1$, five terms add to\n$$S_5=\\frac{a_1(q^{5}-1)}{q-1}=\\frac{2(243-1)}{3-1}=\\frac{484}{2}=242.$$\n\nWriting the terms out confirms it: $2,\\ 6,\\ 18,\\ 54,\\ 162$ add to $242$.",
+      "distractorRationale": [
+        "Dropped the factor $a_1$ and evaluated $\\dfrac{3^{5}-1}{3-1}$ alone.",
+        "This is $a_5=2 \\times 81$, the last term rather than the running total.",
+        "Began adding at $a_2$, so the opening term $2$ never entered the total.",
+        "Correct. $\\dfrac{2(3^{5}-1)}{3-1}=\\dfrac{484}{2}=242$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * (Math.pow(3, 5) - 1) / (3 - 1)",
+        "expected": 242,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M6.2-003",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / Geometric sequences and their sums",
+      "difficulty": 3,
+      "stem": "In a geometric sequence of positive terms, $a_2=6$ and $a_4=54$. Find $q$.",
+      "options": ["$3$", "$9$", "$24$", "$48$"],
+      "correctIndex": 0,
+      "solution": "Two steps separate $a_2$ from $a_4$, so the ratio acts twice:\n$$\\frac{a_4}{a_2}=q^{2}=\\frac{54}{6}=9.$$\n\nA square root gives $q=3$ or $q=-3$. Every term is positive, and a negative ratio would flip the sign at each step, so\n$$q=3.$$",
+      "distractorRationale": [
+        "Correct. $q^{2}=9$, and positive terms rule out $q=-3$, leaving $q=3$.",
+        "Stopped at $q^{2}=9$ without taking the square root.",
+        "Treated the list as arithmetic and reported $\\dfrac{54-6}{2}=24$ as a common difference.",
+        "Subtracted where a division was needed, giving $54-6$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(54 / 6)",
+        "expected": 3,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M6.2-004",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / Geometric sequences and their sums",
+      "difficulty": 5,
+      "stem": "A geometric sequence of real numbers has $a_1=4$ and $a_3=36$. Find $a_5$.",
+      "options": ["$68$", "$108$", "$324$", "$1296$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — the ratio, with two cases.** Two steps give\n$$q^{2}=\\frac{36}{4}=9,$$\nso $q=3$ or $q=-3$. Nothing in the question rules either out, so both have to be carried.\n\n**Step 2 — the two cases agree.** Four steps separate $a_1$ from $a_5$, and\n$$q^{4}=(q^{2})^{2}=81$$\nwhatever sign $q$ carries, because the square erases it. So\n$$a_5=4 \\times 81=324$$\nin both cases, and the ambiguity never reaches the answer.",
+      "distractorRationale": [
+        "Read the list as arithmetic, taking $\\dfrac{36-4}{2}=16$ as a common difference and then $4+4 \\times 16$.",
+        "Advanced one step past $a_3$ instead of two, computing $36 \\times 3$.",
+        "Correct. $q^{2}=9$ forces $q^{4}=81$ for either sign, so $a_5=4 \\times 81=324$.",
+        "Squared $a_3$ without dividing by $a_1$. The relation is $a_5=\\dfrac{a_3^{2}}{a_1}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "4 * Math.pow(36 / 4, 2)",
+        "expected": 324,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M6.3-001",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / General terms, recurrences and S(n) relations",
+      "difficulty": 1,
+      "stem": "A sequence is given by $a_n=5n-2$. Find $a_4$.",
+      "options": ["$13$", "$18$", "$20$", "$22$"],
+      "correctIndex": 1,
+      "solution": "Put $n=4$ into the rule:\n$$a_4=5 \\times 4-2=20-2=18.$$",
+      "distractorRationale": [
+        "Substituted $n=3$, which returns the term before the one asked for.",
+        "Correct. $5 \\times 4=20$, and $20-2=18$.",
+        "Stopped at $5 \\times 4$ and never subtracted the $2$.",
+        "Sign slip: added the $2$ where the rule subtracts it."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "5 * 4 - 2",
+        "expected": 18,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M6.3-002",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / General terms, recurrences and S(n) relations",
+      "difficulty": 2,
+      "stem": "The list $4,\\ 7,\\ 10,\\ 13,\\ \\ldots$ carries on with the same pattern. Its general term is",
+      "options": ["$a_n=3n+1$", "$a_n=3n-1$", "$a_n=4n$", "$a_n=n+3$"],
+      "correctIndex": 0,
+      "solution": "Neighbouring entries rise by $3$ every time, so this is arithmetic with $d=3$ starting from $a_1=4$.\n\nSubstitute into $a_n=a_1+(n-1)d$ and expand:\n$$a_n=4+3(n-1)=3n+1.$$\n\nTesting the rule: it returns $4$, then $7$, then $10$, which is the list given.",
+      "distractorRationale": [
+        "Correct. $4+3(n-1)$ expands to $3n+1$, which reproduces $4,\\ 7,\\ 10,\\ 13$ in turn.",
+        "Expanded $4+3(n-1)$ as $3n-1$, subtracting the $3$ from nothing instead of from $4$.",
+        "Multiplied the opening term by $n$. That rule delivers $4,\\ 8,\\ 12$, a different list.",
+        "Put the common difference in the constant slot, so the terms climb by $1$ per step rather than by $3$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["n"],
+        "domain": [[1, 30]],
+        "integerVars": ["n"],
+        "reference": "4 + 3 * (n - 1)",
+        "optionForms": ["3 * n + 1", "3 * n - 1", "4 * n", "n + 3"],
+        "extraSamples": [{ "n": 1 }, { "n": 2 }, { "n": 3 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M6.3-003",
+      "subject": "math",
+      "topic": "M6",
+      "subtopic": "M6.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Sequences / General terms, recurrences and S(n) relations",
+      "difficulty": 4,
+      "stem": "A sequence $\\{a_n\\}$ has running total $S_n=n^{2}+4n$ for every $n \\ge 1$. Then $a_n$ equals",
+      "options": ["$a_n=n^{2}+4n$", "$a_n=2n+3$", "$a_n=n+4$", "$a_n=2n+5$"],
+      "correctIndex": 1,
+      "solution": "**Step 1 — subtract consecutive totals.** For $n \\ge 2$, the $n$th entry is whatever the running total gains at step $n$:\n$$a_n=S_n-S_{n-1}.$$\n\nExpanding the earlier total,\n$$(n-1)^{2}+4(n-1)=n^{2}+2n-3,$$\nso the gain is\n$$a_n=(n^{2}+4n)-(n^{2}+2n-3)=2n+3.$$\n\n**Step 2 — treat the opening term separately.** Subtraction says nothing about $a_1$, which has to come from $S_1=1+4=5$. The formula returns $2+3=5$ as well, so a single rule covers every index.",
+      "distractorRationale": [
+        "Reported $S_n$ itself. A running total is not an individual entry unless only one entry has been added.",
+        "Correct. $S_n-S_{n-1}=2n+3$, and that rule also delivers $a_1=5=S_1$.",
+        "Divided $S_n$ by $n$, which produces the average of the first $n$ entries rather than the $n$th one.",
+        "Computed $S_{n+1}-S_n$, shifting the index by one and returning the next entry instead."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["n"],
+        "domain": [[1, 30]],
+        "integerVars": ["n"],
+        "reference": "(n * n + 4 * n) - ((n - 1) * (n - 1) + 4 * (n - 1))",
+        "optionForms": ["n * n + 4 * n", "2 * n + 3", "n + 4", "2 * n + 5"],
+        "extraSamples": [{ "n": 1 }, { "n": 2 }, { "n": 5 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    }
+  ]
+}

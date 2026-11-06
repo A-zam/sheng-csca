@@ -1,0 +1,507 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M5",
+  "questions": [
+    {
+      "id": "math-M5.1-001",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Definitions, radians and the unit circle",
+      "difficulty": 1,
+      "stem": "Written in radians, $150^\\circ$ is",
+      "options": [
+        "$\\dfrac{5\\pi}{6}$",
+        "$\\dfrac{2\\pi}{3}$",
+        "$\\dfrac{3\\pi}{4}$",
+        "$\\dfrac{5\\pi}{3}$"
+      ],
+      "correctIndex": 0,
+      "solution": "A straight angle is $180^\\circ$ and also $\\pi$ radians, so one degree is $\\dfrac{\\pi}{180}$ radians. Multiply by that factor:\n$$150^\\circ = 150 \\times \\frac{\\pi}{180} = \\frac{150\\pi}{180} = \\frac{5\\pi}{6}.$$\n\nA quick check: $150^\\circ$ is five sixths of $180^\\circ$, so it must be five sixths of $\\pi$.",
+      "distractorRationale": [
+        "Correct. $150 \\times \\dfrac{\\pi}{180} = \\dfrac{5\\pi}{6}$.",
+        "This is $120^\\circ$. Cancelling $\\dfrac{150}{180}$ to $\\dfrac{2}{3}$ instead of $\\dfrac{5}{6}$ gives this.",
+        "This is $135^\\circ$, the radian value most often confused with $150^\\circ$ because both sit in the second quadrant.",
+        "Doubled the numerator and halved the denominator, giving $300^\\circ$ rather than $150^\\circ$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "150 * Math.PI / 180",
+        "expected": 2.6179938779914944,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.1-002",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Definitions, radians and the unit circle",
+      "difficulty": 2,
+      "stem": "In standard position, the ray for an angle $\\theta$ runs through $(-3,\\ 4)$. What is $\\sin\\theta$?",
+      "options": [
+        "$-\\dfrac{3}{5}$",
+        "$\\dfrac{4}{5}$",
+        "$-\\dfrac{4}{3}$",
+        "$\\dfrac{3}{5}$"
+      ],
+      "correctIndex": 1,
+      "solution": "For a point $(x,\\ y)$ on the terminal side, first find its distance from the origin:\n$$r=\\sqrt{x^{2}+y^{2}}=\\sqrt{(-3)^{2}+4^{2}}=\\sqrt{25}=5.$$\n\nThen the definitions read straight off:\n$$\\sin\\theta=\\frac{y}{r}=\\frac{4}{5}.$$\n\nNote that $r$ is a distance, so it is always positive. The sign of the answer comes from $y$, which is positive here — as it should be, since $P$ is in the second quadrant where sine is positive.",
+      "distractorRationale": [
+        "This is $\\cos\\theta=\\dfrac{x}{r}$. Sine uses the vertical coordinate, cosine the horizontal one.",
+        "Correct. $r=5$, and $\\sin\\theta=\\dfrac{y}{r}=\\dfrac{4}{5}$.",
+        "This is $\\dfrac{y}{x}$ with the sign kept, which is $\\tan\\theta$ rather than $\\sin\\theta$.",
+        "Used $\\dfrac{|x|}{r}$, taking the horizontal coordinate and dropping its minus sign."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "4 / Math.sqrt((-3) * (-3) + 4 * 4)",
+        "expected": 0.8,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.1-003",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Definitions, radians and the unit circle",
+      "difficulty": 3,
+      "stem": "An angle $\\theta$ satisfies $\\cos\\theta<0$ and $\\tan\\theta>0$. In which quadrant does $\\theta$ lie?",
+      "options": ["The first", "The second", "The third", "The fourth"],
+      "correctIndex": 2,
+      "solution": "Take the two conditions one at a time and intersect the answers.\n\n**$\\cos\\theta<0$.** Cosine is the horizontal coordinate, so it is negative on the left-hand side: the second and third quadrants.\n\n**$\\tan\\theta>0$.** Tangent is $\\dfrac{\\sin\\theta}{\\cos\\theta}$, positive when sine and cosine share a sign: the first and third quadrants.\n\nThe only quadrant on both lists is the **third**. (Sanity check: there both coordinates are negative, so cosine is negative and their ratio is positive.)",
+      "distractorRationale": [
+        "Here every ratio is positive, so $\\cos\\theta>0$ and the first condition fails.",
+        "Satisfies $\\cos\\theta<0$, but sine is positive there while cosine is negative, so $\\tan\\theta<0$ and the second condition fails.",
+        "Correct. Both coordinates are negative, so cosine is negative and tangent is positive.",
+        "Here cosine is positive, so the first condition fails. Tangent is also negative here."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "cos is negative in quadrants II and III; tan is positive in quadrants I and III. The intersection of {II, III} and {I, III} is {III}, so exactly one option satisfies both conditions."
+      }
+    },
+    {
+      "id": "math-M5.2-001",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Identities for the same angle and reduction formulae",
+      "difficulty": 2,
+      "stem": "Given $\\sin\\alpha=\\dfrac{3}{5}$ with $\\alpha$ in the second quadrant, $\\cos\\alpha=$",
+      "options": [
+        "$\\dfrac{4}{5}$",
+        "$-\\dfrac{3}{4}$",
+        "$\\dfrac{4}{3}$",
+        "$-\\dfrac{4}{5}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — find the size.** The Pythagorean identity gives\n$$\\cos^{2}\\alpha=1-\\sin^{2}\\alpha=1-\\left(\\frac{3}{5}\\right)^{2}=1-\\frac{9}{25}=\\frac{16}{25},$$\nso $|\\cos\\alpha|=\\dfrac{4}{5}$.\n\n**Step 2 — fix the sign.** The identity only gives the size; the quadrant decides the sign. In the second quadrant cosine is negative.\n$$\\cos\\alpha=-\\frac{4}{5}.$$",
+      "distractorRationale": [
+        "The right size but the wrong sign. Cosine is negative throughout the second quadrant.",
+        "This is $-\\tan\\alpha$, formed from $\\dfrac{3}{4}$ rather than from $\\dfrac{4}{5}$.",
+        "The reciprocal of the size, and positive. This would be $\\dfrac{1}{\\cos\\alpha}$ with the sign dropped.",
+        "Correct. $\\cos^{2}\\alpha=\\dfrac{16}{25}$ and the second quadrant makes cosine negative."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "-Math.sqrt(1 - (3 / 5) * (3 / 5))",
+        "expected": -0.8,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.2-002",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Identities for the same angle and reduction formulae",
+      "difficulty": 1,
+      "stem": "For every angle $\\theta$, $\\sin(\\pi-\\theta)=$",
+      "options": ["$\\sin\\theta$", "$-\\sin\\theta$", "$\\cos\\theta$", "$-\\cos\\theta$"],
+      "correctIndex": 0,
+      "solution": "Reduction formulae based on $\\pi$ (or $180^\\circ$) keep the function and only decide a sign. It is the ones based on $\\dfrac{\\pi}{2}$ (or $90^\\circ$) that swap sine for cosine.\n\nSo $\\sin(\\pi-\\theta)$ must be $\\pm\\sin\\theta$. To pick the sign, take $\\theta$ in the first quadrant: then $\\pi-\\theta$ lands in the second quadrant, where sine is still positive. The sign is therefore $+$:\n$$\\sin(\\pi-\\theta)=\\sin\\theta.$$\n\nCheck with $\\theta=\\dfrac{\\pi}{6}$: $\\sin\\dfrac{5\\pi}{6}=\\dfrac{1}{2}=\\sin\\dfrac{\\pi}{6}$.",
+      "distractorRationale": [
+        "Correct. A shift by $\\pi$ keeps the function, and the second quadrant keeps sine positive.",
+        "This is $\\sin(\\pi+\\theta)$ or $\\sin(-\\theta)$. Subtracting from $\\pi$ lands in the second quadrant, where sine stays positive.",
+        "Swaps sine for cosine, which only happens with a $\\dfrac{\\pi}{2}$ shift, not a $\\pi$ shift.",
+        "Both errors at once: the wrong function and the wrong sign."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["t"],
+        "domain": [[0.15, 3.0]],
+        "reference": "Math.sin(Math.PI - t)",
+        "optionForms": ["Math.sin(t)", "-Math.sin(t)", "Math.cos(t)", "-Math.cos(t)"],
+        "extraSamples": [{ "t": 0.5 }, { "t": 1.2 }, { "t": 2.4 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M5.2-003",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Identities for the same angle and reduction formulae",
+      "difficulty": 3,
+      "stem": "Simplify $\\dfrac{\\sin\\left(\\dfrac{\\pi}{2}+\\theta\\right)}{\\cos(\\pi-\\theta)}$.",
+      "options": ["$1$", "$-1$", "$\\tan\\theta$", "$-\\tan\\theta$"],
+      "correctIndex": 1,
+      "solution": "Reduce the top and the bottom separately.\n\n**Top.** A $\\dfrac{\\pi}{2}$ shift swaps the function. For $\\theta$ in the first quadrant, $\\dfrac{\\pi}{2}+\\theta$ is in the second, where sine is positive:\n$$\\sin\\left(\\frac{\\pi}{2}+\\theta\\right)=\\cos\\theta.$$\n\n**Bottom.** A $\\pi$ shift keeps the function. For $\\theta$ in the first quadrant, $\\pi-\\theta$ is in the second, where cosine is negative:\n$$\\cos(\\pi-\\theta)=-\\cos\\theta.$$\n\n**Divide.**\n$$\\frac{\\cos\\theta}{-\\cos\\theta}=-1.$$\n\nThe $\\cos\\theta$ cancels, so the result is the same constant for every $\\theta$ where the expression is defined.",
+      "distractorRationale": [
+        "Cancelled $\\cos\\theta$ correctly but lost the minus sign from $\\cos(\\pi-\\theta)$.",
+        "Correct. The top reduces to $\\cos\\theta$, the bottom to $-\\cos\\theta$, and the ratio is $-1$.",
+        "Left the top as $\\sin\\theta$, failing to apply the function swap that a $\\dfrac{\\pi}{2}$ shift forces.",
+        "Same failure to swap the function on top, with the sign from the bottom kept."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["t"],
+        "domain": [[0.2, 1.2]],
+        "reference": "Math.sin(Math.PI / 2 + t) / Math.cos(Math.PI - t)",
+        "optionForms": ["1", "-1", "Math.tan(t)", "-Math.tan(t)"],
+        "extraSamples": [{ "t": 0.3 }, { "t": 0.9 }, { "t": 1.1 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M5.2-004",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Identities for the same angle and reduction formulae",
+      "difficulty": 4,
+      "stem": "Given $\\tan\\theta=2$, the value of $\\dfrac{\\sin\\theta+\\cos\\theta}{\\sin\\theta-\\cos\\theta}$ is",
+      "options": ["$\\dfrac{1}{3}$", "$-3$", "$3$", "$2$"],
+      "correctIndex": 2,
+      "solution": "The expression is a ratio in which the top and bottom are both degree one in $\\sin\\theta$ and $\\cos\\theta$. That is the signal to divide through by $\\cos\\theta$, which turns everything into $\\tan\\theta$.\n\nDivide top and bottom by $\\cos\\theta$:\n$$\\frac{\\sin\\theta+\\cos\\theta}{\\sin\\theta-\\cos\\theta}=\\frac{\\dfrac{\\sin\\theta}{\\cos\\theta}+1}{\\dfrac{\\sin\\theta}{\\cos\\theta}-1}=\\frac{\\tan\\theta+1}{\\tan\\theta-1}.$$\n\nSubstitute $\\tan\\theta=2$:\n$$\\frac{2+1}{2-1}=\\frac{3}{1}=3.$$\n\nNo quadrant information is needed: dividing by $\\cos\\theta$ removes the individual signs, and only their ratio survives.",
+      "distractorRationale": [
+        "The reciprocal, from writing $\\dfrac{\\tan\\theta-1}{\\tan\\theta+1}$ with the top and bottom swapped.",
+        "Right size, wrong sign. This comes from $\\dfrac{\\tan\\theta+1}{1-\\tan\\theta}$, subtracting in the wrong order on the bottom.",
+        "Correct. Dividing by $\\cos\\theta$ gives $\\dfrac{\\tan\\theta+1}{\\tan\\theta-1}=\\dfrac{3}{1}=3$.",
+        "Reported $\\tan\\theta$ itself rather than evaluating the expression."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(2 + 1) / (2 - 1)",
+        "expected": 3,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.3-001",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Sum, difference, double- and half-angle formulae",
+      "difficulty": 3,
+      "stem": "$\\cos 75^\\circ=$",
+      "options": [
+        "$\\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$",
+        "$\\dfrac{\\sqrt{2}-\\sqrt{6}}{4}$",
+        "$\\dfrac{\\sqrt{3}-1}{2}$",
+        "$\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Split $75^\\circ$ into two angles whose values are known: $75^\\circ=45^\\circ+30^\\circ$.\n\nApply the cosine addition formula, remembering that the sign on the right flips:\n$$\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B.$$\n\n$$\\cos 75^\\circ=\\cos 45^\\circ\\cos 30^\\circ-\\sin 45^\\circ\\sin 30^\\circ=\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2}-\\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}.$$\n\n$$=\\frac{\\sqrt{6}}{4}-\\frac{\\sqrt{2}}{4}=\\frac{\\sqrt{6}-\\sqrt{2}}{4}.$$\n\nA sanity check on the size: $75^\\circ$ is close to $90^\\circ$, so the cosine should be small and positive. This works out to about $0.26$.",
+      "distractorRationale": [
+        "Used a plus sign in the addition formula. This is $\\cos 15^\\circ \\approx 0.97$, far too large for an angle near $90^\\circ$.",
+        "The right two surds but subtracted the wrong way round, giving a negative value. Cosine is positive for any acute angle.",
+        "Comes from treating $\\cos 75^\\circ$ as $\\cos 45^\\circ - \\cos 30^\\circ$ scaled. Cosine is not additive: $\\cos(A+B) \\neq \\cos A + \\cos B$.",
+        "Correct. $\\cos 45^\\circ\\cos 30^\\circ-\\sin 45^\\circ\\sin 30^\\circ=\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.cos(45 * Math.PI / 180) * Math.cos(30 * Math.PI / 180) - Math.sin(45 * Math.PI / 180) * Math.sin(30 * Math.PI / 180)",
+        "expected": 0.25881904510252074,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.3-002",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Sum, difference, double- and half-angle formulae",
+      "difficulty": 3,
+      "stem": "Given that $\\alpha$ is acute and $\\sin\\alpha=\\dfrac{4}{5}$, the value of $\\sin 2\\alpha$ is",
+      "options": [
+        "$\\dfrac{24}{25}$",
+        "$\\dfrac{8}{5}$",
+        "$\\dfrac{7}{25}$",
+        "$\\dfrac{12}{25}$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — get the cosine.** Since $\\alpha$ is acute, cosine is positive:\n$$\\cos\\alpha=\\sqrt{1-\\left(\\frac{4}{5}\\right)^{2}}=\\sqrt{\\frac{9}{25}}=\\frac{3}{5}.$$\n\n**Step 2 — apply the double-angle formula.**\n$$\\sin 2\\alpha=2\\sin\\alpha\\cos\\alpha=2\\cdot\\frac{4}{5}\\cdot\\frac{3}{5}=\\frac{24}{25}.$$\n\nNote that this is under $1$, as every sine must be.",
+      "distractorRationale": [
+        "Correct. $\\cos\\alpha=\\dfrac{3}{5}$, so $\\sin 2\\alpha=2\\cdot\\dfrac{4}{5}\\cdot\\dfrac{3}{5}=\\dfrac{24}{25}$.",
+        "Doubled the sine instead of using the formula: $2\\sin\\alpha$. A sine can never exceed $1$, so this is impossible.",
+        "This is $\\cos 2\\alpha=1-2\\sin^{2}\\alpha$, the other double-angle formula.",
+        "Multiplied $\\sin\\alpha$ by $\\cos\\alpha$ but forgot the factor of $2$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * (4 / 5) * Math.sqrt(1 - (4 / 5) * (4 / 5))",
+        "expected": 0.96,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.3-003",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Sum, difference, double- and half-angle formulae",
+      "difficulty": 4,
+      "stem": "Given $\\cos\\theta=\\dfrac{1}{3}$, the value of $\\cos 2\\theta$ is",
+      "options": [
+        "$\\dfrac{7}{9}$",
+        "$-\\dfrac{7}{9}$",
+        "$-\\dfrac{1}{9}$",
+        "$\\dfrac{2}{3}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Choose the version of the double-angle formula that uses what you already have. Only the cosine is given, so use\n$$\\cos 2\\theta=2\\cos^{2}\\theta-1.$$\n\nThis avoids needing $\\sin\\theta$, and so avoids needing to know the quadrant.\n\n$$\\cos 2\\theta=2\\left(\\frac{1}{3}\\right)^{2}-1=\\frac{2}{9}-1=-\\frac{7}{9}.$$\n\nThe negative sign is worth a second look, and it is right: $\\cos\\theta=\\tfrac{1}{3}$ makes $\\theta$ a bit over $70^\\circ$, so $2\\theta$ is a bit over $140^\\circ$, where cosine is indeed negative.",
+      "distractorRationale": [
+        "Right size, wrong sign — from $1-2\\cos^{2}\\theta$, which is $-\\cos 2\\theta$, not $\\cos 2\\theta$.",
+        "Correct. $2\\left(\\dfrac{1}{3}\\right)^{2}-1=\\dfrac{2}{9}-1=-\\dfrac{7}{9}$.",
+        "Used $\\cos^{2}\\theta-1$ without the factor of $2$ on the squared term.",
+        "Doubled the cosine rather than applying the formula: $2\\cos\\theta$. Doubling the angle is not doubling the value."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * (1 / 3) * (1 / 3) - 1",
+        "expected": -0.7777777777777778,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.3-004",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Sum, difference, double- and half-angle formulae",
+      "difficulty": 5,
+      "stem": "$\\sin 15^\\circ \\cos 15^\\circ=$",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{\\sqrt{3}}{4}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{8}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The product $\\sin\\theta\\cos\\theta$ is half of the double-angle formula $\\sin 2\\theta=2\\sin\\theta\\cos\\theta$. Read it backwards:\n$$\\sin\\theta\\cos\\theta=\\frac{1}{2}\\sin 2\\theta.$$\n\nWith $\\theta=15^\\circ$, the doubled angle is a value we know:\n$$\\sin 15^\\circ\\cos 15^\\circ=\\frac{1}{2}\\sin 30^\\circ=\\frac{1}{2}\\cdot\\frac{1}{2}=\\frac{1}{4}.$$\n\nSpotting the halved double-angle formula turns an awkward product of two surds into one line.",
+      "distractorRationale": [
+        "This is $\\sin 30^\\circ$ itself. The factor of $\\dfrac{1}{2}$ in front was dropped.",
+        "Comes from doubling to $\\sin 60^\\circ$ rather than $\\sin 30^\\circ$ — the angle was doubled twice.",
+        "Correct. $\\sin 15^\\circ\\cos 15^\\circ=\\dfrac{1}{2}\\sin 30^\\circ=\\dfrac{1}{4}$.",
+        "Halved once too often, applying the $\\dfrac{1}{2}$ factor twice."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * Math.sin(30 * Math.PI / 180)",
+        "expected": 0.25,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.4-001",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.4",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Graphs, period, amplitude and monotonicity",
+      "difficulty": 1,
+      "stem": "The smallest positive period of $y=\\sin 3x$ is",
+      "options": ["$\\dfrac{\\pi}{3}$", "$2\\pi$", "$6\\pi$", "$\\dfrac{2\\pi}{3}$"],
+      "correctIndex": 3,
+      "solution": "The plain sine wave $y=\\sin x$ repeats every $2\\pi$. Writing $3x$ inside makes the input run three times as fast, so the pattern completes three times as often — the period shrinks by a factor of $3$:\n$$T=\\frac{2\\pi}{|\\omega|}=\\frac{2\\pi}{3}.$$\n\nThe rule to hold on to is that a larger coefficient inside gives a *shorter* period, not a longer one.",
+      "distractorRationale": [
+        "This is the period of $y=\\tan 3x$, since tangent starts from a period of $\\pi$ rather than $2\\pi$.",
+        "The period of $y=\\sin x$, with the coefficient $3$ never applied.",
+        "Multiplied by $3$ instead of dividing. A faster-running input shortens the period.",
+        "Correct. $T=\\dfrac{2\\pi}{3}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * Math.PI / 3",
+        "expected": 2.0943951023931953,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.4-002",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.4",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Graphs, period, amplitude and monotonicity",
+      "difficulty": 2,
+      "stem": "How high does the graph of $y=3\\cos\\left(2x-\\dfrac{\\pi}{4}\\right)+1$ reach?",
+      "options": ["$4$", "$3$", "$2$", "$5$"],
+      "correctIndex": 0,
+      "solution": "Whatever sits inside the cosine, the cosine itself can only range over $[-1,\\ 1]$. The coefficients $2$ and $\\dfrac{\\pi}{4}$ change *where* the peak happens, not how high it is.\n\nSo take the cosine at its largest, $+1$:\n$$y_{\\max}=3(1)+1=4.$$\n\nThe amplitude is $3$ and the whole wave is lifted by $1$, so the graph oscillates between $-2$ and $4$.",
+      "distractorRationale": [
+        "Correct. The cosine peaks at $1$, giving $3(1)+1=4$.",
+        "This is the amplitude alone. The vertical shift of $+1$ still has to be added.",
+        "Used the coefficient $2$ from inside the bracket. That sets the period, and has nothing to do with the maximum.",
+        "Added the amplitude to the coefficient inside the bracket, $3+2$, mixing two unrelated numbers."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "3 * 1 + 1",
+        "expected": 4,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.4-003",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.4",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Graphs, period, amplitude and monotonicity",
+      "difficulty": 4,
+      "stem": "The smallest positive period of $y=\\tan\\dfrac{x}{2}$ is",
+      "options": ["$\\pi$", "$2\\pi$", "$\\dfrac{\\pi}{2}$", "$4\\pi$"],
+      "correctIndex": 1,
+      "solution": "There are two traps here, and they pull in opposite directions.\n\n**First:** tangent is not sine. Its basic period is $\\pi$, not $2\\pi$:\n$$T=\\frac{\\pi}{|\\omega|}.$$\n\n**Second:** the coefficient is $\\omega=\\dfrac{1}{2}$, which is less than $1$, so it *stretches* the graph rather than squashing it.\n\n$$T=\\frac{\\pi}{\\tfrac{1}{2}}=2\\pi.$$",
+      "distractorRationale": [
+        "The period of $y=\\tan x$, with the coefficient $\\dfrac{1}{2}$ never applied.",
+        "Correct. Tangent has base period $\\pi$, and dividing by $\\omega=\\dfrac{1}{2}$ doubles it to $2\\pi$.",
+        "Multiplied by $\\dfrac{1}{2}$ instead of dividing. A coefficient below $1$ stretches the graph, so the period must grow.",
+        "Used $\\dfrac{2\\pi}{\\omega}$, treating tangent as though its base period were $2\\pi$ like sine and cosine."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.PI / (1 / 2)",
+        "expected": 6.283185307179586,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.5-001",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.5",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Solving triangles: sine rule, cosine rule and area",
+      "difficulty": 2,
+      "stem": "In triangle $ABC$, $a=6$, $b=8$ and the included angle $C=60^\\circ$. The area of the triangle is",
+      "options": ["$12$", "$24$", "$12\\sqrt{3}$", "$24\\sqrt{3}$"],
+      "correctIndex": 2,
+      "solution": "Two sides and the angle *between* them is exactly the setup for\n$$\\text{Area}=\\frac{1}{2}ab\\sin C.$$\n\nSubstitute, using $\\sin 60^\\circ=\\dfrac{\\sqrt{3}}{2}$:\n$$\\text{Area}=\\frac{1}{2}(6)(8)\\cdot\\frac{\\sqrt{3}}{2}=24 \\cdot \\frac{\\sqrt{3}}{2}=12\\sqrt{3}.$$\n\nThat is about $20.8$, comfortably less than the $24$ a right angle at $C$ would give — which is the check worth doing.",
+      "distractorRationale": [
+        "Used $\\dfrac{1}{2}ab$ and then multiplied by $\\dfrac{1}{2}$ again instead of by $\\sin 60^\\circ$.",
+        "Left out $\\sin C$ entirely, computing $\\dfrac{1}{2}ab$. That is the area only when $C=90^\\circ$, and $60^\\circ$ must give less.",
+        "Correct. $\\dfrac{1}{2}(6)(8)\\sin 60^\\circ=12\\sqrt{3}$.",
+        "Forgot the factor of $\\dfrac{1}{2}$, computing $ab\\sin C$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * 6 * 8 * Math.sin(60 * Math.PI / 180)",
+        "expected": 20.784609690826528,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.5-002",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.5",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Solving triangles: sine rule, cosine rule and area",
+      "difficulty": 3,
+      "stem": "In triangle $ABC$, $a=3$, $b=5$ and $C=120^\\circ$. The length of side $c$ is",
+      "options": ["$4$", "$\\sqrt{34}$", "$8$", "$7$"],
+      "correctIndex": 3,
+      "solution": "Two sides and the angle between them, with the third side wanted, is the cosine rule:\n$$c^{2}=a^{2}+b^{2}-2ab\\cos C.$$\n\nThe angle is obtuse, so $\\cos 120^\\circ=-\\dfrac{1}{2}$ and the last term *adds* rather than subtracts:\n$$c^{2}=9+25-2(3)(5)\\left(-\\frac{1}{2}\\right)=34+15=49.$$\n\n$$c=7.$$\n\nThe check: $c$ came out longer than either given side, which is what an obtuse angle should produce.",
+      "distractorRationale": [
+        "Subtracted the third term instead of adding it, giving $c^{2}=34-15=19$, and then mis-rooted it.",
+        "Dropped the $-2ab\\cos C$ term altogether, leaving $c^{2}=a^{2}+b^{2}$. That is Pythagoras, valid only when $C=90^\\circ$.",
+        "Added the two sides, $3+5$. The cosine rule works with squares, and in any case a triangle side must be shorter than the sum of the other two.",
+        "Correct. $c^{2}=9+25+15=49$, so $c=7$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(3 * 3 + 5 * 5 - 2 * 3 * 5 * Math.cos(120 * Math.PI / 180))",
+        "expected": 7,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M5.5-003",
+      "subject": "math",
+      "topic": "M5",
+      "subtopic": "M5.5",
+      "syllabusRef": "M-2 / Functions and Sequences / Trigonometry / Solving triangles: sine rule, cosine rule and area",
+      "difficulty": 4,
+      "stem": "In triangle $ABC$, $A=30^\\circ$, $B=45^\\circ$ and $a=4$. The length of side $b$ is",
+      "options": ["$4\\sqrt{2}$", "$2\\sqrt{2}$", "$8$", "$2\\sqrt{6}$"],
+      "correctIndex": 0,
+      "solution": "Two angles and the side opposite one of them is the sine rule:\n$$\\frac{a}{\\sin A}=\\frac{b}{\\sin B}.$$\n\nRearrange for $b$ and substitute $\\sin 45^\\circ=\\dfrac{\\sqrt{2}}{2}$, $\\sin 30^\\circ=\\dfrac{1}{2}$:\n$$b=a\\cdot\\frac{\\sin B}{\\sin A}=4\\cdot\\frac{\\tfrac{\\sqrt{2}}{2}}{\\tfrac{1}{2}}=4\\sqrt{2}.$$\n\nPair each side with the angle *opposite* it, never an adjacent one. The check: $B>A$, so $b$ must be longer than $a$, and $4\\sqrt{2}\\approx 5.7$ is.",
+      "distractorRationale": [
+        "Correct. $b=4\\cdot\\dfrac{\\sin 45^\\circ}{\\sin 30^\\circ}=4\\sqrt{2}$.",
+        "Inverted the ratio, computing $a\\cdot\\dfrac{\\sin A}{\\sin B}$. That would make $b$ shorter than $a$, but the larger angle must face the longer side.",
+        "Used $\\dfrac{1}{\\sin 30^\\circ}=2$ and stopped, never multiplying by $\\sin 45^\\circ$.",
+        "Paired the sides with the wrong angles, using the third angle $C=105^\\circ$ in place of $B$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "4 * Math.sin(45 * Math.PI / 180) / Math.sin(30 * Math.PI / 180)",
+        "expected": 5.656854249492381,
+        "tolerance": 1e-9
+      }
+    }
+  ]
+}

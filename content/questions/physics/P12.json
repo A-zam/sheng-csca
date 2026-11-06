@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P12",
+  "questions": [
+    {
+      "id": "physics-P12.1-001",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.1",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Reflection and plane mirrors",
+      "difficulty": 1,
+      "stem": "A laser beam strikes a flat mirror clamped to a bench, arriving at $25^\\circ$ to the mirror surface. Through what angle is the beam turned as it reflects?",
+      "options": [
+        "$25^\\circ$",
+        "$65^\\circ$",
+        "$130^\\circ$",
+        "$50^\\circ$"
+      ],
+      "correctIndex": 2,
+      "solution": "Angles in reflection are always measured from the **normal**, the line perpendicular to the mirror, not from the mirror surface.\n\n**Step 1 — find the angle of incidence.** The beam is $25^\\circ$ from the surface, so it is\n$$90^\\circ - 25^\\circ = 65^\\circ$$\nfrom the normal.\n\n**Step 2 — reflect it.** The law of reflection gives an angle of reflection of $65^\\circ$, on the other side of the normal.\n\n**Step 3 — add the two.** The incident and reflected rays sit one on each side of the normal, so the angle between them is\n$$65^\\circ + 65^\\circ = 130^\\circ.$$",
+      "distractorRationale": [
+        "Read the angle given in the question straight off as the answer, without reflecting anything.",
+        "Gave the angle of incidence alone. That is the angle between the incident ray and the normal, not between the two rays.",
+        "Correct. The angle of incidence is $90^\\circ - 25^\\circ = 65^\\circ$, and the two rays are separated by twice that.",
+        "Doubled the angle measured from the mirror surface instead of the angle measured from the normal."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * (90 - 25)",
+        "expected": 130,
+        "tolerance": 1e-09,
+        "unit": "^\\circ"
+      }
+    },
+    {
+      "id": "physics-P12.1-002",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.1",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Reflection and plane mirrors",
+      "difficulty": 2,
+      "stem": "A dancer stands $1.2\\ \\mathrm{m}$ in front of a flat studio mirror, then walks straight back until she is $2.0\\ \\mathrm{m}$ from it. The distance between the dancer and her own image increases by",
+      "options": [
+        "$1.6\\ \\mathrm{m}$",
+        "$0.8\\ \\mathrm{m}$",
+        "$2.0\\ \\mathrm{m}$",
+        "$4.0\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 0,
+      "solution": "A plane mirror puts the image as far behind the glass as the object is in front of it. The dancer and her image are therefore always separated by **twice** the mirror distance.\n\n**Step 1 — the two separations.**\n$$2 \\times 1.2 = 2.4\\ \\mathrm{m}, \\qquad 2 \\times 2.0 = 4.0\\ \\mathrm{m}.$$\n\n**Step 2 — the increase.**\n$$4.0 - 2.4 = 1.6\\ \\mathrm{m}.$$\n\nWhen the dancer steps back by $0.8\\ \\mathrm{m}$, her image steps back by $0.8\\ \\mathrm{m}$ too, so the gap between them grows by twice as much.",
+      "distractorRationale": [
+        "Correct. The separation goes from $2.4\\ \\mathrm{m}$ to $4.0\\ \\mathrm{m}$, an increase of $1.6\\ \\mathrm{m}$.",
+        "Counted only how far the dancer moved, forgetting that the image retreats by the same amount at the same time.",
+        "Quoted the new distance from the dancer to the mirror rather than the change in the dancer-to-image distance.",
+        "Quoted the final dancer-to-image separation instead of the increase in it."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * 2.0 - 2 * 1.2",
+        "expected": 1.6,
+        "tolerance": 1e-09,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P12.1-003",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.1",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Reflection and plane mirrors",
+      "difficulty": 3,
+      "stem": "A small mirror inside a light-beam galvanometer throws a narrow beam onto a distant scale. The mirror turns through $6^\\circ$ about an axis lying in its own plane, while the incoming beam stays fixed. The reflected beam turns through",
+      "options": [
+        "$3^\\circ$",
+        "$6^\\circ$",
+        "$24^\\circ$",
+        "$12^\\circ$"
+      ],
+      "correctIndex": 3,
+      "solution": "Turning the mirror turns its normal by the same amount, and both the angle of incidence and the angle of reflection are measured from that normal.\n\n**Step 1 — the angle of incidence.** Rotating the mirror by $6^\\circ$ rotates the normal by $6^\\circ$, so the fixed incoming beam now makes an angle of incidence larger by $6^\\circ$.\n\n**Step 2 — the reflected ray.** The angle of reflection also grows by $6^\\circ$, and it grows on the far side of a normal that has itself moved by $6^\\circ$.\n\n**Step 3 — add the two contributions.**\n$$6^\\circ + 6^\\circ = 12^\\circ.$$\n\nThis doubling is exactly why the instrument is sensitive: a tiny twist of the coil produces twice as large a swing of the light spot.",
+      "distractorRationale": [
+        "Halved the mirror's rotation instead of doubling it, as though the beam shared the turn between incidence and reflection.",
+        "Assumed the beam simply follows the mirror. The normal moves with the mirror, so both the incidence and the reflection angles change.",
+        "Doubled twice. The rotation of the reflected beam is two times the mirror rotation, not four times.",
+        "Correct. The reflected beam turns through twice the mirror's rotation, $2 \\times 6^\\circ = 12^\\circ$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * 6",
+        "expected": 12,
+        "tolerance": 1e-09,
+        "unit": "^\\circ"
+      }
+    },
+    {
+      "id": "physics-P12.2-001",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.2",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Refraction and refractive index",
+      "difficulty": 2,
+      "stem": "A narrow beam strikes the flat top face of a glass block, arriving at $45^\\circ$ to the normal. Inside the glass the beam runs at $30^\\circ$ to the normal. What is the glass block's refractive index?",
+      "options": [
+        "$0.71$",
+        "$1.41$",
+        "$1.50$",
+        "$1.73$"
+      ],
+      "correctIndex": 1,
+      "solution": "Snell's law for a ray going from air into a medium is\n$$n = \\frac{\\sin i}{\\sin r}.$$\n\nSubstitute the two angles:\n$$n = \\frac{\\sin 45^\\circ}{\\sin 30^\\circ} = \\frac{0.707}{0.500} = 1.41.$$\n\nA check without arithmetic: the ray bent **towards** the normal on entering, so the second medium is optically denser and $n$ must be greater than $1$.",
+      "distractorRationale": [
+        "Inverted the ratio, dividing $\\sin r$ by $\\sin i$. That would make the glass optically less dense than air.",
+        "Correct. $\\sin 45^\\circ / \\sin 30^\\circ = 0.707/0.500 = 1.41$.",
+        "Divided the angles themselves, $45/30$, instead of their sines. Snell's law is a statement about sines, not about angles.",
+        "Used tangents in place of sines: $\\tan 45^\\circ / \\tan 30^\\circ = 1.73$."
+      ],
+      "figure": "<svg viewBox='0 0 260 170' xmlns='http://www.w3.org/2000/svg' stroke='currentColor' fill='none'><line x1='20' y1='85' x2='240' y2='85' stroke-width='1.5'/><line x1='130' y1='15' x2='130' y2='155' stroke-width='1' stroke-dasharray='4 4'/><line x1='60' y1='15' x2='130' y2='85' stroke-width='1.5'/><line x1='130' y1='85' x2='170' y2='155' stroke-width='1.5'/><text x='28' y='40' fill='currentColor' stroke='none' font-size='12'>air</text><text x='28' y='115' fill='currentColor' stroke='none' font-size='12'>glass</text><text x='103' y='72' fill='currentColor' stroke='none' font-size='11'>45</text><text x='137' y='120' fill='currentColor' stroke='none' font-size='11'>30</text><text x='146' y='30' fill='currentColor' stroke='none' font-size='11'>normal</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sin(45 * Math.PI / 180) / Math.sin(30 * Math.PI / 180)",
+        "expected": 1.4142135623730951,
+        "tolerance": 0.005
+      }
+    },
+    {
+      "id": "physics-P12.2-002",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.2",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Refraction and refractive index",
+      "difficulty": 2,
+      "stem": "A camera lens is ground from glass of refractive index $1.5$. The speed of light in vacuum is $c=3.0\\times10^{8}\\ \\mathrm{m/s}$. The speed of light inside this glass is",
+      "options": [
+        "$1.5\\times10^{8}\\ \\mathrm{m/s}$",
+        "$4.5\\times10^{8}\\ \\mathrm{m/s}$",
+        "$3.0\\times10^{8}\\ \\mathrm{m/s}$",
+        "$2.0\\times10^{8}\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 3,
+      "solution": "The refractive index of a medium is defined by how much it slows light down:\n$$n = \\frac{c}{v} \\quad \\Longrightarrow \\quad v = \\frac{c}{n}.$$\n\nSubstitute:\n$$v = \\frac{3.0\\times10^{8}}{1.5} = 2.0\\times10^{8}\\ \\mathrm{m/s}.$$\n\nSince $n>1$ for every ordinary transparent material, the answer must be smaller than $c$, which rules out two of the options at a glance.",
+      "distractorRationale": [
+        "Divided $c$ by $2$ rather than by $1.5$, or read the refractive index straight off as the answer's mantissa.",
+        "Multiplied by the refractive index instead of dividing by it. Nothing travels faster than light in vacuum.",
+        "Assumed light keeps its vacuum speed inside the glass, which would mean $n=1$ and no refraction at all.",
+        "Correct. $v = c/n = 3.0\\times10^{8}/1.5 = 2.0\\times10^{8}\\ \\mathrm{m/s}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "3.0e8 / 1.5",
+        "expected": 200000000,
+        "tolerance": 1e-09,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P12.2-003",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.2",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Refraction and refractive index",
+      "difficulty": 3,
+      "stem": "A coin lies on the flat bottom of a swimming pool under $2.4\\ \\mathrm{m}$ of water. The refractive index of water is $\\dfrac{4}{3}$. Viewed from directly above the surface, the coin appears to lie at a depth of",
+      "options": [
+        "$1.8\\ \\mathrm{m}$",
+        "$3.2\\ \\mathrm{m}$",
+        "$2.4\\ \\mathrm{m}$",
+        "$1.2\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Rays leaving the coin bend away from the normal as they cross into the air, so they reach the eye as if they had come from a point higher up. For a view along the normal,\n$$n = \\frac{\\text{real depth}}{\\text{apparent depth}}.$$\n\nRearrange and substitute:\n$$\\text{apparent depth} = \\frac{2.4}{4/3} = 2.4 \\times \\frac{3}{4} = 1.8\\ \\mathrm{m}.$$\n\nThe pool always looks shallower than it is, so the answer must be less than $2.4\\ \\mathrm{m}$.",
+      "distractorRationale": [
+        "Correct. $2.4 \\div \\tfrac{4}{3} = 1.8\\ \\mathrm{m}$.",
+        "Multiplied by the refractive index instead of dividing by it, which would make the pool look deeper than it is.",
+        "Assumed refraction leaves the depth unchanged. Then water would not appear shallower than it is, and $n$ would be $1$.",
+        "Used a refractive index of $2$ instead of $\\tfrac{4}{3}$, halving the real depth."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2.4 / (4 / 3)",
+        "expected": 1.8,
+        "tolerance": 1e-09,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P12.2-004",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.2",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Refraction and refractive index",
+      "difficulty": 4,
+      "stem": "A ray of light travelling in water meets the flat upper face of a thick glass plate resting on the pool floor. The refractive index of water is $\\dfrac{4}{3}$ and that of the glass is $\\dfrac{5}{3}$, each measured relative to air. The ray strikes the glass at $53^\\circ$ to the normal, and $\\sin 53^\\circ = 0.80$. The sine of the angle of refraction inside the glass is",
+      "options": [
+        "$0.51$",
+        "$0.80$",
+        "$0.64$",
+        "$1.00$"
+      ],
+      "correctIndex": 2,
+      "solution": "For a boundary between two media, Snell's law reads\n$$n_{1}\\sin\\theta_{1} = n_{2}\\sin\\theta_{2},$$\nwith the indices measured relative to air.\n\n**Step 1 — identify the two media.** The light starts in water, so $n_{1}=\\tfrac{4}{3}$, and enters glass, so $n_{2}=\\tfrac{5}{3}$.\n\n**Step 2 — rearrange.**\n$$\\sin\\theta_{2} = \\frac{n_{1}}{n_{2}}\\sin\\theta_{1} = \\frac{4/3}{5/3}\\times 0.80 = \\frac{4}{5}\\times 0.80.$$\n\n**Step 3 — evaluate.**\n$$\\sin\\theta_{2} = 0.80 \\times 0.80 = 0.64.$$\n\nThe glass is optically denser than the water, so the ray bends towards the normal and $\\sin\\theta_{2}$ must be smaller than $0.80$.",
+      "distractorRationale": [
+        "Applied the factor $0.80$ one time too many, as though the ray crossed two boundaries instead of one.",
+        "Assumed the ray passes straight through. It only does that if the two media have equal refractive indices.",
+        "Correct. $\\sin\\theta_{2} = \\tfrac{4}{5}\\times 0.80 = 0.64$.",
+        "Inverted the index ratio, using $\\tfrac{5}{4}\\times 0.80 = 1.00$. A sine of exactly $1$ would mean the ray runs along the boundary, which is impossible when entering a denser medium."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(4 / 3) * 0.80 / (5 / 3)",
+        "expected": 0.64,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "physics-P12.3-001",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.3",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Total internal reflection and the critical angle",
+      "difficulty": 1,
+      "stem": "Light travelling inside the glass core of an optical fibre reaches the boundary with the cladding that surrounds it. Total internal reflection happens at that boundary only if",
+      "options": [
+        "$\\text{the cladding has the larger refractive index of the two}$",
+        "$\\text{the cladding index is the smaller one and the angle of incidence is above the critical angle}$",
+        "$\\text{the angle of incidence is below the critical angle}$",
+        "$\\text{the light meets the boundary along the normal}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Total internal reflection needs two conditions together, and dropping either one destroys it.\n\n**Condition 1 — the right direction.** The light must be leaving the optically denser medium for a less dense one. Only then does the refracted ray bend away from the normal, and only then can it be pushed all the way to $90^\\circ$. In a fibre this means the core index must exceed the cladding index.\n\n**Condition 2 — a large enough angle.** The critical angle $C$ satisfies $\\sin C = n_{2}/n_{1}$. Below $C$ some light still refracts out; above $C$ there is no possible refracted direction, so all the light is reflected back into the core.\n\nOption B is the only one that states both.",
+      "distractorRationale": [
+        "Reverses the required direction. If the cladding were denser, the ray would bend towards the normal and always find a refracted path out.",
+        "Correct. Light must be heading from the denser core into a less dense cladding, and it must arrive at more than the critical angle.",
+        "Below the critical angle a refracted ray still exists, so light leaks out of the core instead of being reflected back.",
+        "A ray along the normal has an angle of incidence of zero, the smallest value possible, so it passes straight through."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Total internal reflection requires both that the second medium be optically less dense, so that a critical angle exists at all, and that the angle of incidence exceed that critical angle, so that no refracted direction is available. Option B is the only one asserting both conditions; A reverses the density order, C names the regime in which light still refracts out, and D describes normal incidence, which is the minimum possible angle."
+      }
+    },
+    {
+      "id": "physics-P12.3-002",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.3",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Total internal reflection and the critical angle",
+      "difficulty": 3,
+      "stem": "A prism inside a pair of binoculars is made of glass of refractive index $\\sqrt{2}$, with air on the far side of each polished face. The critical angle at a glass-air face of this prism is",
+      "options": [
+        "$45^\\circ$",
+        "$35^\\circ$",
+        "$30^\\circ$",
+        "$60^\\circ$"
+      ],
+      "correctIndex": 0,
+      "solution": "At the critical angle the refracted ray grazes along the boundary, so the angle of refraction in the air is $90^\\circ$. Snell's law then gives\n$$n\\sin C = 1 \\times \\sin 90^\\circ = 1, \\qquad \\text{so} \\qquad \\sin C = \\frac{1}{n}.$$\n\nSubstitute $n=\\sqrt{2}$:\n$$\\sin C = \\frac{1}{\\sqrt{2}} = 0.707.$$\n\nThe angle whose sine is $0.707$ is\n$$C = 45^\\circ.$$\n\nThat is why a $45^\\circ$ right-angled prism turns light through a right angle with no loss: every ray inside it meets the long face at exactly the critical angle or more.",
+      "distractorRationale": [
+        "Correct. $\\sin C = 1/\\sqrt{2} = 0.707$, so $C = 45^\\circ$.",
+        "Used the tangent instead of the sine, solving $\\tan C = 1/\\sqrt{2}$.",
+        "Used a refractive index of $2$ rather than $\\sqrt{2}$, giving $\\sin C = 0.5$.",
+        "Took $\\sin C = \\sqrt{3}/2$, confusing $\\sqrt{2}$ with $\\sqrt{3}$ in the arithmetic."
+      ],
+      "figure": "<svg viewBox='0 0 260 165' xmlns='http://www.w3.org/2000/svg' stroke='currentColor' fill='none'><line x1='20' y1='80' x2='240' y2='80' stroke-width='1.5'/><line x1='130' y1='12' x2='130' y2='152' stroke-width='1' stroke-dasharray='4 4'/><line x1='60' y1='150' x2='130' y2='80' stroke-width='1.5'/><line x1='130' y1='80' x2='200' y2='150' stroke-width='1.5'/><line x1='130' y1='74' x2='232' y2='74' stroke-width='1.5' stroke-dasharray='3 3'/><text x='28' y='40' fill='currentColor' stroke='none' font-size='12'>air</text><text x='28' y='112' fill='currentColor' stroke='none' font-size='12'>glass</text><text x='108' y='112' fill='currentColor' stroke='none' font-size='11'>C</text><text x='150' y='62' fill='currentColor' stroke='none' font-size='11'>grazing ray</text><text x='186' y='130' fill='currentColor' stroke='none' font-size='11'>reflected</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.asin(1 / Math.sqrt(2)) * 180 / Math.PI",
+        "expected": 45,
+        "tolerance": 1e-09,
+        "unit": "^\\circ"
+      }
+    },
+    {
+      "id": "physics-P12.3-003",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.3",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Total internal reflection and the critical angle",
+      "difficulty": 4,
+      "stem": "The core of an optical fibre has refractive index $1.5$ and the cladding around it has refractive index $1.2$. Take $\\sin 53^\\circ = 0.80$. Light inside the core stays trapped by total internal reflection provided it meets the core-cladding boundary at an angle to the normal greater than",
+      "options": [
+        "$17^\\circ$",
+        "$37^\\circ$",
+        "$53^\\circ$",
+        "$42^\\circ$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — write the critical-angle condition for two dense media.** When light passes from index $n_{1}$ to index $n_{2}$ with $n_{1}>n_{2}$, the refracted ray grazes the boundary at the critical angle, so\n$$n_{1}\\sin C = n_{2}\\sin 90^\\circ \\quad \\Longrightarrow \\quad \\sin C = \\frac{n_{2}}{n_{1}}.$$\n\n**Step 2 — substitute the two indices.** Here the light starts in the core, so $n_{1}=1.5$, and the cladding gives $n_{2}=1.2$:\n$$\\sin C = \\frac{1.2}{1.5} = 0.80.$$\n\n**Step 3 — read off the angle.** The question supplies $\\sin 53^\\circ = 0.80$, so\n$$C = 53^\\circ.$$\n\nBeyond $53^\\circ$ no refracted ray can exist, and the light is thrown back into the core.",
+      "distractorRationale": [
+        "Subtracted the two indices instead of dividing them, taking $\\sin C = 1.5-1.2 = 0.30$.",
+        "Took the complement of the correct angle, by solving $\\cos C = 0.80$ rather than $\\sin C = 0.80$.",
+        "Correct. $\\sin C = n_{\\text{clad}}/n_{\\text{core}} = 1.2/1.5 = 0.80$, so $C = 53^\\circ$.",
+        "Ignored the cladding and used the glass-to-air critical angle, $\\sin C = 1/1.5$. The light never meets air here."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.asin(1.2 / 1.5) * 180 / Math.PI",
+        "expected": 53.13010235415598,
+        "tolerance": 0.005,
+        "unit": "^\\circ"
+      }
+    },
+    {
+      "id": "physics-P12.3-004",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.3",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Total internal reflection and the critical angle",
+      "difficulty": 5,
+      "stem": "A small lamp sits on the bottom of a tank, $1.5\\ \\mathrm{m}$ below the flat surface of a clear liquid of refractive index $1.25$. Light escapes into the air above only through a circular patch of surface centred over the lamp. Take $\\sin 53^\\circ = 0.80$ and $\\tan 53^\\circ = 1.33$. The radius of that patch is",
+      "options": [
+        "$1.2\\ \\mathrm{m}$",
+        "$1.5\\ \\mathrm{m}$",
+        "$1.9\\ \\mathrm{m}$",
+        "$2.0\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — find the critical angle.** Light leaves the liquid for air, so\n$$\\sin C = \\frac{1}{n} = \\frac{1}{1.25} = 0.80 \\quad \\Longrightarrow \\quad C = 53^\\circ.$$\n\n**Step 2 — see what the patch is.** Rays that reach the surface at less than $C$ get out; rays at more than $C$ are totally internally reflected back down. The escaping rays therefore fill a cone of half-angle $C$ with its tip at the lamp, and the cone cuts the surface in a circle.\n\n**Step 3 — turn the angle into a length.** The lamp is a vertical distance $h=1.5\\ \\mathrm{m}$ below the surface, and the edge ray leans over by the angle $C$ from the vertical, so\n$$r = h\\tan C = 1.5 \\times 1.33 = 2.0\\ \\mathrm{m}.$$",
+      "distractorRationale": [
+        "Used $\\sin C$ where $\\tan C$ was needed: $1.5\\times0.80$. The sine relates the edge ray to its slanted path length, not to the horizontal distance.",
+        "Quoted the depth of the lamp instead of the radius at the surface.",
+        "Divided the depth by $\\sin C$, $1.5/0.80$, which gives the slant length of the edge ray rather than its horizontal reach.",
+        "Correct. $r = h\\tan C = 1.5 \\times \\tan 53^\\circ = 2.0\\ \\mathrm{m}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1.5 * Math.tan(Math.asin(1 / 1.25))",
+        "expected": 2,
+        "tolerance": 1e-09,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P12.4-001",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.4",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Thin lenses and magnification",
+      "difficulty": 2,
+      "stem": "A thin converging lens has a focal length of $12\\ \\mathrm{cm}$. A small object is placed on the principal axis, $36\\ \\mathrm{cm}$ from the lens. Using $\\dfrac{1}{u}+\\dfrac{1}{v}=\\dfrac{1}{f}$, the image forms at a distance from the lens of",
+      "options": [
+        "$9\\ \\mathrm{cm}$",
+        "$18\\ \\mathrm{cm}$",
+        "$24\\ \\mathrm{cm}$",
+        "$48\\ \\mathrm{cm}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Rearrange the thin-lens equation for the image distance:\n$$\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = \\frac{1}{12} - \\frac{1}{36}.$$\n\nPut both fractions over $36$:\n$$\\frac{1}{v} = \\frac{3}{36} - \\frac{1}{36} = \\frac{2}{36} = \\frac{1}{18}.$$\n\nSo\n$$v = 18\\ \\mathrm{cm}.$$\n\nThe object sits beyond $2f = 24\\ \\mathrm{cm}$, so the image should land between $f$ and $2f$, that is between $12\\ \\mathrm{cm}$ and $24\\ \\mathrm{cm}$. It does.",
+      "distractorRationale": [
+        "Added the reciprocals instead of subtracting: $\\tfrac{1}{12}+\\tfrac{1}{36}=\\tfrac{1}{9}$. The formula puts $1/u$ and $1/v$ on the same side, so isolating $1/v$ requires a subtraction.",
+        "Correct. $\\tfrac{1}{v}=\\tfrac{1}{12}-\\tfrac{1}{36}=\\tfrac{1}{18}$, so $v = 18\\ \\mathrm{cm}$.",
+        "Quoted $2f$, as though the image always forms at twice the focal length whatever the object distance.",
+        "Subtracted the focal length from the object distance, $36-12$, instead of working with reciprocals."
+      ],
+      "figure": "<svg viewBox='0 0 300 145' xmlns='http://www.w3.org/2000/svg' stroke='currentColor' fill='none'><line x1='15' y1='78' x2='285' y2='78' stroke-width='1'/><ellipse cx='150' cy='78' rx='10' ry='44' stroke-width='1.5'/><line x1='60' y1='78' x2='60' y2='40' stroke-width='1.5'/><line x1='118' y1='74' x2='118' y2='82' stroke-width='1.5'/><line x1='182' y1='74' x2='182' y2='82' stroke-width='1.5'/><text x='42' y='32' fill='currentColor' stroke='none' font-size='11'>object</text><text x='114' y='96' fill='currentColor' stroke='none' font-size='11'>F</text><text x='178' y='96' fill='currentColor' stroke='none' font-size='11'>F</text><text x='70' y='120' fill='currentColor' stroke='none' font-size='11'>u = 36 cm</text><text x='196' y='34' fill='currentColor' stroke='none' font-size='11'>f = 12 cm</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1 / (1 / 12 - 1 / 36)",
+        "expected": 18,
+        "tolerance": 1e-09,
+        "unit": "cm"
+      }
+    },
+    {
+      "id": "physics-P12.4-002",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.4",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Thin lenses and magnification",
+      "difficulty": 3,
+      "stem": "A projector uses a thin converging lens of focal length $10\\ \\mathrm{cm}$. A slide is placed $12\\ \\mathrm{cm}$ from the lens. Using $\\dfrac{1}{u}+\\dfrac{1}{v}=\\dfrac{1}{f}$ and $m=\\dfrac{v}{u}$, the magnification of the picture on the screen is",
+      "options": [
+        "$5$",
+        "$0.2$",
+        "$1.2$",
+        "$6$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — find the image distance.**\n$$\\frac{1}{v} = \\frac{1}{10} - \\frac{1}{12} = \\frac{6}{60} - \\frac{5}{60} = \\frac{1}{60},$$\nso $v = 60\\ \\mathrm{cm}$.\n\n**Step 2 — form the magnification.**\n$$m = \\frac{v}{u} = \\frac{60}{12} = 5.$$\n\nThe slide sits just outside the focal point, so the image is far away and much enlarged, which is exactly what a projector is for.",
+      "distractorRationale": [
+        "Correct. $v = 60\\ \\mathrm{cm}$ and $m = 60/12 = 5$.",
+        "Inverted the magnification, computing $u/v$ instead of $v/u$. That would shrink the slide rather than enlarge it.",
+        "Divided the object distance by the focal length, $12/10$, which is not the magnification.",
+        "Divided the image distance by the focal length, $60/10$, instead of by the object distance."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(1 / (1 / 10 - 1 / 12)) / 12",
+        "expected": 5,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "physics-P12.4-003",
+      "subject": "physics",
+      "topic": "P12",
+      "subtopic": "P12.4",
+      "syllabusRef": "P-4 / Optics / Geometrical Optics / Thin lenses and magnification",
+      "difficulty": 4,
+      "stem": "A thin diverging lens has a focal length of $-15\\ \\mathrm{cm}$. An object stands on the principal axis $30\\ \\mathrm{cm}$ in front of the lens. Using $\\dfrac{1}{u}+\\dfrac{1}{v}=\\dfrac{1}{f}$ with the convention that real distances are positive, the image distance $v$ is",
+      "options": [
+        "$-30\\ \\mathrm{cm}$",
+        "$-10\\ \\mathrm{cm}$",
+        "$+10\\ \\mathrm{cm}$",
+        "$-45\\ \\mathrm{cm}$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — keep the sign of $f$.** A diverging lens has a negative focal length, and that minus sign has to survive into the arithmetic.\n\n**Step 2 — rearrange.**\n$$\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = -\\frac{1}{15} - \\frac{1}{30}.$$\n\n**Step 3 — combine over $30$.**\n$$\\frac{1}{v} = -\\frac{2}{30} - \\frac{1}{30} = -\\frac{3}{30} = -\\frac{1}{10}.$$\n\n**Step 4 — invert.**\n$$v = -10\\ \\mathrm{cm}.$$\n\nThe negative sign says the image is virtual and sits on the same side of the lens as the object. A diverging lens always does this, and the image is always closer to the lens than the object is.",
+      "distractorRationale": [
+        "Assumed the virtual image forms at the object's own position. A diverging lens pulls the image in closer than that.",
+        "Correct. $\\tfrac{1}{v}=-\\tfrac{1}{15}-\\tfrac{1}{30}=-\\tfrac{1}{10}$, so $v=-10\\ \\mathrm{cm}$.",
+        "Dropped the minus sign, which would place a real image on the far side of the lens. A diverging lens cannot form a real image of a real object.",
+        "Added the magnitudes of the object distance and the focal length, $30+15$, instead of combining their reciprocals."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1 / (-1 / 15 - 1 / 30)",
+        "expected": -10,
+        "tolerance": 1e-09,
+        "unit": "cm"
+      }
+    }
+  ]
+}

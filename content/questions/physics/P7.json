@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P7",
+  "questions": [
+    {
+      "id": "physics-P7.1-001",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.1",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Charge, conservation of charge and Coulomb's law",
+      "difficulty": 1,
+      "stem": "A polythene strip is rubbed with a dry duster and ends up carrying $-4.8 \\times 10^{-9}\\ \\mathrm{C}$. Nothing else touched either object. The charge left on the duster is",
+      "options": [
+        "$+4.8 \\times 10^{-9}\\ \\mathrm{C}$",
+        "$-4.8 \\times 10^{-9}\\ \\mathrm{C}$",
+        "$0\\ \\mathrm{C}$",
+        "$+9.6 \\times 10^{-9}\\ \\mathrm{C}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Rubbing does not create charge. It moves electrons from one surface to the other, and the pair started out neutral, so the total must still be zero:\n$$q_{\\text{strip}}+q_{\\text{duster}}=0.$$\n\nThe strip gained electrons and so became negative. Those electrons came from the duster, which is therefore short of exactly the same amount:\n$$q_{\\text{duster}}=-(-4.8 \\times 10^{-9})=+4.8 \\times 10^{-9}\\ \\mathrm{C}.$$\n\nEqual size, opposite sign — that is conservation of charge.",
+      "distractorRationale": [
+        "Correct. The two charges must sum to zero, so the duster carries $+4.8 \\times 10^{-9}\\ \\mathrm{C}$.",
+        "Gives both objects the same sign. That would mean charge was created from nothing, and the two would repel rather than attract.",
+        "Would be right only if no electrons had moved. But the strip is charged, so they did.",
+        "Doubles the amount. The electrons the strip gained are precisely the ones the duster lost — no more, no fewer."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0 - (-4.8e-9)",
+        "expected": 4.8e-09,
+        "tolerance": 1e-09,
+        "unit": "C"
+      }
+    },
+    {
+      "id": "physics-P7.1-002",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.1",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Charge, conservation of charge and Coulomb's law",
+      "difficulty": 2,
+      "stem": "A metal sphere carrying $+12\\ \\mathrm{nC}$ is briefly touched against a second, uncharged sphere of the same size, then the two are moved apart. Each sphere now carries",
+      "options": [
+        "$0\\ \\mathrm{nC}$",
+        "$+6\\ \\mathrm{nC}$",
+        "$+12\\ \\mathrm{nC}$",
+        "$+24\\ \\mathrm{nC}$"
+      ],
+      "correctIndex": 1,
+      "solution": "While the spheres touch they behave as one conductor, so the charge spreads out over the whole of it. Because the two are the same size, it settles evenly.\n\nThe total is conserved throughout:\n$$q_{\\text{total}}=+12+0=+12\\ \\mathrm{nC}.$$\n\nSharing that equally between two identical spheres:\n$$q_{\\text{each}}=\\frac{+12}{2}=+6\\ \\mathrm{nC}.$$\n\nThe \"same size\" clause is doing real work here. Spheres of different sizes would share the charge unequally.",
+      "distractorRationale": [
+        "Treats contact as cancelling the charge. Cancellation needs an equal *negative* charge; the second sphere was neutral, not negative.",
+        "Correct. $+12\\ \\mathrm{nC}$ shared equally between two identical spheres gives $+6\\ \\mathrm{nC}$ each.",
+        "Leaves the first sphere unchanged and gives the second one $+12\\ \\mathrm{nC}$ too, which would double the total charge.",
+        "The total on both spheres added together and then assigned to each, counting the charge twice."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(12 + 0) / 2",
+        "expected": 6,
+        "tolerance": 1e-09,
+        "unit": "nC"
+      }
+    },
+    {
+      "id": "physics-P7.1-003",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.1",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Charge, conservation of charge and Coulomb's law",
+      "difficulty": 3,
+      "stem": "Two small beads carry $+2.0\\ \\mathrm{nC}$ and $+3.0\\ \\mathrm{nC}$ and are held $3.0\\ \\mathrm{cm}$ apart in air. Take $k=9.0 \\times 10^{9}\\ \\mathrm{N\\cdot m^2/C^2}$. The force each feels is",
+      "options": [
+        "$2.0 \\times 10^{-6}\\ \\mathrm{N}$",
+        "$1.8 \\times 10^{-3}\\ \\mathrm{N}$",
+        "$6.0 \\times 10^{-5}\\ \\mathrm{N}$",
+        "$6.0 \\times 10^{-3}\\ \\mathrm{N}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Coulomb's law:\n$$F=k\\frac{q_{1}q_{2}}{r^{2}}.$$\n\n**Convert first.** The separation must be in metres:\n$$r=3.0\\ \\mathrm{cm}=0.030\\ \\mathrm{m}, \\qquad r^{2}=9.0 \\times 10^{-4}\\ \\mathrm{m^{2}}.$$\n\n**Substitute.**\n$$F=\\frac{(9.0 \\times 10^{9})(2.0 \\times 10^{-9})(3.0 \\times 10^{-9})}{9.0 \\times 10^{-4}}=\\frac{5.4 \\times 10^{-8}}{9.0 \\times 10^{-4}}=6.0 \\times 10^{-5}\\ \\mathrm{N}.$$\n\nBoth beads feel this same size of force, pushing them apart — Newton's third law applies to the electric force like any other.",
+      "distractorRationale": [
+        "Left the separation in centimetres and squared $3.0$ instead of $0.030$, making $r^{2}$ ten thousand times too large.",
+        "Used $r$ rather than $r^{2}$ on the bottom, dropping the inverse-square dependence.",
+        "Correct. $F=(9.0 \\times 10^{9})(2.0 \\times 10^{-9})(3.0 \\times 10^{-9})/(0.030)^{2}=6.0 \\times 10^{-5}\\ \\mathrm{N}$.",
+        "Converted the separation but then used $r^{2}=9.0 \\times 10^{-6}$, slipping two powers of ten in the square."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "9.0e9 * 2.0e-9 * 3.0e-9 / (0.030 * 0.030)",
+        "expected": 6e-05,
+        "tolerance": 1e-09,
+        "unit": "N"
+      }
+    },
+    {
+      "id": "physics-P7.1-004",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.1",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Charge, conservation of charge and Coulomb's law",
+      "difficulty": 4,
+      "stem": "Two fixed charges are moved apart until their separation is three times what it was. Their charges do not change. The force between them is now what fraction of its original value?",
+      "options": [
+        "$\\dfrac{1}{3}$",
+        "$3$",
+        "$9$",
+        "$\\dfrac{1}{9}$"
+      ],
+      "correctIndex": 3,
+      "solution": "In Coulomb's law the separation appears **squared** on the bottom:\n$$F=k\\frac{q_{1}q_{2}}{r^{2}} \\ \\Longrightarrow \\ F \\propto \\frac{1}{r^{2}}.$$\n\nNothing but $r$ has changed, so form the ratio and let everything else cancel:\n$$\\frac{F_{2}}{F_{1}}=\\left(\\frac{r_{1}}{r_{2}}\\right)^{2}=\\left(\\frac{1}{3}\\right)^{2}=\\frac{1}{9}.$$\n\nMoving three times further apart weakens the force ninefold, not threefold. That is the whole content of \"inverse square\".",
+      "distractorRationale": [
+        "Treats the force as inverse to $r$ rather than to $r^{2}$, forgetting to square.",
+        "Scales the force up with distance. Like charges pushed further apart interact more weakly, not more strongly.",
+        "Squares correctly but inverts the result, giving the factor for moving three times *closer*.",
+        "Correct. $F \\propto 1/r^{2}$, so trebling $r$ divides the force by $3^{2}=9$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1 / (3 * 3)",
+        "expected": 0.1111111111111111,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "physics-P7.2-001",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.2",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Electric field strength and field lines",
+      "difficulty": 2,
+      "stem": "Inside a dust precipitator, a grain carrying $2.0 \\times 10^{-8}\\ \\mathrm{C}$ is pushed with a force of $6.0 \\times 10^{-4}\\ \\mathrm{N}$. How strong is the field where the grain sits?",
+      "options": [
+        "$3.0 \\times 10^{4}\\ \\mathrm{N/C}$",
+        "$1.2 \\times 10^{-11}\\ \\mathrm{N/C}$",
+        "$3.3 \\times 10^{-5}\\ \\mathrm{N/C}$",
+        "$6.0 \\times 10^{-4}\\ \\mathrm{N/C}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Field strength is the force **per unit charge**:\n$$E=\\frac{F}{q}.$$\n\nSubstitute:\n$$E=\\frac{6.0 \\times 10^{-4}}{2.0 \\times 10^{-8}}=3.0 \\times 10^{4}\\ \\mathrm{N/C}.$$\n\nThe field belongs to the precipitator, not to the grain. Swap in a grain with twice the charge and the force would double, leaving $E$ exactly as it was.",
+      "distractorRationale": [
+        "Correct. $E=F/q=6.0 \\times 10^{-4}/2.0 \\times 10^{-8}=3.0 \\times 10^{4}\\ \\mathrm{N/C}$.",
+        "Multiplied the force by the charge instead of dividing.",
+        "Divided the wrong way round, $q/F$, giving charge per unit force.",
+        "Reported the force as if it were the field. They are only equal for a charge of exactly one coulomb."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "6.0e-4 / 2.0e-8",
+        "expected": 30000,
+        "tolerance": 1e-09,
+        "unit": "N/C"
+      }
+    },
+    {
+      "id": "physics-P7.2-002",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.2",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Electric field strength and field lines",
+      "difficulty": 3,
+      "stem": "A small sphere holds an isolated charge of $+5.0\\ \\mathrm{nC}$. Take $k=9.0 \\times 10^{9}\\ \\mathrm{N\\cdot m^2/C^2}$. How strong is the field it produces $0.10\\ \\mathrm{m}$ from its centre?",
+      "options": [
+        "$450\\ \\mathrm{N/C}$",
+        "$4.5 \\times 10^{3}\\ \\mathrm{N/C}$",
+        "$4.5 \\times 10^{5}\\ \\mathrm{N/C}$",
+        "$45\\ \\mathrm{N/C}$"
+      ],
+      "correctIndex": 1,
+      "solution": "For a point charge the field falls off as an inverse square:\n$$E=k\\frac{q}{r^{2}}.$$\n\nSubstitute, taking care with $r^{2}=(0.10)^{2}=1.0 \\times 10^{-2}\\ \\mathrm{m^{2}}$:\n$$E=\\frac{(9.0 \\times 10^{9})(5.0 \\times 10^{-9})}{1.0 \\times 10^{-2}}=\\frac{45}{0.010}=4.5 \\times 10^{3}\\ \\mathrm{N/C}.$$\n\nNote there is no second charge here. Field strength describes what the charge does to the space around it, whether or not anything is there to feel it.",
+      "distractorRationale": [
+        "Used $r$ instead of $r^{2}$, so the field falls off ten times too slowly at this distance.",
+        "Correct. $E=kq/r^{2}=(9.0 \\times 10^{9})(5.0 \\times 10^{-9})/(0.10)^{2}=4.5 \\times 10^{3}\\ \\mathrm{N/C}$.",
+        "Took $r^{2}=1.0 \\times 10^{-4}$, squaring $0.10$ as though it were $0.010$.",
+        "Divided by $1$ rather than by $r^{2}$, leaving the distance out altogether."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "9.0e9 * 5.0e-9 / (0.10 * 0.10)",
+        "expected": 4500,
+        "tolerance": 1e-09,
+        "unit": "N/C"
+      }
+    },
+    {
+      "id": "physics-P7.2-003",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.2",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Electric field strength and field lines",
+      "difficulty": 3,
+      "stem": "A meter is moved from a point near an isolated point charge to a point twice as far away. The field strength it reads falls to what fraction of the first reading?",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$2$",
+        "$\\dfrac{1}{4}$",
+        "$4$"
+      ],
+      "correctIndex": 2,
+      "solution": "The field of a point charge obeys an inverse-square law:\n$$E=k\\frac{q}{r^{2}} \\ \\Longrightarrow \\ E \\propto \\frac{1}{r^{2}}.$$\n\nThe charge is unchanged, so form the ratio and let $k$ and $q$ cancel:\n$$\\frac{E_{2}}{E_{1}}=\\left(\\frac{r_{1}}{r_{2}}\\right)^{2}=\\left(\\frac{1}{2}\\right)^{2}=\\frac{1}{4}.$$\n\nDoubling the distance quarters the field. In a field-line picture, the same number of lines has spread over four times the area.",
+      "distractorRationale": [
+        "Forgot to square, treating the field as inverse to $r$.",
+        "Has the field growing with distance, which would make the charge's influence strongest far away.",
+        "Correct. $E \\propto 1/r^{2}$, so doubling $r$ divides the field by $4$.",
+        "Squared correctly but inverted, giving the factor for halving the distance instead."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1 / (2 * 2)",
+        "expected": 0.25,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "physics-P7.2-004",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.2",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Electric field strength and field lines",
+      "difficulty": 4,
+      "stem": "In a field-line map, the lines near point $P$ are drawn closer together than the lines near point $Q$. Identical small positive test charges are placed at $P$ and at $Q$. Which statement is correct?",
+      "options": [
+        "$\\text{The charge at } Q \\text{ feels the larger force}$",
+        "$\\text{Both charges feel the same force}$",
+        "$\\text{Neither charge feels any force, as the lines are only a drawing}$",
+        "$\\text{The charge at } P \\text{ feels the larger force}$"
+      ],
+      "correctIndex": 3,
+      "figure": "<svg viewBox=\"0 0 260 120\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"><path d=\"M20 20 C 90 30, 150 45, 240 30\"/><path d=\"M20 38 C 90 44, 150 55, 240 50\"/><path d=\"M20 56 C 90 58, 150 65, 240 70\"/><path d=\"M20 74 C 90 72, 150 75, 240 90\"/><path d=\"M20 92 C 90 86, 150 85, 240 110\"/><circle cx=\"55\" cy=\"56\" r=\"3.4\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"215\" cy=\"70\" r=\"3.4\" fill=\"currentColor\" stroke=\"none\"/><text x=\"48\" y=\"110\" font-size=\"13\" fill=\"currentColor\" stroke=\"none\">P</text><text x=\"208\" y=\"36\" font-size=\"13\" fill=\"currentColor\" stroke=\"none\">Q</text></svg>",
+      "solution": "Field lines are drawn to a convention: **where the lines crowd together, the field is strong; where they spread out, it is weak.** The spacing is the whole point of the picture.\n\nAt $P$ the lines are closer, so the field strength there is larger:\n$$E_{P}>E_{Q}.$$\n\nThe force on a test charge follows directly, since\n$$F=qE,$$\nand the two test charges are identical. A larger $E$ with the same $q$ gives a larger $F$, so the charge at $P$ feels the larger force.",
+      "distractorRationale": [
+        "Reads the spacing backwards. Widely spaced lines mean a weak field, so $Q$ is the weaker point.",
+        "Would require equal spacing at the two points. The diagram shows the opposite, and equal spacing is precisely how a uniform field is drawn.",
+        "The lines are a way of recording a real field. A charge placed in that field feels a real force whether or not anyone has drawn it.",
+        "Correct. Closer lines mean a stronger field, and $F=qE$ with identical $q$ makes the force larger at $P$."
+      ],
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "By the drawing convention, field-line density is proportional to field strength, so closer lines at P mean E_P > E_Q. With F = qE and identical test charges, the force is larger at P. Only option D states this."
+      }
+    },
+    {
+      "id": "physics-P7.3-001",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.3",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Potential difference and work done by the electric force",
+      "difficulty": 2,
+      "stem": "An ink droplet in a printer head carries $+4.0 \\times 10^{-6}\\ \\mathrm{C}$. Crossing the deflection gap from entry point $A$ to exit point $B$, it is speeded up by the field, which does $8.0 \\times 10^{-4}\\ \\mathrm{J}$ of work on it. What is $U_{AB}$?",
+      "options": [
+        "$200\\ \\mathrm{V}$",
+        "$-200\\ \\mathrm{V}$",
+        "$3.2 \\times 10^{-9}\\ \\mathrm{V}$",
+        "$0.20\\ \\mathrm{V}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Potential difference is the work done by the electric force **per unit charge** moved:\n$$U_{AB}=\\frac{W_{AB}}{q}.$$\n\nSubstitute:\n$$U_{AB}=\\frac{8.0 \\times 10^{-4}}{4.0 \\times 10^{-6}}=200\\ \\mathrm{V}.$$\n\nThe sign is worth a moment. The work is positive on a positive charge, so the field pushed it along — meaning $A$ sits at the higher potential, and $U_{AB}$ comes out positive. That is consistent.",
+      "distractorRationale": [
+        "Correct. $U_{AB}=W/q=8.0 \\times 10^{-4}/4.0 \\times 10^{-6}=200\\ \\mathrm{V}$.",
+        "Right size, wrong sign. Positive work on a positive charge means it moved from high potential to low, so $U_{AB}$ is positive.",
+        "Multiplied the work by the charge instead of dividing.",
+        "Slipped three powers of ten while dividing $10^{-4}$ by $10^{-6}$; the result should be $10^{2}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "8.0e-4 / 4.0e-6",
+        "expected": 200,
+        "tolerance": 1e-09,
+        "unit": "V"
+      }
+    },
+    {
+      "id": "physics-P7.3-002",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.3",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Potential difference and work done by the electric force",
+      "difficulty": 3,
+      "stem": "Inside a cathode-ray tube an electron is accelerated from rest through a potential difference of $500\\ \\mathrm{V}$. Take the elementary charge as $e=1.6 \\times 10^{-19}\\ \\mathrm{C}$. The kinetic energy it gains is",
+      "options": [
+        "$3.2 \\times 10^{-22}\\ \\mathrm{J}$",
+        "$8.0 \\times 10^{-17}\\ \\mathrm{J}$",
+        "$3.2 \\times 10^{-17}\\ \\mathrm{J}$",
+        "$8.0 \\times 10^{-19}\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 1,
+      "solution": "All the work done by the field on the electron becomes kinetic energy, because it starts from rest and nothing else acts on it:\n$$E_{k}=W=qU.$$\n\nUse the size of the electron's charge:\n$$E_{k}=(1.6 \\times 10^{-19})(500)=8.0 \\times 10^{-17}\\ \\mathrm{J}.$$\n\nAs a cross-check in the other common unit: an electron through $500\\ \\mathrm{V}$ gains $500\\ \\mathrm{eV}$ by definition, and $500 \\times 1.6 \\times 10^{-19}$ is the same $8.0 \\times 10^{-17}\\ \\mathrm{J}$.",
+      "distractorRationale": [
+        "Divided by the potential difference instead of multiplying by it.",
+        "Correct. $E_{k}=qU=(1.6 \\times 10^{-19})(500)=8.0 \\times 10^{-17}\\ \\mathrm{J}$.",
+        "Used $200\\ \\mathrm{V}$ in place of $500\\ \\mathrm{V}$, or halved the result partway through.",
+        "Slipped two powers of ten: $1.6 \\times 500$ is $800$, which is $8.0 \\times 10^{2}$, not $8.0$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1.6e-19 * 500",
+        "expected": 8e-17,
+        "tolerance": 1e-09,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P7.3-003",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.3",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Potential difference and work done by the electric force",
+      "difficulty": 3,
+      "stem": "Two large parallel plates are held $0.020\\ \\mathrm{m}$ apart with $120\\ \\mathrm{V}$ across them. Ignoring edge effects, the field between them is uniform and has strength",
+      "options": [
+        "$2.4\\ \\mathrm{V/m}$",
+        "$1.7 \\times 10^{-4}\\ \\mathrm{V/m}$",
+        "$6.0 \\times 10^{3}\\ \\mathrm{V/m}$",
+        "$60\\ \\mathrm{V/m}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Between parallel plates the field is uniform, and the potential falls at a steady rate across the gap:\n$$E=\\frac{U}{d}.$$\n\nSubstitute:\n$$E=\\frac{120}{0.020}=6.0 \\times 10^{3}\\ \\mathrm{V/m}.$$\n\nThe small gap is what makes the field large. Dividing by $0.020\\ \\mathrm{m}$ multiplies by $50$, so a modest $120\\ \\mathrm{V}$ produces several thousand volts per metre.",
+      "distractorRationale": [
+        "Multiplied by the separation instead of dividing by it.",
+        "Divided the wrong way round, $d/U$.",
+        "Correct. $E=U/d=120/0.020=6.0 \\times 10^{3}\\ \\mathrm{V/m}$.",
+        "Divided by $2.0$ rather than by $0.020$, losing two powers of ten in the separation."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "120 / 0.020",
+        "expected": 6000,
+        "tolerance": 1e-09,
+        "unit": "V/m"
+      }
+    },
+    {
+      "id": "physics-P7.3-004",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.3",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Potential difference and work done by the electric force",
+      "difficulty": 5,
+      "stem": "In a uniform electric field, a small charged bead is carried along a path that stays everywhere at right angles to the field lines, ending at a point the same distance along the field as it started. The work done on the bead by the electric force over this path is",
+      "options": [
+        "$\\text{positive, because the bead moved}$",
+        "$\\text{negative, because the force opposed the motion}$",
+        "$\\text{impossible to decide without the size of the charge}$",
+        "$\\text{zero}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Work counts only the part of the motion that lies **along** the force:\n$$W=Fs\\cos\\theta.$$\n\nThe path is everywhere perpendicular to the field, and the electric force on a charge is along the field. So at every step $\\theta=90^\\circ$, and $\\cos 90^\\circ=0$. Each step contributes nothing, so the total is\n$$W=0.$$\n\nThere is a second way to see it. Work by the electric force is $W=qU$, and $U$ is the potential difference between the ends. Moving perpendicular to the field lines never changes the potential — such a path lies on a single equipotential surface — so $U=0$ and $W=0$ whatever the charge is.\n\nThat second argument also disposes of the idea that the answer depends on $q$: zero times any charge is still zero.",
+      "distractorRationale": [
+        "Movement alone is not enough. Work needs displacement *along the direction of the force*, and here there is none.",
+        "Would require a component of the force pointing backwards along the path. The force is square-on to the path throughout, so it neither helps nor hinders.",
+        "The work is $qU$ with $U=0$, so it vanishes for every charge. The size of $q$ never enters.",
+        "Correct. The displacement is perpendicular to the force throughout, so $W=Fs\\cos 90^\\circ=0$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Work is the component of force along the displacement, W = Fs cos(theta), and theta is 90 degrees at every point of the path, giving zero. Equivalently the path lies on an equipotential so U = 0 and W = qU = 0 regardless of q, which also rules out option C."
+      }
+    },
+    {
+      "id": "physics-P7.4-001",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.4",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Capacitance and capacitors",
+      "difficulty": 1,
+      "stem": "A capacitor in a camera flash unit holds $6.0 \\times 10^{-5}\\ \\mathrm{C}$ when there is $12\\ \\mathrm{V}$ across it. Its capacitance is",
+      "options": [
+        "$5.0 \\times 10^{-6}\\ \\mathrm{F}$",
+        "$7.2 \\times 10^{-4}\\ \\mathrm{F}$",
+        "$2.0 \\times 10^{5}\\ \\mathrm{F}$",
+        "$5.0 \\times 10^{-4}\\ \\mathrm{F}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Capacitance is the charge stored per volt applied:\n$$C=\\frac{Q}{U}.$$\n\nSubstitute:\n$$C=\\frac{6.0 \\times 10^{-5}}{12}=5.0 \\times 10^{-6}\\ \\mathrm{F}.$$\n\nThat is $5.0\\ \\mathrm{\\mu F}$, an ordinary size for a component of this kind. A farad is a very large unit, so real capacitors are almost always quoted in microfarads or smaller.",
+      "distractorRationale": [
+        "Correct. $C=Q/U=6.0 \\times 10^{-5}/12=5.0 \\times 10^{-6}\\ \\mathrm{F}$.",
+        "Multiplied the charge by the voltage instead of dividing.",
+        "Divided the wrong way round, $U/Q$. A capacitance of $2 \\times 10^{5}\\ \\mathrm{F}$ would be larger than anything ever built.",
+        "Slipped one power of ten while dividing by $12$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "6.0e-5 / 12",
+        "expected": 5e-06,
+        "tolerance": 1e-09,
+        "unit": "F"
+      }
+    },
+    {
+      "id": "physics-P7.4-002",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.4",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Capacitance and capacitors",
+      "difficulty": 2,
+      "stem": "The voltage across a capacitor is doubled, and the capacitor itself is not changed. The charge it now stores is how many times the charge it stored before?",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$2$",
+        "$4$",
+        "$1$"
+      ],
+      "correctIndex": 1,
+      "solution": "Capacitance is a property of the component — its plate area, their separation, and what sits between them. None of that changed, so $C$ is fixed.\n\nWith $C$ fixed, $Q=CU$ makes charge directly proportional to voltage:\n$$\\frac{Q_{2}}{Q_{1}}=\\frac{CU_{2}}{CU_{1}}=\\frac{U_{2}}{U_{1}}=2.$$\n\nDoubling the voltage doubles the stored charge. Note that the stored *energy* would quadruple, since $E=\\tfrac{1}{2}CU^{2}$ — a distinction worth keeping straight.",
+      "distractorRationale": [
+        "Has the charge falling as the voltage rises. Pushing harder puts more charge on, not less.",
+        "Correct. $Q=CU$ with $C$ fixed, so doubling $U$ doubles $Q$.",
+        "This is the factor for the stored *energy*, which goes as $U^{2}$. The charge itself is linear in $U$.",
+        "Would mean the charge is fixed regardless of voltage, which is what a battery does, not a capacitor."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 / 1",
+        "expected": 2,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "physics-P7.4-003",
+      "subject": "physics",
+      "topic": "P7",
+      "subtopic": "P7.4",
+      "syllabusRef": "P-2 / Electromagnetism / Electrostatics / Capacitance and capacitors",
+      "difficulty": 4,
+      "stem": "A $20\\ \\mathrm{\\mu F}$ capacitor is charged until there is $50\\ \\mathrm{V}$ across it. The energy it now stores is",
+      "options": [
+        "$1.0 \\times 10^{-3}\\ \\mathrm{J}$",
+        "$0.050\\ \\mathrm{J}$",
+        "$0.025\\ \\mathrm{J}$",
+        "$0.013\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The stored energy is\n$$E=\\tfrac{1}{2}CU^{2}.$$\n\n**Convert the capacitance first:** $20\\ \\mathrm{\\mu F}=20 \\times 10^{-6}\\ \\mathrm{F}$.\n\n$$E=\\tfrac{1}{2}(20 \\times 10^{-6})(50)^{2}=\\tfrac{1}{2}(20 \\times 10^{-6})(2500)=0.025\\ \\mathrm{J}.$$\n\nThe factor of $\\tfrac{1}{2}$ is there because the voltage climbed from zero to $50\\ \\mathrm{V}$ as the capacitor filled, so the *average* voltage doing the work was only half the final one.",
+      "distractorRationale": [
+        "Used $CU$ rather than $\\tfrac{1}{2}CU^{2}$, so the voltage was never squared.",
+        "Dropped the factor of $\\tfrac{1}{2}$, computing $CU^{2}$.",
+        "Correct. $E=\\tfrac{1}{2}(20 \\times 10^{-6})(50)^{2}=0.025\\ \\mathrm{J}$.",
+        "Halved twice, applying the $\\tfrac{1}{2}$ once to the capacitance and again to the result."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * 20e-6 * 50 * 50",
+        "expected": 0.025,
+        "tolerance": 1e-09,
+        "unit": "J"
+      }
+    }
+  ]
+}

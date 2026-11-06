@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M3",
+  "questions": [
+    {
+      "id": "math-M3.1-001",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Domain and range",
+      "difficulty": 1,
+      "stem": "The domain of $f(x)=\\sqrt{x-3}$ is",
+      "options": [
+        "$(-\\infty,\\ 3]$",
+        "$[-3,\\ +\\infty)$",
+        "$(3,\\ +\\infty)$",
+        "$[3,\\ +\\infty)$"
+      ],
+      "correctIndex": 3,
+      "solution": "A square root only accepts an argument that is not negative, so the single condition is\n$$x-3\\ge 0.$$\n\nAdding $3$ to both sides gives $x\\ge 3$.\n\nThe value $x=3$ stays in: there $\\sqrt{0}=0$, which is a perfectly good output. So the domain is $[3,+\\infty)$.",
+      "distractorRationale": [
+        "Solved $x-3\\le 0$. A root needs its argument non-negative, not non-positive.",
+        "Sign slip: read $x-3\\ge 0$ as $x\\ge -3$ instead of $x\\ge 3$.",
+        "Excluded $x=3$, but $\\sqrt{0}$ is defined, so that point belongs to the domain.",
+        "Correct. $x-3\\ge 0$ gives $x\\ge 3$, and the end point is kept."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-8, 10]],
+        "reference": "((x - 3) >= 0) ? 1 : 0",
+        "optionForms": [
+          "(x <= 3) ? 1 : 0",
+          "(x >= -3) ? 1 : 0",
+          "(x > 3) ? 1 : 0",
+          "(x >= 3) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": 3 }, { "x": 2.9 }, { "x": 3.1 }, { "x": -3 }, { "x": 0 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.1-002",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Domain and range",
+      "difficulty": 2,
+      "stem": "The domain of $g(x)=\\dfrac{1}{\\sqrt{5-x}}$ is",
+      "options": [
+        "$[5,\\ +\\infty)$",
+        "$(5,\\ +\\infty)$",
+        "$(-\\infty,\\ 5]$",
+        "$(-\\infty,\\ 5)$"
+      ],
+      "correctIndex": 3,
+      "solution": "Two demands meet in this expression. The root needs $5-x\\ge 0$, and the denominator must not be $0$, which rules out $5-x=0$.\n\nPut together they leave one strict condition:\n$$5-x>0.$$\n\nAdding $x$ to both sides gives $5>x$, that is $x<5$.",
+      "distractorRationale": [
+        "Turned the condition round to $x-5\\ge 0$, and kept $x=5$, where the denominator would be $0$.",
+        "Turned the condition round: $5-x>0$ means $x<5$, not $x>5$.",
+        "Allowed $x=5$. There the root is $0$ and the fraction has no value.",
+        "Correct. The root and the denominator together force $5-x>0$, so $x<5$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-6, 12]],
+        "reference": "((5 - x) > 0) ? 1 : 0",
+        "optionForms": [
+          "(x >= 5) ? 1 : 0",
+          "(x > 5) ? 1 : 0",
+          "(x <= 5) ? 1 : 0",
+          "(x < 5) ? 1 : 0"
+        ],
+        "extraSamples": [{ "x": 5 }, { "x": 4.9 }, { "x": 5.1 }, { "x": 0 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.1-003",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Domain and range",
+      "difficulty": 3,
+      "stem": "The range of $f(x)=x^{2}-4x+7$ is",
+      "options": [
+        "$(3,\\ +\\infty)$",
+        "$[3,\\ +\\infty)$",
+        "$[7,\\ +\\infty)$",
+        "$(-\\infty,\\ 3]$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — complete the square.**\n$$x^{2}-4x+7=(x-2)^{2}+3.$$\n\n**Step 2 — read off the smallest output.** A square is never negative, so $(x-2)^{2}\\ge 0$ and therefore $f(x)\\ge 3$. Putting $x=2$ gives exactly $3$, so that value is genuinely reached and belongs to the range.\n\nAs $x$ moves away from $2$ the square grows without limit, so every number above $3$ is produced as well. The range is $[3,+\\infty)$.",
+      "distractorRationale": [
+        "Excluded $3$, but $f(2)=3$, so the smallest value is attained.",
+        "Correct. $(x-2)^{2}+3$ has least value $3$ at $x=2$, and grows without bound.",
+        "Used $f(0)=7$, the constant term, as though it were the smallest value.",
+        "Wrote the range downwards. The parabola opens upwards, so $3$ is a floor, not a ceiling."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["y"],
+        "domain": [[-6, 16]],
+        "reference": "((16 - 4 * (7 - y)) >= 0) ? 1 : 0",
+        "optionForms": [
+          "(y > 3) ? 1 : 0",
+          "(y >= 3) ? 1 : 0",
+          "(y >= 7) ? 1 : 0",
+          "(y <= 3) ? 1 : 0"
+        ],
+        "extraSamples": [{ "y": 3 }, { "y": 2.9 }, { "y": 3.1 }, { "y": 7 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.1-004",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Domain and range",
+      "difficulty": 4,
+      "stem": "The domain of $h(x)=\\sqrt{6-x}+\\dfrac{1}{\\sqrt{x-2}}$ is",
+      "options": [
+        "$[2,\\ 6]$",
+        "$(2,\\ 6)$",
+        "$(2,\\ 6]$",
+        "$[2,\\ 6)$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — the first term.** $\\sqrt{6-x}$ needs $6-x\\ge 0$, that is $x\\le 6$.\n\n**Step 2 — the second term.** Here the root sits in a denominator, so it must be defined *and* non-zero: $x-2>0$, that is $x>2$.\n\n**Step 3 — both at once.** The domain is where the two conditions overlap:\n$$2<x\\le 6.$$\n\nThe ends behave differently on purpose. The left end is open because a zero denominator is not allowed; the right end is closed because $\\sqrt{0}$ in a numerator is fine.",
+      "distractorRationale": [
+        "Kept $x=2$, where $\\sqrt{x-2}=0$ sits underneath a fraction.",
+        "Dropped $x=6$, but the first root is defined there and simply returns $0$.",
+        "Correct. $x\\le 6$ from the first term and $x>2$ from the second.",
+        "Both ends the wrong way round: $2$ admitted and $6$ rejected."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-3, 11]],
+        "reference": "(((6 - x) >= 0) && ((x - 2) > 0)) ? 1 : 0",
+        "optionForms": [
+          "(x >= 2 && x <= 6) ? 1 : 0",
+          "(x > 2 && x < 6) ? 1 : 0",
+          "(x > 2 && x <= 6) ? 1 : 0",
+          "(x >= 2 && x < 6) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": 2 }, { "x": 6 }, { "x": 1.9 }, { "x": 2.1 },
+          { "x": 5.9 }, { "x": 6.1 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.2-001",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Monotonicity",
+      "difficulty": 1,
+      "stem": "On which set is $f(x)=(x+2)^{2}$ increasing?",
+      "options": [
+        "$[-2,\\ +\\infty)$",
+        "$(-\\infty,\\ -2]$",
+        "$[2,\\ +\\infty)$",
+        "$(-\\infty,\\ 0]$"
+      ],
+      "correctIndex": 0,
+      "solution": "The curve $y=(x+2)^{2}$ is the parabola $y=x^{2}$ pushed $2$ units to the left, because the bracket is zero at $x=-2$. So the vertex sits at $x=-2$.\n\nAn upward parabola falls on the way to its vertex and rises after it.\n\nThe function therefore increases on $[-2,+\\infty)$.",
+      "distractorRationale": [
+        "Correct. The vertex is at $x=-2$ and the parabola rises to the right of it.",
+        "The falling branch. To the left of the vertex the outputs go down as $x$ grows.",
+        "Vertex placed at $x=2$. The bracket $x+2$ is zero at $x=-2$, so the shift is leftwards.",
+        "Vertex left at $x=0$, as though the graph of $x^{2}$ had never been moved."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-8, 8]],
+        "reference": "(2 * (x + 2) >= 0) ? 1 : 0",
+        "optionForms": [
+          "(x >= -2) ? 1 : 0",
+          "(x <= -2) ? 1 : 0",
+          "(x >= 2) ? 1 : 0",
+          "(x <= 0) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": -2 }, { "x": -2.1 }, { "x": -1.9 }, { "x": 0 }, { "x": 2 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.2-002",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Monotonicity",
+      "difficulty": 2,
+      "stem": "On which set is $f(x)=-x^{2}+8x$ increasing?",
+      "options": [
+        "$[0,\\ 8]$",
+        "$(-\\infty,\\ 4]$",
+        "$[4,\\ +\\infty)$",
+        "$(-\\infty,\\ 8]$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — locate the turning point.** For $ax^{2}+bx+c$ the axis of symmetry is at $x=-\\dfrac{b}{2a}$. Here $a=-1$ and $b=8$, so\n$$x=-\\dfrac{8}{2\\times(-1)}=4.$$\n\n**Step 2 — decide which side rises.** The coefficient of $x^{2}$ is negative, so the parabola opens downwards: it climbs up to the vertex and falls after it.\n\nThe function increases on everything to the left of the vertex, $(-\\infty,4]$.",
+      "distractorRationale": [
+        "This is where $f(x)\\ge 0$, the stretch above the axis, which is not the same as where the graph rises.",
+        "Correct. The vertex is at $x=4$ and a downward parabola rises before its vertex.",
+        "The falling branch. Because the leading coefficient is negative, the graph goes down after the vertex.",
+        "Used the root $x=8$ as the turning point. The vertex is halfway between the roots $0$ and $8$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-6, 14]],
+        "reference": "((-2) * x + 8 >= 0) ? 1 : 0",
+        "optionForms": [
+          "(x >= 0 && x <= 8) ? 1 : 0",
+          "(x <= 4) ? 1 : 0",
+          "(x >= 4) ? 1 : 0",
+          "(x <= 8) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": 4 }, { "x": 3.9 }, { "x": 4.1 }, { "x": 0 }, { "x": 8 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.2-003",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Monotonicity",
+      "difficulty": 3,
+      "stem": "A function $f$ is decreasing on $\\mathbb{R}$, and $f(3t)<f(t+4)$. Then",
+      "options": ["$t<-2$", "$t<2$", "$t>-2$", "$t>2$"],
+      "correctIndex": 3,
+      "solution": "A decreasing function reverses order: the bigger input produces the smaller output.\n\nThe output at $3t$ is the smaller one, so the input $3t$ has to be the bigger one:\n$$3t>t+4.$$\n\nSubtract $t$ from both sides:\n$$2t>4,$$\nand dividing by the positive number $2$ gives $t>2$.",
+      "distractorRationale": [
+        "The direction was kept and a sign was slipped as well, solving $2t<-4$.",
+        "Compared the inputs in the same direction as the outputs. A decreasing function turns the comparison round.",
+        "Reversed the direction correctly, then solved $2t>-4$ instead of $2t>4$.",
+        "Correct. Decreasing turns $f(3t)<f(t+4)$ into $3t>t+4$, so $t>2$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["t"],
+        "domain": [[-8, 8]],
+        "reference": "((3 * t) > (t + 4)) ? 1 : 0",
+        "optionForms": [
+          "(t < -2) ? 1 : 0",
+          "(t < 2) ? 1 : 0",
+          "(t > -2) ? 1 : 0",
+          "(t > 2) ? 1 : 0"
+        ],
+        "extraSamples": [{ "t": 2 }, { "t": 1.9 }, { "t": 2.1 }, { "t": -2 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.2-004",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Monotonicity",
+      "difficulty": 4,
+      "stem": "$f(x)=x^{2}+2(m-1)x+5$ is decreasing on $(-\\infty,\\ 4]$. Then",
+      "options": ["$m\\ge -3$", "$m\\ge 5$", "$m\\le -3$", "$m\\le -1$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — locate the axis of symmetry.** The coefficient of $x$ is $2(m-1)$, so\n$$x=-\\dfrac{2(m-1)}{2}=1-m.$$\n\n**Step 2 — say where the graph falls.** The parabola opens upwards, so it decreases on exactly $(-\\infty,\\ 1-m]$ and nowhere else.\n\n**Step 3 — fit the given interval inside that.** Being decreasing on all of $(-\\infty,\\ 4]$ means this interval is contained in $(-\\infty,\\ 1-m]$, which needs\n$$4\\le 1-m\\quad\\Longrightarrow\\quad m\\le -3.$$\n\nAt $m=-3$ the axis is exactly $x=4$, and the function still decreases on the whole of $(-\\infty,4]$, so that value is kept.",
+      "distractorRationale": [
+        "Containment pointed the wrong way, requiring $1-m\\le 4$.",
+        "Took the axis to be $x=m-1$, dropping the minus sign, and then required $m-1\\ge 4$.",
+        "Correct. The axis $1-m$ must sit at or to the right of $4$, giving $m\\le -3$.",
+        "Forgot to halve the coefficient, using $x=-2(m-1)$ as the axis and solving $-2(m-1)\\ge 4$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["m"],
+        "domain": [[-9, 9]],
+        "reference": "((1 - m) >= 4) ? 1 : 0",
+        "optionForms": [
+          "(m >= -3) ? 1 : 0",
+          "(m >= 5) ? 1 : 0",
+          "(m <= -3) ? 1 : 0",
+          "(m <= -1) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "m": -3 }, { "m": -3.1 }, { "m": -2.9 }, { "m": 5 }, { "m": -1 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.3-001",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Parity: odd and even functions",
+      "difficulty": 2,
+      "stem": "Which of these functions is odd?",
+      "options": [
+        "$f(x)=x^{3}-x$",
+        "$f(x)=x^{2}+x$",
+        "$f(x)=x^{2}+1$",
+        "$f(x)=|x|+2$"
+      ],
+      "correctIndex": 0,
+      "solution": "Odd means $f(-x)=-f(x)$ at every $x$, so replace $x$ by $-x$ and compare.\n\nFor $x^{3}-x$:\n$$f(-x)=(-x)^{3}-(-x)=-x^{3}+x=-\\left(x^{3}-x\\right)=-f(x).$$\nBoth powers present are odd powers, so the whole function is odd.\n\nThe other three each carry a part that survives the sign change untouched — $x^{2}$, $|x|$ or a constant — so their values cannot flip sign.",
+      "distractorRationale": [
+        "Correct. $f(-x)=-x^{3}+x=-f(x)$, so the graph has half-turn symmetry about the origin.",
+        "Here $f(-x)=x^{2}-x$, which is neither $f(x)$ nor $-f(x)$: mixing an even term with an odd one leaves no parity at all.",
+        "This one is even, not odd: $f(-x)=f(x)$ because neither term notices the sign of $x$.",
+        "Even as well, since $|-x|=|x|$ and the constant does not move."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-5, 5]],
+        "reference": "0",
+        "optionForms": [
+          "(x * x * x - x) + ((-x) * (-x) * (-x) - (-x))",
+          "(x * x + x) + ((-x) * (-x) + (-x))",
+          "(x * x + 1) + ((-x) * (-x) + 1)",
+          "(Math.abs(x) + 2) + (Math.abs(-x) + 2)"
+        ],
+        "extraSamples": [{ "x": 1 }, { "x": 2 }, { "x": -3 }, { "x": 0.5 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.3-002",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Parity: odd and even functions",
+      "difficulty": 3,
+      "stem": "$f$ is even on $\\mathbb{R}$, and $f(x)=x^{2}-3x$ whenever $x\\ge 0$. Find $f(-2)$.",
+      "options": ["$-10$", "$-2$", "$2$", "$10$"],
+      "correctIndex": 1,
+      "solution": "An even function copies its values across the vertical axis: $f(-x)=f(x)$. So\n$$f(-2)=f(2).$$\n\nThe given formula may be used at $x=2$, because $2\\ge 0$:\n$$f(2)=2^{2}-3\\times 2=4-6=-2.$$\n\nHence $f(-2)=-2$. Note that the formula itself must not be fed $-2$; it is only stated for inputs that are not negative.",
+      "distractorRationale": [
+        "Substituted $-2$ into a formula meant for $x\\ge 0$ and then changed the sign of the result.",
+        "Correct. Evenness gives $f(-2)=f(2)=4-6=-2$.",
+        "Used odd symmetry, $f(-2)=-f(2)$, although the function is stated to be even.",
+        "Substituted $-2$ into a formula that is only valid for $x\\ge 0$, obtaining $4+6$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.pow(2, 2) - 3 * 2",
+        "expected": -2,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M3.3-003",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Parity: odd and even functions",
+      "difficulty": 5,
+      "stem": "$f(x)=ax^{3}+bx+2$ and $f(-3)=7$. Find $f(3)$.",
+      "options": ["$-7$", "$-5$", "$-3$", "$7$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — peel off the odd part.** Write $g(x)=ax^{3}+bx$, so that $f(x)=g(x)+2$. Both $x^{3}$ and $x$ are odd powers, so $g(-x)=-g(x)$.\n\n**Step 2 — use the value given.**\n$$f(-3)=g(-3)+2=7\\quad\\Longrightarrow\\quad g(-3)=5.$$\n\n**Step 3 — flip the sign and put the constant back.** Oddness gives $g(3)=-g(-3)=-5$, so\n$$f(3)=g(3)+2=-5+2=-3.$$\n\nNeither $a$ nor $b$ is ever needed: the constant $2$ is the only part that does not reverse.",
+      "distractorRationale": [
+        "Treated $f$ itself as odd, giving $f(3)=-f(-3)=-7$. The constant $2$ spoils that symmetry.",
+        "Found the odd part $g(3)=-5$ but never added the constant $2$ back.",
+        "Correct. $g(-3)=5$, so $g(3)=-5$ and $f(3)=-5+2=-3$.",
+        "Treated $f$ as even, giving $f(3)=f(-3)$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "-(7 - 2) + 2",
+        "expected": -3,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M3.4-001",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.4",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Inverse functions and graph transformations",
+      "difficulty": 2,
+      "stem": "The graph of $y=\\sqrt{x}$ is moved $3$ units right and then $2$ units down. The new curve is",
+      "options": [
+        "$y=\\sqrt{x+3}-2$",
+        "$y=\\sqrt{x-3}-2$",
+        "$y=\\sqrt{x-3}+2$",
+        "$y=\\sqrt{x+3}+2$"
+      ],
+      "correctIndex": 1,
+      "solution": "A move to the right by $3$ replaces $x$ by $x-3$. The reason is that the new curve at position $x$ must repeat what the old curve did at $x-3$.\n\nA move down by $2$ subtracts $2$ from the whole right-hand side.\n\nDoing both to $y=\\sqrt{x}$:\n$$y=\\sqrt{x-3}-2.$$\n\nA quick check: the corner of $y=\\sqrt{x}$ at $(0,0)$ lands on $(3,-2)$, exactly $3$ right and $2$ down.",
+      "distractorRationale": [
+        "Horizontal move reversed. Writing $x+3$ slides the curve to the left.",
+        "Correct. Right by $3$ gives $x-3$ inside the root, and down by $2$ subtracts $2$ outside it.",
+        "Vertical move reversed: adding $2$ lifts the curve instead of lowering it.",
+        "Both moves reversed, giving a curve $3$ left and $2$ up."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[3.5, 15]],
+        "reference": "Math.pow(x - 3, 0.5) - 2",
+        "optionForms": [
+          "Math.sqrt(x + 3) - 2",
+          "Math.sqrt(x - 3) - 2",
+          "Math.sqrt(x - 3) + 2",
+          "Math.sqrt(x + 3) + 2"
+        ],
+        "extraSamples": [{ "x": 4 }, { "x": 7 }, { "x": 12 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.4-002",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.4",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Inverse functions and graph transformations",
+      "difficulty": 3,
+      "stem": "Let $f(x)=\\dfrac{x}{2}-4$. Its inverse $f^{-1}(x)$ is",
+      "options": [
+        "$2x+8$",
+        "$2x-8$",
+        "$\\dfrac{x+4}{2}$",
+        "$\\dfrac{2}{x}-4$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — name the output.** Put $y=\\dfrac{x}{2}-4$.\n\n**Step 2 — undo the operations in reverse order.** Add $4$ to both sides, then multiply by $2$:\n$$y+4=\\dfrac{x}{2},\\qquad x=2(y+4)=2y+8.$$\n\n**Step 3 — rename.** The inverse sends an output back to its input, so\n$$f^{-1}(x)=2x+8.$$\n\nCheck it: $f(2x+8)=\\dfrac{2x+8}{2}-4=x+4-4=x$.",
+      "distractorRationale": [
+        "Correct. Undoing \"halve, then subtract $4$\" means \"add $4$, then double\".",
+        "Sign slip: doubled correctly but subtracted the $8$ instead of adding it.",
+        "Copied the operations instead of reversing them, halving where the inverse should double.",
+        "Read \"inverse function\" as \"reciprocal\" and turned only the $x$ upside down."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[1, 12]],
+        "reference": "2 * (x + 4)",
+        "optionForms": [
+          "2 * x + 8",
+          "2 * x - 8",
+          "(x + 4) / 2",
+          "2 / x - 4"
+        ],
+        "extraSamples": [{ "x": 2 }, { "x": 6 }, { "x": 10 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M3.4-003",
+      "subject": "math",
+      "topic": "M3",
+      "subtopic": "M3.4",
+      "syllabusRef": "M-2 / Functions and Sequences / Properties of Functions / Inverse functions and graph transformations",
+      "difficulty": 4,
+      "stem": "Let $f(x)=\\dfrac{x+1}{x-2}$ for $x\\neq 2$. Find $f^{-1}(3)$.",
+      "options": [
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{5}{2}$",
+        "$\\dfrac{7}{2}$",
+        "$4$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — read what is being asked.** $f^{-1}(3)$ is the input whose output is $3$. So solve\n$$\\dfrac{x+1}{x-2}=3.$$\n\n**Step 2 — clear the fraction.** Since $x\\neq 2$, multiplying both sides by $x-2$ is safe:\n$$x+1=3(x-2)=3x-6.$$\n\n**Step 3 — solve.** Then $7=2x$, so $x=\\dfrac{7}{2}$.\n\nCheck: $f\\left(\\dfrac{7}{2}\\right)=\\dfrac{9/2}{3/2}=3$, as required.",
+      "distractorRationale": [
+        "Computed $\\dfrac{1}{f(3)}$, treating the inverse function as a reciprocal.",
+        "Sign slip while rearranging, using $x=\\dfrac{2y-1}{y-1}$ in place of $x=\\dfrac{2y+1}{y-1}$.",
+        "Correct. Solving $\\dfrac{x+1}{x-2}=3$ gives $x=\\dfrac{7}{2}$.",
+        "Evaluated $f(3)$ instead of $f^{-1}(3)$, running the function forwards."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(2 * 3 + 1) / (3 - 1)",
+        "expected": 3.5,
+        "tolerance": 1e-9
+      }
+    }
+  ]
+}

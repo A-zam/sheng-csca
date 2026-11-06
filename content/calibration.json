@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "derivedFrom": {
+    "corpus": "A private reference set of past-paper-style material supplied by the site operator: practice and mock papers, preparation guides, formula sheets and syllabus analyses.",
+    "extractionMethod": "pdftotext -layout, then aggregate statistics only",
+    "policy": "The corpus is input only. It is gitignored, never copied into content/ or public/, never quoted in the UI, the README, solutions or commit messages. Only the aggregate numbers on this page are carried forward."
+  },
+
+  "paperFormat": {
+    "questionsPerPaper": 48,
+    "timeLimitMinutes": 60,
+    "totalPoints": 100,
+    "pointsPerQuestion": 2.0833333333333335,
+    "optionsPerQuestion": 4,
+    "optionLabels": ["A", "B", "C", "D"],
+    "negativeMarking": false,
+    "negativeMarkingVerified": false,
+    "negativeMarkingNote": "No source states a penalty for wrong answers and no reference paper shows one. The app scores +1 per correct answer and 0 otherwise, and tells the user to answer every question.",
+    "medium": "Computer-based multiple choice, one correct option",
+    "secondsPerQuestion": 75,
+    "verified": true,
+    "verifiedBy": ["src-analysis", "src-guides", "src-guidebook", "src-cucas", "src-mandarinzone"]
+  },
+
+  "difficulty": {
+    "scale": "1 (easiest) to 5 (hardest)",
+    "officialBands": {
+      "easy": 0.4,
+      "medium": 0.3,
+      "complex": 0.3,
+      "source": "src-analysis — both syllabus-analysis documents state a 40%-30%-30% easy/medium/complex structure, and give the split module by module.",
+      "verified": true
+    },
+    "practicePaperSignal": {
+      "note": "Practice material in the reference set labels every item with a p-value (proportion answering correctly). Only three values appear, 0.94, 0.85 and 0.65, one per official band."
+    },
+    "mapping": [
+      { "level": 1, "band": "easy", "label": "Recall", "approxPValue": 0.94, "description": "One definition, one formula, or a direct reading. No intermediate step." },
+      { "level": 2, "band": "easy", "label": "Single step", "approxPValue": 0.94, "description": "Substitute the given values into one formula." },
+      { "level": 3, "band": "medium", "label": "Standard", "approxPValue": 0.85, "description": "Two steps, or one step plus a rearrangement or unit conversion." },
+      { "level": 4, "band": "complex", "label": "Multi-step", "approxPValue": 0.65, "description": "Three or more steps, or combining two different results." },
+      { "level": 5, "band": "complex", "label": "Challenging", "approxPValue": 0.65, "description": "Non-obvious setup, a case split, or a general rather than numeric answer." }
+    ],
+    "targetDistribution": { "1": 0.15, "2": 0.25, "3": 0.3, "4": 0.2, "5": 0.1 },
+    "targetCountsPerSubject": { "1": 26, "2": 42, "3": 51, "4": 34, "5": 17 },
+    "tolerance": 0.06
+  },
+
+  "paperBlueprint": {
+    "note": "How one 48-question paper is built. The mock-exam mode follows this exactly, so a mock has the same shape as the real thing even though the bank behind it is deeper and more evenly spread.",
+    "bandLevels": { "easy": [1, 2], "medium": [3], "complex": [4, 5] },
+    "math": {
+      "total": 48,
+      "byStrand": {
+        "M-1": { "total": 8, "easy": 4, "medium": 2, "complex": 2 },
+        "M-2": { "total": 16, "easy": 6, "medium": 5, "complex": 5 },
+        "M-3": { "total": 14, "easy": 5, "medium": 5, "complex": 4 },
+        "M-4": { "total": 10, "easy": 5, "medium": 3, "complex": 2 }
+      },
+      "byBand": { "easy": 20, "medium": 15, "complex": 13 }
+    },
+    "physics": {
+      "total": 48,
+      "byStrand": {
+        "P-1": { "total": 14, "easy": 6, "medium": 4, "complex": 4 },
+        "P-2": { "total": 12, "easy": 5, "medium": 4, "complex": 3 },
+        "P-3": { "total": 6, "easy": 3, "medium": 2, "complex": 1 },
+        "P-4": { "total": 8, "easy": 3, "medium": 3, "complex": 2 },
+        "P-5": { "total": 8, "easy": 3, "medium": 3, "complex": 2 }
+      },
+      "byBand": { "easy": 20, "medium": 16, "complex": 12 }
+    },
+    "verified": true,
+    "verifiedBy": ["src-analysis"]
+  },
+
+  "bankTargets": {
+    "note": "How many questions to author per subtopic. Deliberately flatter than the paper blueprint: a practice bank needs enough depth in every subtopic to be worth revising from, with a floor of three so no corner of the syllabus is a dead end. The blueprint above, not this table, decides what a mock paper looks like.",
+    "floorPerSubtopic": 3,
+    "math": {
+      "totalTarget": 170,
+      "byStrand": { "M-1": 28, "M-2": 62, "M-3": 48, "M-4": 32 },
+      "byTopic": {
+        "M1": 14, "M2": 14, "M3": 14, "M4": 11, "M5": 17, "M6": 11, "M7": 9,
+        "M8": 15, "M9": 12, "M10": 6, "M11": 6, "M12": 9,
+        "M13": 6, "M14": 11, "M15": 15
+      },
+      "bySubtopic": {
+        "M1.1": 5, "M1.2": 5, "M1.3": 4,
+        "M2.1": 5, "M2.2": 5, "M2.3": 4,
+        "M3.1": 4, "M3.2": 4, "M3.3": 3, "M3.4": 3,
+        "M4.1": 3, "M4.2": 4, "M4.3": 4,
+        "M5.1": 3, "M5.2": 4, "M5.3": 4, "M5.4": 3, "M5.5": 3,
+        "M6.1": 4, "M6.2": 4, "M6.3": 3,
+        "M7.1": 3, "M7.2": 3, "M7.3": 3,
+        "M8.1": 4, "M8.2": 4, "M8.3": 4, "M8.4": 3,
+        "M9.1": 4, "M9.2": 4, "M9.3": 4,
+        "M10.1": 3, "M10.2": 3,
+        "M11.1": 3, "M11.2": 3,
+        "M12.1": 3, "M12.2": 3, "M12.3": 3,
+        "M13.1": 3, "M13.2": 3,
+        "M14.1": 4, "M14.2": 4, "M14.3": 3,
+        "M15.1": 4, "M15.2": 4, "M15.3": 3, "M15.4": 4
+      },
+      "highFrequencyTopics": ["M5", "M8", "M3", "M9", "M6", "M2"]
+    },
+    "physics": {
+      "totalTarget": 173,
+      "byStrand": { "P-1": 76, "P-2": 47, "P-3": 12, "P-4": 20, "P-5": 18 },
+      "byTopic": {
+        "P1": 14, "P2": 19, "P3": 15, "P4": 8, "P5": 10, "P6": 10,
+        "P7": 15, "P8": 12, "P9": 10, "P10": 10,
+        "P11": 12, "P12": 14, "P13": 6, "P14": 7, "P15": 11
+      },
+      "bySubtopic": {
+        "P1.1": 3, "P1.2": 3, "P1.3": 4, "P1.4": 4,
+        "P2.1": 4, "P2.2": 4, "P2.3": 4, "P2.4": 3, "P2.5": 4,
+        "P3.1": 4, "P3.2": 4, "P3.3": 4, "P3.4": 3,
+        "P4.1": 4, "P4.2": 4,
+        "P5.1": 3, "P5.2": 4, "P5.3": 3,
+        "P6.1": 3, "P6.2": 4, "P6.3": 3,
+        "P7.1": 4, "P7.2": 4, "P7.3": 4, "P7.4": 3,
+        "P8.1": 4, "P8.2": 4, "P8.3": 4,
+        "P9.1": 3, "P9.2": 4, "P9.3": 3,
+        "P10.1": 4, "P10.2": 3, "P10.3": 3,
+        "P11.1": 3, "P11.2": 5, "P11.3": 4,
+        "P12.1": 3, "P12.2": 4, "P12.3": 4, "P12.4": 3,
+        "P13.1": 3, "P13.2": 3,
+        "P14.1": 3, "P14.2": 4,
+        "P15.1": 4, "P15.2": 4, "P15.3": 3
+      },
+      "highFrequencyTopics": ["P2", "P3", "P7", "P1", "P8", "P12"]
+    }
+  },
+
+  "stemLength": {
+    "unit": "characters",
+    "math": { "median": 79, "p25": 56, "p75": 102, "mean": 86, "max": 493, "target": [40, 220] },
+    "physics": { "median": 163, "p25": 130, "p75": 197, "mean": 166, "max": 423, "target": [80, 340] },
+    "note": "Mathematics stems are terse and often symbol-only. Physics stems set up a short scenario, then ask for one quantity."
+  },
+
+  "conventions": {
+    "language": "English throughout. Short sentences, no idioms, no culture-specific scenarios. Written to be read by a non-native speaker under time pressure.",
+    "optionStyle": "Four options labelled A-D. Options are the same kind of object as each other — all numbers with the same unit, or all intervals, or all equations. Never 'all of the above' or 'none of the above'.",
+    "optionOrdering": "Numeric options are listed in ascending order where that does not give the answer away; otherwise the correct index is spread evenly across A-D.",
+    "correctIndexBalance": "Across the bank, each of A/B/C/D holds the correct answer 20-30% of the time.",
+    "mathNotation": {
+      "delimiters": "LaTeX inside $...$ for inline and $$...$$ for display",
+      "intervals": "(-\\infty, 3] \\cup [5, +\\infty) — round brackets for open, square for closed",
+      "sets": "\\{x \\mid 3 < x < 5\\}",
+      "fractions": "\\dfrac in options so they render at full size",
+      "angles": "Degrees with ^\\circ for values (\\sin 120^\\circ); radians with \\pi for periods and intervals",
+      "sequences": "a_n, S_n, common difference d, common ratio q — the corpus uses q, not r"
+    },
+    "physicsNotation": {
+      "units": "SI, upright, with a thin space before the unit: 12.5\\ \\mathrm{m/s}",
+      "gravity": "g = 10\\ \\mathrm{m/s^2}",
+      "gravityNote": "The build brief asked for g = 9.8 m/s^2. Every paper and formula sheet in the corpus uses g = 10 m/s^2, so the bank uses 10 to match what candidates will actually see. The value is written into the stem of every question where it matters, so nothing depends on the reader guessing.",
+      "statedConstants": [
+        { "symbol": "g", "value": "10 m/s^2", "when": "weight, free fall, inclines" },
+        { "symbol": "k", "value": "9.0 \\times 10^9 N·m^2/C^2", "when": "Coulomb's law" },
+        { "symbol": "h", "value": "6.63 \\times 10^{-34} J·s", "when": "photon energy, photoelectric effect" },
+        { "symbol": "c", "value": "3.0 \\times 10^8 m/s", "when": "light and photon wavelength" },
+        { "symbol": "e", "value": "1.6 \\times 10^{-19} C", "when": "electronvolts, elementary charge" },
+        { "symbol": "v_sound", "value": "340 m/s", "when": "sound wavelength or period" },
+        { "symbol": "G", "value": "6.67 \\times 10^{-11} N·m^2/kg^2", "when": "universal gravitation" }
+      ],
+      "significantFigures": "Answers come out to 1-3 significant figures. Numbers in stems are chosen so the arithmetic is doable in about 75 seconds without a calculator."
+    }
+  },
+
+  "archetypes": {
+    "math": [
+      { "id": "MA1", "name": "Evaluate a set operation on two described sets", "topics": ["M1"], "frequency": "high" },
+      { "id": "MA2", "name": "Decide whether one condition is necessary, sufficient, or both, for another", "topics": ["M1"], "frequency": "medium" },
+      { "id": "MA3", "name": "Give the solution set of a quadratic or rational inequality as an interval", "topics": ["M2"], "frequency": "high" },
+      { "id": "MA4", "name": "Apply AM-GM to find a minimum", "topics": ["M2"], "frequency": "medium" },
+      { "id": "MA5", "name": "State the domain of a function built from a root, a log and a denominator", "topics": ["M3"], "frequency": "high" },
+      { "id": "MA6", "name": "Pick the odd / even / monotonic function from four candidates", "topics": ["M3"], "frequency": "high" },
+      { "id": "MA7", "name": "Find the inverse of a simple invertible function", "topics": ["M3"], "frequency": "medium" },
+      { "id": "MA8", "name": "Evaluate or compare logarithmic and exponential expressions", "topics": ["M4"], "frequency": "medium" },
+      { "id": "MA9", "name": "Evaluate a trigonometric value at a special or reduced angle", "topics": ["M5"], "frequency": "high" },
+      { "id": "MA10", "name": "Apply a double- or half-angle identity given one ratio and a quadrant", "topics": ["M5"], "frequency": "high" },
+      { "id": "MA11", "name": "State the period, range or monotonic interval of a transformed trig function", "topics": ["M5"], "frequency": "medium" },
+      { "id": "MA12", "name": "Solve a triangle with the sine or cosine rule, or find its area", "topics": ["M5"], "frequency": "medium" },
+      { "id": "MA13", "name": "Find a missing term or sum of an arithmetic or geometric sequence", "topics": ["M6"], "frequency": "high" },
+      { "id": "MA14", "name": "Recover the general term from S_n, or S_n from a recurrence", "topics": ["M6"], "frequency": "medium" },
+      { "id": "MA15", "name": "Differentiate and evaluate, or find a tangent line", "topics": ["M7"], "frequency": "medium" },
+      { "id": "MA16", "name": "Use the sign of the derivative to find a monotonic interval or an extremum", "topics": ["M7"], "frequency": "medium" },
+      { "id": "MA17", "name": "Find the slope, inclination or equation of a line through given points", "topics": ["M8"], "frequency": "high" },
+      { "id": "MA18", "name": "Test two lines for parallel or perpendicular, or find their intersection", "topics": ["M8"], "frequency": "medium" },
+      { "id": "MA19", "name": "Write or read off the equation of a circle", "topics": ["M8"], "frequency": "high" },
+      { "id": "MA20", "name": "Recover a conic's equation from focus, axis, eccentricity or focal length", "topics": ["M9"], "frequency": "high" },
+      { "id": "MA21", "name": "Express one vector in terms of two others in a named figure", "topics": ["M10"], "frequency": "medium" },
+      { "id": "MA22", "name": "Use the dot product to find an angle, a magnitude, or test perpendicularity", "topics": ["M10"], "frequency": "medium" },
+      { "id": "MA23", "name": "Solve a linear equation in a complex unknown, or find a modulus", "topics": ["M11"], "frequency": "low" },
+      { "id": "MA24", "name": "Find an angle, a length or an area in a triangle, circle or polygon", "topics": ["M12"], "frequency": "medium" },
+      { "id": "MA25", "name": "Count arrangements or selections with permutations and combinations", "topics": ["M13"], "frequency": "medium" },
+      { "id": "MA26", "name": "Compute a classical probability from a described experiment", "topics": ["M14"], "frequency": "high" },
+      { "id": "MA27", "name": "Combine events: exclusive, complementary, independent, or conditional", "topics": ["M14"], "frequency": "medium" },
+      { "id": "MA28", "name": "Compute mean, median, variance or standard deviation of a data set", "topics": ["M15"], "frequency": "high" },
+      { "id": "MA29", "name": "Read a probability off a binomial or normal distribution", "topics": ["M15"], "frequency": "medium" }
+    ],
+    "physics": [
+      { "id": "PA1", "name": "Classify a quantity as scalar or vector, or identify the frame of reference", "topics": ["P1"], "frequency": "medium" },
+      { "id": "PA2", "name": "Apply v = v0 + at or s = v0 t + at^2/2 to a body starting from rest", "topics": ["P1"], "frequency": "high" },
+      { "id": "PA3", "name": "Distinguish average velocity from average speed on a curved path", "topics": ["P1"], "frequency": "medium" },
+      { "id": "PA4", "name": "Free fall: time, speed or height, with g stated in the stem", "topics": ["P1"], "frequency": "high" },
+      { "id": "PA5", "name": "Hooke's law, sometimes with two loadings to recover the natural length", "topics": ["P2"], "frequency": "high" },
+      { "id": "PA6", "name": "Decide whether an object slides, and find the friction force", "topics": ["P2"], "frequency": "high" },
+      { "id": "PA7", "name": "Find the range or an extreme value of a resultant of two or three forces", "topics": ["P2"], "frequency": "high" },
+      { "id": "PA8", "name": "Newton's second law on a horizontal surface or a smooth incline", "topics": ["P2"], "frequency": "high" },
+      { "id": "PA9", "name": "Compute work done by a named force over a stated displacement", "topics": ["P3"], "frequency": "high" },
+      { "id": "PA10", "name": "Apply the work-energy theorem to find a final speed", "topics": ["P3"], "frequency": "high" },
+      { "id": "PA11", "name": "Change in gravitational or elastic potential energy, with sign", "topics": ["P3"], "frequency": "medium" },
+      { "id": "PA12", "name": "Impulse of a named force over a stated time", "topics": ["P4"], "frequency": "medium" },
+      { "id": "PA13", "name": "Conservation of momentum in a one-dimensional collision", "topics": ["P4"], "frequency": "medium" },
+      { "id": "PA14", "name": "Projectile motion: time of flight, range, or a component of velocity", "topics": ["P5"], "frequency": "medium" },
+      { "id": "PA15", "name": "Relate v, omega, T and R, including belt- and axle-linked points", "topics": ["P5"], "frequency": "high" },
+      { "id": "PA16", "name": "Orbital speed or period from universal gravitation", "topics": ["P5"], "frequency": "medium" },
+      { "id": "PA17", "name": "Which quantity is maximal at the equilibrium or the extreme point of SHM", "topics": ["P6"], "frequency": "medium" },
+      { "id": "PA18", "name": "Period, frequency, wavelength or wave speed", "topics": ["P6"], "frequency": "medium" },
+      { "id": "PA19", "name": "Charge sharing between identical spheres, or Coulomb's law", "topics": ["P7"], "frequency": "high" },
+      { "id": "PA20", "name": "Field strength from a point charge, or the field at the midpoint of a pair", "topics": ["P7"], "frequency": "high" },
+      { "id": "PA21", "name": "Potential difference from the work done moving a charge", "topics": ["P7"], "frequency": "medium" },
+      { "id": "PA22", "name": "Series and parallel resistance, current split, or power dissipated", "topics": ["P8"], "frequency": "high" },
+      { "id": "PA23", "name": "Separate heating loss from total power in a motor or a source with internal resistance", "topics": ["P8"], "frequency": "medium" },
+      { "id": "PA24", "name": "F = BIL, or the Lorentz force and the radius of a charged particle's path", "topics": ["P9"], "frequency": "high" },
+      { "id": "PA25", "name": "Faraday's law with N turns and a stated flux change", "topics": ["P10"], "frequency": "high" },
+      { "id": "PA26", "name": "Lenz's law: the direction of an induced current", "topics": ["P10"], "frequency": "medium" },
+      { "id": "PA27", "name": "Gas law at constant volume, pressure or temperature, with Celsius to Kelvin", "topics": ["P11"], "frequency": "high" },
+      { "id": "PA28", "name": "First law of thermodynamics: sign bookkeeping for Q, W and internal energy", "topics": ["P11"], "frequency": "medium" },
+      { "id": "PA29", "name": "Reflection, refractive index, critical angle or total internal reflection", "topics": ["P12"], "frequency": "high" },
+      { "id": "PA30", "name": "Thin lens formula and magnification", "topics": ["P12"], "frequency": "medium" },
+      { "id": "PA31", "name": "Conditions for interference or diffraction to be observable", "topics": ["P13"], "frequency": "medium" },
+      { "id": "PA32", "name": "Photon energy, work function and maximum kinetic energy", "topics": ["P14"], "frequency": "high" },
+      { "id": "PA33", "name": "Energy-level transition and the wavelength of the photon emitted", "topics": ["P15"], "frequency": "medium" },
+      { "id": "PA34", "name": "Balance a nuclear decay equation, or find a mass defect and binding energy", "topics": ["P15"], "frequency": "medium" }
+    ]
+  },
+
+  "outOfScope": {
+    "note": "Named in no source and absent from the reference corpus. Kept out of the bank so practice time is not wasted.",
+    "math": ["integration", "matrices and determinants", "polar coordinates", "mathematical induction proofs", "hypothesis testing", "three-dimensional solid geometry"],
+    "physics": ["the Doppler effect", "standing waves and resonance", "transformers and AC circuit analysis", "torque and rotational dynamics", "buoyancy and fluid statics", "calorimetry and specific heat capacity", "special relativity beyond mass-energy equivalence"]
+  },
+
+  "originalityPolicy": {
+    "rule": "Every published item is original work modelled on the profile above. Same skill tested, different scenario, different quantities, different wording.",
+    "automatedCheck": "scripts/check-originality.ts",
+    "shingleSize": 8,
+    "shingleRule": "Flag any stem or solution sharing a run of 8 or more consecutive normalised words with any reference item. Numbers are folded to a placeholder first, so swapping the quantities does not evade the check.",
+    "numericRule": "Flag any stem reusing a reference item's ordered numeric run of 3 or more values when the surrounding wording is also more than 45% similar.",
+    "onFlag": "Rewrite. Never ship a flagged item."
+  }
+}

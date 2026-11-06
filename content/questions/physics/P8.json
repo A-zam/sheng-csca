@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P8",
+  "questions": [
+    {
+      "id": "physics-P8.1-001",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.1",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Current, resistance and Ohm's law",
+      "difficulty": 1,
+      "stem": "A hand torch is switched on for $20\\ \\mathrm{s}$, during which a steady $0.30\\ \\mathrm{A}$ flows through its bulb. The charge that passes through the bulb is",
+      "options": [
+        "$6.0\\ \\mathrm{C}$",
+        "$0.015\\ \\mathrm{C}$",
+        "$67\\ \\mathrm{C}$",
+        "$20.3\\ \\mathrm{C}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Current is the rate at which charge flows, so charge is current multiplied by time:\n$$Q=It.$$\n\nSubstitute:\n$$Q=0.30 \\times 20=6.0\\ \\mathrm{C}.$$\n\nAn ampere is a coulomb per second, which is worth remembering: it turns the formula into a unit check.",
+      "distractorRationale": [
+        "Correct. $Q=It=0.30 \\times 20=6.0\\ \\mathrm{C}$.",
+        "Divided the current by the time. That gives a rate of change of current, not a charge.",
+        "Divided the time by the current, $20/0.30$.",
+        "Added the two quantities. Amperes and seconds cannot be added; they multiply to give coulombs."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.30 * 20",
+        "expected": 6,
+        "tolerance": 1e-9,
+        "unit": "C"
+      }
+    },
+    {
+      "id": "physics-P8.1-002",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.1",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Current, resistance and Ohm's law",
+      "difficulty": 2,
+      "stem": "A $9.0\\ \\mathrm{V}$ supply drives $0.15\\ \\mathrm{A}$ through the element of a small soldering iron. The resistance of the element is",
+      "options": [
+        "$1.35\\ \\mathrm{\\Omega}$",
+        "$60\\ \\mathrm{\\Omega}$",
+        "$0.017\\ \\mathrm{\\Omega}$",
+        "$9.15\\ \\mathrm{\\Omega}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Rearrange Ohm's law for the resistance:\n$$U=IR \\ \\Longrightarrow \\ R=\\frac{U}{I}.$$\n\nSubstitute:\n$$R=\\frac{9.0}{0.15}=60\\ \\mathrm{\\Omega}.$$\n\nA small current from a modest voltage means a fairly large resistance, so a two-figure answer in ohms is the right order of magnitude.",
+      "distractorRationale": [
+        "Multiplied the voltage by the current, which gives the power in watts rather than the resistance.",
+        "Correct. $R=U/I=9.0/0.15=60\\ \\mathrm{\\Omega}$.",
+        "Divided the wrong way round, $I/U$, giving the conductance instead.",
+        "Added the two quantities. Volts and amperes are different kinds of thing."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "9.0 / 0.15",
+        "expected": 60,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P8.1-003",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.1",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Current, resistance and Ohm's law",
+      "difficulty": 3,
+      "stem": "A fixed resistor passes $0.50\\ \\mathrm{A}$ when $6.0\\ \\mathrm{V}$ sits across it. Its temperature barely changes, so its resistance stays the same. When the voltage is raised to $15\\ \\mathrm{V}$, the current becomes",
+      "options": [
+        "$0.20\\ \\mathrm{A}$",
+        "$7.5\\ \\mathrm{A}$",
+        "$1.25\\ \\mathrm{A}$",
+        "$0.80\\ \\mathrm{A}$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — find the resistance from the first pair of readings.**\n$$R=\\frac{U_{1}}{I_{1}}=\\frac{6.0}{0.50}=12\\ \\mathrm{\\Omega}.$$\n\n**Step 2 — use it with the new voltage.**\n$$I_{2}=\\frac{U_{2}}{R}=\\frac{15}{12}=1.25\\ \\mathrm{A}.$$\n\nA shortcut, once you trust that $R$ is constant: current is proportional to voltage, and the voltage rose by a factor of $15/6.0=2.5$, so the current does too — $0.50 \\times 2.5=1.25\\ \\mathrm{A}$.",
+      "distractorRationale": [
+        "Divided the current by the voltage ratio rather than multiplying by it, so the current falls as the voltage rises.",
+        "Multiplied the voltage by the current, $15 \\times 0.50$, instead of dividing by the resistance.",
+        "Correct. $R=12\\ \\mathrm{\\Omega}$, so $I=15/12=1.25\\ \\mathrm{A}$.",
+        "Used the voltage *difference* of $9.0\\ \\mathrm{V}$ somewhere instead of the new total of $15\\ \\mathrm{V}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "15 / (6.0 / 0.50)",
+        "expected": 1.25,
+        "tolerance": 1e-9,
+        "unit": "A"
+      }
+    },
+    {
+      "id": "physics-P8.1-004",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.1",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Current, resistance and Ohm's law",
+      "difficulty": 4,
+      "stem": "A length of wire in a doorbell coil is swapped for one of the same material and the same length, but twice the diameter. Its resistance is now what fraction of the original?",
+      "options": [
+        "$\\dfrac{1}{2}$",
+        "$2$",
+        "$\\dfrac{1}{4}$",
+        "$4$"
+      ],
+      "correctIndex": 2,
+      "solution": "Resistance depends on the cross-sectional **area**, not on the diameter directly:\n$$R=\\frac{\\rho L}{A}.$$\n\nThe material fixes $\\rho$ and the length is unchanged, so only $A$ matters.\n\nFor a circular wire $A=\\pi r^{2}$, so doubling the diameter doubles the radius and multiplies the area by $2^{2}=4$:\n$$A_{2}=4A_{1}.$$\n\nSince $R$ is inversely proportional to $A$,\n$$\\frac{R_{2}}{R_{1}}=\\frac{A_{1}}{A_{2}}=\\frac{1}{4}.$$\n\nA thicker wire gives the current more room, so it resists less — and the area, not the diameter, is what widens.",
+      "distractorRationale": [
+        "Scaled by the diameter rather than the area, forgetting that area goes as the square of the radius.",
+        "Has resistance rising as the wire gets thicker, which is backwards.",
+        "Correct. The area quadruples, so the resistance falls to a quarter.",
+        "Squared correctly but inverted the relationship, giving the factor for a wire of *half* the diameter."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1 / (2 * 2)",
+        "expected": 0.25,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P8.2-001",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.2",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Series and parallel combinations",
+      "difficulty": 2,
+      "stem": "Inside a dimmer unit, a $30\\ \\mathrm{\\Omega}$ element and a $60\\ \\mathrm{\\Omega}$ element are wired side by side across the same two terminals. Their combined resistance is",
+      "options": [
+        "$20\\ \\mathrm{\\Omega}$",
+        "$90\\ \\mathrm{\\Omega}$",
+        "$45\\ \\mathrm{\\Omega}$",
+        "$1800\\ \\mathrm{\\Omega}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Wired side by side across the same two terminals means they are in parallel, so the reciprocals add:\n$$\\frac{1}{R}=\\frac{1}{30}+\\frac{1}{60}=\\frac{2}{60}+\\frac{1}{60}=\\frac{3}{60}=\\frac{1}{20}.$$\n\n$$R=20\\ \\mathrm{\\Omega}.$$\n\nThe check to run every time: a parallel combination is always **smaller than the smallest branch**. Adding a second path can only make it easier for current to get through. $20 < 30$, so this passes.",
+      "distractorRationale": [
+        "Correct. $1/R=1/30+1/60=1/20$, so $R=20\\ \\mathrm{\\Omega}$.",
+        "Added the resistances as if they were in series. That would make the pair harder to push current through than either alone.",
+        "Took the average of the two. A parallel pair falls below the smaller branch, not between the two.",
+        "Multiplied the two values without dividing by their sum, using only half of the product-over-sum rule."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1 / (1 / 30 + 1 / 60)",
+        "expected": 20,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P8.2-002",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.2",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Series and parallel combinations",
+      "difficulty": 1,
+      "stem": "A $4.0\\ \\mathrm{\\Omega}$ coil and a $12\\ \\mathrm{\\Omega}$ coil are joined end to end so that the same current passes through both. Their combined resistance is",
+      "options": [
+        "$3.0\\ \\mathrm{\\Omega}$",
+        "$16\\ \\mathrm{\\Omega}$",
+        "$8.0\\ \\mathrm{\\Omega}$",
+        "$48\\ \\mathrm{\\Omega}$"
+      ],
+      "correctIndex": 1,
+      "solution": "\"Joined end to end so that the same current passes through both\" is the definition of a series connection, and in series the resistances simply add:\n$$R=R_{1}+R_{2}=4.0+12=16\\ \\mathrm{\\Omega}.$$\n\nThe current has to fight its way through both in turn, so the total is larger than either one on its own.",
+      "distractorRationale": [
+        "This is the parallel result, $1/(1/4+1/12)$. Parallel branches split the current; these two carry the same current.",
+        "Correct. In series the resistances add: $4.0+12=16\\ \\mathrm{\\Omega}$.",
+        "Took the average of the two values.",
+        "Multiplied them instead of adding."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "4.0 + 12",
+        "expected": 16,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P8.2-003",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.2",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Series and parallel combinations",
+      "difficulty": 3,
+      "stem": "A $3.0\\ \\mathrm{\\Omega}$ branch and a $6.0\\ \\mathrm{\\Omega}$ branch are connected across the same $12\\ \\mathrm{V}$ battery. The current in the $3.0\\ \\mathrm{\\Omega}$ branch is how many times the current in the $6.0\\ \\mathrm{\\Omega}$ branch?",
+      "options": [
+        "$0.50$",
+        "$4.0$",
+        "$2.0$",
+        "$1.0$"
+      ],
+      "correctIndex": 2,
+      "solution": "Both branches sit across the same battery, so both have the same $12\\ \\mathrm{V}$ across them. With the voltage common, Ohm's law makes current inversely proportional to resistance:\n$$\\frac{I_{1}}{I_{2}}=\\frac{U/R_{1}}{U/R_{2}}=\\frac{R_{2}}{R_{1}}=\\frac{6.0}{3.0}=2.0.$$\n\nThe smaller resistance carries the larger share, which is the point of the question. Checking directly: $I_{1}=12/3.0=4.0\\ \\mathrm{A}$ and $I_{2}=12/6.0=2.0\\ \\mathrm{A}$, a ratio of $2.0$.",
+      "distractorRationale": [
+        "Inverted the ratio, taking $R_{1}/R_{2}$. That would make the larger resistance carry the larger current.",
+        "Used the current in one branch, $12/3.0=4.0\\ \\mathrm{A}$, as though it were the ratio.",
+        "Correct. Equal voltage across both branches makes the currents inversely proportional to the resistances: $6.0/3.0=2.0$.",
+        "This would be the answer in series, where a single current passes through both. Here the branches are in parallel."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(12 / 3.0) / (12 / 6.0)",
+        "expected": 2,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "physics-P8.2-004",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.2",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Series and parallel combinations",
+      "difficulty": 3,
+      "stem": "A $5.0\\ \\mathrm{\\Omega}$ ballast and a $20\\ \\mathrm{\\Omega}$ heater are joined in series across a $25\\ \\mathrm{V}$ supply. The voltage across the heater is",
+      "options": [
+        "$5.0\\ \\mathrm{V}$",
+        "$12.5\\ \\mathrm{V}$",
+        "$25\\ \\mathrm{V}$",
+        "$20\\ \\mathrm{V}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — one current runs through both.** In series the total resistance is\n$$R=5.0+20=25\\ \\mathrm{\\Omega},$$\nso\n$$I=\\frac{25}{25}=1.0\\ \\mathrm{A}.$$\n\n**Step 2 — apply Ohm's law to the heater alone.**\n$$U_{\\text{heater}}=IR_{\\text{heater}}=1.0 \\times 20=20\\ \\mathrm{V}.$$\n\nThe supply voltage splits in proportion to the resistances, $20:5$, so the heater takes four fifths of the $25\\ \\mathrm{V}$ and the ballast takes the remaining $5\\ \\mathrm{V}$. The two shares add back to $25\\ \\mathrm{V}$, as they must.",
+      "distractorRationale": [
+        "This is the voltage across the *ballast*, the smaller share.",
+        "Split the supply equally between the two components. Series components share voltage in proportion to their resistances, not evenly.",
+        "Gave the heater the whole supply voltage, leaving nothing for the ballast.",
+        "Correct. $I=1.0\\ \\mathrm{A}$, so the heater takes $1.0 \\times 20=20\\ \\mathrm{V}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(25 / (5.0 + 20)) * 20",
+        "expected": 20,
+        "tolerance": 1e-9,
+        "unit": "V"
+      }
+    },
+    {
+      "id": "physics-P8.3-001",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.3",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Electrical power, energy and electromotive force",
+      "difficulty": 2,
+      "stem": "A reading lamp is marked $60\\ \\mathrm{W}$ and runs from a $240\\ \\mathrm{V}$ mains supply. The current it draws in normal use is",
+      "options": [
+        "$0.25\\ \\mathrm{A}$",
+        "$4.0\\ \\mathrm{A}$",
+        "$14400\\ \\mathrm{A}$",
+        "$180\\ \\mathrm{A}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Electrical power is the product of voltage and current:\n$$P=UI \\ \\Longrightarrow \\ I=\\frac{P}{U}.$$\n\nSubstitute:\n$$I=\\frac{60}{240}=0.25\\ \\mathrm{A}.$$\n\nA quarter of an amp is about right for a small lamp on a high-voltage supply — high voltage is exactly what lets the current stay low for a given power.",
+      "distractorRationale": [
+        "Correct. $I=P/U=60/240=0.25\\ \\mathrm{A}$.",
+        "Divided the wrong way round, $U/P$.",
+        "Multiplied power by voltage instead of dividing.",
+        "Subtracted the two values, which have different units."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "60 / 240",
+        "expected": 0.25,
+        "tolerance": 1e-9,
+        "unit": "A"
+      }
+    },
+    {
+      "id": "physics-P8.3-002",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.3",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Electrical power, energy and electromotive force",
+      "difficulty": 3,
+      "stem": "The heating element of a kettle has a resistance of $24\\ \\mathrm{\\Omega}$ and is connected straight across a $240\\ \\mathrm{V}$ supply. The power it develops is",
+      "options": [
+        "$10\\ \\mathrm{W}$",
+        "$2400\\ \\mathrm{W}$",
+        "$5760\\ \\mathrm{W}$",
+        "$100\\ \\mathrm{W}$"
+      ],
+      "correctIndex": 1,
+      "solution": "The current is not given, so use the form of the power equation written in terms of voltage and resistance:\n$$P=\\frac{U^{2}}{R}.$$\n\nSubstitute:\n$$P=\\frac{240^{2}}{24}=\\frac{57600}{24}=2400\\ \\mathrm{W}.$$\n\nThe two-step route agrees: $I=240/24=10\\ \\mathrm{A}$, then $P=UI=240 \\times 10=2400\\ \\mathrm{W}$. A $2.4\\ \\mathrm{kW}$ kettle is an ordinary rating.",
+      "distractorRationale": [
+        "This is the current in amperes, $240/24$, reported as though it were the power.",
+        "Correct. $P=U^{2}/R=240^{2}/24=2400\\ \\mathrm{W}$.",
+        "Multiplied by the resistance instead of dividing, computing $U^{2}R$ scaled down.",
+        "Used $U/R$ and then squared it, giving $I^{2}$ rather than $U^{2}/R$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "240 * 240 / 24",
+        "expected": 2400,
+        "tolerance": 1e-9,
+        "unit": "W"
+      }
+    },
+    {
+      "id": "physics-P8.3-003",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.3",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Electrical power, energy and electromotive force",
+      "difficulty": 4,
+      "stem": "A small winch motor runs from $100\\ \\mathrm{V}$ and draws $3.0\\ \\mathrm{A}$. The resistance of its windings is $2.0\\ \\mathrm{\\Omega}$. The power wasted heating the windings is",
+      "options": [
+        "$300\\ \\mathrm{W}$",
+        "$50\\ \\mathrm{W}$",
+        "$18\\ \\mathrm{W}$",
+        "$282\\ \\mathrm{W}$"
+      ],
+      "correctIndex": 2,
+      "solution": "A motor is not a plain resistor. Most of the electrical energy going in leaves as mechanical work, and only the part dissipated in the resistance of the copper windings becomes heat.\n\nFor the heating alone, use the form that involves the current and the resistance, because those are the two quantities that describe the windings:\n$$P_{\\text{heat}}=I^{2}R=(3.0)^{2}(2.0)=18\\ \\mathrm{W}.$$\n\nFor context, the motor takes in $P_{\\text{total}}=UI=300\\ \\mathrm{W}$, so $282\\ \\mathrm{W}$ is doing useful work and only $18\\ \\mathrm{W}$ is wasted.\n\nThe trap is $U^{2}/R=5000\\ \\mathrm{W}$, which is nonsense here: that formula assumes the whole $100\\ \\mathrm{V}$ appears across the $2.0\\ \\mathrm{\\Omega}$ of copper, but most of it is spent driving the motor round instead.",
+      "distractorRationale": [
+        "This is the total power drawn from the supply, $UI$, not the part lost as heat.",
+        "Comes from $UI/R \\times$ a slip, or from using $100/2.0$ somewhere. The heating depends on the current through the windings, not the supply voltage across them.",
+        "Correct. $P_{\\text{heat}}=I^{2}R=(3.0)^{2}(2.0)=18\\ \\mathrm{W}$.",
+        "This is the useful mechanical output, $300-18$, which is what is *not* wasted."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "3.0 * 3.0 * 2.0",
+        "expected": 18,
+        "tolerance": 1e-9,
+        "unit": "W"
+      }
+    },
+    {
+      "id": "physics-P8.3-004",
+      "subject": "physics",
+      "topic": "P8",
+      "subtopic": "P8.3",
+      "syllabusRef": "P-2 / Electromagnetism / Direct Current Circuits / Electrical power, energy and electromotive force",
+      "difficulty": 5,
+      "stem": "A cell of electromotive force $1.5\\ \\mathrm{V}$ has an internal resistance of $0.50\\ \\mathrm{\\Omega}$. It is connected to a lamp of resistance $2.5\\ \\mathrm{\\Omega}$. The voltage measured across the cell's terminals is",
+      "options": [
+        "$1.5\\ \\mathrm{V}$",
+        "$0.25\\ \\mathrm{V}$",
+        "$0.75\\ \\mathrm{V}$",
+        "$1.25\\ \\mathrm{V}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — find the current.** The internal resistance is in series with the lamp, so it counts towards the total:\n$$I=\\frac{\\varepsilon}{R+r}=\\frac{1.5}{2.5+0.50}=\\frac{1.5}{3.0}=0.50\\ \\mathrm{A}.$$\n\n**Step 2 — subtract the loss inside the cell.** Driving the current through the cell's own resistance uses up some of the emf:\n$$U_{\\text{terminal}}=\\varepsilon-Ir=1.5-(0.50)(0.50)=1.5-0.25=1.25\\ \\mathrm{V}.$$\n\nThe same answer comes from looking at the lamp instead: $U=IR=0.50 \\times 2.5=1.25\\ \\mathrm{V}$. The terminal voltage is whatever the external circuit actually receives.\n\nThis is why a torch dims as its battery ages: $r$ creeps up, so more of the emf is lost inside the cell.",
+      "distractorRationale": [
+        "The emf itself. That is the terminal voltage only when no current flows, so the internal resistance costs nothing.",
+        "This is the voltage *lost* inside the cell, $Ir$, not what is left at the terminals.",
+        "Used a current of $1.5\\ \\mathrm{A}$, from dividing the emf by the internal resistance alone and ignoring the lamp.",
+        "Correct. $I=0.50\\ \\mathrm{A}$, so the terminal voltage is $1.5-(0.50)(0.50)=1.25\\ \\mathrm{V}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1.5 - (1.5 / (2.5 + 0.50)) * 0.50",
+        "expected": 1.25,
+        "tolerance": 1e-9,
+        "unit": "V"
+      }
+    }
+  ]
+}

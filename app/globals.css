@@ -1,0 +1,210 @@
+@import 'tailwindcss';
+@import 'katex/dist/katex.min.css';
+
+/* Dark mode is a class on <html>, set before paint by the script in layout.tsx,
+   so there is no flash of the wrong theme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * The look is the material of a Chinese exam room: grey-green squared
+ * exercise-book paper, carbon ink, royal-blue fountain-pen ink for anything you
+ * can act on, the red ink an answer card is printed in (and a teacher marks
+ * with), and a highlighter for questions flagged to come back to.
+ *
+ * Fonts come from next/font in layout.tsx, which self-hosts them at build time,
+ * so no request ever goes to a third party.
+ */
+@theme inline {
+  --font-sans: var(--font-ui), ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: var(--font-paper), 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+
+  --color-paper: var(--paper);
+  --color-sheet: var(--sheet);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-pen: var(--pen);
+}
+
+:root {
+  color-scheme: light;
+
+  /* Exercise-book paper, and the squares printed on it. */
+  --paper: #eef2ec;
+  --grid: #dfe7dc;
+  /* The printed sheet a question sits on. */
+  --sheet: #fbfcfa;
+  --paper-sunk: #e4eae1;
+  --line: #c9d3c6;
+
+  /* Carbon ink for reading, royal-blue ink for acting. */
+  --ink: #1a2233;
+  --ink-soft: #536079;
+  --brand: #1f3f7a;
+  --brand-soft: #e1e8f4;
+
+  /* Answer-card red: the printed bubbles, the margin rule, the marking pen. */
+  --pen: #c8322b;
+  --pen-soft: #f7e2de;
+
+  /* Pencil graphite, for a filled bubble. */
+  --graphite: #2b2f36;
+
+  --good: #1e7352;
+  --good-soft: #dcefe4;
+  --bad: #b8281f;
+  --bad-soft: #f7e2de;
+  --warn: #6e5300;
+  --warn-soft: #f7eaa8;
+  --highlight: #f1d84e;
+}
+
+/* Night study: the same desk with the lamp on. */
+.dark {
+  color-scheme: dark;
+  --paper: #121a2b;
+  --grid: #18223a;
+  --sheet: #17213a;
+  --paper-sunk: #1c2742;
+  --line: #2d3a57;
+  --ink: #e6eaf2;
+  --ink-soft: #9ca7bd;
+  --brand: #93b4f2;
+  --brand-soft: #1f2d4f;
+  --pen: #ff7b6b;
+  --pen-soft: #3a1f26;
+  --graphite: #dde3ee;
+  --good: #5fd3a2;
+  --good-soft: #123428;
+  --bad: #ff7b6b;
+  --bad-soft: #3a1f26;
+  --warn: #f0d65e;
+  --warn-soft: #3a3417;
+  --highlight: #8c7a1c;
+}
+
+html {
+  /* Stops the layout jumping sideways when a page grows past one screen. */
+  scrollbar-gutter: stable;
+  /* The sticky header: two rows on a phone, one from 640px up. */
+  --header-h: 5.5rem;
+}
+
+@media (min-width: 40rem) {
+  html {
+    --header-h: 3.5rem;
+  }
+}
+
+body {
+  background-color: var(--paper);
+  /* Squared paper, at the 5 mm pitch of a Chinese exercise book. */
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: -1px -1px;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern';
+}
+
+.font-serif {
+  font-optical-sizing: auto;
+}
+
+/* Visible focus for keyboard users, invisible for mouse users. */
+:focus-visible {
+  outline: 2px solid var(--pen);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- The answer card -----------------------------------------------------
+   The one piece of motion on the site: on the home page the card fills in,
+   bubble by bubble, once. Each bubble carries its own delay. */
+@keyframes pencil-in {
+  from {
+    background-color: transparent;
+    border-color: var(--pen);
+    color: var(--pen);
+  }
+  to {
+    background-color: var(--graphite);
+    border-color: var(--graphite);
+    color: var(--sheet);
+  }
+}
+
+.bubble-fill {
+  animation: pencil-in 140ms ease-out both;
+}
+
+/* --- KaTeX ---------------------------------------------------------------
+   Long expressions must scroll inside their own box rather than pushing the
+   page sideways on a phone. */
+.katex {
+  font-size: 1.05em;
+}
+
+.katex-display {
+  margin: 0.75rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.katex-display > .katex {
+  white-space: normal;
+}
+
+/* A LaTeX chunk that fails to parse renders as its own source, in red, so a
+   broken question is obvious rather than silently blank. */
+.katex-error {
+  color: var(--bad);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+
+/* --- Figures -------------------------------------------------------------
+   Question SVGs draw with currentColor so they follow the theme. */
+.question-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 22rem;
+  margin-inline: auto;
+  color: var(--ink);
+}
+
+@media print {
+  body {
+    background-image: none;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

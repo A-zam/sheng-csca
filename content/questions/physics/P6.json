@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P6",
+  "questions": [
+    {
+      "id": "physics-P6.1-001",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.1",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Simple harmonic motion",
+      "difficulty": 1,
+      "stem": "The pendulum in a wall clock takes $2.0\\ \\mathrm{s}$ to complete one full swing, out and back. Its frequency of oscillation is",
+      "options": [
+        "$0.50\\ \\mathrm{Hz}$",
+        "$1.0\\ \\mathrm{Hz}$",
+        "$2.0\\ \\mathrm{Hz}$",
+        "$4.0\\ \\mathrm{Hz}$"
+      ],
+      "correctIndex": 0,
+      "solution": "\"One full swing, out and back\" is one complete oscillation, so the period is\n$$T=2.0\\ \\mathrm{s}.$$\n\nFrequency counts oscillations per second, which is the reciprocal of the period:\n$$f=\\frac{1}{T}=\\frac{1}{2.0}=0.50\\ \\mathrm{Hz}.$$\n\nA slow pendulum has a low frequency. Anything above $1\\ \\mathrm{Hz}$ would mean more than one swing a second.",
+      "distractorRationale": [
+        "Correct. $f=1/T=1/2.0=0.50\\ \\mathrm{Hz}$.",
+        "Counted the outward journey alone as one oscillation, halving the period to $1.0\\ \\mathrm{s}$. A full oscillation returns to the starting point.",
+        "Quoted the period back as though it were the frequency. The two are reciprocals, not the same number.",
+        "Doubled the period rather than inverting it."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1 / 2.0",
+        "expected": 0.5,
+        "tolerance": 1e-9,
+        "unit": "Hz"
+      }
+    },
+    {
+      "id": "physics-P6.1-002",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.1",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Simple harmonic motion",
+      "difficulty": 2,
+      "stem": "The cone of a loudspeaker moves back and forth in simple harmonic motion $250$ times each second. The period of its motion is",
+      "options": [
+        "$0.25\\ \\mathrm{s}$",
+        "$4.0 \\times 10^{-3}\\ \\mathrm{s}$",
+        "$2.5 \\times 10^{-3}\\ \\mathrm{s}$",
+        "$250\\ \\mathrm{s}$"
+      ],
+      "correctIndex": 1,
+      "solution": "$250$ oscillations each second is a frequency of $f=250\\ \\mathrm{Hz}$.\n\nThe period is the time for one oscillation, so it is the reciprocal:\n$$T=\\frac{1}{f}=\\frac{1}{250}=0.0040\\ \\mathrm{s}=4.0 \\times 10^{-3}\\ \\mathrm{s}.$$\n\nA useful check on the size: $250$ oscillations share one second between them, so each must take a small fraction of a second.",
+      "distractorRationale": [
+        "Divided by $4$ rather than by $250$, perhaps from reading $250$ as $4$ oscillations. The answer must be far smaller than a second.",
+        "Correct. $T=1/250=4.0 \\times 10^{-3}\\ \\mathrm{s}$.",
+        "Used $1/400$, from halving the frequency somewhere in the arithmetic.",
+        "Quoted the frequency as a time. Frequency is counted per second; the period is measured in seconds."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1 / 250",
+        "expected": 0.004,
+        "tolerance": 1e-9,
+        "unit": "s"
+      }
+    },
+    {
+      "id": "physics-P6.1-003",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.1",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Simple harmonic motion",
+      "difficulty": 3,
+      "stem": "A trolley attached to a spring slides back and forth on a smooth bench in simple harmonic motion. At the instant it passes through the middle of its travel, which quantity is at its largest?",
+      "options": [
+        "$\\text{Its displacement from the middle}$",
+        "$\\text{The force the spring exerts on it}$",
+        "$\\text{Its speed}$",
+        "$\\text{Its acceleration}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The middle of the travel is the equilibrium position, where the spring is neither stretched nor compressed.\n\nThree of these quantities go to **zero** there, and for the same reason. Displacement is zero because that is what \"the middle\" means. The spring force is zero because the spring is at its natural length. Acceleration is zero because the force is.\n\nSpeed behaves the other way round. Moving from an end towards the middle, the spring does positive work on the trolley the whole way, so kinetic energy keeps rising and peaks exactly as the trolley crosses the centre. After that the spring starts opposing the motion and the trolley slows.\n\nSo speed is greatest at the middle, and greatest exactly where the other three are least.",
+      "distractorRationale": [
+        "Displacement is measured from the middle, so at the middle it is zero — its smallest value, not its largest.",
+        "The spring is at its natural length there, so it pulls and pushes with no force at all.",
+        "Correct. All the energy is kinetic at the equilibrium position, so the trolley is moving fastest there.",
+        "Acceleration is proportional to the restoring force, which is zero at the middle. It peaks at the two ends instead."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "In SHM the restoring force is proportional to displacement, so at zero displacement the force and hence the acceleration are also zero. Energy conservation puts all the energy into kinetic form there, making speed maximal. Only option C is at a maximum; the other three are simultaneously at a minimum."
+      }
+    },
+    {
+      "id": "physics-P6.2-001",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.2",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Mechanical waves: speed, frequency and wavelength",
+      "difficulty": 1,
+      "stem": "A wave travelling along a stretched rope has a wavelength of $3.0\\ \\mathrm{m}$ and a frequency of $20\\ \\mathrm{Hz}$. How fast does it travel?",
+      "options": [
+        "$6.7\\ \\mathrm{m/s}$",
+        "$23\\ \\mathrm{m/s}$",
+        "$60\\ \\mathrm{m/s}$",
+        "$0.15\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 2,
+      "solution": "In one period the wave advances exactly one wavelength. Doing that $f$ times a second gives\n$$v=f\\lambda.$$\n\nSubstitute:\n$$v=20 \\times 3.0=60\\ \\mathrm{m/s}.$$",
+      "distractorRationale": [
+        "Divided instead of multiplying: $20/3.0$. Speed grows with both frequency and wavelength, so neither belongs on the bottom.",
+        "Added the two numbers. They carry different units, so adding them is not a legal operation.",
+        "Correct. $v=f\\lambda=20 \\times 3.0=60\\ \\mathrm{m/s}$.",
+        "Divided the wrong way round, $3.0/20$, which gives a period-like quantity rather than a speed."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "20 * 3.0",
+        "expected": 60,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P6.2-002",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.2",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Mechanical waves: speed, frequency and wavelength",
+      "difficulty": 2,
+      "stem": "Ripples cross a pond towards a wooden post. Five complete ripples pass the post in $2.0\\ \\mathrm{s}$, and successive crests are $0.40\\ \\mathrm{m}$ apart. The ripples travel at",
+      "options": [
+        "$0.80\\ \\mathrm{m/s}$",
+        "$2.5\\ \\mathrm{m/s}$",
+        "$4.0\\ \\mathrm{m/s}$",
+        "$1.0\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — get the frequency.** Five complete ripples in $2.0\\ \\mathrm{s}$ means\n$$f=\\frac{5}{2.0}=2.5\\ \\mathrm{Hz}.$$\n\n**Step 2 — read off the wavelength.** The distance between successive crests *is* the wavelength:\n$$\\lambda=0.40\\ \\mathrm{m}.$$\n\n**Step 3 — combine.**\n$$v=f\\lambda=2.5 \\times 0.40=1.0\\ \\mathrm{m/s}.$$",
+      "distractorRationale": [
+        "Divided the $2.0\\ \\mathrm{s}$ by the number of ripples to get a period of $0.40\\ \\mathrm{s}$, then multiplied by the wavelength — mixing up which quantity the $0.40$ describes.",
+        "Stopped at the frequency, $2.5\\ \\mathrm{Hz}$, and reported it as a speed.",
+        "Used the count of ripples as a frequency directly, $5 \\times 0.80$, ignoring that they were spread over two seconds.",
+        "Correct. $f=2.5\\ \\mathrm{Hz}$ and $\\lambda=0.40\\ \\mathrm{m}$, so $v=1.0\\ \\mathrm{m/s}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(5 / 2.0) * 0.40",
+        "expected": 1,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P6.2-003",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.2",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Mechanical waves: speed, frequency and wavelength",
+      "difficulty": 3,
+      "stem": "A pulse train runs along a slinky at $12\\ \\mathrm{m/s}$. Each coil takes $0.25\\ \\mathrm{s}$ to complete one oscillation. The wavelength is",
+      "options": [
+        "$48\\ \\mathrm{m}$",
+        "$3.0\\ \\mathrm{m}$",
+        "$0.021\\ \\mathrm{m}$",
+        "$12.25\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 1,
+      "solution": "The time for one oscillation is the period, so $T=0.25\\ \\mathrm{s}$.\n\nThe wave advances one wavelength in one period, so\n$$\\lambda=vT=12 \\times 0.25=3.0\\ \\mathrm{m}.$$\n\nEquivalently, $f=1/0.25=4.0\\ \\mathrm{Hz}$ and $\\lambda=v/f=12/4.0=3.0\\ \\mathrm{m}$ — the same answer by the longer route.",
+      "distractorRationale": [
+        "Divided by the period instead of multiplying: $12/0.25$. That gives $v/T$, which is not a length.",
+        "Correct. $\\lambda=vT=12 \\times 0.25=3.0\\ \\mathrm{m}$.",
+        "Inverted the whole expression, computing $T/v$.",
+        "Added the two given numbers, which have different units."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "12 * 0.25",
+        "expected": 3,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P6.2-004",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.2",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Mechanical waves: speed, frequency and wavelength",
+      "difficulty": 4,
+      "stem": "A wave crosses a boundary into a second material, where it travels at half its original speed. Compared with their values in the first material, the frequency and the wavelength in the second material are",
+      "options": [
+        "$\\text{frequency halved, wavelength unchanged}$",
+        "$\\text{frequency halved, wavelength halved}$",
+        "$\\text{frequency unchanged, wavelength halved}$",
+        "$\\text{frequency unchanged, wavelength unchanged}$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Frequency is set by the source, not by the material.** The far side of the boundary is driven by the near side: every oscillation arriving must produce one leaving, or the boundary would have to store or destroy oscillations. So $f$ is unchanged.\n\n**Wavelength then has to absorb the change.** With $v=f\\lambda$ and $f$ fixed, $\\lambda$ is proportional to $v$:\n$$\\lambda_{2}=\\frac{v_{2}}{f}=\\frac{v_{1}/2}{f}=\\frac{\\lambda_{1}}{2}.$$\n\nHalving the speed halves the wavelength. Picture the wave crowding up as it slows, like traffic entering a slow zone: the same number of cars per minute, packed closer together.",
+      "distractorRationale": [
+        "Changes the quantity that is fixed and fixes the quantity that changes. Frequency is imposed by the source across the boundary.",
+        "Halves both. That would make $v=f\\lambda$ fall by a factor of four, not two.",
+        "Correct. Frequency carries over from the source; wavelength halves along with the speed.",
+        "If neither changed, the speed could not change either, since $v=f\\lambda$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Frequency is fixed by the source and is continuous across a boundary, since oscillations cannot accumulate at the interface. With f fixed and v = f x lambda, halving v halves lambda. Only option C keeps f constant while halving lambda."
+      }
+    },
+    {
+      "id": "physics-P6.3-001",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.3",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Sound waves",
+      "difficulty": 2,
+      "stem": "A survey vessel sends a sound pulse straight down and detects its echo from the seabed $0.60\\ \\mathrm{s}$ later. Sound travels at $1500\\ \\mathrm{m/s}$ in the water. The seabed lies at a depth of",
+      "options": [
+        "$450\\ \\mathrm{m}$",
+        "$900\\ \\mathrm{m}$",
+        "$1800\\ \\mathrm{m}$",
+        "$2500\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 0,
+      "solution": "The pulse travels **down and back**, so in $0.60\\ \\mathrm{s}$ it covers twice the depth.\n\nTotal distance travelled:\n$$s=vt=1500 \\times 0.60=900\\ \\mathrm{m}.$$\n\nThat is the round trip, so the depth is half of it:\n$$d=\\frac{900}{2}=450\\ \\mathrm{m}.$$",
+      "distractorRationale": [
+        "Correct. The round trip is $900\\ \\mathrm{m}$, so the depth is $450\\ \\mathrm{m}$.",
+        "The total distance the pulse travelled, forgetting that the journey is there and back.",
+        "Doubled instead of halving, giving four times the depth.",
+        "Divided the speed by the time rather than multiplying."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1500 * 0.60 / 2",
+        "expected": 450,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P6.3-002",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.3",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Sound waves",
+      "difficulty": 3,
+      "stem": "An organ pipe sounds a note of $680\\ \\mathrm{Hz}$. Sound travels through the surrounding air at $340\\ \\mathrm{m/s}$. The wavelength of the note is",
+      "options": [
+        "$2.0\\ \\mathrm{m}$",
+        "$0.50\\ \\mathrm{m}$",
+        "$2.3 \\times 10^{5}\\ \\mathrm{m}$",
+        "$1.0\\ \\mathrm{m}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Rearrange $v=f\\lambda$ for the wavelength:\n$$\\lambda=\\frac{v}{f}=\\frac{340}{680}=0.50\\ \\mathrm{m}.$$\n\nA check on the size: the frequency is twice the numerical value of the speed, so the wavelength must be half a metre. Audible notes have wavelengths from a few centimetres to several metres, so this is in the right region.",
+      "distractorRationale": [
+        "Divided the wrong way round, $680/340$. That gives a number per metre, not a length.",
+        "Correct. $\\lambda=v/f=340/680=0.50\\ \\mathrm{m}$.",
+        "Multiplied the speed by the frequency instead of dividing. That would put a single sound wave far beyond the length of the pipe.",
+        "Halved the frequency before dividing, or rounded $340/680$ up to $1$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "340 / 680",
+        "expected": 0.5,
+        "tolerance": 1e-9,
+        "unit": "m"
+      }
+    },
+    {
+      "id": "physics-P6.3-003",
+      "subject": "physics",
+      "topic": "P6",
+      "subtopic": "P6.3",
+      "syllabusRef": "P-1 / Mechanics / Vibrations and Waves / Sound waves",
+      "difficulty": 5,
+      "stem": "A tuning fork of frequency $512\\ \\mathrm{Hz}$ is struck in air, where sound travels at $340\\ \\mathrm{m/s}$, and then held under water, where sound travels at $1500\\ \\mathrm{m/s}$. The wavelength under water is how many times the wavelength in air?",
+      "options": [
+        "$0.23$", "$1.00$", "$4.41$", "$2.93$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — decide what stays fixed.** The fork is the source, and its prongs vibrate at $512\\ \\mathrm{Hz}$ whatever surrounds them. So the frequency is the same in both media, and the given $512\\ \\mathrm{Hz}$ never has to be used numerically.\n\n**Step 2 — form the ratio.** From $\\lambda=v/f$ with $f$ common to both,\n$$\\frac{\\lambda_{\\text{water}}}{\\lambda_{\\text{air}}}=\\frac{v_{\\text{water}}/f}{v_{\\text{air}}/f}=\\frac{v_{\\text{water}}}{v_{\\text{air}}}=\\frac{1500}{340}=4.41.$$\n\nSound travels faster in water, so at the same frequency each wave is stretched longer — by the same factor the speed increased.",
+      "distractorRationale": [
+        "Inverted the ratio, $340/1500$. Faster travel at fixed frequency means longer waves, so the factor must exceed $1$.",
+        "Assumes the wavelength is a property of the source. It is the *frequency* that carries over; the wavelength follows the medium.",
+        "Correct. At fixed frequency, wavelength scales with speed: $1500/340=4.41$.",
+        "Divided $1500$ by $512$, using the frequency as if it were the speed in air."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "1500 / 340",
+        "expected": 4.411764705882353,
+        "tolerance": 0.005
+      }
+    }
+  ]
+}

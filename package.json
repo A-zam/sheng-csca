@@ -1,0 +1,47 @@
+{
+  "name": "csca-prep",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "npm run build:data && next dev",
+    "build": "npm run build:data && next build",
+    "build:data": "node scripts/build-public-data.ts",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "validate:content": "node scripts/validate-content.ts",
+    "verify:answers": "node scripts/verify-answers.ts",
+    "check:originality": "node scripts/check-originality.ts",
+    "check:batch": "node scripts/check-batch.ts",
+    "add:questions": "node scripts/add-questions.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run lint && npm run validate:content && npm run verify:answers && npm run check:originality && npm run test",
+    "check:leak": "node scripts/check-no-leak.ts",
+    "verify:all": "npm run check && npm run build && npm run check:leak"
+  },
+  "dependencies": {
+    "katex": "^0.18.7",
+    "next": "^16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "eslint": "^9.37.0",
+    "eslint-config-next": "^16.3.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.0"
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M15",
+  "questions": [
+    {
+      "id": "math-M15.1-001",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.1",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / Mean, median, mode and range",
+      "difficulty": 1,
+      "stem": "On seven evenings a café had $6$, $9$, $6$, $11$, $15$, $6$ and $12$ tables occupied at eight o'clock. Find the mode.",
+      "options": ["$6$", "$9$", "$11$", "$15$"],
+      "correctIndex": 0,
+      "solution": "The mode is the value that occurs most often. It is read off from the counts, not from the size of the values.\n\nTally the seven readings:\n$$6 \\text{ occurs } 3 \\text{ times},\\quad 9,\\ 11,\\ 12,\\ 15 \\text{ occur once each}.$$\n\nNo other value reaches three, so the mode is $6$.",
+      "distractorRationale": [
+        "Correct. $6$ appears three times and every other value appears once.",
+        "This is the median: the middle value once the list is sorted, which is not the same as the most frequent value.",
+        "This is the fourth entry of the list as it is written down. The middle of an unsorted list carries no meaning.",
+        "This is the largest value. The mode is the most common value, not the biggest one."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "[6, 9, 11, 12, 15].reduce(function (best, v) { return [6,9,6,11,15,6,12].filter(function (w) { return w === v; }).length > [6,9,6,11,15,6,12].filter(function (w) { return w === best; }).length ? v : best; })",
+        "expected": 6,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.1-002",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.1",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / Mean, median, mode and range",
+      "difficulty": 2,
+      "stem": "Over one week a kiosk sold $14$, $9$, $22$, $9$, $17$, $30$ and $12$ newspapers on its seven days. Find the range.",
+      "options": ["$9$", "$21$", "$30$", "$39$"],
+      "correctIndex": 1,
+      "solution": "The range measures spread. It is the largest value minus the smallest value.\n\nThe largest sale is $30$ and the smallest is $9$, so\n$$\\text{range} = 30 - 9 = 21.$$\n\nThe range is a single number, not a pair of numbers.",
+      "distractorRationale": [
+        "This is the smallest value, which is also the mode. The range is a difference, not one of the readings.",
+        "Correct. $30 - 9 = 21$.",
+        "This is the largest value on its own; the smallest was never subtracted.",
+        "Added the two extreme values instead of subtracting them."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.max(14, 9, 22, 9, 17, 30, 12) - Math.min(14, 9, 22, 9, 17, 30, 12)",
+        "expected": 21,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.1-003",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.1",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / Mean, median, mode and range",
+      "difficulty": 3,
+      "stem": "Six parcels have masses, in kilograms, of $15$, $4$, $11$, $16$, $6$ and $14$. Find the median mass.",
+      "options": ["$11$", "$12$", "$12.5$", "$14$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — sort the masses.**\n$$4,\\ 6,\\ 11,\\ 14,\\ 15,\\ 16.$$\n\n**Step 2 — locate the middle.** There are $6$ values, an even count, so no single value sits in the middle. The two central values are the third and the fourth, namely $11$ and $14$.\n\n**Step 3 — average them.**\n$$\\text{median} = \\frac{11 + 14}{2} = 12.5.$$",
+      "distractorRationale": [
+        "Took the lower of the two central values on its own. It is also the mean, $\\dfrac{66}{6}$, which for this data happens to coincide with it.",
+        "This is the range, $16 - 4$, a measure of spread rather than of centre.",
+        "Correct. With an even count the median is the mean of the two central values, $\\dfrac{11 + 14}{2} = 12.5$.",
+        "Took the upper of the two central values on its own, instead of averaging the pair."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "[15, 4, 11, 16, 6, 14].slice().sort(function (a, b) { return a - b; }).slice(2, 4).reduce(function (a, b) { return a + b; }, 0) / 2",
+        "expected": 12.5,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.1-004",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.1",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / Mean, median, mode and range",
+      "difficulty": 3,
+      "stem": "Six scores have a mean of $12$. A seventh score is included and the mean of all seven rises to $13$. Find the seventh score.",
+      "options": ["$6$", "$7$", "$13$", "$19$"],
+      "correctIndex": 3,
+      "solution": "A mean is a total divided by a count, so turn each mean back into a total.\n\n**Step 1 — the total before.**\n$$6 \\times 12 = 72.$$\n\n**Step 2 — the total after.** There are now seven scores:\n$$7 \\times 13 = 91.$$\n\n**Step 3 — the difference is the new score.**\n$$91 - 72 = 19.$$\n\nA check: the new score has to sit above $13$ to pull the mean upwards, and $19$ does.",
+      "distractorRationale": [
+        "Used $6 \\times 13 - 6 \\times 12$, keeping the count at six after the extra score was added.",
+        "Used $7 \\times 13 - 7 \\times 12$, applying the new count of seven to the old total as well.",
+        "Restated the new mean. A single value equal to the mean would leave the mean unchanged, not raise it.",
+        "Correct. $7 \\times 13 - 6 \\times 12 = 91 - 72 = 19$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "7 * 13 - 6 * 12",
+        "expected": 19,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.2-001",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.2",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / Variance and standard deviation",
+      "difficulty": 2,
+      "stem": "Find the variance of $4$, $6$, $8$, $10$ and $12$.",
+      "options": ["$2\\sqrt{2}$", "$8$", "$10$", "$40$"],
+      "correctIndex": 1,
+      "solution": "**Step 1 — the mean.**\n$$\\bar{x} = \\frac{4 + 6 + 8 + 10 + 12}{5} = \\frac{40}{5} = 8.$$\n\n**Step 2 — the deviations and their squares.**\n$$-4,\\ -2,\\ 0,\\ 2,\\ 4 \\quad\\longrightarrow\\quad 16,\\ 4,\\ 0,\\ 4,\\ 16.$$\n\n**Step 3 — average the squares.** The squared deviations total $40$, and there are $5$ values:\n$$s^{2} = \\frac{40}{5} = 8.$$",
+      "distractorRationale": [
+        "This is $\\sqrt{8}$, the standard deviation. The question asks for the variance, which is the square of it.",
+        "Correct. The squared deviations total $40$, and $\\dfrac{40}{5} = 8$.",
+        "Divided by $4$ instead of by $5$. The divisor is the number of values, not one fewer.",
+        "Left the total of the squared deviations undivided."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "((4-8)*(4-8) + (6-8)*(6-8) + (8-8)*(8-8) + (10-8)*(10-8) + (12-8)*(12-8)) / 5",
+        "expected": 8,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.2-002",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.2",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / Variance and standard deviation",
+      "difficulty": 3,
+      "stem": "Find the standard deviation of $3$, $5$, $6$, $7$ and $9$.",
+      "options": ["$2$", "$\\sqrt{5}$", "$4$", "$20$"],
+      "correctIndex": 0,
+      "solution": "**Step 1 — the mean.**\n$$\\bar{x} = \\frac{3 + 5 + 6 + 7 + 9}{5} = \\frac{30}{5} = 6.$$\n\n**Step 2 — the squared deviations.**\n$$(-3)^{2} + (-1)^{2} + 0^{2} + 1^{2} + 3^{2} = 9 + 1 + 0 + 1 + 9 = 20.$$\n\n**Step 3 — the variance.**\n$$s^{2} = \\frac{20}{5} = 4.$$\n\n**Step 4 — take the square root.**\n$$s = \\sqrt{4} = 2.$$",
+      "distractorRationale": [
+        "Correct. The variance is $\\dfrac{20}{5} = 4$, and its square root is $2$.",
+        "Divided the total $20$ by $4$ rather than by $5$ before taking the root, so the divisor was one too small.",
+        "Stopped at the variance and never took the square root.",
+        "Left the total of the squared deviations undivided and unrooted."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(((3-6)*(3-6) + (5-6)*(5-6) + (6-6)*(6-6) + (7-6)*(7-6) + (9-6)*(9-6)) / 5)",
+        "expected": 2,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.2-003",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.2",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / Variance and standard deviation",
+      "difficulty": 3,
+      "stem": "The variance of $x_{1},\\ x_{2},\\ \\ldots,\\ x_{8}$ is $3$. Find the variance of $2x_{1}+5,\\ 2x_{2}+5,\\ \\ldots,\\ 2x_{8}+5$.",
+      "options": ["$3$", "$6$", "$11$", "$12$"],
+      "correctIndex": 3,
+      "solution": "Variance measures spread about the mean, so treat the two parts of the transformation separately.\n\n**The $+5$.** Adding $5$ to every value slides the whole data set along, and the mean slides with it. Each deviation from the mean is unchanged, so the variance is unchanged.\n\n**The $\\times 2$.** Doubling every value doubles every deviation. Variance uses *squared* deviations, so it is multiplied by $2^{2} = 4$.\n\nIn general, for $y = ax + b$,\n$$\\operatorname{Var}(y) = a^{2}\\operatorname{Var}(x) = 2^{2} \\times 3 = 12.$$",
+      "distractorRationale": [
+        "Assumed the transformation leaves the variance alone. That is true of the $+5$, but not of the $\\times 2$.",
+        "Multiplied by the scale factor $2$ instead of by its square $2^{2}$.",
+        "Applied the whole transformation to the variance itself, computing $2 \\times 3 + 5$. The shift $+5$ must not be carried across.",
+        "Correct. $\\operatorname{Var}(2x + 5) = 2^{2} \\times 3 = 12$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * 2 * 3",
+        "expected": 12,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.2-004",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.2",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / Variance and standard deviation",
+      "difficulty": 4,
+      "stem": "The mean of six measurements is $5$, and the sum of their squares is $174$. Find the variance of the six measurements.",
+      "options": ["$2$", "$4$", "$24$", "$29$"],
+      "correctIndex": 1,
+      "solution": "The individual measurements are not given, so use the form of the variance that needs only totals:\n$$s^{2} = \\overline{x^{2}} - \\bar{x}^{2},$$\nthe mean of the squares minus the square of the mean.\n\n**Step 1 — the mean of the squares.**\n$$\\overline{x^{2}} = \\frac{174}{6} = 29.$$\n\n**Step 2 — the square of the mean.**\n$$\\bar{x}^{2} = 5^{2} = 25.$$\n\n**Step 3 — subtract.**\n$$s^{2} = 29 - 25 = 4.$$",
+      "distractorRationale": [
+        "This is $\\sqrt{4}$, the standard deviation, not the variance.",
+        "Correct. $\\dfrac{174}{6} - 5^{2} = 29 - 25 = 4$.",
+        "Subtracted the mean itself rather than the square of the mean, computing $29 - 5$.",
+        "Stopped at $\\dfrac{174}{6}$, the mean of the squares, with the $\\bar{x}^{2}$ term never subtracted."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "174 / 6 - 5 * 5",
+        "expected": 4,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.3-001",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.3",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / The binomial distribution",
+      "difficulty": 2,
+      "stem": "Each seed of one variety germinates with probability $0.2$, independently of the others. Four seeds are sown. Find the probability that exactly one germinates.",
+      "options": ["$0.1024$", "$0.2$", "$0.4096$", "$0.5904$"],
+      "correctIndex": 2,
+      "solution": "The four seeds are independent and each has the same germination probability, so the number that germinate is binomial with $n = 4$ and $p = 0.2$.\n\n**Step 1 — one particular arrangement.** One seed germinates and the other three do not:\n$$0.2 \\times 0.8 \\times 0.8 \\times 0.8 = 0.2 \\times 0.8^{3} = 0.1024.$$\n\n**Step 2 — count the arrangements.** The germinating seed can be any one of the four, so there are $\\binom{4}{1} = 4$ arrangements, each with the same probability.\n\n**Step 3 — multiply.**\n$$4 \\times 0.1024 = 0.4096.$$",
+      "distractorRationale": [
+        "This is one arrangement only: the factor $\\binom{4}{1} = 4$ was left out.",
+        "Restated $p$, the germination probability for a single seed.",
+        "Correct. $\\binom{4}{1} \\times 0.2 \\times 0.8^{3} = 4 \\times 0.1024 = 0.4096$.",
+        "This is $1 - 0.8^{4}$, the probability that *at least* one germinates, which also allows two, three or four."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "4 * 0.2 * Math.pow(0.8, 3)",
+        "expected": 0.4096,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.3-002",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.3",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / The binomial distribution",
+      "difficulty": 3,
+      "stem": "A machine seals a carton incorrectly with probability $0.3$, independently of the other cartons. Ten cartons are checked. The probability that exactly two of them are sealed incorrectly is",
+      "options": [
+        "$0.3^{2} \\times 0.7^{8}$",
+        "$10 \\times 0.3^{2} \\times 0.7^{8}$",
+        "$45 \\times 0.3^{2} \\times 0.7^{8}$",
+        "$45 \\times 0.3^{8} \\times 0.7^{2}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The count of badly sealed cartons is binomial with $n = 10$ and $p = 0.3$, so\n$$P(X = k) = \\binom{10}{k} \\, 0.3^{k} \\, 0.7^{\\,10-k}.$$\n\n**Step 1 — the exponents.** Exactly two cartons are sealed incorrectly, so $0.3$ carries the exponent $2$ and the remaining $10 - 2 = 8$ good cartons give $0.7^{8}$.\n\n**Step 2 — the coefficient.** The two faulty cartons can be any two of the ten:\n$$\\binom{10}{2} = \\frac{10 \\times 9}{2 \\times 1} = 45.$$\n\n**Step 3 — put it together.**\n$$P(X = 2) = 45 \\times 0.3^{2} \\times 0.7^{8}.$$",
+      "distractorRationale": [
+        "The exponents are right but the coefficient $\\binom{10}{2}$ is missing, so only one arrangement of the two faulty cartons is counted.",
+        "Used $10$ in place of $\\binom{10}{2} = 45$. That coefficient would suit exactly *one* faulty carton, not two.",
+        "Correct. $\\binom{10}{2} = 45$, and the exponents $2$ and $8$ match the two faulty and eight sound cartons.",
+        "The exponents are swapped: $0.3$ describes a faulty carton, so it must carry the exponent $2$, not $8$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "((10 * 9) / (2 * 1)) * Math.pow(0.3, 2) * Math.pow(0.7, 8)",
+        "expected": 0.2334744405,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.3-003",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.3",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / The binomial distribution",
+      "difficulty": 4,
+      "stem": "A component passes a test with probability $0.6$, independently of the others. One hundred components are tested, and $X$ is the number that pass. Find the variance of $X$.",
+      "options": ["$2\\sqrt{6}$", "$24$", "$40$", "$60$"],
+      "correctIndex": 1,
+      "solution": "$X$ counts successes in a fixed number of independent trials that all share the same success probability, so $X$ is binomial with $n = 100$ and $p = 0.6$.\n\nFor a binomial variable,\n$$E(X) = np, \\qquad \\operatorname{Var}(X) = np(1-p).$$\n\nSubstituting $n = 100$ and $p = 0.6$:\n$$\\operatorname{Var}(X) = 100 \\times 0.6 \\times 0.4 = 24.$$",
+      "distractorRationale": [
+        "This is $\\sqrt{24}$, the standard deviation of $X$. The variance is its square.",
+        "Correct. $np(1-p) = 100 \\times 0.6 \\times 0.4 = 24$.",
+        "Computed $n(1-p) = 100 \\times 0.4$, the expected number of components that fail.",
+        "Computed $np = 100 \\times 0.6$, the mean of $X$ rather than its variance."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "100 * 0.6 * (1 - 0.6)",
+        "expected": 24,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.4-001",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.4",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / The normal distribution",
+      "difficulty": 1,
+      "stem": "A variable $X$ is normally distributed with mean $60$, so its curve is symmetric about $60$. Given $P(X > 72) = 0.15$, find $P(X < 48)$.",
+      "options": ["$0.15$", "$0.35$", "$0.70$", "$0.85$"],
+      "correctIndex": 0,
+      "solution": "Compare the two boundaries with the mean:\n$$72 - 60 = 12, \\qquad 60 - 48 = 12.$$\nThe two values sit the same distance from the mean, one above and one below.\n\nThe curve is symmetric about $60$, so the tail to the left of $48$ is a mirror image of the tail to the right of $72$. Mirror images have equal area:\n$$P(X < 48) = P(X > 72) = 0.15.$$",
+      "distractorRationale": [
+        "Correct. $48$ and $72$ are both $12$ from the mean, so the two outer tails have equal area.",
+        "This is $0.5 - 0.15$, the area between the mean and $72$, not the tail beyond $48$.",
+        "This is $1 - 2 \\times 0.15$, the area between $48$ and $72$ — the middle, not a tail.",
+        "This is $1 - 0.15 = P(X < 72)$, which includes the whole left half of the curve as well as the tail asked for."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 - (0.5 - 0.15)",
+        "expected": 0.15,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.4-002",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.4",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / The normal distribution",
+      "difficulty": 4,
+      "stem": "The masses of a batch of bricks are normally distributed with mean $2.4$ and standard deviation $0.2$, in kilograms. For a normal distribution, $95.44\\%$ of the values lie within two standard deviations of the mean. Find the proportion of bricks with mass below $2.8$ kilograms.",
+      "options": ["$0.0228$", "$0.4772$", "$0.9544$", "$0.9772$"],
+      "correctIndex": 3,
+      "solution": "**Step 1 — measure $2.8$ in standard deviations.**\n$$2.8 = 2.4 + 2 \\times 0.2,$$\nso $2.8$ sits exactly two standard deviations above the mean.\n\n**Step 2 — split the given band.** The stated $0.9544$ covers the band from $2.0$ to $2.8$, which straddles the mean. By symmetry, half of it lies above the mean:\n$$P(2.4 < X < 2.8) = \\frac{0.9544}{2} = 0.4772.$$\n\n**Step 3 — add the lower half of the curve.** Everything below the mean also counts:\n$$P(X < 2.8) = 0.5 + 0.4772 = 0.9772.$$",
+      "distractorRationale": [
+        "This is $\\dfrac{1 - 0.9544}{2}$, the upper tail — the proportion *above* $2.8$, not below it.",
+        "This is half the given band, $P(2.4 < X < 2.8)$, with the lower half of the curve left out.",
+        "This is the stated band itself, $P(2.0 < X < 2.8)$, which wrongly excludes every brick lighter than $2.0$.",
+        "Correct. $0.5 + \\dfrac{0.9544}{2} = 0.9772$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 + 0.9544 / 2",
+        "expected": 0.9772,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.4-003",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.4",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / The normal distribution",
+      "difficulty": 5,
+      "stem": "The lifetime $X$ of a lamp, in hours, is normally distributed with mean $900$, and $P(880 < X < 920) = 0.68$. Two lamps are picked independently. Find the probability that both last longer than $920$ hours.",
+      "options": ["$0.0256$", "$0.1024$", "$0.16$", "$0.32$"],
+      "correctIndex": 0,
+      "solution": "**Step 1 — the area outside the band.** The band from $880$ to $920$ holds $0.68$, so the two tails together hold\n$$1 - 0.68 = 0.32.$$\n\n**Step 2 — split the tails.** The band is centred on the mean $900$, since $900 - 880 = 920 - 900 = 20$. So the two tails are mirror images and share the $0.32$ equally:\n$$P(X > 920) = \\frac{0.32}{2} = 0.16.$$\n\n**Step 3 — two lamps.** The lamps are independent, so multiply:\n$$0.16 \\times 0.16 = 0.0256.$$",
+      "distractorRationale": [
+        "Correct. Each lamp exceeds $920$ hours with probability $0.16$, and $0.16^{2} = 0.0256$.",
+        "Squared $0.32$, the two tails together, instead of squaring the single upper tail $0.16$.",
+        "This is the probability for one lamp only; the second lamp was never brought in.",
+        "This is $1 - 0.68$, the chance that one lamp falls outside the band — either tail, and for one lamp only."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.pow((1 - 0.68) / 2, 2)",
+        "expected": 0.0256,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M15.4-004",
+      "subject": "math",
+      "topic": "M15",
+      "subtopic": "M15.4",
+      "syllabusRef": "M-4 / Probability and Statistics / Statistics and Distributions / The normal distribution",
+      "difficulty": 5,
+      "stem": "Marks in a test are normally distributed with mean $70$ and standard deviation $8$. For a normal distribution, $68.26\\%$ of values lie within one standard deviation of the mean and $95.44\\%$ within two. Of $2000$ candidates, estimate how many scored between $62$ and $86$.",
+      "options": ["$955$", "$1365$", "$1637$", "$1909$"],
+      "correctIndex": 2,
+      "solution": "**Step 1 — put the two boundaries in standard deviations.**\n$$62 = 70 - 8 \\quad (\\text{one below}), \\qquad 86 = 70 + 2 \\times 8 \\quad (\\text{two above}).$$\nThe interval is lopsided, so the two given percentages cannot be used directly. Split it at the mean.\n\n**Step 2 — the part below the mean.** Half of the one-standard-deviation band:\n$$P(62 < X < 70) = \\frac{0.6826}{2} = 0.3413.$$\n\n**Step 3 — the part above the mean.** Half of the two-standard-deviation band:\n$$P(70 < X < 86) = \\frac{0.9544}{2} = 0.4772.$$\n\n**Step 4 — add, then scale to the group.**\n$$0.3413 + 0.4772 = 0.8185, \\qquad 2000 \\times 0.8185 = 1637.$$",
+      "distractorRationale": [
+        "Used $0.4772$ alone, the part from $70$ to $86$, leaving out everything between $62$ and the mean.",
+        "Used the full one-standard-deviation band $0.6826$, which covers $62$ to $78$ — the upper boundary is wrong.",
+        "Correct. $2000 \\times (0.3413 + 0.4772) = 2000 \\times 0.8185 = 1637$.",
+        "Used the full two-standard-deviation band $0.9544$, which covers $54$ to $86$ — the lower boundary is wrong."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2000 * (0.6826 / 2 + 0.9544 / 2)",
+        "expected": 1637,
+        "tolerance": 1e-9
+      }
+    }
+  ]
+}

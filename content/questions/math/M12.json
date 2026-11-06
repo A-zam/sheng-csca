@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M12",
+  "questions": [
+    {
+      "id": "math-M12.1-001",
+      "subject": "math",
+      "topic": "M12",
+      "subtopic": "M12.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Plane Geometry / Triangles: angles, similarity and area",
+      "difficulty": 2,
+      "stem": "In $\\triangle ABC$, $\\angle A=2\\angle B$ and $\\angle C=54^{\\circ}$. Find $\\angle B$.",
+      "options": [
+        "$42^\\circ$",
+        "$27^\\circ$",
+        "$63^\\circ$",
+        "$84^\\circ$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — what is left for $A$ and $B$.** The three angles total $180^{\\circ}$, so\n$$\\angle A+\\angle B=180^{\\circ}-54^{\\circ}=126^{\\circ}.$$\n\n**Step 2 — use the ratio.** Replacing $\\angle A$ by $2\\angle B$ turns that into three equal shares:\n$$2\\angle B+\\angle B=126^{\\circ} \\quad\\Longrightarrow\\quad 3\\angle B=126^{\\circ}.$$\n\n**Step 3 — divide.**\n$$\\angle B=42^{\\circ}.$$\n\nThen $\\angle A=84^{\\circ}$, and $84+42+54=180$ as required.",
+      "distractorRationale": [
+        "Correct. $3\\angle B=126^{\\circ}$, so $\\angle B=42^{\\circ}$.",
+        "Halved the given angle $54^{\\circ}$ instead of working with the remaining $126^{\\circ}$.",
+        "Split $126^{\\circ}$ into two equal halves, ignoring that $\\angle A$ is twice $\\angle B$.",
+        "This is $\\angle A$. It is twice the answer, so the two shares were reported the wrong way round."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(180 - 54) / 3",
+        "expected": 42,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M12.1-002",
+      "subject": "math",
+      "topic": "M12",
+      "subtopic": "M12.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Plane Geometry / Triangles: angles, similarity and area",
+      "difficulty": 3,
+      "stem": "Two similar triangles have areas $18$ and $50$. A side of the smaller one is $6$. The matching side of the larger one is",
+      "options": [
+        "$3.6$",
+        "$10$",
+        "$\\dfrac{50}{3}$",
+        "$30$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — areas scale as the square.** If matching lengths are in the ratio $k$, matching areas are in the ratio $k^{2}$. Here\n$$k^{2}=\\frac{50}{18}=\\frac{25}{9}.$$\n\n**Step 2 — take the square root.**\n$$k=\\frac{5}{3}.$$\n\n**Step 3 — scale the side.**\n$$6\\times\\frac{5}{3}=10.$$",
+      "distractorRationale": [
+        "Used $\\dfrac{3}{5}$, shrinking the side instead of enlarging it. The bigger triangle must have the longer side.",
+        "Correct. $k=\\sqrt{\\dfrac{50}{18}}=\\dfrac{5}{3}$, so the side is $6\\times\\dfrac{5}{3}=10$.",
+        "Scaled by the area ratio $\\dfrac{50}{18}$ itself, forgetting that lengths scale by its square root.",
+        "Multiplied by $5$ but never divided by $3$ — only half of the ratio $\\dfrac{5}{3}$ was applied."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "6 * Math.sqrt(50 / 18)",
+        "expected": 10,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M12.1-003",
+      "subject": "math",
+      "topic": "M12",
+      "subtopic": "M12.1",
+      "syllabusRef": "M-3 / Geometry and Algebra / Plane Geometry / Triangles: angles, similarity and area",
+      "difficulty": 4,
+      "stem": "In $\\triangle ABC$, the point $D$ on $BC$ divides it so that $BD:DC=2:3$, and $E$ is the midpoint of $AD$. The area of $\\triangle ABC$ is $40$. Find the area of $\\triangle ABE$.",
+      "options": [
+        "$12$",
+        "$16$",
+        "$8$",
+        "$20$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — cut the big triangle at $D$.** $\\triangle ABD$ and $\\triangle ABC$ share the apex $A$, so they have the same height above the line $BC$. Their areas are therefore in the same ratio as their bases:\n$$[ABD]=\\frac{2}{2+3}\\times 40=16.$$\n\n**Step 2 — cut again at $E$.** Inside $\\triangle ABD$, the point $E$ is the midpoint of $AD$. Triangles $ABE$ and $ABD$ share the apex $B$, and the base $AE$ is half of $AD$, so\n$$[ABE]=\\tfrac12\\times 16=8.$$\n\nA median always halves a triangle's area, whatever its shape.",
+      "distractorRationale": [
+        "Halved $[ADC]=24$ instead of $[ABD]$ — the wrong one of the two pieces was cut.",
+        "Stopped at $[ABD]=16$ and never used the midpoint $E$.",
+        "Correct. $[ABD]=\\dfrac{2}{5}\\times 40=16$, and the median $BE$ halves it to $8$.",
+        "Halved the whole triangle, treating $E$ as though it split $BC$ rather than $AD$."
+      ],
+      "figure": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Triangle ABC with D on BC and E the midpoint of AD\"><polygon points=\"40,140 200,140 90,20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"90\" y1=\"20\" x2=\"104\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"140\" x2=\"97\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"104\" cy=\"140\" r=\"3\" fill=\"currentColor\"/><circle cx=\"97\" cy=\"80\" r=\"3\" fill=\"currentColor\"/><text x=\"85\" y=\"14\" font-size=\"13\" fill=\"currentColor\">A</text><text x=\"28\" y=\"152\" font-size=\"13\" fill=\"currentColor\">B</text><text x=\"202\" y=\"152\" font-size=\"13\" fill=\"currentColor\">C</text><text x=\"100\" y=\"157\" font-size=\"13\" fill=\"currentColor\">D</text><text x=\"78\" y=\"78\" font-size=\"13\" fill=\"currentColor\">E</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "40 * 2 / (2 + 3) / 2",
+        "expected": 8,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M12.2-001",
+      "subject": "math",
+      "topic": "M12",
+      "subtopic": "M12.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Plane Geometry / Circles: chords, tangents and angles",
+      "difficulty": 1,
+      "stem": "$AB$ is a diameter of a circle, and $C$ is a third point on the same circle. Find $\\angle ACB$.",
+      "options": [
+        "$45^\\circ$",
+        "$60^\\circ$",
+        "$180^\\circ$",
+        "$90^\\circ$"
+      ],
+      "correctIndex": 3,
+      "solution": "An inscribed angle is half the central angle standing on the same arc.\n\nHere the chord $AB$ is a diameter, so the central angle $\\angle AOB$ is the straight angle $180^{\\circ}$. The angle at the circumference is therefore\n$$\\angle ACB=\\tfrac12\\times 180^{\\circ}=90^{\\circ}.$$\n\nThis holds wherever $C$ sits on the circle, which is why every triangle drawn on a diameter is right-angled.",
+      "distractorRationale": [
+        "Halved the right angle a second time.",
+        "Assumed $\\triangle ABC$ is equilateral. Nothing in the question fixes the position of $C$, so its angles cannot all be equal.",
+        "Gave the central angle $\\angle AOB$ instead of the angle at the circumference, which is half of it.",
+        "Correct. The inscribed angle on a diameter is half of $180^{\\circ}$, that is $90^{\\circ}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "180 / 2",
+        "expected": 90,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M12.2-002",
+      "subject": "math",
+      "topic": "M12",
+      "subtopic": "M12.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Plane Geometry / Circles: chords, tangents and angles",
+      "difficulty": 3,
+      "stem": "A circle of radius $13$ carries a chord whose distance from the centre is $5$. How long is the chord?",
+      "options": [
+        "$12$",
+        "$24$",
+        "$18$",
+        "$\\sqrt{194}$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — drop a perpendicular.** The perpendicular from the centre to a chord bisects it. That builds a right-angled triangle whose hypotenuse is the radius $13$, whose short leg is the distance $5$, and whose other leg is half the chord.\n\n**Step 2 — Pythagoras.**\n$$\\left(\\tfrac12 \\text{chord}\\right)^{2}=13^{2}-5^{2}=169-25=144,$$\nso half the chord is $12$.\n\n**Step 3 — double it.**\n$$\\text{chord}=24.$$",
+      "distractorRationale": [
+        "Stopped at the half-chord. The perpendicular bisects the chord, so the leg found by Pythagoras must be doubled.",
+        "Correct. Half the chord is $\\sqrt{169-25}=12$, so the chord is $24$.",
+        "Added the radius and the distance, $13+5$, instead of using the right-angled triangle.",
+        "Added the squares, $169+25$, rather than subtracting. The radius is the hypotenuse, so it is the one that gets squared and reduced."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * Math.sqrt(13 * 13 - 5 * 5)",
+        "expected": 24,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M12.2-003",
+      "subject": "math",
+      "topic": "M12",
+      "subtopic": "M12.2",
+      "syllabusRef": "M-3 / Geometry and Algebra / Plane Geometry / Circles: chords, tangents and angles",
+      "difficulty": 4,
+      "stem": "From an outside point $P$, a tangent touches a circle at $T$ with $PT=8$. The line from $P$ through the centre cuts the circle at $A$ and then at $B$, with $PA=4$. Find the radius.",
+      "options": [
+        "$6$",
+        "$8$",
+        "$12$",
+        "$16$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — the tangent-secant relation.** For any point outside a circle, the square of the tangent length equals the product of the two distances along a secant:\n$$PT^{2}=PA\\times PB.$$\n\n**Step 2 — solve for the far intersection.**\n$$64=4\\times PB \\quad\\Longrightarrow\\quad PB=16.$$\n\n**Step 3 — extract the diameter.** $A$ and $B$ are the two ends of the diameter on that line, so\n$$AB=PB-PA=16-4=12.$$\n\n**Step 4 — halve it.**\n$$r=\\tfrac12\\times 12=6.$$",
+      "distractorRationale": [
+        "Correct. $PB=\\dfrac{64}{4}=16$, so $AB=12$ and $r=6$.",
+        "Took the radius to equal the tangent length. The tangent is longer than the radius here, and the two are not equal in general.",
+        "Gave the diameter $AB=12$ without halving it.",
+        "Gave $PB$, the distance from $P$ to the far side of the circle, which still includes the outside segment $PA$."
+      ],
+      "figure": "<svg viewBox=\"0 0 230 145\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Circle with centre O, a tangent from P touching at T, and a secant through P, A, O and B\"><circle cx=\"150\" cy=\"80\" r=\"40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"83\" y1=\"80\" x2=\"192\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"83\" y1=\"80\" x2=\"126\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"83\" cy=\"80\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"110\" cy=\"80\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"150\" cy=\"80\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"190\" cy=\"80\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"126\" cy=\"48\" r=\"2.5\" fill=\"currentColor\"/><text x=\"70\" y=\"85\" font-size=\"13\" fill=\"currentColor\">P</text><text x=\"104\" y=\"96\" font-size=\"13\" fill=\"currentColor\">A</text><text x=\"145\" y=\"96\" font-size=\"13\" fill=\"currentColor\">O</text><text x=\"186\" y=\"96\" font-size=\"13\" fill=\"currentColor\">B</text><text x=\"128\" y=\"41\" font-size=\"13\" fill=\"currentColor\">T</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(8 * 8 / 4 - 4) / 2",
+        "expected": 6,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M12.3-001",
+      "subject": "math",
+      "topic": "M12",
+      "subtopic": "M12.3",
+      "syllabusRef": "M-3 / Geometry and Algebra / Plane Geometry / Polygons, perimeter and area",
+      "difficulty": 3,
+      "stem": "Each interior angle of a regular polygon is $156^{\\circ}$. How many sides has it?",
+      "options": [
+        "$13$",
+        "$24$",
+        "$15$",
+        "$30$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — switch to the exterior angle.** At each vertex the interior and exterior angles form a straight line, so\n$$180^{\\circ}-156^{\\circ}=24^{\\circ}.$$\n\n**Step 2 — use the total.** Walking once round the polygon turns you through $360^{\\circ}$ in all, and a regular polygon shares that equally between its vertices:\n$$n=\\frac{360^{\\circ}}{24^{\\circ}}=15.$$\n\nCheck with the interior-angle sum: $(15-2)\\times 180^{\\circ}=2340^{\\circ}$, and $2340\\div 15=156$.",
+      "distractorRationale": [
+        "Subtracted $2$ from the answer, confusing the side count $n$ with the $n-2$ that appears in the interior-angle sum.",
+        "Reported the exterior angle $24^{\\circ}$ itself rather than the number of vertices it divides into.",
+        "Correct. The exterior angle is $24^{\\circ}$, and $\\dfrac{360^{\\circ}}{24^{\\circ}}=15$.",
+        "Divided $720^{\\circ}$ by the exterior angle. The exterior angles of any polygon add to $360^{\\circ}$, not $720^{\\circ}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "360 / (180 - 156)",
+        "expected": 15,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M12.3-002",
+      "subject": "math",
+      "topic": "M12",
+      "subtopic": "M12.3",
+      "syllabusRef": "M-3 / Geometry and Algebra / Plane Geometry / Polygons, perimeter and area",
+      "difficulty": 4,
+      "stem": "An isosceles trapezium has parallel sides $10$ and $4$, and both slanted sides measure $5$. Find its area.",
+      "options": [
+        "$35$",
+        "$40$",
+        "$56$",
+        "$28$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — find the horizontal overhang.** Dropping a perpendicular from each end of the short side leaves the extra length split evenly between the two ends:\n$$\\frac{10-4}{2}=3.$$\n\n**Step 2 — find the height.** That overhang and the height are the legs of a right-angled triangle whose hypotenuse is the slanted side $5$:\n$$h=\\sqrt{5^{2}-3^{2}}=\\sqrt{25-9}=4.$$\n\n**Step 3 — apply the area rule.**\n$$A=\\tfrac12(10+4)\\times 4=\\tfrac12\\times 14\\times 4=28.$$",
+      "distractorRationale": [
+        "Used the slanted side $5$ as the height. The height is the perpendicular distance, which is shorter than any slanted side.",
+        "Multiplied the two parallel sides, treating the shape as a rectangle.",
+        "Forgot the factor $\\tfrac12$, computing $(10+4)\\times 4$ — that is the area of a rectangle twice the size.",
+        "Correct. The height is $\\sqrt{25-9}=4$, so the area is $\\tfrac12(10+4)(4)=28$."
+      ],
+      "figure": "<svg viewBox=\"0 0 230 145\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Isosceles trapezium with parallel sides 10 and 4 and slanted sides 5\"><polygon points=\"20,112 200,112 146,40 74,40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"74\" y1=\"40\" x2=\"74\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"104\" y=\"130\" font-size=\"13\" fill=\"currentColor\">10</text><text x=\"106\" y=\"33\" font-size=\"13\" fill=\"currentColor\">4</text><text x=\"36\" y=\"82\" font-size=\"13\" fill=\"currentColor\">5</text><text x=\"178\" y=\"82\" font-size=\"13\" fill=\"currentColor\">5</text></svg>",
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * (10 + 4) * Math.sqrt(5 * 5 - Math.pow((10 - 4) / 2, 2))",
+        "expected": 28,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M12.3-003",
+      "subject": "math",
+      "topic": "M12",
+      "subtopic": "M12.3",
+      "syllabusRef": "M-3 / Geometry and Algebra / Plane Geometry / Polygons, perimeter and area",
+      "difficulty": 5,
+      "stem": "A convex polygon has nine times as many diagonals as sides. How many sides has it?",
+      "options": [
+        "$9$",
+        "$12$",
+        "$18$",
+        "$21$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — count the diagonals.** From each of the $n$ vertices you can draw a diagonal to every vertex except itself and its two neighbours, giving $n-3$ each. That counts every diagonal twice, once from each end, so the true count is\n$$\\frac{n(n-3)}{2}.$$\n\n**Step 2 — write the condition.**\n$$\\frac{n(n-3)}{2}=9n.$$\n\n**Step 3 — cancel and solve.** A polygon has $n\\ge 3$, so $n\\neq 0$ and we may divide both sides by $n$:\n$$\\frac{n-3}{2}=9 \\quad\\Longrightarrow\\quad n-3=18 \\quad\\Longrightarrow\\quad n=21.$$\n\nCheck: a $21$-gon has $\\dfrac{21\\times 18}{2}=189$ diagonals, and $189=9\\times 21$.",
+      "distractorRationale": [
+        "Reported the multiplier from the question rather than solving for $n$.",
+        "Dropped the $\\tfrac12$ from the diagonal count, solving $n-3=9$.",
+        "Solved as far as $n-3=18$ and stopped there, never adding the $3$ back.",
+        "Correct. Cancelling $n$ gives $\\dfrac{n-3}{2}=9$, so $n=21$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * 9 + 3",
+        "expected": 21,
+        "tolerance": 1e-9
+      }
+    }
+  ]
+}

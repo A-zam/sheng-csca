@@ -1,0 +1,500 @@
+{
+  "schemaVersion": 1,
+  "subject": "physics",
+  "topic": "P3",
+  "questions": [
+    {
+      "id": "physics-P3.1-001",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.1",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Work and power",
+      "difficulty": 1,
+      "stem": "An airport porter walks at a steady speed along a level corridor, carrying a suitcase at a constant height. The work done on the suitcase by the upward force from the porter's hand is",
+      "options": [
+        "$\\text{positive, because the hand pushes up while the suitcase moves}$",
+        "$\\text{negative, because the weight of the suitcase acts downwards}$",
+        "$\\text{zero, because the force is at right angles to the displacement}$",
+        "$\\text{positive, and equal to the weight multiplied by the distance walked}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Work is not simply force times distance. It is the force multiplied by the distance moved **in the direction of the force**:\n$$W = Fd\\cos\\theta.$$\n\nThe hand pushes straight up. The suitcase travels horizontally along the corridor. The angle between the two is $\\theta = 90^\\circ$, and $\\cos 90^\\circ = 0$.\n\nSo the supporting force does no work at all, however far the porter walks. The porter's muscles certainly use energy holding the case up, but none of it is transferred to the suitcase as work.",
+      "distractorRationale": [
+        "The force points up and the displacement is horizontal. Work counts only the part of the force lying along the displacement, and here that part is zero.",
+        "Confuses the direction of the weight with the direction of the hand's force. In any case a force does no work when it acts at right angles to the motion.",
+        "Correct. $W = Fd\\cos\\theta$ with $\\theta = 90^\\circ$, so $\\cos\\theta = 0$ and the supporting force does no work.",
+        "Multiplies a vertical force by a horizontal distance. Those two directions are perpendicular, so that product is not a work."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Work is Fd cos(theta), and the supporting force is vertical while the displacement is horizontal, so theta = 90 degrees and the work is exactly zero. Only option C states this; the other three either ignore the angle or attribute the wrong direction to the hand's force."
+      }
+    },
+    {
+      "id": "physics-P3.1-002",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.1",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Work and power",
+      "difficulty": 2,
+      "stem": "A worker pushes a loaded trolley along a level warehouse floor with a constant horizontal force of $45\\ \\mathrm{N}$. The trolley slides $12\\ \\mathrm{m}$ in the direction of the push. The work done on the trolley by this force is",
+      "options": [
+        "$540\\ \\mathrm{J}$",
+        "$270\\ \\mathrm{J}$",
+        "$57\\ \\mathrm{J}$",
+        "$3.75\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 0,
+      "solution": "The push is constant and points along the direction of travel, so the work is the force multiplied by the distance:\n$$W = Fd = 45 \\times 12 = 540\\ \\mathrm{J}.$$\n\nNo angle factor is needed, because the force and the displacement point the same way.\n\nThe two quantities are multiplied, not added and not divided. Adding a newton to a metre is meaningless, and dividing gives a force per metre, which is a spring constant rather than an energy.",
+      "distractorRationale": [
+        "Correct. $W = Fd = 45 \\times 12 = 540\\ \\mathrm{J}$.",
+        "Inserted a factor of $\\tfrac12$, imported from the kinetic-energy formula $\\tfrac12 mv^2$. The definition of work carries no such factor.",
+        "Added the force and the distance instead of multiplying them.",
+        "Divided the force by the distance. That produces a force per metre, not an energy."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "45 * 12",
+        "expected": 540,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P3.1-003",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.1",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Work and power",
+      "difficulty": 3,
+      "stem": "A gardener drags a wheelbarrow $20\\ \\mathrm{m}$ across a level lawn by pulling on the handles with a steady force of $150\\ \\mathrm{N}$. The handles are held at $60^\\circ$ to the ground. The work done by the pull is",
+      "options": [
+        "$75\\ \\mathrm{J}$",
+        "$1500\\ \\mathrm{J}$",
+        "$2600\\ \\mathrm{J}$",
+        "$3000\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — resolve the pull along the motion.** Only the part of the force pointing along the displacement does work. The wheelbarrow travels horizontally, so take the horizontal component:\n$$F_x = F\\cos\\theta = 150 \\times \\cos 60^\\circ = 150 \\times 0.5 = 75\\ \\mathrm{N}.$$\n\n**Step 2 — multiply by the distance.**\n$$W = F_x d = 75 \\times 20 = 1500\\ \\mathrm{J}.$$\n\nThe vertical component, $150\\sin 60^\\circ$, points at right angles to the motion and does no work. That is why the cosine appears here and the sine does not.",
+      "distractorRationale": [
+        "Resolved the pull correctly to $150\\cos 60^\\circ = 75\\ \\mathrm{N}$, then stopped and never multiplied by the distance.",
+        "Correct. $W = Fd\\cos\\theta = 150 \\times 20 \\times \\cos 60^\\circ = 1500\\ \\mathrm{J}$.",
+        "Used $\\sin 60^\\circ$ in place of $\\cos 60^\\circ$, resolving the pull perpendicular to the motion rather than along it.",
+        "Used $W = Fd$ and ignored the angle, as though the handles were pulled horizontally."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "150 * 20 * Math.cos(60 * Math.PI / 180)",
+        "expected": 1500,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P3.1-004",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.1",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Work and power",
+      "difficulty": 3,
+      "stem": "A ski lift carries a chair and two skiers of total mass $150\\ \\mathrm{kg}$ up through a vertical height of $80\\ \\mathrm{m}$ in $40\\ \\mathrm{s}$, moving at a steady speed. The useful power delivered by the lift motor is (Take $g=10\\ \\mathrm{m/s^2}$.)",
+      "options": [
+        "$300\\ \\mathrm{W}$",
+        "$1500\\ \\mathrm{W}$",
+        "$1.2 \\times 10^{5}\\ \\mathrm{W}$",
+        "$3000\\ \\mathrm{W}$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — find the useful work.** The chair rises at a steady speed, so no kinetic energy is being gained and every joule goes into height:\n$$W = mgh = 150 \\times 10 \\times 80 = 1.2 \\times 10^{5}\\ \\mathrm{J}.$$\n\n**Step 2 — divide by the time.** Power is the rate of doing work:\n$$P = \\frac{W}{t} = \\frac{1.2 \\times 10^{5}}{40} = 3000\\ \\mathrm{W}.$$\n\nBoth steps are needed. Stopping after the first gives an energy in joules, which is not what the question asks for.",
+      "distractorRationale": [
+        "Left $g$ out, computing $mh/t$. A mass is not a force, so that product is not an energy.",
+        "Applied the factor of $\\tfrac12$ from $\\tfrac12 mv^2$ to the gravitational potential energy, which carries no such factor.",
+        "Found the work done, $mgh = 1.2 \\times 10^{5}\\ \\mathrm{J}$, and forgot to divide by the time.",
+        "Correct. $P = \\dfrac{mgh}{t} = \\dfrac{150 \\times 10 \\times 80}{40} = 3000\\ \\mathrm{W}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(150 * 10 * 80) / 40",
+        "expected": 3000,
+        "tolerance": 1e-9,
+        "unit": "W"
+      }
+    },
+    {
+      "id": "physics-P3.2-001",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.2",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Kinetic energy and the work-energy theorem",
+      "difficulty": 2,
+      "stem": "A skateboarder and her board have a combined mass of $60\\ \\mathrm{kg}$ and roll along a flat path at $4\\ \\mathrm{m/s}$. Their total kinetic energy is",
+      "options": [
+        "$120\\ \\mathrm{J}$",
+        "$480\\ \\mathrm{J}$",
+        "$960\\ \\mathrm{J}$",
+        "$7200\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Kinetic energy is\n$$E_k = \\tfrac12 mv^2.$$\n\nSubstitute the combined mass and the speed, squaring the speed and not the mass:\n$$E_k = \\tfrac12 \\times 60 \\times 4^2 = 30 \\times 16 = 480\\ \\mathrm{J}.$$\n\nOrder matters here. Square first, then take half. It is the speed that is squared, so a rider moving twice as fast carries four times the kinetic energy, not twice.",
+      "distractorRationale": [
+        "Forgot to square the speed, computing $\\tfrac12 mv$.",
+        "Correct. $E_k = \\tfrac12 mv^2 = \\tfrac12 \\times 60 \\times 4^2 = 480\\ \\mathrm{J}$.",
+        "Dropped the factor of $\\tfrac12$, computing $mv^2$.",
+        "Squared the mass instead of the speed, computing $\\tfrac12 vm^2$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * 60 * 4 * 4",
+        "expected": 480,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P3.2-002",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.2",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Kinetic energy and the work-energy theorem",
+      "difficulty": 3,
+      "stem": "A curling stone of mass $20\\ \\mathrm{kg}$ slides across level ice at $3\\ \\mathrm{m/s}$ and is gradually brought to rest by friction. The work done on the stone by the friction force is",
+      "options": [
+        "$-90\\ \\mathrm{J}$",
+        "$-30\\ \\mathrm{J}$",
+        "$+90\\ \\mathrm{J}$",
+        "$-180\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 0,
+      "solution": "The work-energy theorem says the total work done on a body equals its change in kinetic energy:\n$$W = E_{k,\\text{end}} - E_{k,\\text{start}}.$$\n\n**Step 1 — the two kinetic energies.** The stone finishes at rest, so $E_{k,\\text{end}} = 0$, and\n$$E_{k,\\text{start}} = \\tfrac12 \\times 20 \\times 3^2 = 90\\ \\mathrm{J}.$$\n\n**Step 2 — subtract.**\n$$W = 0 - 90 = -90\\ \\mathrm{J}.$$\n\nFriction is the only horizontal force acting, so all of that work is its doing. The minus sign records that the force opposes the motion and drains energy from the stone.",
+      "distractorRationale": [
+        "Correct. $W = \\Delta E_k = 0 - \\tfrac12 \\times 20 \\times 3^2 = -90\\ \\mathrm{J}$.",
+        "Forgot to square the speed, computing $\\tfrac12 mv$.",
+        "Right size, wrong sign: reported the starting kinetic energy itself. Friction opposes the motion, so the work it does must be negative.",
+        "Dropped the factor of $\\tfrac12$, computing $mv^2$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0 - 0.5 * 20 * 3 * 3",
+        "expected": -90,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P3.2-003",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.2",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Kinetic energy and the work-energy theorem",
+      "difficulty": 4,
+      "stem": "A go-kart of mass $50\\ \\mathrm{kg}$ starts from rest on a flat track. Its engine supplies a constant forward force of $55\\ \\mathrm{N}$, while resistive forces total a constant $15\\ \\mathrm{N}$. After the kart has travelled $10\\ \\mathrm{m}$, its speed is",
+      "options": [
+        "$2.8\\ \\mathrm{m/s}$",
+        "$16\\ \\mathrm{m/s}$",
+        "$4\\ \\mathrm{m/s}$",
+        "$4.7\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 2,
+      "solution": "**Step 1 — the resultant force.** The engine pushes forward and the resistance pulls back:\n$$F_{\\text{net}} = 55 - 15 = 40\\ \\mathrm{N}.$$\n\n**Step 2 — the work it does over $10\\ \\mathrm{m}$.**\n$$W = F_{\\text{net}}d = 40 \\times 10 = 400\\ \\mathrm{J}.$$\n\n**Step 3 — turn that into a speed.** The kart starts from rest, so the whole $400\\ \\mathrm{J}$ appears as kinetic energy:\n$$400 = \\tfrac12 \\times 50 \\times v^2 = 25v^2 \\ \\Longrightarrow\\ v^2 = 16 \\ \\Longrightarrow\\ v = 4\\ \\mathrm{m/s}.$$\n\nThe last line is the step most often dropped. $v^2 = 16$ is not a speed.",
+      "distractorRationale": [
+        "Dropped the factor of $\\tfrac12$ in the kinetic energy, solving $Fd = mv^2$ instead.",
+        "Stopped at $v^2 = 16$ and forgot to take the square root.",
+        "Correct. The resultant force is $55 - 15 = 40\\ \\mathrm{N}$, so $\\tfrac12 \\times 50 \\times v^2 = 40 \\times 10$ and $v = 4\\ \\mathrm{m/s}$.",
+        "Used the engine force alone and ignored the resistance, solving $\\tfrac12 \\times 50 \\times v^2 = 55 \\times 10$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(2 * (55 - 15) * 10 / 50)",
+        "expected": 4,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P3.2-004",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.2",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Kinetic energy and the work-energy theorem",
+      "difficulty": 3,
+      "stem": "An ice hockey puck of mass $0.5\\ \\mathrm{kg}$ leaves a player's stick carrying $25\\ \\mathrm{J}$ of kinetic energy. Its speed as it leaves the stick is",
+      "options": [
+        "$7.1\\ \\mathrm{m/s}$",
+        "$50\\ \\mathrm{m/s}$",
+        "$100\\ \\mathrm{m/s}$",
+        "$10\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Start from the definition and rearrange for the speed:\n$$E_k = \\tfrac12 mv^2 \\ \\Longrightarrow\\ v^2 = \\frac{2E_k}{m}.$$\n\nThe factor of $2$ appears because the $\\tfrac12$ has to be undone. Substituting,\n$$v^2 = \\frac{2 \\times 25}{0.5} = 100 \\ \\Longrightarrow\\ v = 10\\ \\mathrm{m/s}.$$\n\nA value of $100\\ \\mathrm{m/s}$ for a struck puck should look wrong on sight: that number is $v^2$, not $v$.",
+      "distractorRationale": [
+        "Dropped the factor of $2$ when rearranging $E_k = \\tfrac12 mv^2$, computing $\\sqrt{E_k/m}$.",
+        "Divided the energy by the mass and called the result a speed, skipping both the factor of $2$ and the square root.",
+        "Found $v^2 = 100$ and forgot to take the square root.",
+        "Correct. $v = \\sqrt{\\dfrac{2E_k}{m}} = \\sqrt{\\dfrac{2 \\times 25}{0.5}} = 10\\ \\mathrm{m/s}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(2 * 25 / 0.5)",
+        "expected": 10,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P3.3-001",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.3",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Gravitational and elastic potential energy",
+      "difficulty": 1,
+      "stem": "Three identical crates are each raised from a loading bay floor to a platform $3\\ \\mathrm{m}$ above it. One goes straight up on a hoist, one is pushed up a long smooth ramp, and one is carried up a staircase. Comparing the gains in gravitational potential energy,",
+      "options": [
+        "$\\text{all three gains are the same}$",
+        "$\\text{the gain is largest for the crate pushed up the ramp}$",
+        "$\\text{the gain is largest for the crate carried up the staircase}$",
+        "$\\text{the gain is largest for the crate raised by the hoist}$"
+      ],
+      "correctIndex": 0,
+      "solution": "Gravitational potential energy is $E_p = mgh$, where $h$ is the **vertical** height gained. The route taken does not appear anywhere in that formula.\n\nAll three crates are identical, so they share the same $m$. All three finish on the same platform, so they share the same rise, $h = 3\\ \\mathrm{m}$. Their gains are therefore equal.\n\nWhat does differ is the force needed and the path length: the ramp needs a smaller push over a longer distance. The product $mgh$ comes out the same either way, which is precisely why a ramp is worth building.",
+      "distractorRationale": [
+        "Correct. $\\Delta E_p = mgh$ depends only on the mass and the vertical rise, and all three crates share both.",
+        "Confuses the distance travelled along the path with the vertical rise. Only the vertical rise enters $mgh$.",
+        "Counts the individual steps as extra height. The steps add up to the same $3\\ \\mathrm{m}$ rise as the other two routes.",
+        "Assumes the shortest route stores the most energy. The route does not matter; only the change of height does."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Gravitational potential energy gained is mgh, a function of mass and vertical rise alone. The three crates have equal mass and an equal rise of 3 m, so the gains are equal regardless of the path followed. Every other option treats path length or step count as if it entered the formula."
+      }
+    },
+    {
+      "id": "physics-P3.3-002",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.3",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Gravitational and elastic potential energy",
+      "difficulty": 2,
+      "stem": "A tower crane raises a steel beam of weight $4000\\ \\mathrm{N}$ from the ground to a floor $6\\ \\mathrm{m}$ higher up. The gain in gravitational potential energy of the beam is",
+      "options": [
+        "$2.4 \\times 10^{3}\\ \\mathrm{J}$",
+        "$1.2 \\times 10^{4}\\ \\mathrm{J}$",
+        "$2.4 \\times 10^{5}\\ \\mathrm{J}$",
+        "$2.4 \\times 10^{4}\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Read the given quantity carefully: it is a **weight**, not a mass. Weight is the gravitational force $mg$, so\n$$\\Delta E_p = mgh = (\\text{weight}) \\times h.$$\n\nSubstituting,\n$$\\Delta E_p = 4000 \\times 6 = 2.4 \\times 10^{4}\\ \\mathrm{J}.$$\n\nMultiplying $4000\\ \\mathrm{N}$ by $g$ again would count gravity twice. As a check, the mass is $4000/10 = 400\\ \\mathrm{kg}$, and $400 \\times 10 \\times 6$ gives the same $2.4 \\times 10^{4}\\ \\mathrm{J}$.",
+      "distractorRationale": [
+        "Divided the weight by $g$ to get the mass, $400\\ \\mathrm{kg}$, and then forgot to put $g$ back, computing $mh$.",
+        "Inserted a factor of $\\tfrac12$. Gravitational potential energy is $mgh$, with no such factor.",
+        "Multiplied the weight by $g$ as well, substituting the weight for the mass in $mgh$. The weight already contains $g$.",
+        "Correct. The weight is the gravitational force, so $\\Delta E_p = 4000 \\times 6 = 2.4 \\times 10^{4}\\ \\mathrm{J}$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "4000 * 6",
+        "expected": 24000,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P3.3-003",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.3",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Gravitational and elastic potential energy",
+      "difficulty": 2,
+      "stem": "The spring in a pinball plunger has a force constant of $200\\ \\mathrm{N/m}$. A player pulls the plunger back, compressing the spring by $0.10\\ \\mathrm{m}$. The elastic potential energy now stored in the spring is",
+      "options": [
+        "$2\\ \\mathrm{J}$",
+        "$10\\ \\mathrm{J}$",
+        "$1\\ \\mathrm{J}$",
+        "$20\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 2,
+      "solution": "The energy stored in a spring compressed or stretched by $x$ is\n$$E_p = \\tfrac12 kx^2.$$\n\nSubstitute $k = 200\\ \\mathrm{N/m}$ and $x = 0.10\\ \\mathrm{m}$, squaring the compression before multiplying:\n$$E_p = \\tfrac12 \\times 200 \\times (0.10)^2 = 100 \\times 0.01 = 1\\ \\mathrm{J}.$$\n\nThe square is what makes a spring such a sharply rising energy store: pull the plunger back twice as far and it holds four times the energy.",
+      "distractorRationale": [
+        "Dropped the factor of $\\tfrac12$, computing $kx^2$.",
+        "Forgot to square the compression, computing $\\tfrac12 kx$.",
+        "Correct. $E_p = \\tfrac12 kx^2 = \\tfrac12 \\times 200 \\times (0.10)^2 = 1\\ \\mathrm{J}$.",
+        "Made both slips at once, computing $kx$ with neither the half nor the square."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * 200 * 0.10 * 0.10",
+        "expected": 1,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P3.3-004",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.3",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Gravitational and elastic potential energy",
+      "difficulty": 4,
+      "stem": "A climbing rope behaves like a spring of force constant $800\\ \\mathrm{N/m}$. A test rig first stretches it by $0.20\\ \\mathrm{m}$, then stretches it further until the total extension is $0.40\\ \\mathrm{m}$. The extra elastic potential energy stored during the second stage is",
+      "options": [
+        "$16\\ \\mathrm{J}$",
+        "$48\\ \\mathrm{J}$",
+        "$64\\ \\mathrm{J}$",
+        "$80\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Stored energy grows as the square of the extension, so the second $0.20\\ \\mathrm{m}$ is far more expensive than the first. Work out both totals and subtract.\n\n**Step 1 — energy at an extension of $0.20\\ \\mathrm{m}$.**\n$$E_1 = \\tfrac12 \\times 800 \\times (0.20)^2 = 400 \\times 0.04 = 16\\ \\mathrm{J}.$$\n\n**Step 2 — energy at an extension of $0.40\\ \\mathrm{m}$.**\n$$E_2 = \\tfrac12 \\times 800 \\times (0.40)^2 = 400 \\times 0.16 = 64\\ \\mathrm{J}.$$\n\n**Step 3 — the extra stored in the second stage.**\n$$\\Delta E = E_2 - E_1 = 64 - 16 = 48\\ \\mathrm{J}.$$\n\nThree times as much as the first stage bought, for the same extra $0.20\\ \\mathrm{m}$.",
+      "distractorRationale": [
+        "Treated the second stage as a fresh stretch of $0.20\\ \\mathrm{m}$ from the unstretched length, computing $\\tfrac12 k (0.20)^2$. Because the energy goes as $x^2$, the second $0.20\\ \\mathrm{m}$ costs three times the first.",
+        "Correct. $\\tfrac12 \\times 800 \\times (0.40)^2 - \\tfrac12 \\times 800 \\times (0.20)^2 = 64 - 16 = 48\\ \\mathrm{J}$.",
+        "Gave the total energy stored at $0.40\\ \\mathrm{m}$ and forgot to subtract the $16\\ \\mathrm{J}$ already stored after the first stage.",
+        "Added the two stored energies, $64 + 16$, instead of subtracting them."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "0.5 * 800 * 0.40 * 0.40 - 0.5 * 800 * 0.20 * 0.20",
+        "expected": 48,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P3.4-001",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.4",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Conservation of mechanical energy",
+      "difficulty": 3,
+      "stem": "A water slide drops a rider through a vertical height of $5\\ \\mathrm{m}$. The rider starts from rest at the top, and friction and air resistance are negligible. The rider's speed at the bottom is (Take $g=10\\ \\mathrm{m/s^2}$.)",
+      "options": [
+        "$10\\ \\mathrm{m/s}$",
+        "$7.1\\ \\mathrm{m/s}$",
+        "$50\\ \\mathrm{m/s}$",
+        "$100\\ \\mathrm{m/s}$"
+      ],
+      "correctIndex": 0,
+      "solution": "With friction negligible, mechanical energy is conserved: the potential energy lost reappears as kinetic energy.\n$$mgh = \\tfrac12 mv^2.$$\n\nThe mass cancels from both sides, which is why the answer does not depend on how heavy the rider is:\n$$v = \\sqrt{2gh} = \\sqrt{2 \\times 10 \\times 5} = \\sqrt{100} = 10\\ \\mathrm{m/s}.$$\n\nThe twists and turns of the slide make no difference either. Only the vertical drop of $5\\ \\mathrm{m}$ enters the calculation.",
+      "distractorRationale": [
+        "Correct. $\\tfrac12 mv^2 = mgh$ gives $v = \\sqrt{2gh} = \\sqrt{2 \\times 10 \\times 5} = 10\\ \\mathrm{m/s}$.",
+        "Dropped the factor of $2$, computing $\\sqrt{gh}$ rather than $\\sqrt{2gh}$.",
+        "Computed $gh = 50$ and reported it as a speed. That product has the units of $\\mathrm{m^2/s^2}$, not $\\mathrm{m/s}$.",
+        "Found $v^2 = 2gh = 100$ and forgot to take the square root."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.sqrt(2 * 10 * 5)",
+        "expected": 10,
+        "tolerance": 1e-9,
+        "unit": "m/s"
+      }
+    },
+    {
+      "id": "physics-P3.4-002",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.4",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Conservation of mechanical energy",
+      "difficulty": 4,
+      "stem": "A toboggan and its rider have a combined mass of $80\\ \\mathrm{kg}$. They pass a marker on a snowy slope at $2\\ \\mathrm{m/s}$, and at a point $4\\ \\mathrm{m}$ vertically lower they are moving at $8\\ \\mathrm{m/s}$. The energy turned into heat by friction between the two points is (Take $g=10\\ \\mathrm{m/s^2}$.)",
+      "options": [
+        "$640\\ \\mathrm{J}$",
+        "$2400\\ \\mathrm{J}$",
+        "$800\\ \\mathrm{J}$",
+        "$3200\\ \\mathrm{J}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Friction takes whatever part of the released potential energy does not show up as kinetic energy.\n\n**Step 1 — potential energy released.**\n$$\\Delta E_p = mgh = 80 \\times 10 \\times 4 = 3200\\ \\mathrm{J}.$$\n\n**Step 2 — kinetic energy gained.** The toboggan was already moving at the marker, so subtract the kinetic energy it started with:\n$$\\Delta E_k = \\tfrac12 \\times 80 \\times 8^2 - \\tfrac12 \\times 80 \\times 2^2 = 2560 - 160 = 2400\\ \\mathrm{J}.$$\n\n**Step 3 — the difference is the loss.**\n$$E_{\\text{friction}} = 3200 - 2400 = 800\\ \\mathrm{J}.$$\n\nLeaving out the starting $160\\ \\mathrm{J}$ inflates the friction loss by exactly that amount.",
+      "distractorRationale": [
+        "Ignored the kinetic energy the toboggan already had at the marker, computing $3200 - 2560$.",
+        "Gave the gain in kinetic energy, $2560 - 160$. Friction claims the part of the released potential energy that does not become kinetic energy, not the part that does.",
+        "Correct. $3200\\ \\mathrm{J}$ of potential energy is released and $2400\\ \\mathrm{J}$ appears as kinetic energy, so $800\\ \\mathrm{J}$ went to friction.",
+        "Gave the whole potential energy released, as though none of it became kinetic energy. The toboggan plainly speeds up, so most of it did."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "80 * 10 * 4 - (0.5 * 80 * 8 * 8 - 0.5 * 80 * 2 * 2)",
+        "expected": 800,
+        "tolerance": 1e-9,
+        "unit": "J"
+      }
+    },
+    {
+      "id": "physics-P3.4-003",
+      "subject": "physics",
+      "topic": "P3",
+      "subtopic": "P3.4",
+      "syllabusRef": "P-1 / Mechanics / Work, Energy and Power / Conservation of mechanical energy",
+      "difficulty": 5,
+      "stem": "A wrecking ball hangs from a fixed point on a cable of length $L$. It is drawn aside until the cable is horizontal and released from rest. Air resistance is negligible, and potential energy is measured from the lowest point of the swing. Through what vertical distance has the ball fallen at the instant when its kinetic energy is three times its potential energy?",
+      "options": [
+        "$\\dfrac{L}{4}$",
+        "$\\dfrac{3L}{4}$",
+        "$\\dfrac{L}{2}$",
+        "$\\dfrac{2L}{3}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Let $h$ be the height of the ball above the lowest point of the swing. The cable starts horizontal, so the ball begins a distance $L$ above that point and the distance it has fallen is $L - h$.\n\n**Step 1 — write the two energies.** Taking the lowest point as the zero of potential energy,\n$$E_p = mgh, \\qquad E_k = mg(L-h),$$\nbecause every joule lost from potential energy reappears as kinetic energy.\n\n**Step 2 — impose the condition.**\n$$mg(L-h) = 3mgh \\ \\Longrightarrow\\ L - h = 3h \\ \\Longrightarrow\\ h = \\frac{L}{4}.$$\n\n**Step 3 — answer the question that was asked.** The distance fallen is\n$$L - h = L - \\frac{L}{4} = \\frac{3L}{4}.$$\n\nBoth $m$ and $g$ cancel, so the result holds for any ball on any cable.",
+      "distractorRationale": [
+        "This is $h$, the height still remaining above the lowest point, not the distance fallen. The two add up to $L$.",
+        "Correct. $E_k = 3E_p$ gives $L - h = 3h$, so $h = L/4$ and the ball has fallen $L - L/4 = 3L/4$.",
+        "Used $E_k = E_p$, the halfway point of the drop, instead of the stated condition $E_k = 3E_p$.",
+        "Solved $L - h = 3h$ as though it read $L = 3h$, dropping the $-h$ on the left, then subtracted $L/3$ from $L$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["L"],
+        "domain": [[1, 10]],
+        "integerVars": [],
+        "reference": "3 * L / 4",
+        "optionForms": ["L / 4", "3 * L / 4", "L / 2", "2 * L / 3"],
+        "tolerance": 1e-9,
+        "samples": 40,
+        "extraSamples": []
+      }
+    }
+  ]
+}

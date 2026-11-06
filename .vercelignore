@@ -1,0 +1,31 @@
+# Nothing in this file is optional.
+#
+# `vercel deploy` uploads the working directory. Without this list it would
+# upload the private reference set, which is input only and is not ours to
+# redistribute. The build does not read
+# any of it: `build:data` reads content/ alone, and the originality check runs
+# locally, never in CI.
+
+# --- Reference corpus. INPUT ONLY. Never upload. ---
+reference/
+Study Pack - Math/
+Study Pack - Physics/
+
+# The kickoff brief quotes the corpus rules and is not part of the site.
+csca-prep-claude-code-prompt.md
+
+# --- Build output. Vercel rebuilds these itself. ---
+node_modules/
+.next/
+out/
+public/data/
+
+# --- Not needed to build or serve the site ---
+.git/
+.gitignore
+tests/
+docs/
+.claude/
+.tmp/
+coverage/
+*.tsbuildinfo

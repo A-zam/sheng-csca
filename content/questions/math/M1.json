@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M1",
+  "questions": [
+    {
+      "id": "math-M1.1-001",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Set notation, elements and subsets",
+      "difficulty": 1,
+      "stem": "Let $T=\\{2,\\ 5,\\ 9,\\ 11\\}$. Which statement is correct?",
+      "options": [
+        "$5 \\in T$",
+        "$\\{5\\} \\in T$",
+        "$5 \\subseteq T$",
+        "$\\{2,\\ 9\\} \\in T$"
+      ],
+      "correctIndex": 0,
+      "solution": "The symbol $\\in$ links an *element* to a set. The symbol $\\subseteq$ links a *set* to a set.\n\n$5$ is one of the four things listed inside $T$, so $5 \\in T$ is correct.\n\nThe other three mix the two symbols up. $\\{5\\}$ is a set, not an element of $T$, so it needs $\\subseteq$. And $5$ on its own is an element, so it cannot sit on the left of $\\subseteq$.",
+      "distractorRationale": [
+        "Correct. $5$ is listed inside $T$, and $\\in$ is the symbol that links an element to its set.",
+        "Uses $\\in$ where $\\subseteq$ is needed. $\\{5\\}$ is a set, so the correct statement is $\\{5\\} \\subseteq T$.",
+        "Uses $\\subseteq$ where $\\in$ is needed. A single element cannot be a subset unless it is written inside braces.",
+        "Same mix-up as option B, with two elements. The correct statement is $\\{2,\\ 9\\} \\subseteq T$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Only one option pairs an element with $\\in$. $5$ appears in the roster of $T$, so $5 \\in T$ is true; the other three misuse $\\in$ or $\\subseteq$ and are false as written."
+      }
+    },
+    {
+      "id": "math-M1.1-002",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Set notation, elements and subsets",
+      "difficulty": 2,
+      "stem": "A set $K$ has $4$ elements. How many subsets does $K$ have?",
+      "options": ["$8$", "$15$", "$16$", "$24$"],
+      "correctIndex": 2,
+      "solution": "Building a subset means deciding, for each element separately, whether to keep it or leave it out. That is $2$ choices per element.\n\nWith $4$ independent elements the number of subsets is\n$$2^{4}=16.$$\n\nThis count includes the empty set and $K$ itself.",
+      "distractorRationale": [
+        "Used $2^{3}$ instead of $2^{4}$, so one element was left out of the count.",
+        "Counted only the *proper* subsets, $2^{4}-1=15$, forgetting that $K$ itself is still a subset of $K$.",
+        "Correct. Each of the $4$ elements is independently in or out, giving $2^{4}=16$.",
+        "Computed $4!=24$, which counts orderings of the elements, not subsets."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.pow(2, 4)",
+        "expected": 16,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M1.1-003",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Set notation, elements and subsets",
+      "difficulty": 2,
+      "stem": "Let $P=\\{1,\\ 3,\\ 5,\\ 7,\\ 9\\}$. How many non-empty proper subsets does $P$ have?",
+      "options": ["$25$", "$30$", "$31$", "$32$"],
+      "correctIndex": 1,
+      "solution": "$P$ has $5$ elements, so it has $2^{5}=32$ subsets in total.\n\n\"Proper\" removes $P$ itself. \"Non-empty\" removes $\\varnothing$. Two subsets are excluded, so\n$$2^{5}-2=30.$$",
+      "distractorRationale": [
+        "Computed $5^{2}$ instead of $2^{5}$ — the base and the exponent were swapped.",
+        "Correct. $2^{5}=32$ subsets in total, minus $P$ itself and minus the empty set, gives $30$.",
+        "Removed only one subset. This is the count of proper subsets ($31$) or of non-empty subsets ($31$), but not of both at once.",
+        "The total number of subsets, with neither $P$ nor $\\varnothing$ removed."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.pow(2, 5) - 2",
+        "expected": 30,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M1.1-004",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Set notation, elements and subsets",
+      "difficulty": 3,
+      "stem": "Let $M=\\{x \\mid x \\in \\mathbb{Z},\\ -3 < x \\le 2\\}$. Written as a list, $M$ is",
+      "options": [
+        "$\\{-3,\\ -2,\\ -1,\\ 0,\\ 1\\}$",
+        "$\\{-2,\\ -1,\\ 0,\\ 1\\}$",
+        "$\\{-3,\\ -2,\\ -1,\\ 0,\\ 1,\\ 2\\}$",
+        "$\\{-2,\\ -1,\\ 0,\\ 1,\\ 2\\}$"
+      ],
+      "correctIndex": 3,
+      "solution": "Read the two ends separately.\n\n$-3 < x$ is strict, so $-3$ is **not** in $M$. The smallest integer allowed is $-2$.\n\n$x \\le 2$ is not strict, so $2$ **is** in $M$. The largest integer allowed is $2$.\n\nListing the integers from $-2$ up to $2$:\n$$M=\\{-2,\\ -1,\\ 0,\\ 1,\\ 2\\}.$$",
+      "distractorRationale": [
+        "Both ends read the wrong way round: $-3$ was included and $2$ was dropped.",
+        "Correctly excluded $-3$, but also dropped $2$, treating $x \\le 2$ as if it were $x < 2$.",
+        "Included $-3$, treating $-3 < x$ as if it were $-3 \\le x$.",
+        "Correct. $-3 < x$ excludes $-3$; $x \\le 2$ includes $2$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-6, 6]],
+        "integerVars": ["x"],
+        "reference": "(x > -3 && x <= 2) ? 1 : 0",
+        "optionForms": [
+          "(x >= -3 && x <= 1) ? 1 : 0",
+          "(x >= -2 && x <= 1) ? 1 : 0",
+          "(x >= -3 && x <= 2) ? 1 : 0",
+          "(x >= -2 && x <= 2) ? 1 : 0"
+        ],
+        "extraSamples": [{ "x": -3 }, { "x": -2 }, { "x": 1 }, { "x": 2 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M1.1-005",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.1",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Set notation, elements and subsets",
+      "difficulty": 4,
+      "stem": "Let $D$ be the set of positive integers that divide $12$. How many subsets of $D$ contain the number $12$?",
+      "options": ["$16$", "$31$", "$32$", "$64$"],
+      "correctIndex": 2,
+      "solution": "First list $D$. The positive divisors of $12$ are\n$$D=\\{1,\\ 2,\\ 3,\\ 4,\\ 6,\\ 12\\},$$\nso $D$ has $6$ elements.\n\nNow fix $12$ as \"in\". That decision is made for us, so it costs no choices. The remaining $5$ elements are each independently in or out:\n$$2^{5}=32.$$",
+      "distractorRationale": [
+        "Counted $2^{4}$, which happens if $D$ is taken to have $5$ elements — usually by missing $6$ or by leaving out $1$.",
+        "Took all $2^{5}$ subsets of the other five divisors and then removed one, as if the empty choice were not allowed. Keeping only $12$ is a valid subset.",
+        "Correct. $D$ has $6$ divisors; fixing $12$ as included leaves $5$ free choices, giving $2^{5}=32$.",
+        "Counted all $2^{6}$ subsets of $D$, ignoring the condition that $12$ must be present."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.pow(2, [1,2,3,4,5,6,7,8,9,10,11,12].filter(function (d) { return 12 % d === 0; }).length - 1)",
+        "expected": 32,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M1.2-001",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Union, intersection and complement",
+      "difficulty": 1,
+      "stem": "Let $A=\\{1,\\ 2,\\ 3,\\ 4\\}$ and $B=\\{3,\\ 4,\\ 5\\}$. Then $A \\cap B$ is",
+      "options": [
+        "$\\{3\\}$",
+        "$\\{3,\\ 4\\}$",
+        "$\\{1,\\ 2,\\ 5\\}$",
+        "$\\{1,\\ 2,\\ 3,\\ 4,\\ 5\\}$"
+      ],
+      "correctIndex": 1,
+      "solution": "$A \\cap B$ keeps only the elements that appear in **both** lists.\n\nCheck each element of $B$ against $A$: $3$ is in $A$, $4$ is in $A$, $5$ is not.\n\nSo\n$$A \\cap B=\\{3,\\ 4\\}.$$",
+      "distractorRationale": [
+        "Stopped after finding the first shared element and missed that $4$ is also in both sets.",
+        "Correct. $3$ and $4$ are the only elements belonging to both $A$ and $B$.",
+        "Listed the elements that belong to exactly one of the two sets — the symmetric difference, not the intersection.",
+        "Computed $A \\cup B$: everything in either set. Union collects, intersection filters."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[0, 7]],
+        "integerVars": ["x"],
+        "reference": "((x >= 1 && x <= 4) && (x >= 3 && x <= 5)) ? 1 : 0",
+        "optionForms": [
+          "(x === 3) ? 1 : 0",
+          "(x >= 3 && x <= 4) ? 1 : 0",
+          "((x >= 1 && x <= 2) || x === 5) ? 1 : 0",
+          "(x >= 1 && x <= 5) ? 1 : 0"
+        ],
+        "extraSamples": [{ "x": 1 }, { "x": 2 }, { "x": 3 }, { "x": 4 }, { "x": 5 }],
+        "tolerance": 1e-9,
+        "samples": 30
+      }
+    },
+    {
+      "id": "math-M1.2-002",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Union, intersection and complement",
+      "difficulty": 2,
+      "stem": "Let $A=\\{x \\mid x < 4\\}$ and $B=\\{x \\mid x \\ge -1\\}$. Then $A \\cap B$ is",
+      "options": [
+        "$[-1,\\ 4)$",
+        "$(-1,\\ 4]$",
+        "$[-1,\\ 4]$",
+        "$(-\\infty,\\ 4)$"
+      ],
+      "correctIndex": 0,
+      "solution": "The intersection must satisfy both conditions at once, so combine them into one chain:\n$$-1 \\le x < 4.$$\n\nNow match the brackets to the inequality signs. $x \\ge -1$ allows $x=-1$, so the left end is **closed**: $[$. And $x<4$ excludes $4$, so the right end is **open**: $)$.\n$$A \\cap B=[-1,\\ 4).$$",
+      "distractorRationale": [
+        "Correct. $x \\ge -1$ closes the left end and $x < 4$ opens the right end.",
+        "Both brackets are the wrong way round: $-1$ is wrongly excluded and $4$ is wrongly included.",
+        "Closed at both ends. This includes $x=4$, which fails $x<4$.",
+        "This is set $A$ alone. The condition $x \\ge -1$ from $B$ was never applied."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-8, 9]],
+        "reference": "(x < 4 && x >= -1) ? 1 : 0",
+        "optionForms": [
+          "(x >= -1 && x < 4) ? 1 : 0",
+          "(x > -1 && x <= 4) ? 1 : 0",
+          "(x >= -1 && x <= 4) ? 1 : 0",
+          "(x < 4) ? 1 : 0"
+        ],
+        "extraSamples": [{ "x": -1 }, { "x": 4 }, { "x": -1.5 }, { "x": 3.9 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M1.2-003",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Union, intersection and complement",
+      "difficulty": 3,
+      "stem": "Let the universal set be $U=\\{1,\\ 2,\\ 3,\\ 4,\\ 5,\\ 6,\\ 7,\\ 8\\}$, with $A=\\{2,\\ 4,\\ 6,\\ 8\\}$ and $B=\\{1,\\ 2,\\ 3,\\ 4\\}$. Then $(\\complement_{U}A) \\cap B$ is",
+      "options": [
+        "$\\{2,\\ 4\\}$",
+        "$\\{5,\\ 7\\}$",
+        "$\\{1,\\ 3\\}$",
+        "$\\{1,\\ 3,\\ 5,\\ 7\\}$"
+      ],
+      "correctIndex": 2,
+      "solution": "Work from the inside out.\n\n**Step 1 — the complement.** $\\complement_{U}A$ holds everything in $U$ that is not in $A$:\n$$\\complement_{U}A=\\{1,\\ 3,\\ 5,\\ 7\\}.$$\n\n**Step 2 — the intersection.** Keep only those that are also in $B=\\{1,\\ 2,\\ 3,\\ 4\\}$. Of $1,3,5,7$, only $1$ and $3$ survive:\n$$(\\complement_{U}A) \\cap B=\\{1,\\ 3\\}.$$",
+      "distractorRationale": [
+        "Computed $A \\cap B$ and forgot the complement altogether.",
+        "Took the complement of $A$ and then removed everything in $B$, which is $(\\complement_{U}A) \\cap (\\complement_{U}B)$, not an intersection with $B$.",
+        "Correct. $\\complement_{U}A=\\{1,3,5,7\\}$, and intersecting with $B$ leaves $\\{1,3\\}$.",
+        "Stopped after Step 1. This is $\\complement_{U}A$ on its own, with $B$ never used."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[1, 8]],
+        "integerVars": ["x"],
+        "reference": "((x >= 1 && x <= 8) && (x % 2 === 1) && (x >= 1 && x <= 4)) ? 1 : 0",
+        "optionForms": [
+          "(x === 2 || x === 4) ? 1 : 0",
+          "(x === 5 || x === 7) ? 1 : 0",
+          "(x === 1 || x === 3) ? 1 : 0",
+          "(x === 1 || x === 3 || x === 5 || x === 7) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "x": 1 }, { "x": 2 }, { "x": 3 }, { "x": 4 },
+          { "x": 5 }, { "x": 6 }, { "x": 7 }, { "x": 8 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 20
+      }
+    },
+    {
+      "id": "math-M1.2-004",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Union, intersection and complement",
+      "difficulty": 3,
+      "stem": "Let $A=\\{x \\mid -2 \\le x \\le 3\\}$ and $B=\\{x \\mid x > 1\\}$. Then $A \\cup B$ is",
+      "options": [
+        "$(1,\\ 3]$",
+        "$[-2,\\ 1)$",
+        "$(-\\infty,\\ 3]$",
+        "$[-2,\\ +\\infty)$"
+      ],
+      "correctIndex": 3,
+      "solution": "A union keeps anything satisfying **either** condition, so picture the two pieces on a number line.\n\n$A$ covers $[-2,\\ 3]$. $B$ covers everything to the right of $1$.\n\nThey overlap on $(1,\\ 3]$, so the two pieces join into one unbroken stretch. It starts at $-2$, which $A$ includes, and runs right without end because $B$ never stops.\n$$A \\cup B=[-2,\\ +\\infty).$$",
+      "distractorRationale": [
+        "This is $A \\cap B$ — the overlap of the two sets, not their union. Union is larger than either set, never smaller.",
+        "This is the part of $A$ that lies outside $B$. The rest of the union was dropped.",
+        "Stopped the union at $3$, the right end of $A$, forgetting that $B$ carries on past $3$ without bound.",
+        "Correct. The two intervals overlap and merge into $[-2,\\ +\\infty)$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-8, 12]],
+        "reference": "((x >= -2 && x <= 3) || x > 1) ? 1 : 0",
+        "optionForms": [
+          "(x > 1 && x <= 3) ? 1 : 0",
+          "(x >= -2 && x < 1) ? 1 : 0",
+          "(x <= 3) ? 1 : 0",
+          "(x >= -2) ? 1 : 0"
+        ],
+        "extraSamples": [{ "x": -2 }, { "x": -2.5 }, { "x": 1 }, { "x": 3 }, { "x": 5 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M1.2-005",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.2",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Union, intersection and complement",
+      "difficulty": 4,
+      "stem": "Let $A=\\{x \\mid x^{2}-4x<0\\}$ and $B=\\{x \\mid x \\ge 3\\}$, with $\\mathbb{R}$ as the universal set. Then $A \\cap (\\complement_{\\mathbb{R}}B)$ is",
+      "options": [
+        "$(0,\\ 3)$",
+        "$(0,\\ 3]$",
+        "$(0,\\ 4)$",
+        "$[3,\\ 4)$"
+      ],
+      "correctIndex": 0,
+      "solution": "**Step 1 — describe $A$.** Factorise:\n$$x^{2}-4x<0 \\iff x(x-4)<0.$$\nA product of two factors is negative exactly between its roots, so $A=(0,\\ 4)$.\n\n**Step 2 — describe the complement.** $B$ is $x \\ge 3$, so everything else is\n$$\\complement_{\\mathbb{R}}B=\\{x \\mid x<3\\}.$$\nNote the strict sign: $3$ belonged to $B$, so $3$ is excluded here.\n\n**Step 3 — intersect.** Impose $0<x<4$ and $x<3$ together. The tighter right-hand limit wins:\n$$A \\cap (\\complement_{\\mathbb{R}}B)=(0,\\ 3).$$",
+      "distractorRationale": [
+        "Correct. $A=(0,4)$ and $\\complement_{\\mathbb{R}}B=(-\\infty,3)$, so the overlap is $(0,3)$.",
+        "Included $3$. Since $3 \\in B$, it is excluded from the complement, so the right end must be open.",
+        "This is $A$ alone. The complement of $B$ was never intersected in.",
+        "Intersected with $B$ instead of with its complement."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-4, 8]],
+        "reference": "((x * x - 4 * x < 0) && !(x >= 3)) ? 1 : 0",
+        "optionForms": [
+          "(x > 0 && x < 3) ? 1 : 0",
+          "(x > 0 && x <= 3) ? 1 : 0",
+          "(x > 0 && x < 4) ? 1 : 0",
+          "(x >= 3 && x < 4) ? 1 : 0"
+        ],
+        "extraSamples": [{ "x": 0 }, { "x": 3 }, { "x": 4 }, { "x": 2.9 }, { "x": 3.5 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M1.3-001",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.3",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Necessary and sufficient conditions",
+      "difficulty": 2,
+      "stem": "The statement \"$x=2$\" is what kind of condition for \"$x^{2}=4$\"?",
+      "options": [
+        "Necessary but not sufficient",
+        "Sufficient but not necessary",
+        "Necessary and sufficient",
+        "Neither necessary nor sufficient"
+      ],
+      "correctIndex": 1,
+      "solution": "Test the implication in each direction.\n\n**Forwards.** If $x=2$ then $x^{2}=4$. True, so \"$x=2$\" is **sufficient**.\n\n**Backwards.** If $x^{2}=4$ then $x=2$ or $x=-2$. The value $x=-2$ satisfies $x^{2}=4$ without satisfying $x=2$, so the reverse fails and \"$x=2$\" is **not necessary**.\n\nOne direction holds and the other does not, so it is sufficient but not necessary.",
+      "distractorRationale": [
+        "The two directions have been swapped. This would be right if $x^{2}=4$ forced $x=2$, but $x=-2$ is a counterexample.",
+        "Correct. $x=2 \\Rightarrow x^{2}=4$, but $x^{2}=4 \\not\\Rightarrow x=2$ because $x=-2$ also works.",
+        "Would require both directions to hold. The backward direction fails at $x=-2$.",
+        "At least one direction does hold: $x=2$ really does force $x^{2}=4$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "The solution set of $x=2$ is $\\{2\\}$, a strict subset of the solution set $\\{-2,2\\}$ of $x^{2}=4$. A strict subset gives sufficient but not necessary, and $x=-2$ is the explicit counterexample to necessity."
+      }
+    },
+    {
+      "id": "math-M1.3-002",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.3",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Necessary and sufficient conditions",
+      "difficulty": 3,
+      "stem": "For real numbers $a$ and $b$, the statement \"$ab=0$\" is what kind of condition for \"$a=0$\"?",
+      "options": [
+        "Sufficient but not necessary",
+        "Necessary and sufficient",
+        "Necessary but not sufficient",
+        "Neither necessary nor sufficient"
+      ],
+      "correctIndex": 2,
+      "solution": "Take the two directions one at a time. Careful: the condition being classified is \"$ab=0$\", and it is being classified *for* \"$a=0$\".\n\n**Is it sufficient?** Does $ab=0$ force $a=0$? No. Take $a=7,\\ b=0$: then $ab=0$ but $a \\neq 0$. So it is not sufficient.\n\n**Is it necessary?** Does $a=0$ force $ab=0$? Yes, because $0 \\cdot b=0$ for every $b$. So it is necessary.\n\nNecessary but not sufficient.",
+      "distractorRationale": [
+        "The roles are reversed. $ab=0$ does not force $a=0$, as $a=7,\\ b=0$ shows.",
+        "Would need both directions. The forward direction fails whenever $b=0$ and $a \\neq 0$.",
+        "Correct. $a=0 \\Rightarrow ab=0$ makes it necessary, and $a=7,\\ b=0$ shows it is not sufficient.",
+        "The direction $a=0 \\Rightarrow ab=0$ does hold, so \"neither\" is too strong."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "The solution set of $a=0$ is a strict subset of the solution set of $ab=0$ in the $(a,b)$ plane: the line $a=0$ sits inside the union of the two lines $a=0$ and $b=0$. A superset condition is necessary but not sufficient, and $(a,b)=(7,0)$ witnesses the strictness."
+      }
+    },
+    {
+      "id": "math-M1.3-003",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.3",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Necessary and sufficient conditions",
+      "difficulty": 4,
+      "stem": "Let $p$ be \"$-1<x<3$\" and let $q$ be \"$x^{2}-2x-3<0$\". Then $p$ is what kind of condition for $q$?",
+      "options": [
+        "Sufficient but not necessary",
+        "Necessary and sufficient",
+        "Necessary but not sufficient",
+        "Neither necessary nor sufficient"
+      ],
+      "correctIndex": 1,
+      "solution": "Solve $q$ before comparing anything.\n\nFactorise the quadratic:\n$$x^{2}-2x-3=(x-3)(x+1).$$\nThis product is negative exactly between its roots $-1$ and $3$, so\n$$q \\iff -1<x<3.$$\n\nThat is word for word the statement $p$. The two conditions have the same solution set, so each implies the other:\n$$p \\iff q.$$\nSo $p$ is necessary and sufficient for $q$.",
+      "distractorRationale": [
+        "Would mean the solution set of $p$ sits strictly inside that of $q$. Here the two sets are equal, so neither is strictly inside the other.",
+        "Correct. Solving $q$ gives exactly $-1<x<3$, which is $p$, so the two are equivalent.",
+        "Would mean the solution set of $p$ strictly contains that of $q$. Again, they are equal.",
+        "The two conditions are identical once $q$ is solved, so both directions hold."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "conceptual",
+        "justification": "Factorising gives $(x-3)(x+1)<0$, whose solution set is exactly $(-1,3)$ — the same set as $p$. Equal solution sets make each condition imply the other, which is the definition of necessary and sufficient."
+      }
+    },
+    {
+      "id": "math-M1.3-004",
+      "subject": "math",
+      "topic": "M1",
+      "subtopic": "M1.3",
+      "syllabusRef": "M-1 / Sets and Inequalities / Sets and Logic / Necessary and sufficient conditions",
+      "difficulty": 5,
+      "stem": "Let $p$ be \"$|x-1|<2$\" and let $q$ be \"$x<a$\". If $p$ is a sufficient but not necessary condition for $q$, the range of $a$ is",
+      "options": [
+        "$a \\le -1$",
+        "$a > -1$",
+        "$a > 3$",
+        "$a \\ge 3$"
+      ],
+      "correctIndex": 3,
+      "solution": "**Step 1 — turn $p$ into an interval.** $|x-1|<2$ means the distance from $x$ to $1$ is under $2$, so\n$$-2<x-1<2 \\quad\\Longrightarrow\\quad -1<x<3.$$\n\n**Step 2 — translate \"sufficient\" into sets.** $p$ sufficient for $q$ means every $x$ satisfying $p$ also satisfies $q$:\n$$(-1,\\ 3) \\subseteq (-\\infty,\\ a).$$\nThe interval $(-1,3)$ fits inside $(-\\infty,a)$ exactly when $a$ is at or beyond $3$. At $a=3$ it still fits, because $(-1,3)$ never actually reaches $3$. So $a \\ge 3$.\n\n**Step 3 — check \"not necessary\".** This needs the containment to be strict, so some $x$ satisfies $q$ but not $p$. For any $a \\ge 3$, take $x=-5$: it satisfies $x<a$ but fails $-1<x<3$. So no extra restriction appears.\n\n$$a \\ge 3.$$",
+      "distractorRationale": [
+        "Points the containment the wrong way, using the left end of $p$ instead of the right.",
+        "Uses the left end $-1$ of $p$. The relevant end is the right one, because $q$ is an upper bound.",
+        "Excludes $a=3$. But $(-1,3) \\subseteq (-\\infty,3)$ still holds, since $x<3$ is strict on both sides.",
+        "Correct. $(-1,3) \\subseteq (-\\infty,a)$ holds exactly when $a \\ge 3$, and the containment is automatically strict."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["a"],
+        "domain": [[-6, 9]],
+        "reference": "(a >= 3) ? 1 : 0",
+        "optionForms": [
+          "(a <= -1) ? 1 : 0",
+          "(a > -1) ? 1 : 0",
+          "(a > 3) ? 1 : 0",
+          "(a >= 3) ? 1 : 0"
+        ],
+        "extraSamples": [{ "a": 3 }, { "a": -1 }, { "a": 2.99 }, { "a": 3.01 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    }
+  ]
+}

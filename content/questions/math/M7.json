@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "topic": "M7",
+  "questions": [
+    {
+      "id": "math-M7.1-001",
+      "subject": "math",
+      "topic": "M7",
+      "subtopic": "M7.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Limits and Derivatives / Limits and the definition of the derivative",
+      "difficulty": 1,
+      "stem": "Evaluate $\\lim_{x \\to 4}(2x-3)$.",
+      "options": ["$-3$", "$2$", "$5$", "$8$"],
+      "correctIndex": 2,
+      "solution": "A polynomial has no break anywhere, so its limit at a point is simply its value there. Substitute:\n$$\\lim_{x \\to 4}(2x-3)=2 \\times 4-3=5.$$",
+      "distractorRationale": [
+        "Kept the constant term alone and ignored the $2x$ part.",
+        "Read off the coefficient of $x$ rather than evaluating the whole expression.",
+        "Correct. Substituting $x=4$ gives $8-3=5$.",
+        "Stopped at $2 \\times 4$ and never subtracted the $3$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "2 * 4 - 3",
+        "expected": 5,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M7.1-002",
+      "subject": "math",
+      "topic": "M7",
+      "subtopic": "M7.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Limits and Derivatives / Limits and the definition of the derivative",
+      "difficulty": 2,
+      "stem": "Evaluate $\\lim_{x \\to -2}\\dfrac{x^{2}-4}{x+2}$.",
+      "options": ["$-4$", "$-2$", "$0$", "$4$"],
+      "correctIndex": 0,
+      "solution": "Putting $x=-2$ straight in makes both parts vanish, so the fraction has to be simplified before it can be read.\n\nFactorise the top and cancel the shared bracket:\n$$\\frac{x^{2}-4}{x+2}=\\frac{(x-2)(x+2)}{x+2}=x-2, \\qquad x \\neq -2.$$\n\nWhat is left is a polynomial, and a limit never asks about the point itself, only about values nearby. Substitute:\n$$\\lim_{x \\to -2}(x-2)=-2-2=-4.$$",
+      "distractorRationale": [
+        "Correct. Cancelling leaves $x-2$, and $-2-2=-4$.",
+        "Reported the value $x$ moves towards instead of the value the fraction moves towards.",
+        "Cancelled down to $x+2$ rather than $x-2$, and that bracket does vanish at $x=-2$.",
+        "Subtracted in the wrong order, working out $2-(-2)$ in place of $-2-2$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "-2 - 2",
+        "expected": -4,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M7.1-003",
+      "subject": "math",
+      "topic": "M7",
+      "subtopic": "M7.1",
+      "syllabusRef": "M-2 / Functions and Sequences / Limits and Derivatives / Limits and the definition of the derivative",
+      "difficulty": 3,
+      "stem": "Let $f(x)=x^{3}$. Then $\\lim_{h \\to 0}\\dfrac{f(2+h)-f(2)}{h}$ equals",
+      "options": ["$4$", "$6$", "$8$", "$12$"],
+      "correctIndex": 3,
+      "solution": "This quotient is the definition of $f'(2)$: it measures the steepness of the curve at $x=2$, not its height.\n\nExpand the top:\n$$(2+h)^{3}-8=12h+6h^{2}+h^{3}.$$\n\nEvery term carries an $h$, so the division goes through cleanly:\n$$\\frac{12h+6h^{2}+h^{3}}{h}=12+6h+h^{2}.$$\n\nAs $h$ shrinks to $0$ the last two terms die away, leaving $12$.",
+      "distractorRationale": [
+        "Lowered the exponent without bringing the $3$ down, then evaluated $2^{2}$.",
+        "Read off the coefficient of the $6h$ term, which vanishes once $h$ shrinks to zero.",
+        "This is $f(2)=8$, the height of the curve at that point rather than its steepness.",
+        "Correct. The quotient simplifies to $12+6h+h^{2}$, whose value at $h=0$ is $12$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "3 * Math.pow(2, 3 - 1)",
+        "expected": 12,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M7.2-001",
+      "subject": "math",
+      "topic": "M7",
+      "subtopic": "M7.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Limits and Derivatives / Differentiation rules and tangent lines",
+      "difficulty": 2,
+      "stem": "Given $f(x)=x^{3}-4x$, find $f'(x)$.",
+      "options": [
+        "$f'(x)=3x^{2}-4x$",
+        "$f'(x)=3x^{2}-4$",
+        "$f'(x)=x^{2}-4$",
+        "$f'(x)=3x^{2}$"
+      ],
+      "correctIndex": 1,
+      "solution": "Differentiate one term at a time. The power rule turns $x^{k}$ into $kx^{k-1}$: the exponent drops in front as a multiplier and then falls by one.\n\nFor $x^{3}$, the $3$ comes down and the exponent becomes $2$, giving $3x^{2}$.\n\nFor $-4x$, the exponent is $1$, so it drops to $0$ and the term becomes the constant $-4$.\n$$f'(x)=3x^{2}-4.$$",
+      "distractorRationale": [
+        "Differentiated the cubic term but copied $-4x$ across untouched.",
+        "Correct. $x^{3}$ becomes $3x^{2}$ and $-4x$ becomes $-4$.",
+        "Lowered the exponent but forgot to bring the $3$ down in front of it.",
+        "Deleted the linear term. Its derivative is the constant $-4$, not zero."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-5, 5]],
+        "reference": "3 * Math.pow(x, 2) - 4",
+        "optionForms": ["3*x*x - 4*x", "3*x*x - 4", "x*x - 4", "3*x*x"],
+        "extraSamples": [{ "x": 0 }, { "x": 1 }, { "x": -1 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M7.2-002",
+      "subject": "math",
+      "topic": "M7",
+      "subtopic": "M7.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Limits and Derivatives / Differentiation rules and tangent lines",
+      "difficulty": 3,
+      "stem": "A tangent to the curve $y=x^{2}-5x+3$ runs parallel to the line $y=3x-1$. At which $x$ does it touch the curve?",
+      "options": ["$-1$", "$\\dfrac{3}{2}$", "$4$", "$8$"],
+      "correctIndex": 2,
+      "solution": "Parallel lines share a slope, so the tangent has slope $3$.\n\nThe steepness of the curve at any $x$ is\n$$y'=2x-5.$$\n\nSet that equal to $3$ and solve:\n$$2x-5=3, \\qquad 2x=8, \\qquad x=4.$$",
+      "distractorRationale": [
+        "Moved the $-5$ across without changing its sign, solving $2x=3-5$.",
+        "Ignored the $-5$ altogether and solved $2x=3$.",
+        "Correct. $2x-5=3$ gives $x=4$.",
+        "Lost the factor $2$ from the power rule and solved $x-5=3$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "(3 + 5) / 2",
+        "expected": 4,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M7.2-003",
+      "subject": "math",
+      "topic": "M7",
+      "subtopic": "M7.2",
+      "syllabusRef": "M-2 / Functions and Sequences / Limits and Derivatives / Differentiation rules and tangent lines",
+      "difficulty": 4,
+      "stem": "Find the tangent to $y=x^{3}-3x$ at the point where $x=2$.",
+      "options": ["$y=2x-2$", "$y=9x-16$", "$y=9x-18$", "$y=9x+2$"],
+      "correctIndex": 1,
+      "solution": "**Step 1 — where the line touches.** At $x=2$ the curve sits at $y=8-6=2$, so the point of contact is $(2,\\ 2)$.\n\n**Step 2 — how steep it is there.** Differentiating, $y'=3x^{2}-3$, and at $x=2$ that comes to $12-3=9$.\n\n**Step 3 — assemble the line.** Through $(2,\\ 2)$ with slope $9$:\n$$y-2=9(x-2), \\qquad\\text{so}\\qquad y=9x-16.$$",
+      "distractorRationale": [
+        "Used the height $2$ as the slope. Height and steepness are two different readings of the same curve.",
+        "Correct. Slope $9$ through $(2,\\ 2)$ gives $y-2=9(x-2)$, that is $y=9x-16$.",
+        "Wrote $y=9(x-2)$ and never added the height $2$ back on.",
+        "Treated $2$ as the intercept, as though the contact point sat on the $y$-axis."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-6, 6]],
+        "reference": "2 + 9 * (x - 2)",
+        "optionForms": ["2*x - 2", "9*x - 16", "9*x - 18", "9*x + 2"],
+        "extraSamples": [{ "x": 2 }, { "x": 0 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M7.3-001",
+      "subject": "math",
+      "topic": "M7",
+      "subtopic": "M7.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Limits and Derivatives / Monotonicity and extrema using derivatives",
+      "difficulty": 3,
+      "stem": "On which interval is $f(x)=x^{3}-12x$ decreasing?",
+      "options": [
+        "$(-\\infty,\\ -2)$",
+        "$(2,\\ +\\infty)$",
+        "$(-4,\\ 4)$",
+        "$(-2,\\ 2)$"
+      ],
+      "correctIndex": 3,
+      "solution": "A curve falls exactly where its derivative is negative.\n$$f'(x)=3x^{2}-12=3(x^{2}-4).$$\n\nSolve $3(x^{2}-4)<0$. Dividing by the positive $3$ leaves\n$$x^{2}<4, \\qquad\\text{that is}\\qquad -2<x<2.$$\n\nOutside that band $x^{2}>4$, the derivative is positive and the curve climbs. So the only falling stretch is $(-2,\\ 2)$.",
+      "distractorRationale": [
+        "This is one of the two climbing stretches, where $f'>0$.",
+        "The other climbing stretch. Both tails rise, because $f'(x)>0$ once $|x|>2$.",
+        "Read $x^{2}<4$ as $-4<x<4$, forgetting to take the square root of the $4$.",
+        "Correct. $f'(x)<0$ precisely when $x^{2}<4$, which is the interval $(-2,\\ 2)$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["x"],
+        "domain": [[-6, 6]],
+        "reference": "(3 * x * x - 12 < 0) ? 1 : 0",
+        "optionForms": [
+          "(x < -2) ? 1 : 0",
+          "(x > 2) ? 1 : 0",
+          "(x > -4 && x < 4) ? 1 : 0",
+          "(x > -2 && x < 2) ? 1 : 0"
+        ],
+        "extraSamples": [{ "x": -4 }, { "x": -2 }, { "x": 0 }, { "x": 2 }, { "x": 4 }],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    },
+    {
+      "id": "math-M7.3-002",
+      "subject": "math",
+      "topic": "M7",
+      "subtopic": "M7.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Limits and Derivatives / Monotonicity and extrema using derivatives",
+      "difficulty": 4,
+      "stem": "Find the local minimum value of $f(x)=x^{3}-6x^{2}+5$.",
+      "options": ["$-27$", "$-11$", "$4$", "$5$"],
+      "correctIndex": 0,
+      "solution": "**Step 1 — find the turning points.**\n$$f'(x)=3x^{2}-12x=3x(x-4),$$\nwhich is zero at $x=0$ and at $x=4$.\n\n**Step 2 — say which is which.** $f'$ is positive to the left of $0$, negative between $0$ and $4$, and positive again beyond $4$. The curve therefore drops into $x=4$ and rises out of it, making $x=4$ the minimum; $x=0$ is the maximum.\n\n**Step 3 — evaluate there.** A minimum *value* is a height, so substitute back:\n$$f(4)=64-96+5=-27.$$",
+      "distractorRationale": [
+        "Correct. The turning point at $x=4$ is the minimum, and $f(4)=-27$.",
+        "Used $x=2$, the midpoint of the two turning points, where the curve is still on its way down.",
+        "Reported the position $x=4$ rather than the height of the curve there.",
+        "This is $f(0)=5$, the local maximum. The other turning point was chosen."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "numeric",
+        "expression": "Math.pow(4, 3) - 6 * Math.pow(4, 2) + 5",
+        "expected": -27,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "math-M7.3-003",
+      "subject": "math",
+      "topic": "M7",
+      "subtopic": "M7.3",
+      "syllabusRef": "M-2 / Functions and Sequences / Limits and Derivatives / Monotonicity and extrema using derivatives",
+      "difficulty": 5,
+      "stem": "The function $f(x)=x^{3}+ax^{2}+3x$ is increasing on the whole of $\\mathbb{R}$. Find the range of $a$.",
+      "options": [
+        "$(-3,\\ 3)$",
+        "$[-3,\\ 3]$",
+        "$[-9,\\ 9]$",
+        "$(-\\infty,\\ -3] \\cup [3,\\ +\\infty)$"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1 — turn the wording into a condition.** Increasing everywhere means $f'(x) \\ge 0$ for every real $x$, where\n$$f'(x)=3x^{2}+2ax+3.$$\n\n**Step 2 — a parabola that never dips below the axis.** The leading coefficient $3$ is positive, so this parabola opens upwards. It stays at or above the axis exactly when it has no two distinct roots, that is when its discriminant is at most zero:\n$$(2a)^{2}-4 \\times 3 \\times 3 \\le 0, \\qquad 4a^{2} \\le 36, \\qquad a^{2} \\le 9.$$\n\n**Step 3 — read off the bounds.** $a^{2} \\le 9$ means $-3 \\le a \\le 3$.\n\nThe ends are kept. At $a=\\pm 3$ the derivative touches zero at a single point and is positive elsewhere, and one isolated zero does not interrupt the climb.",
+      "distractorRationale": [
+        "Threw the ends away. At $a=\\pm 3$ the derivative only grazes zero at one point, so those two values are still allowed.",
+        "Correct. $f' \\ge 0$ everywhere forces $4a^{2}-36 \\le 0$, giving $-3 \\le a \\le 3$.",
+        "Quoted $9$ as the bound, reading it straight from $a^{2} \\le 9$ without taking the square root.",
+        "Solved the discriminant condition the wrong way round, using $4a^{2}-36 \\ge 0$."
+      ],
+      "figure": null,
+      "verified": true,
+      "original": true,
+      "verification": {
+        "kind": "symbolic",
+        "vars": ["a"],
+        "domain": [[-7, 7]],
+        "reference": "(4 * a * a - 36 <= 0) ? 1 : 0",
+        "optionForms": [
+          "(a > -3 && a < 3) ? 1 : 0",
+          "(a >= -3 && a <= 3) ? 1 : 0",
+          "(a >= -9 && a <= 9) ? 1 : 0",
+          "(a <= -3 || a >= 3) ? 1 : 0"
+        ],
+        "extraSamples": [
+          { "a": -3 }, { "a": 3 }, { "a": 0 },
+          { "a": 5 }, { "a": -9 }, { "a": 9 }
+        ],
+        "tolerance": 1e-9,
+        "samples": 40
+      }
+    }
+  ]
+}
