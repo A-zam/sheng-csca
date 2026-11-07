@@ -13,18 +13,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "csca-prep-five.vercel.app"
-        }
-      ],
-      "destination": "https://sheng-csca.vercel.app/:path*",
-      "permanent": true
-    }
   ]
 }
