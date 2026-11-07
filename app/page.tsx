@@ -22,7 +22,7 @@ const WAYS: Array<{ href: Route; title: string; body: string }> = [
   {
     href: '/practice',
     title: 'Practise by topic',
-    body: 'Choose a subject, a topic and a difficulty. Answer one question at a time and read the worked solution as soon as you commit.',
+    body: 'Choose a subject, a topic and a difficulty. Check each answer when you are sure. A wrong pick is crossed out and you try again, with a hint if you want one.',
   },
   {
     href: '/mock',
@@ -140,8 +140,8 @@ export default function HomePage() {
           <div>
             <dt className="font-semibold text-[var(--ink)]">Answer from the keyboard</dt>
             <dd className="mt-1 text-[var(--ink-soft)]">
-              Press <Kbd>1</Kbd> to <Kbd>4</Kbd> to choose an answer and <Kbd>Enter</Kbd> to move
-              on.
+              Press <Kbd>1</Kbd> to <Kbd>4</Kbd> to choose, <Kbd>Enter</Kbd> to check, and{' '}
+              <Kbd>Enter</Kbd> again to move on.
             </dd>
           </div>
           <div>

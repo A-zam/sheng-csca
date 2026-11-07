@@ -14,7 +14,7 @@ import { describeInterval, dueQueue, isLearned, nextDueAt, type ReviewCard } fro
 import { useAppState } from '@/lib/useAppState';
 import { useNow } from '@/lib/useNow';
 import { Boundary } from './Boundary';
-import { QuestionView } from './QuestionView';
+import { TryQuestion } from './QuestionView';
 import {
   Badge,
   Button,
@@ -57,8 +57,6 @@ function ReviewInner() {
   const [running, setRunning] = useState(false);
   const [queueIds, setQueueIds] = useState<string[]>([]);
   const [cursor, setCursor] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [revealed, setRevealed] = useState(false);
   const [done, setDone] = useState({ answered: 0, correct: 0 });
   const shownAt = useRef(0);
 
@@ -83,19 +81,15 @@ function ReviewInner() {
   const startSession = () => {
     setQueueIds(due.map((c) => c.questionId));
     setCursor(0);
-    setSelected(null);
-    setRevealed(false);
     setDone({ answered: 0, correct: 0 });
     setRunning(true);
   };
 
-  const onSelect = (question: PublicQuestion, index: number) => {
-    if (revealed) return;
+  // The first check is what the schedule grades. Later tries, after a wrong
+  // option has been struck out, are for finding the answer.
+  const onFirstCheck = (question: PublicQuestion, index: number, correct: boolean) => {
     const row = rowFor(question.id);
     if (!row) return;
-    const correct = index === question.correctIndex;
-    setSelected(index);
-    setRevealed(true);
     setDone((d) => ({
       answered: d.answered + 1,
       correct: d.correct + (correct ? 1 : 0),
@@ -114,11 +108,7 @@ function ReviewInner() {
     });
   };
 
-  const advance = () => {
-    setSelected(null);
-    setRevealed(false);
-    setCursor((c) => c + 1);
-  };
+  const advance = () => setCursor((c) => c + 1);
 
   if (!ready) return <LoadingCard lines={4} />;
 
@@ -155,9 +145,7 @@ function ReviewInner() {
               key={currentRow.id}
               row={currentRow}
               manifest={manifest}
-              selected={selected}
-              revealed={revealed}
-              onSelect={onSelect}
+              onFirstCheck={onFirstCheck}
               onNext={advance}
               nextLabel={cursor + 1 >= queueIds.length ? 'Finish review' : 'Next'}
               position={{ index: cursor + 1, total: queueIds.length }}
@@ -225,18 +213,14 @@ function ReviewInner() {
 function ReviewQuestion({
   row,
   manifest,
-  selected,
-  revealed,
-  onSelect,
+  onFirstCheck,
   onNext,
   nextLabel,
   position,
 }: {
   row: ManifestQuestion;
   manifest: Manifest;
-  selected: number | null;
-  revealed: boolean;
-  onSelect: (question: PublicQuestion, index: number) => void;
+  onFirstCheck: (question: PublicQuestion, index: number, correct: boolean) => void;
   onNext: () => void;
   nextLabel: string;
   position: { index: number; total: number };
@@ -256,11 +240,9 @@ function ReviewQuestion({
   }
 
   return (
-    <QuestionView
+    <TryQuestion
       question={question}
-      selected={selected}
-      onSelect={(index) => onSelect(question, index)}
-      revealed={revealed}
+      onFirstCheck={(index, correct) => onFirstCheck(question, index, correct)}
       onNext={onNext}
       nextLabel={nextLabel}
       position={position}

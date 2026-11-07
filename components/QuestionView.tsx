@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useMemo, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import type { PublicQuestion } from '@/lib/data';
+import { hintFor } from '@/lib/hints';
 import { RichText } from './RichText';
-import { Bubble, Button, cx, type BubbleState } from './ui';
+import { Bubble, Button, Kbd, cx, type BubbleState } from './ui';
 import { reportLink } from '@/lib/site';
 
 export const OPTION_LABELS = ['A', 'B', 'C', 'D'] as const;
@@ -15,6 +16,22 @@ export interface QuestionViewProps {
   onSelect: (index: number) => void;
   /** Show the mark, the worked solution and the distractor notes. */
   revealed: boolean;
+  /** Options already checked and found wrong. They are struck through and cannot be picked. */
+  eliminated?: readonly number[];
+  /**
+   * Present in practice and review: a choice is only marked when this is
+   * called, so a mis-tap or a change of mind costs nothing.
+   */
+  onCheck?: () => void;
+  /**
+   * How many wrong checks came before the right one. Present only when the
+   * question was solved by trying until correct, which changes the verdict
+   * shown once it is revealed.
+   */
+  misses?: number;
+  /** Feedback shown under the options while the question is still open. */
+  feedback?: ReactNode;
+  onSkip?: () => void;
   onNext?: () => void;
   nextLabel?: string;
   /** 1-based position within the current run. */
@@ -31,6 +48,11 @@ export function QuestionView({
   selected,
   onSelect,
   revealed,
+  eliminated = [],
+  onCheck,
+  misses,
+  feedback,
+  onSkip,
   onNext,
   nextLabel = 'Next question',
   position,
@@ -41,8 +63,8 @@ export function QuestionView({
 }: QuestionViewProps) {
   const nextRef = useRef<HTMLButtonElement | null>(null);
 
-  // 1-4 picks an option, Enter moves on. Ignored while the user is typing in a
-  // field, so the shortcuts never fight a real input.
+  // 1-4 picks an option, Enter checks it, Enter again moves on. Ignored while
+  // the user is typing in a field, so the shortcuts never fight a real input.
   useEffect(() => {
     if (!keyboard) return;
     const onKeyDown = (event: KeyboardEvent) => {
@@ -55,19 +77,32 @@ export function QuestionView({
 
       if (event.key >= '1' && event.key <= '4') {
         const index = Number(event.key) - 1;
-        if (revealed) return;
+        if (revealed || eliminated.includes(index) || index >= question.options.length) return;
         event.preventDefault();
         onSelect(index);
         return;
       }
-      if (event.key === 'Enter' && onNext) {
+      if (event.key !== 'Enter') return;
+      if (revealed && onNext) {
         event.preventDefault();
         onNext();
+      } else if (!revealed && onCheck && selected !== null) {
+        event.preventDefault();
+        onCheck();
       }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [keyboard, onNext, onSelect, revealed]);
+  }, [
+    keyboard,
+    onNext,
+    onSelect,
+    onCheck,
+    revealed,
+    selected,
+    eliminated,
+    question.options.length,
+  ]);
 
   // Once the answer is shown, put focus on the button that moves on, so Enter
   // and Tab both do the obvious thing.
@@ -78,6 +113,17 @@ export function QuestionView({
   const correct = revealed && selected === question.correctIndex;
   const href = typeof window === 'undefined' ? '' : window.location.href;
   const report = useMemo(() => reportLink(question.id, href), [question.id, href]);
+
+  const verdict =
+    misses !== undefined
+      ? misses === 0
+        ? 'Correct, first time.'
+        : `Correct, on try ${misses + 1}.`
+      : correct
+        ? 'Correct.'
+        : selected === null
+          ? `Not answered. The answer is ${OPTION_LABELS[question.correctIndex]}.`
+          : `Not quite. The answer is ${OPTION_LABELS[question.correctIndex]}.`;
 
   return (
     <article className="relative overflow-hidden rounded-[3px] border border-[var(--line)] bg-[var(--sheet)]">
@@ -141,12 +187,41 @@ export function QuestionView({
                   option={option}
                   chosen={selected === index}
                   isCorrect={index === question.correctIndex}
+                  struck={eliminated.includes(index)}
                   revealed={revealed}
                   onClick={() => onSelect(index)}
                 />
               </li>
             ))}
           </ul>
+
+          {!revealed && onCheck ? (
+            <>
+              <div aria-live="polite">{feedback}</div>
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+                <Button onClick={onCheck} disabled={selected === null}>
+                  Check answer
+                  <kbd className="rounded-[3px] border border-current/40 px-1.5 font-sans text-[12px] font-semibold opacity-80">
+                    Enter
+                  </kbd>
+                </Button>
+                {onSkip ? (
+                  <Button tone="ghost" onClick={onSkip}>
+                    Skip this one
+                  </Button>
+                ) : null}
+                <p className="text-[14px] text-[var(--ink-soft)]">
+                  {selected === null ? (
+                    <>
+                      Choose an answer first. <Kbd>1</Kbd> to <Kbd>4</Kbd> works too.
+                    </>
+                  ) : (
+                    'You can still change your mind before you check.'
+                  )}
+                </p>
+              </div>
+            </>
+          ) : null}
 
           {revealed ? (
             <div className="mt-7 border-t border-dashed border-[var(--line)] pt-6">
@@ -157,14 +232,13 @@ export function QuestionView({
                   correct ? 'text-[var(--good)]' : 'text-[var(--bad)]',
                 )}
               >
-                {correct
-                  ? 'Correct.'
-                  : selected === null
-                    ? `Not answered. The answer is ${OPTION_LABELS[question.correctIndex]}.`
-                    : `Not quite. The answer is ${OPTION_LABELS[question.correctIndex]}.`}
+                {verdict}
               </p>
 
-              {!correct && selected !== null && question.distractorRationale[selected] ? (
+              {misses === undefined &&
+              !correct &&
+              selected !== null &&
+              question.distractorRationale[selected] ? (
                 <div className="mt-4 border-l-[3px] border-[var(--bad)] bg-[var(--bad-soft)] px-4 py-3">
                   <p className="text-[14px] font-semibold text-[var(--bad)]">
                     Why {OPTION_LABELS[selected]} is wrong
@@ -230,6 +304,106 @@ export function QuestionView({
   );
 }
 
+/* --------------------------------------------------------------- trying */
+
+export interface TryQuestionProps {
+  question: PublicQuestion;
+  /** Called once, on the first check. That first try is what counts for progress. */
+  onFirstCheck: (index: number, correct: boolean) => void;
+  onNext: () => void;
+  nextLabel?: string;
+  onSkip?: () => void;
+  position?: { index: number; total: number };
+  topicName?: string;
+}
+
+/**
+ * Practice and review: choose, then check. A wrong check strikes that option
+ * out and offers a hint, and the question stays open until the right option
+ * is checked. Only then do the verdict and the worked solution appear.
+ *
+ * Mount it with a key per question, so its state starts fresh each time.
+ */
+export function TryQuestion({
+  question,
+  onFirstCheck,
+  onNext,
+  nextLabel,
+  onSkip,
+  position,
+  topicName,
+}: TryQuestionProps) {
+  const [selected, setSelected] = useState<number | null>(null);
+  const [eliminated, setEliminated] = useState<number[]>([]);
+  const [solved, setSolved] = useState(false);
+  const [lastMiss, setLastMiss] = useState<number | null>(null);
+  const [hintOpen, setHintOpen] = useState(false);
+
+  const select = useCallback(
+    (index: number) => {
+      if (solved || eliminated.includes(index)) return;
+      setSelected(index);
+    },
+    [solved, eliminated],
+  );
+
+  const check = useCallback(() => {
+    if (solved || selected === null) return;
+    const correct = selected === question.correctIndex;
+    if (eliminated.length === 0) onFirstCheck(selected, correct);
+    if (correct) {
+      setSolved(true);
+      return;
+    }
+    setEliminated((list) => [...list, selected]);
+    setLastMiss(selected);
+    setHintOpen(false);
+    setSelected(null);
+  }, [solved, selected, question.correctIndex, eliminated.length, onFirstCheck]);
+
+  const missLetter = lastMiss === null ? '' : OPTION_LABELS[lastMiss];
+
+  return (
+    <QuestionView
+      question={question}
+      selected={solved ? question.correctIndex : selected}
+      onSelect={select}
+      revealed={solved}
+      eliminated={eliminated}
+      onCheck={check}
+      misses={solved ? eliminated.length : undefined}
+      onSkip={onSkip}
+      onNext={onNext}
+      nextLabel={nextLabel}
+      position={position}
+      topicName={topicName}
+      feedback={
+        lastMiss === null ? null : (
+          <div className="mt-5 border-l-[3px] border-[var(--bad)] bg-[var(--bad-soft)] px-4 py-3">
+            <p className="text-[15px] text-[var(--ink)]">
+              <strong className="font-semibold text-[var(--bad)]">Not {missLetter}.</strong> It is
+              crossed out now. Pick another option and check again.
+            </p>
+            <button
+              type="button"
+              aria-expanded={hintOpen}
+              onClick={() => setHintOpen((open) => !open)}
+              className="mt-2 min-h-9 text-[15px] font-semibold text-[var(--brand)] underline decoration-1 underline-offset-[3px] hover:text-[var(--ink)]"
+            >
+              {hintOpen ? 'Hide the hint' : 'Show a hint'}
+            </button>
+            {hintOpen ? (
+              <RichText className="mt-2 text-[15px] leading-relaxed text-[var(--ink)]">
+                {hintFor(question, lastMiss)}
+              </RichText>
+            ) : null}
+          </div>
+        )
+      }
+    />
+  );
+}
+
 const DIFFICULTY_LABELS: Record<number, string> = {
   1: 'Recall',
   2: 'Single step',
@@ -243,6 +417,7 @@ function OptionButton({
   option,
   chosen,
   isCorrect,
+  struck,
   revealed,
   onClick,
 }: {
@@ -250,6 +425,7 @@ function OptionButton({
   option: string;
   chosen: boolean;
   isCorrect: boolean;
+  struck: boolean;
   revealed: boolean;
   onClick: () => void;
 }) {
@@ -259,16 +435,18 @@ function OptionButton({
     ? 'correct'
     : showAsWrong
       ? 'wrong'
-      : chosen
-        ? 'filled'
-        : 'empty';
+      : struck
+        ? 'struck'
+        : chosen
+          ? 'filled'
+          : 'empty';
 
   return (
     <button
       type="button"
       role="radio"
       aria-checked={chosen}
-      disabled={revealed}
+      disabled={revealed || struck}
       onClick={onClick}
       className={cx(
         'flex w-full items-start gap-4 rounded-[4px] border px-3 py-3 text-left transition-colors sm:px-4',
@@ -277,17 +455,31 @@ function OptionButton({
           ? 'border-[var(--good)] bg-[var(--good-soft)]'
           : showAsWrong
             ? 'border-[var(--bad)] bg-[var(--bad-soft)]'
-            : chosen
-              ? 'border-[var(--graphite)] bg-[var(--paper-sunk)]'
-              : 'border-transparent enabled:hover:border-[var(--line)] enabled:hover:bg-[var(--paper)]',
+            : struck
+              ? 'border-transparent text-[var(--ink-soft)]'
+              : chosen
+                ? 'border-[var(--graphite)] bg-[var(--paper-sunk)]'
+                : 'border-transparent enabled:hover:border-[var(--line)] enabled:hover:bg-[var(--paper)]',
       )}
     >
       <Bubble letter={label} state={bubble} className="mt-px" />
-      <span className="sr-only">Option {label}:</span>
+      <span className="sr-only">
+        Option {label}
+        {struck ? ', ruled out' : ''}:
+      </span>
       <span className="min-w-0 flex-1 pt-0.5">
-        <RichText inline className="block overflow-x-auto font-serif text-[18px] leading-relaxed">
-          {option}
-        </RichText>
+        <span className={cx('relative inline-block max-w-full', struck && 'opacity-60')}>
+          <RichText inline className="block overflow-x-auto font-serif text-[18px] leading-relaxed">
+            {option}
+          </RichText>
+          {/* A drawn line rather than text-decoration, so maths is struck through too. */}
+          {struck ? (
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-[-4px] top-1/2 h-[2px] -translate-y-1/2 bg-[var(--bad)]"
+            />
+          ) : null}
+        </span>
         {showAsCorrect ? (
           <span className="mt-1 block font-sans text-[13px] font-semibold text-[var(--good)]">
             {chosen ? 'Your answer, correct' : 'Correct answer'}

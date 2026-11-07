@@ -11,8 +11,8 @@ import {
 import { useAppState } from '@/lib/useAppState';
 import { buildQueue } from './PracticeClient';
 import { Boundary } from './Boundary';
-import { QuestionView } from './QuestionView';
-import { Button, EmptyState, Kbd, LoadingCard, Meter } from './ui';
+import { TryQuestion } from './QuestionView';
+import { Button, EmptyState, LoadingCard, Meter } from './ui';
 import Link from 'next/link';
 import { LINK } from './styles';
 
@@ -52,8 +52,6 @@ export function PracticeSession({
   const [queue] = useState(() => buildQueue(pool, seed, new Set(answered ?? []), avoidRepeats));
 
   const [cursor, setCursor] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [revealed, setRevealed] = useState(false);
   const [stats, setStats] = useState({ answered: 0, correct: 0 });
   const shownAt = useRef(0);
 
@@ -70,12 +68,11 @@ export function PracticeSession({
 
   const names = useMemo(() => (row ? topicNames(manifest, row.s) : {}), [manifest, row]);
 
-  const onSelect = useCallback(
-    (question: PublicQuestion, index: number) => {
-      if (revealed || !row) return;
-      const correct = index === question.correctIndex;
-      setSelected(index);
-      setRevealed(true);
+  // Only the first check of a question counts. Later tries, after an option has
+  // been struck out, are for finding the answer, not for the score.
+  const onFirstCheck = useCallback(
+    (question: PublicQuestion, index: number, correct: boolean) => {
+      if (!row) return;
       setStats((s) => ({
         answered: s.answered + 1,
         correct: s.correct + (correct ? 1 : 0),
@@ -93,14 +90,10 @@ export function PracticeSession({
         mode: 'practice',
       });
     },
-    [recordAttempt, revealed, row],
+    [recordAttempt, row],
   );
 
-  const next = useCallback(() => {
-    setSelected(null);
-    setRevealed(false);
-    setCursor((c) => c + 1);
-  }, []);
+  const next = useCallback(() => setCursor((c) => c + 1), []);
 
   if (!ready) return <LoadingCard lines={4} />;
 
@@ -137,7 +130,7 @@ export function PracticeSession({
             <span className="font-semibold text-[var(--ink)] tabular-nums">
               {stats.correct} of {stats.answered}
             </span>{' '}
-            right
+            right first time
           </p>
           <Meter
             className="max-w-xs"
@@ -157,24 +150,11 @@ export function PracticeSession({
           row={row}
           position={{ index: cursor + 1, total: queue.length }}
           topicName={names[row.t]}
-          selected={selected}
-          revealed={revealed}
-          onSelect={onSelect}
+          onFirstCheck={onFirstCheck}
           onNext={next}
           nextLabel={cursor + 1 >= queue.length ? 'Finish' : 'Next question'}
         />
       </Boundary>
-
-      {!revealed ? (
-        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-          <Button tone="ghost" onClick={next}>
-            Skip this one
-          </Button>
-          <p className="text-[14px] text-[var(--ink-soft)]">
-            Press <Kbd>1</Kbd> to <Kbd>4</Kbd> to answer
-          </p>
-        </div>
-      ) : null}
     </>
   );
 }
@@ -183,18 +163,14 @@ function LoadedQuestion({
   row,
   position,
   topicName,
-  selected,
-  revealed,
-  onSelect,
+  onFirstCheck,
   onNext,
   nextLabel,
 }: {
   row: ManifestQuestion;
   position: { index: number; total: number };
   topicName: string | undefined;
-  selected: number | null;
-  revealed: boolean;
-  onSelect: (question: PublicQuestion, index: number) => void;
+  onFirstCheck: (question: PublicQuestion, index: number, correct: boolean) => void;
   onNext: () => void;
   nextLabel: string;
 }) {
@@ -210,12 +186,11 @@ function LoadedQuestion({
   }
 
   return (
-    <QuestionView
+    <TryQuestion
       question={question}
-      selected={selected}
-      onSelect={(index) => onSelect(question, index)}
-      revealed={revealed}
+      onFirstCheck={(index, correct) => onFirstCheck(question, index, correct)}
       onNext={onNext}
+      onSkip={onNext}
       nextLabel={nextLabel}
       position={position}
       topicName={topicName}

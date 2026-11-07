@@ -106,7 +106,7 @@ export function Badge({
 
 /* ---------------------------------------------------------------- bubble */
 
-export type BubbleState = 'empty' | 'filled' | 'correct' | 'wrong';
+export type BubbleState = 'empty' | 'filled' | 'correct' | 'wrong' | 'struck';
 
 /**
  * One answer-card bubble: a pill printed in red ink with its letter inside,
@@ -139,7 +139,9 @@ export function Bubble({
             ? 'border-[var(--good)] bg-[var(--good)] text-[var(--sheet)]'
             : state === 'wrong'
               ? 'border-[var(--bad)] bg-[var(--bad)] text-[var(--sheet)]'
-              : 'border-[var(--pen)]/70 text-[var(--pen)]',
+              : state === 'struck'
+                ? 'border-[var(--bad)]/40 text-[var(--bad)]/60 line-through decoration-2'
+                : 'border-[var(--pen)]/70 text-[var(--pen)]',
         className,
       )}
     >
