@@ -6,7 +6,25 @@
   "headers": [
     {
       "source": "/data/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "csca-prep-five.vercel.app"
+        }
+      ],
+      "destination": "https://sheng-csca.vercel.app/:path*",
+      "permanent": true
     }
   ]
 }
