@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'and difficulty, with a per-topic breakdown when you submit.',
   alternates: { canonical: '/mock/' },
   openGraph: {
-    title: 'Timed mock exam — CSCA Prep',
+    title: 'Timed mock exam — SHENG CSCA',
     description:
       'A full CSCA mock paper under exam conditions: 48 questions, 60 minutes, scored with a ' +
       'per-topic breakdown.',

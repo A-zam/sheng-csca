@@ -114,8 +114,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className="flex h-12 shrink-0 items-center gap-2 text-[var(--ink)] sm:h-auto"
               >
                 <Wordmark />
-                <span className="font-serif text-[18px] font-semibold tracking-tight">
-                  CSCA Prep
+                <span className="font-serif text-[18px] font-semibold tracking-[0.04em]">
+                  SHENG CSCA
                 </span>
               </Link>
               <NavLinks items={NAV} />
@@ -171,7 +171,7 @@ function Wordmark() {
         fill="var(--sheet)"
         fontFamily="var(--font-ui), sans-serif"
       >
-        C
+        S
       </text>
     </svg>
   );

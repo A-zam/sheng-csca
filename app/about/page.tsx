@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'CSCA, and exactly what is stored in your browser.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About and privacy — CSCA Prep',
+    title: 'About and privacy — SHENG CSCA',
     description:
       'What this site is, where the questions come from, and exactly what is stored in your browser.',
     url: '/about',

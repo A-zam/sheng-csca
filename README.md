@@ -1,4 +1,4 @@
-# CSCA Prep
+# SHENG CSCA
 
 Free practice for the **CSCA Mathematics and Physics papers**, in English:
 **343 original questions** (170 Mathematics, 173 Physics), timed mock exams

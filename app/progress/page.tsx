@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'readiness estimate against a target score you set.',
   alternates: { canonical: '/progress/' },
   openGraph: {
-    title: 'Your progress — CSCA Prep',
+    title: 'Your progress — SHENG CSCA',
     description:
       'Accuracy by topic, activity over the last month, and a readiness estimate against your ' +
       'target CSCA score.',

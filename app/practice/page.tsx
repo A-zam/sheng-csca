@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'difficulty, and read a full worked solution after every answer.',
   alternates: { canonical: '/practice/' },
   openGraph: {
-    title: 'Practice by topic — CSCA Prep',
+    title: 'Practice by topic — SHENG CSCA',
     description:
       'Filter CSCA Mathematics and Physics questions by topic and difficulty, with a worked ' +
       'solution after every answer.',

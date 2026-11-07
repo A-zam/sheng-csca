@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     'intervals for as long as you keep getting them right.',
   alternates: { canonical: '/review/' },
   openGraph: {
-    title: 'Mistake bank and review — CSCA Prep',
+    title: 'Mistake bank and review — SHENG CSCA',
     description:
       'Spaced repetition for the CSCA questions you got wrong, so they come back until they stick.',
     url: '/review/',

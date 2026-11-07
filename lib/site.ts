@@ -14,7 +14,7 @@ function resolveSiteUrl(): string {
 }
 
 export const SITE = {
-  name: 'CSCA Prep',
+  name: 'SHENG CSCA',
   tagline: 'Free CSCA Mathematics and Physics practice, in English',
   description:
     'Practice questions, timed mock exams and a spaced-repetition mistake bank for the ' +
