@@ -11,6 +11,10 @@ reference/
 Study Pack - Math/
 Study Pack - Physics/
 
+# Private, machine-local pages: never part of the site.
+*.local.tsx
+app/papers/
+
 # The kickoff brief quotes the corpus rules and is not part of the site.
 csca-prep-claude-code-prompt.md
 

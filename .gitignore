@@ -60,3 +60,7 @@ yarn-error.log*
 # private working notes and local tooling, kept out of the public repo
 /csca-prep-claude-code-prompt.md
 /.claude/skills/
+
+# private, machine-local pages (see next.config.ts) and their folder
+*.local.tsx
+/app/papers/

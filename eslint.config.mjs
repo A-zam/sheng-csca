@@ -14,6 +14,7 @@ const eslintConfig = [
       'node_modules/**',
       'public/data/**',
       'reference/**',
+      '**/*.local.tsx',
       'Study Pack - Math/**',
       'Study Pack - Physics/**',
       'next-env.d.ts',
